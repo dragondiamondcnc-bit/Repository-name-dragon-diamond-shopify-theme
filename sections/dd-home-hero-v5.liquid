@@ -32,10 +32,10 @@
       <!-- 2. CONSOLIDATED EVIDENCE CARD (40%) -->
       <div class="dd-hero-visual">
         <div class="dd-evidence-card-final" role="img" aria-label="CO2 laser cutting acrylic signage components in a production workshop">
-          <div class="dd-evidence-overlay">
-            <span>Active Production</span>
-            <strong>CO2 Laser Acrylic Cutting System</strong>
-            <em>Sign Manufacturing Output In Process</em>
+          <div class="dd-hero-v5__evidence-tag">
+            <span class="dd-hero-v5__evidence-kicker">Acrylic Sign Fabrication</span>
+            <strong>CO2 Laser Cutting System</strong>
+            <span>Sample Output &amp; Production Setup</span>
           </div>
         </div>
       </div>
@@ -80,43 +80,49 @@
     overflow: hidden;
     border: 1px solid #EEE;
   }
-  .dd-evidence-overlay {
+  .dd-hero-v5__evidence-tag {
     position: absolute;
-    top: 22px;
-    left: 22px;
-    max-width: min(360px, calc(100% - 44px));
+    top: 18px;
+    left: 18px;
+    z-index: 2;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 3px;
+    width: fit-content;
+    max-width: 260px;
     box-sizing: border-box;
-    background: rgba(15,17,21,0.48);
-    padding: 16px 18px;
+    border: 1px solid rgba(255,255,255,0.16);
+    border-radius: 4px;
+    background: rgba(15,17,21,0.62);
     color: #FFF;
+    padding: 10px 12px;
   }
-  .dd-evidence-overlay span,
-  .dd-evidence-overlay strong,
-  .dd-evidence-overlay em {
+
+  .dd-hero-v5__evidence-tag span,
+  .dd-hero-v5__evidence-tag strong {
     display: block;
     text-transform: uppercase;
   }
-  .dd-evidence-overlay span {
-    margin-bottom: 10px;
+
+  .dd-hero-v5__evidence-kicker {
     color: #00A3AD;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 850;
-    letter-spacing: 1.4px;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.1px;
   }
-  .dd-evidence-overlay strong {
-    font-size: 21px;
-    font-weight: 850;
-    line-height: 1.05;
+
+  .dd-hero-v5__evidence-tag strong {
+    font-size: 14px;
+    font-weight: 750;
+    line-height: 1.15;
     letter-spacing: 0;
   }
-  .dd-evidence-overlay em {
-    margin-top: 12px;
-    color: rgba(255,255,255,0.72);
+
+  .dd-hero-v5__evidence-tag span:not(.dd-hero-v5__evidence-kicker) {
+    color: rgba(255,255,255,0.7);
     font-size: 11px;
-    font-style: normal;
-    font-weight: 750;
-    letter-spacing: 1px;
+    font-weight: 650;
+    letter-spacing: 0.5px;
   }
 
   @media (max-width: 1024px) {
@@ -126,7 +132,8 @@
     .dd-hero-lead { font-size: 15px; margin-bottom: 24px; }
     .dd-hero-content { padding-left: 0; }
     .dd-evidence-card-final { transform: none; width: 100%; max-width: 540px; min-height: 520px; margin: 0 auto; }
-    .dd-evidence-overlay { top: 18px; left: 18px; max-width: calc(100% - 36px); }
+    .dd-hero-v5__evidence-tag { top: 12px; left: 12px; max-width: calc(100% - 24px); padding: 9px 10px; }
+    .dd-hero-v5__evidence-tag strong { font-size: 13px; }
   }
 </style>
 
