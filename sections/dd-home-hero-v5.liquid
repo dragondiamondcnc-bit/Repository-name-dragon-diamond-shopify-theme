@@ -2,7 +2,7 @@
   DD Home Hero V5 - Solution Provider Focus (Final Locked Version)
   Positioning: Sign Manufacturing Solution Provider
   Layout: 60/40 Split
-  Visual: Single Consolidated Uganda Evidence Image (V2)
+  Visual: Single CO2 Acrylic Cutting Production Panel
 {% endcomment %}
 
 <section class="dd-hero-v5" id="hero-v5">
@@ -31,8 +31,12 @@
 
       <!-- 2. CONSOLIDATED EVIDENCE CARD (40%) -->
       <div class="dd-hero-visual">
-        <div class="dd-evidence-card-final">
-          <img src="https://cdn.shopify.com/s/files/1/0824/6319/5356/files/Hf0fbb561a54e458497085c4c25537c27S.webp?v=1782649890" alt="Uganda Verified Deployment Evidence" class="dd-evidence-img-main">
+        <div class="dd-evidence-card-final" role="img" aria-label="CO2 laser cutting acrylic signage components in a production workshop">
+          <div class="dd-evidence-overlay">
+            <span>Active Production</span>
+            <strong>CO2 Laser Acrylic Cutting System</strong>
+            <em>Sign Manufacturing Output In Process</em>
+          </div>
         </div>
       </div>
 
@@ -59,7 +63,13 @@
 
   /* Right: Consolidated Evidence Card - Industrial Quality */
   .dd-evidence-card-final { 
-    background: #FFF; 
+    position: relative;
+    min-height: 560px;
+    background: #111;
+    background-image: linear-gradient(180deg, rgba(15,17,21,0.08), rgba(15,17,21,0.26)), url('https://cdn.shopify.com/s/files/1/0824/6319/5356/files/He090c30b17f04f96bc455dabb2de31e8X.webp?v=1782717917');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 0; 
     display: flex; 
     flex-direction: column; 
@@ -70,7 +80,44 @@
     overflow: hidden;
     border: 1px solid #EEE;
   }
-  .dd-evidence-img-main { width: 100%; height: auto; display: block; filter: contrast(1.02); }
+  .dd-evidence-overlay {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    max-width: min(360px, calc(100% - 44px));
+    box-sizing: border-box;
+    background: rgba(15,17,21,0.48);
+    padding: 16px 18px;
+    color: #FFF;
+  }
+  .dd-evidence-overlay span,
+  .dd-evidence-overlay strong,
+  .dd-evidence-overlay em {
+    display: block;
+    text-transform: uppercase;
+  }
+  .dd-evidence-overlay span {
+    margin-bottom: 10px;
+    color: #00A3AD;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 850;
+    letter-spacing: 1.4px;
+  }
+  .dd-evidence-overlay strong {
+    font-size: 21px;
+    font-weight: 850;
+    line-height: 1.05;
+    letter-spacing: 0;
+  }
+  .dd-evidence-overlay em {
+    margin-top: 12px;
+    color: rgba(255,255,255,0.72);
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 750;
+    letter-spacing: 1px;
+  }
 
   @media (max-width: 1024px) {
     .dd-hero-v5 { padding: 40px 0 60px; }
@@ -78,7 +125,8 @@
     .dd-hero-h1 { font-size: 40px; margin-bottom: 24px; }
     .dd-hero-lead { font-size: 15px; margin-bottom: 24px; }
     .dd-hero-content { padding-left: 0; }
-    .dd-evidence-card-final { transform: none; width: 100%; max-width: 540px; margin: 0 auto; }
+    .dd-evidence-card-final { transform: none; width: 100%; max-width: 540px; min-height: 520px; margin: 0 auto; }
+    .dd-evidence-overlay { top: 18px; left: 18px; max-width: calc(100% - 36px); }
   }
 </style>
 
