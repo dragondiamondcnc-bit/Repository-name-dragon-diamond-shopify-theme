@@ -1,0 +1,170 @@
+<!-- Why Choose Us Section - Industrial 5-Pillar Trust Framework -->
+{{ 'home-v2.css' | asset_url | stylesheet_tag }}
+
+<section class="why-choose-section v-5-pillar-layout">
+  <div class="why-container">
+    <div class="why-header">
+      <span class="why-subtitle">UNCOMPROMISING QUALITY & SERVICE</span>
+      <h2 class="why-title">WHY CHOOSE US?</h2>
+    </div>
+
+    <div class="why-grid">
+      <!-- Pillar 1: Expertise -->
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+        </div>
+        <h3 class="why-card-title">EXPERTISE</h3>
+        <p class="why-card-text">Over 10 years of engineering mastery ensuring stable, high-durability industrial equipment.</p>
+      </div>
+
+      <!-- Pillar 2: Consultation -->
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75" />
+          </svg>
+        </div>
+        <h3 class="why-card-title">CONSULTATION</h3>
+        <p class="why-card-text">One-on-one pre-sales advisory to tailor the optimal solution for your production goals.</p>
+      </div>
+
+      <!-- Pillar 3: Technical Support -->
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+          </svg>
+        </div>
+        <h3 class="why-card-title">TECHNICAL SUPPORT</h3>
+        <p class="why-card-text">Reliable overseas technical support providing a strong backup for your business continuity.</p>
+      </div>
+
+      <!-- Pillar 4: Free Guidance -->
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+          </svg>
+        </div>
+        <h3 class="why-card-title">FREE GUIDANCE</h3>
+        <p class="why-card-text">Complimentary expert guidance on operation and maintenance for seamless, efficient production.</p>
+      </div>
+
+      <!-- Pillar 5: Global Recognition -->
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="2" y1="12" x2="22" y2="12" />
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          </svg>
+        </div>
+        <h3 class="why-card-title">GLOBAL RECOGNITION</h3>
+        <p class="why-card-text">Globally recognized brand trusted by customers worldwide for reliable, long-term partnerships.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .why-choose-section.v-5-pillar-layout {
+    background: #ffffff !important;
+    padding: 100px 0 !important;
+    border-top: 1px solid #f5f5f5 !important;
+  }
+  .v-5-pillar-layout .why-container {
+    max-width: 1600px !important;
+    margin: 0 auto !important;
+    width: 95% !important;
+  }
+  .v-5-pillar-layout .why-header {
+    text-align: center !important;
+    margin-bottom: 70px !important;
+  }
+  .v-5-pillar-layout .why-subtitle {
+    font-size: 13px !important;
+    font-weight: 800 !important;
+    color: #006841 !important;
+    letter-spacing: 3px !important;
+    margin-bottom: 15px !important;
+    display: block !important;
+  }
+  .v-5-pillar-layout .why-title {
+    font-family: 'Archivo Narrow', sans-serif !important;
+    font-size: 42px !important;
+    font-weight: 800 !important;
+    color: #1a1a1a !important;
+    letter-spacing: 1px !important;
+  }
+  .v-5-pillar-layout .why-grid {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important; /* 5 Columns */
+    gap: 25px !important;
+  }
+  .v-5-pillar-layout .why-card {
+    padding: 35px 25px !important;
+    background: #fbfbfb !important;
+    border: 1px solid #f0f0f0 !important;
+    border-radius: 12px !important;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+  }
+  .v-5-pillar-layout .why-card:hover {
+    background: #ffffff !important;
+    border-color: #006841 !important;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.06) !important;
+    transform: translateY(-8px) !important;
+  }
+  .v-5-pillar-layout .why-icon {
+    width: 36px !important;
+    height: 36px !important;
+    color: #006841 !important;
+    margin-bottom: 25px !important;
+  }
+  .v-5-pillar-layout .why-card-title {
+    font-family: 'Archivo Narrow', sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 800 !important;
+    color: #1a1a1a !important;
+    margin-bottom: 15px !important;
+    line-height: 1.2 !important;
+    text-transform: uppercase !important;
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  .v-5-pillar-layout .why-card-text {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: #666 !important;
+    margin: 0 !important;
+  }
+
+  /* Responsive handling */
+  @media (max-width: 1400px) {
+    .v-5-pillar-layout .why-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  }
+  @media (max-width: 900px) {
+    .v-5-pillar-layout .why-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  }
+  @media (max-width: 600px) {
+    .v-5-pillar-layout .why-grid { grid-template-columns: 1fr !important; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Why Choose Us 5-Pillar",
+  "settings": [],
+  "presets": [{ "name": "Why Choose Us 5-Pillar" }]
+}
+{% endschema %}

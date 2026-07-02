@@ -1,0 +1,170 @@
+{% comment %}
+  Industrial Slideshow Section for DRAGON DIAMOND
+  Final 1920x1080 Layout (V3.8) - Composite Master Final (Force Upload)
+  Optimized for full viewport width with a 1.77:1 aspect ratio.
+{% endcomment %}
+
+<div class="main-slideshow-section">
+  
+  <div class="slideshow-container">
+    
+    <!-- Slide 1: CO2 Laser Showcase (V3.8 - Composite Master - 16:9 - White Text) -->
+    <div class="slide-item">
+      <div class="image-ratio-wrapper">
+        <img src="https://sc01.alicdn.com/kf/H83d7abd45bb245dc8cfd1c61900f5648R.png" 
+             alt="DRAGON DIAMOND CO2 Laser Cutting Machine - V3.8 Composite Master Final">
+      </div>
+      <a href="/products/lz-1390-industrial-co2-laser-cutting-machine" class="slide-link">Explore LZ-1390</a>
+    </div>
+
+    <!-- Slide 2: Manufacturing Mastery (16:9) -->
+    <div class="slide-item">
+      <div class="image-ratio-wrapper">
+        <img src="https://sc02.alicdn.com/kf/Aa1fe8b6b0b0e439e8ecfff756a2af698a.png" 
+             alt="13+ Years of Excellence">
+      </div>
+      <a href="/pages/about-us" class="slide-link">About Us</a>
+    </div>
+
+    <!-- Slide 3: Global Support (16:9) -->
+    <div class="slide-item">
+      <div class="image-ratio-wrapper">
+        <img src="https://sc02.alicdn.com/kf/A38e74dcb0f8d4535ab5f1f4c80ee1651Z.png" 
+             alt="24/7 Global Engineering Support">
+      </div>
+      <a href="/pages/contact-us" class="slide-link">Get Support</a>
+    </div>
+
+    <!-- Slide 4: Customization (16:9) -->
+    <div class="slide-item">
+      <div class="image-ratio-wrapper">
+        <img src="https://sc02.alicdn.com/kf/Af37f5132856645f48aead5ce526c7f52m.png" 
+             alt="Flexible Customization">
+      </div>
+      <a href="/pages/customization" class="slide-link">Custom Solutions</a>
+    </div>
+
+  </div>
+
+  <!-- Navigation Arrows -->
+  <div class="slideshow-nav">
+    <button onclick="prevSlide()">←</button>
+    <button onclick="nextSlide()">→</button>
+  </div>
+
+</div>
+
+<script>
+  let currentSlide = 0;
+  const totalSlides = 4;
+  
+  function showSlide(index) {
+    const container = document.querySelector('.slideshow-container');
+    if (index >= totalSlides) currentSlide = 0;
+    else if (index < 0) currentSlide = totalSlides - 1;
+    else currentSlide = index;
+    container.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+  
+  function nextSlide() { showSlide(currentSlide + 1); }
+  function prevSlide() { showSlide(currentSlide - 1); }
+
+  setInterval(nextSlide, 8000);
+</script>
+
+<style>
+.main-slideshow-section {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  background-color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+}
+
+@media screen and (min-width: 750px) {
+  .main-slideshow-section {
+    width: 100vw !important;
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
+.slideshow-container {
+  display: flex;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+}
+
+.slide-item {
+  min-width: 100%;
+  position: relative;
+  line-height: 0;
+}
+
+.image-ratio-wrapper {
+  position: relative;
+  width: 100% !important;
+  padding-top: 56.25%;
+}
+
+.image-ratio-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+  background-color: #FFFFFF;
+  display: block;
+}
+
+.slide-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  text-indent: -9999px;
+}
+
+.slideshow-nav {
+  position: absolute;
+  bottom: 30px;
+  right: 5%;
+  display: flex; gap: 15px;
+  z-index: 10;
+}
+
+.slideshow-nav button {
+  background: rgba(0,0,0,0.1);
+  border: 1px solid #008F5A;
+  color: #1A1A1B;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.slideshow-nav button:hover {
+  background-color: #008F5A !important;
+  color: #FFFFFF !important;
+}
+
+@media screen and (max-width: 749px) {
+  .slideshow-nav { display: none; }
+  .image-ratio-wrapper {
+    padding-top: 56.25% !important; 
+  }
+}
+</style>

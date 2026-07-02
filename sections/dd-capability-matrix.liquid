@@ -1,0 +1,62 @@
+{% comment %}
+  Dragon Diamond Capability Matrix V1
+  Industrial Evidence // Swiss Grid // 8px Spacing
+{% endcomment %}
+
+<section class="dd-matrix-v1">
+  <div class="dd-container">
+    <div class="dd-matrix-grid">
+      <div class="dd-matrix-item">
+        <span class="dd-matrix-label">COORD_PRECISION</span>
+        <strong class="dd-matrix-value">±0.01MM</strong>
+        <p class="dd-matrix-text">High-frequency axis synchronization for surgical cutting accuracy.</p>
+      </div>
+      <div class="dd-matrix-item">
+        <span class="dd-matrix-label">PROCESSING_FORMAT</span>
+        <strong class="dd-matrix-value">3000MM</strong>
+        <p class="dd-matrix-text">Large-scale industrial bed for full-sheet signage production.</p>
+      </div>
+      <div class="dd-matrix-item">
+        <span class="dd-matrix-label">DUTY_CYCLE</span>
+        <strong class="dd-matrix-value">24/7</strong>
+        <p class="dd-matrix-text">Engineered for continuous operation in high-volume environments.</p>
+      </div>
+      <div class="dd-matrix-item">
+        <span class="dd-matrix-label">FRAME_STABILITY</span>
+        <strong class="dd-matrix-value">99.8%</strong>
+        <p class="dd-matrix-text">Heavy-duty heat-treated steel frame for zero-vibration stability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "DD Capability Matrix",
+  "settings": [],
+  "presets": [{"name": "DD Capability Matrix"}]
+}
+{% endschema %}
+
+<style>
+  .dd-matrix-v1 { background: #F9FAFB; padding: 80px 0; border-bottom: 1px solid #EEE; }
+  .dd-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .dd-matrix-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; }
+  .dd-matrix-item { display: flex; flex-direction: column; }
+  .dd-matrix-label { font-size: 10px; letter-spacing: 2px; opacity: 0.5; margin-bottom: 12px; font-weight: 700; color: #0F1115; }
+  .dd-matrix-value { font-size: 28px; font-weight: 700; color: #0F1115; margin-bottom: 16px; letter-spacing: -0.5px; }
+  .dd-matrix-text { font-size: 13px; line-height: 1.6; opacity: 0.6; color: #0F1115; }
+
+  @media (max-width: 1024px) {
+    .dd-matrix-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  }
+  @media (max-width: 768px) {
+    .dd-matrix-grid { grid-template-columns: 1fr; }
+    .dd-matrix-v1 { padding: 48px 0; }
+  }
+</style>

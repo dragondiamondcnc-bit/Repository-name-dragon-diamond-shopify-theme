@@ -1,0 +1,43 @@
+<section class="industrial-core-section" style="background-color: #1A1A1B; color: #FFFFFF; padding: 60px 0;">
+  <div class="page-width" style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
+    <div class="image-side" style="flex: 1; min-width: 300px;">
+      <img src="{{ section.settings.image | image_url: width: 800 }}" alt="Industrial Core" style="width: 100%; border-radius: 8px; border: 1px solid #333;">
+    </div>
+    <div class="text-side" style="flex: 1; min-width: 300px;">
+      <h2 style="color: #FFFFFF; font-size: 28px; margin-bottom: 20px;">{{ section.settings.heading }}</h2>
+      <div class="rte" style="color: #CCC; line-height: 1.6;">
+        {{ section.settings.text }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Industrial Core",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Don't Just Take Our Word—See What's Inside."
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Genuine Reci Heart. Genuine Ruida Brain.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Industrial Core"
+    }
+  ]
+}
+{% endschema %}

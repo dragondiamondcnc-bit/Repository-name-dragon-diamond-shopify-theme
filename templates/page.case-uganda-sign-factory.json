@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "dd-case-uganda-sign-factory",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,60 @@
+{% comment %}
+  Customer Testimonials Section for DRAGON DIAMOND
+  Displays real feedback from industrial clients across the globe.
+{% endcomment %}
+
+<div class="testimonials-section" style="background-color: #F9F9F9; padding: 120px 0; border-top: 1px solid #EEEEEE;">
+  <div class="page-width">
+    <div class="section-header" style="text-align: center; margin-bottom: 70px;">
+      <h2 style="color: #1A1A1B; font-size: 36px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 800;">CUSTOMER TESTIMONIALS</h2>
+      <p style="color: #666; font-size: 16px; margin: 20px 0 0;">Global stories of industrial success powered by DRAGON DIAMOND.</p>
+      <div style="width: 70px; height: 4px; background-color: #008F5A; margin: 15px auto 0;"></div>
+    </div>
+
+    <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px;">
+      
+      <!-- Signage (Italy) -->
+      <div class="testimonial-item" style="background-color: #FFFFFF; padding: 45px; border-radius: 8px; box-shadow: 0 15px 45px rgba(0,0,0,0.06); position: relative; display: flex; flex-direction: column;">
+        <div class="quote-icon" style="position: absolute; top: 25px; left: 25px; font-size: 50px; color: #008F5A; opacity: 0.15; line-height: 1;">“</div>
+        <div class="rating" style="margin-bottom: 25px; color: #FFB400; font-size: 18px;">★★★★★</div>
+        <p style="color: #1A1A1B; line-height: 1.7; margin-bottom: 35px; font-size: 16px; font-style: italic; flex-grow: 1;">
+          "The <strong>DRAGON DIAMOND</strong> LZ-1390 is the most stable 130W laser in our workshop. The 400KG+ frame is the real differentiator."
+        </p>
+        <div class="client-info" style="display: flex; align-items: center; gap: 20px; border-top: 1px solid #F0F0F0; padding-top: 25px;">
+          <div class="client-avatar" style="width: 55px; height: 55px; border-radius: 50%; background: #1A1A1B; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 20px; border: 2px solid #008F5A;">FR</div>
+          <div>
+            <strong style="display: block; font-size: 17px; color: #1A1A1B;">Fabio R.</strong>
+            <span style="font-size: 13px; color: #008F5A; text-transform: uppercase; font-weight: 600;">CEO (Italy)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Factory (Mexico) -->
+      <div class="testimonial-item" style="background-color: #FFFFFF; padding: 45px; border-radius: 8px; box-shadow: 0 15px 45px rgba(0,0,0,0.06); position: relative; display: flex; flex-direction: column;">
+        <div class="quote-icon" style="position: absolute; top: 25px; left: 25px; font-size: 50px; color: #008F5A; opacity: 0.15; line-height: 1;">“</div>
+        <div class="rating" style="margin-bottom: 25px; color: #FFB400; font-size: 18px;">★★★★★</div>
+        <p style="color: #1A1A1B; line-height: 1.7; margin-bottom: 35px; font-size: 16px; font-style: italic; flex-grow: 1;">
+          "Their 24/7 technical support is world-class. A true manufacturing partner we can rely on."
+        </p>
+        <div class="client-info" style="display: flex; align-items: center; gap: 20px; border-top: 1px solid #F0F0F0; padding-top: 25px;">
+          <div class="client-avatar" style="width: 55px; height: 55px; border-radius: 50%; background: #1A1A1B; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 20px; border: 2px solid #008F5A;">CM</div>
+          <div>
+            <strong style="display: block; font-size: 17px; color: #1A1A1B;">Carlos M.</strong>
+            <span style="font-size: 13px; color: #008F5A; text-transform: uppercase; font-weight: 600;">Production Lead (Mexico)</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+@media screen and (max-width: 989px) {
+  .testimonials-grid { grid-template-columns: 1fr; gap: 30px; }
+}
+@media screen and (max-width: 749px) {
+  .testimonial-item { padding: 30px; }
+  .section-header h2 { font-size: 28px !important; }
+}
+</style>

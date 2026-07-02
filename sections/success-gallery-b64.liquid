@@ -1,0 +1,208 @@
+<section class="success-gallery-section v-base64-v9" id="success-gallery-{{ section.id }}">
+  <div class="container-v2">
+    <div class="section-header-v2">
+      <h2 class="section-title-v2">SUCCESS CASE GALLERY</h2>
+      <p class="section-subtitle-v2">Explore how Dragon Diamond's Industrial 4.0 solutions empower global signage, textile, and furniture manufacturers.</p>
+    </div>
+
+    <div class="success-grid">
+      <div class="success-card">
+        <div class="card-image-wrapper">
+          <img src="https://sc01.alicdn.com/kf/H724740e42dd24a6f93f4c7d211467496j.png" alt="Gallery Image" loading="lazy">
+          <span class="industry-tag">SIGNAGE</span>
+        </div>
+        <div class="card-info">
+          <h3 class="card-title" data-b64="56CH6K6G6aKG6IiqICjpnZ7m娲插Sk">...</h3>
+          <p class="card-market" data-b64="5biC5Zy6OiDpnZ7m娲洲IC8g5bC85pel5Yip5LqaIC8g5ouJ5qC85pav">...</p>
+          <p class="card-desc" data-b64="6auY57Kพ5bqm5Lqa5YWL5Yqb5YiH5Ymy77yM5omT6YCgIDNEIOmauOerr+WTgeeMueagh+ivhuS4juWxl+ekuuOAgQ==">...</p>
+          <a href="/pages/contact" class="card-link">VIEW SOLUTION &rarr;</a>
+        </div>
+      </div>
+
+      <div class="success-card">
+        <div class="card-image-wrapper">
+          <img src="https://sc01.alicdn.com/kf/Hbb59fa86a8404b7f9ffa7a197985b759t.png" alt="Gallery Image" loading="lazy">
+          <span class="industry-tag">TEXTILE</span>
+        </div>
+        <div class="card-info">
+          <h3 class="card-title" data-b64="57qn57uH57Kพ5a+GICjku4TlhLnlipllipvlhYvmlq/ln6Yp">...</h3>
+          <p class="card-market" data-b64="5biC5Zy6OiDku4TlhLnlipllipvlhYvmlq/ln6YgLyDkuK3kupogLyDloZTku4DlubI=">...</p>
+          <p class="card-desc" data-b64="6Ieq5Yqo5YyW5r+A5YWJ6KOB5Ymy77yM5o+Q5Y2H5aSn55S75bmF57qn57uH6Z2面5paZ5YmK5bel5pWI546H44CC">...</p>
+          <a href="/pages/contact" class="card-link">VIEW SOLUTION &rarr;</a>
+        </div>
+      </div>
+
+      <div class="success-card">
+        <div class="card-image-wrapper">
+          <img src="https://sc01.alicdn.com/kf/H5592889fd05a4926af9c895580fc0a58l.png" alt="Gallery Image" loading="lazy">
+          <span class="industry-tag">FURNITURE</span>
+        </div>
+        <div class="card-info">
+          <h3 class="card-title" data-b64="5a6a5Yi25a625YW3ICjmoLzpsYflkInkupopeQ==">...</h3>
+          <p class="card-market" data-b64="5biC5Zy6OiDmoLzpsYflkInkuponIC8g56ys5q+U5Yip5pavIChHb2NoYSDlhYjnlJ8p">...</p>
+          <p class="card-desc" data-b64="QVRDIOiHquWKqOaNouiImiBDTkMg6Lev55Sx6Kej5Yaz5pa55qGIIO+8jOa7oei2s+auuOerr+WutuaXtuWutuaItoOAgQ==">...</p>
+          <a href="/pages/contact" class="card-link">VIEW SOLUTION &rarr;</a>
+        </div>
+      </div>
+
+      <div class="success-card">
+        <div class="card-image-wrapper">
+          <img src="https://sc01.alicdn.com/kf/H909e78c2eeb54708a31b02b6b4ca8e9aQ.png" alt="Gallery Image" loading="lazy">
+          <span class="industry-tag">ACRYLIC</span>
+        </div>
+        <div class="card-info">
+          <h3 class="card-title" data-b64="5Lqa5YWL5Yqb6K6+6K6hICjku43lpKflipkp">...</h3>
+          <p class="card-market" data-b64="5biC5Zy6OiDku43lpKflipkgLyDlqIHlsLnlsq8gLyDlt6XkuJro6K6+6K6h">...</p>
+          <p class="card-desc" data-b64="6YWN5aSH5LiT55SoIFVWIHN5c3RlbSDvvIzlrp7njrDlpI3mnaLkuqaY5YWL5Yqb6YOo5Lu255qE6auY6YCf5YiH5Ymy44CC">...</p>
+          <a href="/pages/contact" class="card-link">VIEW SOLUTION &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function() {
+    function b64DecodeUnicode(str) {
+        return decodeURIComponent(atob(str).split('').map(function(c) {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        }).join(''));
+    }
+    function inject() {
+      document.querySelectorAll('[data-b64]').forEach(el => {
+        const b64 = el.getAttribute('data-b64');
+        try {
+            el.textContent = b64DecodeUnicode(b64);
+        } catch(e) { console.error('B64 Error:', e); }
+      });
+    }
+    if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', inject); }
+    else { inject(); }
+  })();
+</script>
+
+<style>
+  .success-gallery-section.v-base64-v9 {
+    background: #ffffff !important;
+    padding: 80px 0 !important;
+    font-family: "Archivo Narrow", sans-serif !important;
+    display: block !important;
+  }
+  .v-base64-v9 .container-v2 {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    width: 95% !important;
+  }
+  .v-base64-v9 .section-header-v2 {
+    text-align: center !important;
+    margin-bottom: 50px !important;
+  }
+  .v-base64-v9 .section-title-v2 {
+    font-size: 32px !important;
+    font-weight: 800 !important;
+    color: #1a1a1a !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    margin: 0 0 10px 0 !important;
+  }
+  .v-base64-v9 .section-subtitle-v2 {
+    font-size: 14px !important;
+    color: #888 !important;
+    max-width: 700px !important;
+    margin: 0 auto !important;
+  }
+  .v-base64-v9 .success-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    width: 100% !important;
+  }
+  .v-base64-v9 .success-card {
+    background: #ffffff !important;
+    border: 1px solid #f0f0f0 !important;
+    padding: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    transition: all 0.3s ease !important;
+    width: calc(25% - 20px) !important;
+    min-width: 260px !important;
+    box-sizing: border-box !important;
+  }
+  .v-base64-v9 .card-image-wrapper {
+    position: relative !important;
+    width: 180px !important;
+    height: 180px !important;
+    margin-bottom: 20px !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    border: 1px solid #f5f5f5 !important;
+  }
+  .v-base64-v9 .card-image-wrapper img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+  .v-base64-v9 .industry-tag {
+    position: absolute !important;
+    top: 8px !important;
+    left: 8px !important;
+    background: #006841 !important;
+    color: #ffffff !important;
+    font-size: 9px !important;
+    font-weight: 700 !important;
+    padding: 4px 10px !important;
+    border-radius: 2px !important;
+    text-transform: uppercase !important;
+    z-index: 10 !important;
+  }
+  .v-base64-v9 .card-title {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: #1a1a1a !important;
+    margin: 0 0 8px 0 !important;
+    min-height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1.2 !important;
+  }
+  .v-base64-v9 .card-market {
+    font-size: 11px !important;
+    color: #006841 !important;
+    font-weight: 700 !important;
+    margin-bottom: 10px !important;
+  }
+  .v-base64-v9 .card-desc {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+    color: #666 !important;
+    margin-bottom: 20px !important;
+    min-height: 54px !important;
+  }
+  .v-base64-v9 .card-link {
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    color: #006841 !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+  }
+
+  @media (max-width: 1100px) {
+    .v-base64-v9 .success-card { width: calc(50% - 15px) !important; }
+  }
+  @media (max-width: 600px) {
+    .v-base64-v9 .success-card { width: 100% !important; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Success Gallery B64",
+  "settings": [],
+  "presets": [{ "name": "Success Gallery B64" }]
+}
+{% endschema %}

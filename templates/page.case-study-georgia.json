@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "dd-case-study-002",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,91 @@
+{% comment %}
+  DD Home Hero V5 - Solution Provider Focus (Final Locked Version)
+  Positioning: Sign Manufacturing Solution Provider
+  Layout: 60/40 Split
+  Visual: Single Consolidated Uganda Evidence Image (V2)
+{% endcomment %}
+
+<section class="dd-hero-v5" id="hero-v5">
+  <div class="dd-container">
+    <div class="dd-hero-grid">
+      
+      <!-- 1. SOLUTION IDENTITY (60%) -->
+      <div class="dd-hero-content">
+        <div class="dd-industry-badge">Built For Sign Production Teams</div>
+        <h1 class="dd-hero-h1">Production Solutions For Sign Manufacturers</h1>
+        <p class="dd-hero-lead">
+          Verified production deployments across multiple international markets, helping sign manufacturers build and expand production capabilities with CO2 laser, CNC router, fiber laser, and UV printing solutions.
+        </p>
+        
+        <div class="dd-systems-preview">
+          <span>CO2 Laser</span> <span class="dot">·</span> 
+          <span>CNC Router</span> <span class="dot">·</span> 
+          <span>Fiber Laser</span> <span class="dot">·</span> 
+          <span>UV Flatbed</span>
+        </div>
+
+        <div class="dd-hero-actions">
+          <a href="#v2_1_conversion" class="dd-btn-v5">Request A Quote</a>
+        </div>
+      </div>
+
+      <!-- 2. CONSOLIDATED EVIDENCE CARD (40%) -->
+      <div class="dd-hero-visual">
+        <div class="dd-evidence-card-final">
+          <img src="https://cdn.shopify.com/s/files/1/0824/6319/5356/files/Hf0fbb561a54e458497085c4c25537c27S.webp?v=1782649890" alt="Uganda Verified Deployment Evidence" class="dd-evidence-img-main">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Base Reset & Variables */
+  .dd-hero-v5 { padding: 60px 0 80px; background: #FFF; overflow: hidden; border-bottom: 1px solid #EEE; }
+  .dd-hero-grid { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 80px; align-items: center; }
+
+  /* Left: Content - Proportional Balance */
+  .dd-hero-content { padding-left: 40px; }
+  .dd-industry-badge { display: inline-block; background: #00A3AD; color: #FFF; padding: 6px 14px; font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 32px; }
+  .dd-hero-h1 { font-size: 56px; font-weight: 850; color: #111; line-height: 0.95; letter-spacing: -3px; margin: 0 0 32px; text-transform: uppercase; font-family: 'Archivo Narrow', sans-serif; }
+  .dd-hero-lead { font-size: 18px; line-height: 1.6; color: rgba(15,17,21,0.7); max-width: 580px; margin-bottom: 32px; }
+  
+  .dd-systems-preview { font-size: 13px; font-weight: 700; color: #111; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 40px; border-top: 1px solid #EEE; padding-top: 24px; display: flex; align-items: center; gap: 12px; }
+  .dd-systems-preview .dot { color: #00A3AD; font-size: 20px; }
+
+  .dd-btn-v5 { background: #111; color: #FFF; padding: 22px 48px; text-decoration: none; font-weight: 800; letter-spacing: 1.5px; display: inline-block; font-size: 13px; transition: 0.3s; }
+  .dd-btn-v5:hover { background: #00A3AD; }
+
+  /* Right: Consolidated Evidence Card - Industrial Quality */
+  .dd-evidence-card-final { 
+    background: #FFF; 
+    padding: 0; 
+    display: flex; 
+    flex-direction: column; 
+    box-shadow: 0 40px 80px rgba(0,0,0,0.08); 
+    transform: scale(1.02); 
+    transform-origin: center right; 
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #EEE;
+  }
+  .dd-evidence-img-main { width: 100%; height: auto; display: block; filter: contrast(1.02); }
+
+  @media (max-width: 1024px) {
+    .dd-hero-v5 { padding: 40px 0 60px; }
+    .dd-hero-grid { grid-template-columns: 1fr; gap: 48px; }
+    .dd-hero-h1 { font-size: 40px; margin-bottom: 24px; }
+    .dd-hero-lead { font-size: 15px; margin-bottom: 24px; }
+    .dd-hero-content { padding-left: 0; }
+    .dd-evidence-card-final { transform: none; width: 100%; max-width: 540px; margin: 0 auto; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "DD Home Hero V5",
+  "settings": [],
+  "presets": [{"name": "DD Home Hero V5"}]
+}
+{% endschema %}

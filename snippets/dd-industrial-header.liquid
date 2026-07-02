@@ -1,0 +1,139 @@
+{% comment %}
+  Dragon Diamond Industrial Header V4.1
+  FINAL LOCK: Navigation + Slogan System
+{% endcomment %}
+
+<header class="dd-industrial-header">
+  <div class="dd-container">
+    <div class="dd-header-inner">
+      <div class="dd-header-logo">
+        <a href="/">DRAGON DIAMOND</a>
+        <div class="dd-header-slogan">
+          <span class="dd-slogan-primary">Global Laser Solution</span>
+          <span class="dd-slogan-secondary">For Sign Manufacturing & Industrial Fabrication</span>
+        </div>
+      </div>
+      
+      <nav class="dd-header-nav">
+        <a href="/">HOME</a>
+        <a href="/#v2-workflows">SOLUTIONS</a>
+        <a href="/#v2-systems">PRODUCTS</a>
+        <a href="/pages/case-studies">CASE STUDIES</a>
+        <a href="/pages/support">SUPPORT</a>
+        <a href="/pages/about-us">ABOUT US</a>
+        <a href="/pages/contact">CONTACT</a>
+      </nav>
+      
+      <div class="dd-header-actions">
+        <a href="/pages/contact" class="dd-header-btn">TECHNICAL CONSULTATION</a>
+      </div>
+      
+      <button class="dd-menu-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<style>
+  .dd-industrial-header {
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    z-index: 1000;
+    background: rgba(15, 17, 21, 0.98);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .dd-header-inner {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dd-header-logo a {
+    font-size: 18px;
+    font-weight: 850;
+    color: #FFF;
+    text-decoration: none;
+    letter-spacing: 1px;
+    display: block;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .dd-header-slogan {
+    margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .dd-slogan-primary {
+    font-size: 10px;
+    font-weight: 700;
+    color: #00A3AD;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .dd-slogan-secondary {
+    font-size: 8px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .dd-header-nav { display: flex; gap: 32px; }
+  .dd-header-nav a {
+    font-size: 11px;
+    font-weight: 700;
+    color: #FFF;
+    text-decoration: none;
+    letter-spacing: 2px;
+    opacity: 0.5;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+  }
+  .dd-header-nav a:hover { opacity: 1; color: #00A3AD; }
+
+  .dd-header-btn {
+    padding: 14px 28px;
+    font-size: 10px;
+    font-weight: 800;
+    color: #FFF;
+    background: #00A3AD;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .dd-menu-toggle { display: none; background: none; border: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .dd-menu-toggle span { display: block; width: 22px; height: 1px; background: #FFF; transition: 0.3s; }
+
+  @media (max-width: 1200px) {
+    .dd-header-nav { gap: 20px; }
+    .dd-header-logo a { font-size: 16px; }
+  }
+
+  @media (max-width: 1024px) {
+    .dd-header-nav, .dd-header-actions { display: none; }
+    .dd-header-nav.is-active {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 90px;
+      left: 0;
+      width: 100%;
+      background: #0F1115;
+      padding: 40px;
+      gap: 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .dd-menu-toggle { display: flex; }
+  }
+</style>

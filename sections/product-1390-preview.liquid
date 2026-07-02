@@ -1,0 +1,181 @@
+<!-- 
+  Product Template: 1390 Expert Layout V2.0 
+  Style: Industrial 4.0 / Advanced Gallery
+  Compatibility: 1300x900mm CO2 Laser Machine
+-->
+{{ 'home-v2.css' | asset_url | stylesheet_tag }}
+
+<div class="p-1390-wrapper">
+  <!-- 1. HERO SECTION -->
+  <section class="p-1390-hero">
+    <div class="p-container">
+      <div class="p-hero-grid">
+        <!-- Left: Image Gallery (Advanced Carousel) -->
+        <div class="p-hero-gallery">
+          <div class="main-img-wrapper">
+            <img src="https://sc01.alicdn.com/kf/S71806385d8984950a312e75e9b889ebdp.jpg" alt="LZ-1390 CO2 Laser Machine" id="main-product-img">
+          </div>
+          
+          <div class="thumb-carousel-container">
+            <button class="nav-arrow left" onclick="scrollThumbs(-1)">&#8249;</button>
+            <div class="thumb-scroll-window" id="thumb-scroll">
+              <div class="thumb-grid-v2">
+                 <img src="https://sc01.alicdn.com/kf/S71806385d8984950a312e75e9b889ebdp.jpg" class="thumb-v2 active" onclick="changeImg(this)">
+                 <img src="https://sc01.alicdn.com/kf/S34e9e42930264026857f620f4c9359e38.jpg" class="thumb-v2" onclick="changeImg(this)">
+                 <img src="https://sc01.alicdn.com/kf/Sf3b5f799298e4bc39294248464efc7893.jpg" class="thumb-v2" onclick="changeImg(this)">
+                 <img src="https://sc01.alicdn.com/kf/S053075c2e0b144b6b66e60b21703c162X.jpg" class="thumb-v2" onclick="changeImg(this)">
+                 <img src="https://sc01.alicdn.com/kf/S8f9c1f6c4491410684f0975e6488a034q.jpg" class="thumb-v2" onclick="changeImg(this)">
+                 <img src="https://sc01.alicdn.com/kf/Sf65511b0e9984918901f4c39c8949826v.jpg" class="thumb-v2" onclick="changeImg(this)">
+              </div>
+            </div>
+            <button class="nav-arrow right" onclick="scrollThumbs(1)">&#8250;</button>
+          </div>
+        </div>
+
+        <!-- Right: Purchase Info -->
+        <div class="p-hero-content">
+          <h1 class="p-title">LZ-1390 | Industrial CO2 Laser Cutting & Engraving Machine</h1>
+          <p class="p-description">Intelligent and high-quality LZ-1390 CO2 laser cutter with integrated cooling and exhaust systems, providing you with professional and versatile material processing solutions.</p>
+          
+          <div class="p-info-block">
+            <h4 class="info-header">Key Features:</h4>
+            <ol class="info-list">
+              <li>Equipped with high-precision HIWIN linear guide rails for stable movement.</li>
+              <li>Genuine RECI CO2 laser tube ensures long lifespan and stable output.</li>
+              <li>Advanced Ruida 6445G control system with multi-language support.</li>
+              <li>Industrial-grade heavy-duty frame effectively reduces vibration during high-speed work.</li>
+              <li>Motorized up-down table supports materials up to 300mm thickness.</li>
+            </ol>
+          </div>
+
+          <div class="p-info-block">
+            <h4 class="info-header">Configuration Highlights:</h4>
+            <ul class="info-list bullet">
+              <li><strong>Working Area:</strong> 1300mm x 900mm</li>
+              <li><strong>Laser Power:</strong> 90W / 100W / 130W / 150W (Optional)</li>
+              <li><strong>Cooling Mode:</strong> CW5200 Industrial Water Chiller</li>
+              <li><strong>Position Accuracy:</strong> ±0.01mm</li>
+              <li><strong>Software:</strong> RDWorks / LightBurn (Optional)</li>
+            </ul>
+          </div>
+
+          <div class="p-info-block">
+            <h4 class="info-header">Applicable Industries:</h4>
+            <ul class="info-list bullet">
+              <li><strong>Advertising & Signage:</strong> Letter cutting, logo engraving, and acrylic fabrication.</li>
+              <li><strong>Manufacturing:</strong> Models, woodcrafts, furniture, and industrial parts.</li>
+              <li><strong>Textiles:</strong> Precision leather and fabric cutting for fashion and upholstery.</li>
+              <li><strong>Gifts & Personalization:</strong> Custom engraving on glass, wood, and marble.</li>
+            </ul>
+          </div>
+
+          <div class="p-actions">
+            <a href="/pages/contact" class="btn-primary-v2">GET A QUOTE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. TRUST BAR -->
+  <section class="p-trust-bar">
+    <div class="p-container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <span class="icon">✓</span>
+          <div class="text">
+            <strong>Source Factory</strong>
+            <span>Direct Price & Support</span>
+          </div>
+        </div>
+        <div class="trust-item">
+          <span class="icon">✓</span>
+          <div class="text">
+            <strong>Global Warranty</strong>
+            <span>2-Year Full Coverage</span>
+          </div>
+        </div>
+        <div class="trust-item">
+          <span class="icon">✓</span>
+          <div class="text">
+            <strong>Pro Tech Team</strong>
+            <span>24/7 Remote Assistance</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  /* 1390 ADVANCED LAYOUT */
+  .p-1390-wrapper { background: #fff; font-family: 'Archivo Narrow', sans-serif; }
+  .p-container { max-width: 1300px; margin: 0 auto; width: 95%; }
+  
+  .p-1390-hero { padding: 60px 0; }
+  .p-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+  
+  /* GALLERY (Matching Reference Image) */
+  .p-hero-gallery { position: sticky; top: 20px; }
+  .main-img-wrapper { border: 1px solid #f0f0f0; margin-bottom: 20px; background: #fff; }
+  .main-img-wrapper img { width: 100%; height: auto; display: block; }
+  
+  .thumb-carousel-container { position: relative; display: flex; align-items: center; gap: 10px; padding: 0 30px; }
+  .thumb-scroll-window { overflow-x: auto; scroll-behavior: smooth; display: flex; scrollbar-width: none; -ms-overflow-style: none; }
+  .thumb-scroll-window::-webkit-scrollbar { display: none; }
+  
+  .thumb-grid-v2 { display: flex; gap: 10px; padding: 5px 0; }
+  .thumb-v2 { width: 85px; height: 85px; object-fit: cover; border: 1px solid #ddd; cursor: pointer; transition: 0.2s; flex-shrink: 0; }
+  .thumb-v2:hover { border-color: #004d30; }
+  .thumb-v2.active { border-color: #006841; border-width: 2px; }
+
+  .nav-arrow { position: absolute; background: #fff; border: 1px solid #ddd; color: #666; width: 24px; height: 50px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; z-index: 5; transition: 0.2s; }
+  .nav-arrow:hover { background: #f5f5f5; color: #000; }
+  .nav-arrow.left { left: 0; }
+  .nav-arrow.right { right: 0; }
+
+  /* CONTENT (Matching Reference Image) */
+  .p-title { font-size: 28px; font-weight: 800; color: #1a1a1a; margin: 0 0 15px 0; line-height: 1.2; }
+  .p-description { font-size: 15px; color: #555; line-height: 1.6; margin-bottom: 25px; }
+  
+  .p-info-block { margin-bottom: 25px; }
+  .info-header { font-size: 16px; font-weight: 800; color: #1a1a1a; margin-bottom: 12px; }
+  .info-list { padding-left: 18px; margin: 0; list-style-type: decimal; }
+  .info-list li { font-size: 14px; color: #555; margin-bottom: 8px; line-height: 1.4; }
+  .info-list.bullet { list-style-type: disc; }
+  .info-list.bullet li strong { color: #333; }
+  
+  .p-actions { margin-top: 35px; }
+  .btn-primary-v2 { background: #004d30; color: #fff; text-decoration: none; padding: 15px 45px; font-weight: 700; font-size: 14px; border-radius: 2px; display: inline-block; transition: 0.3s; letter-spacing: 0.5px; }
+  .btn-primary-v2:hover { background: #006841; }
+  
+  /* TRUST BAR */
+  .p-trust-bar { padding: 30px 0; border-top: 1px solid #f0f0f0; }
+  .trust-grid { display: flex; gap: 40px; }
+  .trust-item { display: flex; align-items: center; gap: 12px; }
+  .trust-item .icon { color: #006841; font-weight: 900; }
+  .trust-item strong { font-size: 14px; color: #1a1a1a; }
+  .trust-item span { font-size: 12px; color: #888; margin-left: 5px; }
+
+  @media (max-width: 900px) {
+    .p-hero-grid { grid-template-columns: 1fr; }
+    .p-hero-gallery { position: static; }
+  }
+</style>
+
+<script>
+function changeImg(el) {
+  const main = document.getElementById('main-product-img');
+  main.src = el.src;
+  
+  const thumbs = document.querySelectorAll('.thumb-v2');
+  thumbs.forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+}
+
+function scrollThumbs(direction) {
+  const container = document.getElementById('thumb-scroll');
+  const scrollAmount = 100;
+  container.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+}
+</script>

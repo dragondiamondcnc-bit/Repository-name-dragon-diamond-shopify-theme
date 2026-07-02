@@ -1,0 +1,96 @@
+{% comment %}
+  DD Home Verification V2 - Pre-Purchase Audit
+  Industrial Audit Style
+{% endcomment %}
+<section class="dd-home-verification">
+  <div class="dd-container">
+    <div class="dd-section-header">
+      <span class="dd-sub">RISK_REDUCTION // VERIFICATION_PROTOCOL</span>
+      <h2 class="dd-title">VERIFIED BEFORE PURCHASE.</h2>
+      <p class="dd-section-lead">Every system is documented through factory inspection, machine testing, configuration review, and pre-shipment verification to ensure production readiness.</p>
+    </div>
+
+    <div class="dd-verification-slider">
+      <!-- 01 Factory Visit -->
+      <div class="dd-verify-card">
+        <div class="dd-v-num">01</div>
+        <div class="dd-v-media">
+          <img src="https://cdn.shopify.com/s/files/1/0824/6319/5356/t/1/assets/israel-factory-visit-hero.jpg?v=1780650886" alt="Factory Visit Verification">
+        </div>
+        <div class="dd-v-info">
+          <h4>FACTORY VISIT</h4>
+          <p>On-site verification of facility, engineering team, and production scale. (CASE_004 Israel)</p>
+        </div>
+      </div>
+
+      <!-- 02 Machine Inspection -->
+      <div class="dd-verify-card">
+        <div class="dd-v-num">02</div>
+        <div class="dd-v-media">
+          <img src="https://cdn.shopify.com/s/files/1/0824/6319/5356/t/1/assets/georgia-factory-assembly-2023.jpg?v=1780650886" alt="Machine Inspection">
+        </div>
+        <div class="dd-v-info">
+          <h4>MACHINE INSPECTION</h4>
+          <p>Pre-purchase component audit and structural verification under customer supervision.</p>
+        </div>
+      </div>
+
+      <!-- 03 Material Testing -->
+      <div class="dd-verify-card">
+        <div class="dd-v-num">03</div>
+        <div class="dd-v-media">
+          <img src="https://cdn.shopify.com/s/files/1/0824/6319/5356/t/1/assets/georgia-factory-testing-v3.jpg?v=1780650886" alt="Material Testing">
+        </div>
+        <div class="dd-v-info">
+          <h4>MATERIAL TESTING</h4>
+          <p>Specific material processing verified to confirm cutting precision and edge quality.</p>
+        </div>
+      </div>
+
+      <!-- 04 Pre-Shipment -->
+      <div class="dd-verify-card">
+        <div class="dd-v-num">04</div>
+        <div class="dd-v-media">
+          <img src="https://cdn.shopify.com/s/files/1/0824/6319/5356/t/1/assets/israel-machine-front-view.jpg?v=1780650886" alt="Pre-Shipment Verification">
+        </div>
+        <div class="dd-v-info">
+          <h4>PRE-SHIPMENT AUDIT</h4>
+          <p>Final system log and export-grade protective crating verification before handover.</p>
+        </div>
+      </div>
+
+      <!-- 05 Remote Support -->
+      <div class="dd-verify-card">
+        <div class="dd-v-num">05</div>
+        <div class="dd-v-media">
+          <img src="https://sc01.alicdn.com/kf/A3e4f0d8eee9c4f47b81bfa6ad09ff5f2f.jpg" alt="Remote Commissioning">
+        </div>
+        <div class="dd-v-info">
+          <h4>REMOTE SUPPORT</h4>
+          <p>Direct technical session for installation guidance and production launch parameters.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .dd-home-verification { padding: 120px 0; background: #FFF; }
+  .dd-section-lead { font-size: 16px; color: #555; max-width: 800px; margin-bottom: 64px; line-height: 1.6; }
+  .dd-verification-slider { display: flex; gap: 24px; overflow-x: auto; padding-bottom: 40px; }
+  .dd-verify-card { flex: 0 0 320px; background: #F9FAFB; border: 1px solid #EEE; padding: 24px; }
+  .dd-v-num { font-size: 11px; font-weight: 700; color: #00A3AD; margin-bottom: 20px; font-family: 'Archivo Narrow', sans-serif; }
+  .dd-v-media { aspect-ratio: 1/1; overflow: hidden; margin-bottom: 24px; background: #EEE; }
+  .dd-v-media img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); }
+  .dd-verify-card:hover .dd-v-media img { filter: grayscale(0); }
+  .dd-v-info h4 { font-size: 15px; font-weight: 800; margin: 0 0 12px; letter-spacing: 1px; }
+  .dd-v-info p { font-size: 13px; color: #666; margin: 0; line-height: 1.5; }
+</style>
+
+{% schema %}
+{
+  "name": "DD Home Verification",
+  "settings": [],
+  "presets": [{"name": "DD Home Verification"}]
+}
+{% endschema %}

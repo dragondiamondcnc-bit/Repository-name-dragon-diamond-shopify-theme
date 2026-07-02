@@ -1,0 +1,115 @@
+/* 
+  Dragon Diamond Industrial Global V4 Master Stylesheet
+  Core Philosophy: Cold Industrial / Swiss Grid / Monochrome Authority
+*/
+
+:root {
+  --dd-black: #0F1115;
+  --dd-white: #FFFFFF;
+  --dd-cyan: #00A3AD;
+  --dd-border: rgba(15, 17, 21, 0.1);
+  --dd-bg-light: #F9FAFB;
+  --dd-bg-dark: #0F1115;
+  --dd-text-muted: rgba(15, 17, 21, 0.6);
+  --dd-easing: cubic-bezier(0.19, 1, 0.22, 1);
+  --dd-grid: 8px;
+}
+
+/* Base resets & typography */
+.dd-industrial-v4 {
+  font-family: 'Archivo Narrow', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: var(--dd-black);
+}
+
+.dd-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+/* Common Components */
+.dd-sub {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: var(--dd-cyan);
+  display: block;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.dd-title {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin: 0 0 32px;
+  text-transform: uppercase;
+}
+
+.dd-section-header {
+  margin-bottom: 64px;
+  max-width: 800px;
+}
+
+/* Shared Buttons */
+.dd-btn-solid {
+  background: var(--dd-black);
+  color: #FFF;
+  padding: 20px 40px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s linear;
+}
+
+.dd-btn-solid:hover {
+  background: #000;
+  color: var(--dd-cyan);
+}
+
+.dd-btn-outline {
+  background: transparent;
+  color: var(--dd-black);
+  padding: 20px 40px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid var(--dd-black);
+  transition: all 0.2s linear;
+}
+
+.dd-btn-outline:hover {
+  background: var(--dd-black);
+  color: #FFF;
+}
+
+/* Industrial Grid System (8px) */
+.dd-grid-8 { display: grid; gap: calc(var(--dd-grid) * 3); }
+
+/* Engineering Guide Components */
+.dd-guide-v1 { padding: 120px 0; background: #FFF; }
+.dd-guide-header { margin-bottom: 80px; border-bottom: 1px solid #EEE; padding-bottom: 64px; }
+.dd-guide-meta { font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #00A3AD; margin-bottom: 24px; display: block; }
+.dd-guide-title { font-size: 56px; line-height: 1; font-weight: 700; letter-spacing: -2px; margin: 0 0 32px; text-transform: uppercase; }
+.dd-guide-lead { font-size: 20px; line-height: 1.6; opacity: 0.7; max-width: 800px; }
+
+.dd-guide-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 100px; }
+.dd-guide-body h2 { font-size: 24px; font-weight: 700; letter-spacing: 1px; margin: 64px 0 32px; text-transform: uppercase; border-left: 4px solid #00A3AD; padding-left: 24px; }
+.dd-guide-body p { font-size: 16px; line-height: 1.8; opacity: 0.8; margin-bottom: 32px; }
+
+.dd-tech-callout { background: #F9FAFB; padding: 48px; border: 1px solid #EEE; margin: 48px 0; }
+.dd-tech-callout h4 { font-size: 13px; font-weight: 700; letter-spacing: 2px; margin: 0 0 16px; color: #00A3AD; }
+.dd-tech-callout p { font-size: 14px; margin: 0; }
+
+.dd-sidebar-block { margin-bottom: 64px; }
+.dd-sidebar-block h4 { font-size: 12px; font-weight: 700; letter-spacing: 2px; margin-bottom: 24px; opacity: 0.5; }
+.dd-download-box { background: #0F1115; color: #FFF; padding: 32px; }
+.dd-download-box h5 { font-size: 14px; font-weight: 700; margin: 0 0 16px; letter-spacing: 1px; }
+.dd-download-btn { display: inline-block; background: #00A3AD; color: #FFF; padding: 12px 24px; text-decoration: none; font-size: 11px; font-weight: 700; letter-spacing: 2px; width: 100%; text-align: center; box-sizing: border-box; }

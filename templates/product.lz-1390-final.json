@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "lz-1390-final",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

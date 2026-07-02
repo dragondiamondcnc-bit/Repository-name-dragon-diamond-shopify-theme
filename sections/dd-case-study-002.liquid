@@ -1,0 +1,508 @@
+{% comment %}
+  Dragon Diamond Case Study - Georgia Furniture Workshop
+  Phase VII-A // Hero SEO + Decision Timeline + Featured Equipment + H2 Semantics
+  Documentary Style // Evidence-Based Trust Architecture
+{% endcomment %}
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&display=swap');
+
+  .dd-case-georgia-final {
+    background: #0F1115;
+    color: #FFF;
+    font-family: 'Archivo Narrow', sans-serif;
+    overflow-x: hidden;
+  }
+
+  .dd-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .dd-kicker {
+    font-family: "Archivo Narrow", sans-serif;
+    color: #00A3AD;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    display: block;
+    border-left: 3px solid #00A3AD;
+    padding-left: 16px;
+  }
+
+  .dd-section-title {
+    font-size: 42px;
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin: 0 0 24px;
+    color: #fff;
+  }
+
+  .dd-section-copy {
+    max-width: 760px;
+    font-size: 17px;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.68);
+  }
+
+  /* HERO SECTION */
+  .dd-hero-georgia { position: relative; width: 100%; height: 85vh; overflow: hidden; background: #000; }
+  .dd-hero-bg { width: 100%; height: 100%; }
+  .dd-hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+  .dd-hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(15,17,21,0.95) 0%, rgba(15,17,21,0.6) 50%, rgba(15,17,21,0) 100%); display: flex; align-items: center; }
+  .dd-hero-text { max-width: 820px; }
+  
+  .dd-hero-title { font-size: 72px; line-height: 1.05; font-weight: 800; margin-bottom: 24px; letter-spacing: -2px; color: #fff; text-transform: uppercase; }
+  
+  /* HERO SEO SUBHEADLINE */
+  .dd-hero-seo-line {
+    max-width: 760px;
+    margin-bottom: 42px;
+    font-size: 21px;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.78);
+    font-weight: 500;
+  }
+
+  .dd-hero-cta { display: flex; gap: 20px; }
+  .dd-btn-primary { background: #00A3AD; color: #FFF; padding: 20px 36px; font-weight: 800; font-size: 13px; text-decoration: none; letter-spacing: 1px; text-transform: uppercase; display: inline-block; }
+  .dd-btn-secondary { border: 1px solid rgba(255,255,255,0.3); color: #FFF; padding: 20px 36px; font-weight: 800; font-size: 13px; text-decoration: none; letter-spacing: 1px; text-transform: uppercase; display: inline-block; }
+
+  /* OVERVIEW GRID */
+  .dd-overview-grid { background: #11141A; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .dd-ov-columns { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .dd-ov-item { padding: 48px 0; border-right: 1px solid rgba(255,255,255,0.05); display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .dd-ov-item:last-child { border-right: none; }
+  .dd-ov-item span { font-family: "Archivo Narrow", sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 2px; color: #00A3AD; margin-bottom: 12px; text-transform: uppercase; }
+  .dd-ov-item strong { font-size: 18px; font-weight: 800; letter-spacing: 1px; color: #fff; }
+  .status-referral { color: #00A3AD !important; }
+
+  /* DECISION TIMELINE */
+  .dd-decision-timeline {
+    padding: 110px 0;
+    background: #11141A;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .dd-timeline-grid {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 18px;
+  }
+
+  .dd-timeline-step {
+    position: relative;
+    min-height: 190px;
+    padding: 28px 22px;
+    background: #171A20;
+    border: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .dd-timeline-step::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -18px;
+    width: 18px;
+    height: 1px;
+    background: rgba(0,163,173,0.45);
+  }
+
+  .dd-timeline-step:last-child::after {
+    display: none;
+  }
+
+  .dd-step-num {
+    font-family: "Archivo Narrow", sans-serif;
+    font-size: 13px;
+    color: #00A3AD;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+  }
+
+  .dd-step-title {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
+  .dd-step-copy {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.58);
+  }
+
+  /* DOCUMENTARY MODULES */
+  .dd-doc-section { padding: 110px 0; }
+  .dd-dark { background: #0F1115; }
+  .dd-white { background: #FFF; color: #111; }
+  .dd-white .dd-section-title { color: #111; }
+  .dd-white .dd-section-copy { color: #555; }
+  
+  .dd-doc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 56px; }
+  .dd-doc-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 56px; }
+  .dd-doc-card { display: flex; flex-direction: column; }
+  
+  .dd-evidence-frame-v3 {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    background: #181B20;
+    overflow: hidden;
+    margin-bottom: 24px;
+    border: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .dd-evidence-label {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    z-index: 2;
+    padding: 7px 10px;
+    background: rgba(15,17,21,0.85);
+    border: 1px solid rgba(0,163,173,0.45);
+    color: #fff;
+    font-family: "Archivo Narrow", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+  }
+
+  .dd-evidence-img { width: 100%; height: 100%; object-fit: cover; }
+  .dd-vertical-adjust { height: 480px !important; object-fit: contain !important; background: #181B20; }
+  
+  .dd-card-caption { font-family: "Archivo Narrow", sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; color: #00A3AD; margin-bottom: 12px; text-transform: uppercase; }
+  .dd-card-desc { font-size: 15px; line-height: 1.65; color: rgba(255,255,255,0.6); }
+  .dd-white .dd-card-desc { color: #555; }
+  .dd-white .dd-card-caption { color: #00A3AD; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 12px; }
+
+  /* FEATURED EQUIPMENT */
+  .dd-featured-equipment {
+    padding: 110px 0;
+    background: #11141A;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .dd-equipment-panel {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    background: #171A20;
+    border: 1px solid rgba(255,255,255,0.07);
+    padding: 46px;
+  }
+
+  .dd-equipment-name {
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  .dd-equipment-specs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 32px;
+  }
+
+  .dd-spec {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 16px;
+  }
+
+  .dd-spec span {
+    display: block;
+    font-family: "Archivo Narrow", sans-serif;
+    color: #00A3AD;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  .dd-spec strong {
+    font-size: 16px;
+    color: #fff;
+  }
+
+  .dd-equipment-cta {
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* QUOTES MATRIX */
+  .dd-quotes-matrix { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 56px; }
+  .dd-quote-unit { position: relative; padding-left: 60px; }
+  .dd-quote-large { font-family: serif; font-size: 80px; color: #00A3AD; position: absolute; top: -10px; left: 0; opacity: 0.2; line-height: 1; }
+  .dd-quote-unit p { font-size: 20px; font-weight: 800; font-style: italic; line-height: 1.3; color: #fff; }
+
+  /* MOBILE RESPONSIVE */
+  @media (max-width: 1024px) {
+    .dd-container { padding: 0 22px; }
+    .dd-hero-georgia { height: auto; }
+    .dd-hero-title { font-size: 42px; }
+    .dd-hero-seo-line { font-size: 18px; }
+    .dd-ov-columns { grid-template-columns: repeat(2, 1fr); }
+    .dd-timeline-grid, .dd-doc-grid, .dd-doc-grid-2, .dd-equipment-panel, .dd-quotes-matrix { grid-template-columns: 1fr; }
+    .dd-timeline-step::after { display: none; }
+    .dd-timeline-step { min-height: auto; }
+    .dd-evidence-frame-v3 { height: 280px; }
+    .dd-vertical-adjust { height: 360px !important; }
+    .dd-equipment-specs { grid-template-columns: 1fr; }
+  }
+</style>
+
+<div class="dd-case-georgia-final">
+  <!-- SECTION 01: HERO -->
+  <header class="dd-hero-georgia">
+    <div class="dd-hero-bg">
+      <img src="https://sc02.alicdn.com/kf/A21a6f4b6f987470cb208f13ec8b08bacN.png" alt="Dragon Diamond CNC Router 1325 installed in Georgia furniture manufacturing facility">
+    </div>
+    
+    <div class="dd-hero-overlay">
+      <div class="dd-container">
+        <div class="dd-hero-text">
+          <span class="dd-kicker">CASE STUDY: GEORGIA</span>
+          <h1 class="dd-hero-title">Furniture Workshop:<br>Referral Trust & Repeat Order</h1>
+          <p class="dd-hero-seo-line">How a Georgia woodworking business expanded from a referral-based CNC installation in 2023 to a high-capacity ATC CNC Router deployment in 2026.</p>
+          <div class="dd-hero-cta">
+            <a href="#consultation" class="dd-btn-primary">REQUEST MACHINE RECOMMENDATION</a>
+            <a href="#consultation" class="dd-btn-secondary">GET A QUOTE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 02: OVERVIEW -->
+  <section class="dd-overview-grid">
+    <div class="dd-container">
+      <div class="dd-ov-columns">
+        <div class="dd-ov-item"><span>LOCATION</span><strong>GEORGIA</strong></div>
+        <div class="dd-ov-item"><span>INDUSTRY</span><strong>WOODWORKING</strong></div>
+        <div class="dd-ov-item"><span>MACHINE</span><strong>LZ-1325 + 2128 ATC</strong></div>
+        <div class="dd-ov-item"><span>SOURCE</span><strong class="status-referral">REPEAT CUSTOMER</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 03: DECISION TIMELINE -->
+  <section class="dd-decision-timeline">
+    <div class="dd-container">
+      <span class="dd-kicker">01. DEPLOYMENT TIMELINE</span>
+      <h2 class="dd-section-title">A Journey of Technical Trust</h2>
+      <p class="dd-section-copy">Spanning four years, this timeline illustrates the growth from a local referral to a large-scale industrial deployment in Georgia.</p>
+      
+      <div class="dd-timeline-grid">
+        <div class="dd-timeline-step">
+          <div class="dd-step-num">STEP 01</div>
+          <div class="dd-step-title">REFERRAL</div>
+          <p class="dd-step-copy">Customer saw Dragon Diamond machines running at a local peer workshop.</p>
+        </div>
+        <div class="dd-timeline-step">
+          <div class="dd-step-num">STEP 02</div>
+          <div class="dd-step-title">FIRST ORDER</div>
+          <p class="dd-step-copy">2023: Deployment of the first 1325 CNC Router for furniture parts.</p>
+        </div>
+        <div class="dd-timeline-step">
+          <div class="dd-step-num">STEP 03</div>
+          <div class="dd-step-title">PRODUCTION</div>
+          <p class="dd-step-copy">Daily manufacturing confirmed machine durability and accuracy.</p>
+        </div>
+        <div class="dd-timeline-step">
+          <div class="dd-step-num">STEP 04</div>
+          <div class="dd-step-title">EXPANSION</div>
+          <p class="dd-step-copy">2026: Decision to upgrade to Automatic Tool Changer (ATC) system.</p>
+        </div>
+        <div class="dd-timeline-step">
+          <div class="dd-step-num">STEP 05</div>
+          <div class="dd-step-title">CUSTOM CONFIG</div>
+          <p class="dd-step-copy">Designing a 2100x2800mm large table for countertop processing.</p>
+        </div>
+        <div class="dd-timeline-step">
+          <div class="dd-step-num">STEP 06</div>
+          <div class="dd-step-title">QC TESTING</div>
+          <p class="dd-step-copy">Factory verification of ATC spindle and tool bank alignment.</p>
+        </div>
+        <div class="dd-timeline-step">
+          <div class="dd-step-num">STEP 07</div>
+          <div class="dd-step-title">DEPLOYMENT</div>
+          <p class="dd-step-copy">Successful sea export and integration into Georgia facility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 04: THE REFERRAL START -->
+  <section class="dd-doc-section dd-white">
+    <div class="dd-container">
+      <h2 class="dd-kicker">02. WHERE THE REFERRAL STARTED</h2>
+      <div class="dd-section-title">Peer Verification & Real-World Proof</div>
+      <div class="dd-doc-grid-2">
+        <div class="dd-doc-card">
+          <div class="dd-evidence-frame-v3">
+            <span class="dd-evidence-label">SITE AUDIT</span>
+            <img src="https://sc01.alicdn.com/kf/A95141ab4e2294e30b87af68888ffaaf98.jpg" alt="Peer workshop in Georgia" class="dd-evidence-img">
+          </div>
+          <p class="dd-card-caption">PEER WORKSHOP PROOF</p>
+          <p class="dd-card-desc">The customer witnessed the LZ-1325 running reliably in a neighboring factory before contacting our team.</p>
+        </div>
+        <div class="dd-doc-card">
+          <div class="dd-evidence-frame-v3">
+            <span class="dd-evidence-label">CHAT LOG</span>
+            <img src="https://sc02.alicdn.com/kf/Ae94d057ad33c44b6b85994da96973189i.png" alt="Customer WhatsApp Inquiry" class="dd-evidence-img dd-vertical-adjust">
+          </div>
+          <p class="dd-card-caption">INITIAL INQUIRY</p>
+          <p class="dd-card-desc">Verification of the machine model seen at the referral workshop to ensure spec matching.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 05: REPEAT PURCHASE EVIDENCE -->
+  <section class="dd-doc-section dd-dark">
+    <div class="dd-container">
+      <h2 class="dd-kicker">03. REPEAT PURCHASE IN 2026: ATC DEPLOYMENT</h2>
+      <div class="dd-section-title">Scaling with Industrial Automation</div>
+      <div class="dd-doc-grid-2">
+        <div class="dd-doc-card">
+          <div class="dd-evidence-frame-v3">
+            <span class="dd-evidence-label">ORDER LOG</span>
+            <img src="https://sc01.alicdn.com/kf/Adf752a43e9c243fd9d28f17f6b65336cc.jpg" alt="2026 ATC CNC Order" class="dd-evidence-img dd-vertical-adjust">
+          </div>
+          <p class="dd-card-caption">REPEAT ORDER CONFIRMED</p>
+          <p class="dd-card-desc">Discussion for the upgraded 2100x2800mm table size to handle large countertop tiles.</p>
+        </div>
+        <div class="dd-doc-card">
+          <div class="dd-evidence-frame-v3">
+            <span class="dd-evidence-label">QC LOG</span>
+            <img src="https://sc01.alicdn.com/kf/A202f475557324a20ab9c688469d64cd8e.jpg" alt="ATC QC Testing" class="dd-evidence-img">
+          </div>
+          <p class="dd-card-caption">TECHNICAL UPGRADE</p>
+          <p class="dd-card-desc">Verification of the automatic tool changer (ATC) system before the 2026 export.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 06: FEATURED EQUIPMENT -->
+  <section class="dd-featured-equipment">
+    <div class="dd-container">
+      <span class="dd-kicker">CORE TECHNOLOGY</span>
+      <h2 class="dd-section-title">Featured Production System</h2>
+      
+      <div class="dd-equipment-panel">
+        <div class="dd-equipment-info">
+          <h3 class="dd-equipment-name">LZ-1325 ATC CNC Router <br>Furniture Edition</h3>
+          <p class="dd-section-copy">Equipped with a 9KW high-frequency spindle and 12-slot linear tool changer for seamless furniture component production.</p>
+          
+          <div class="dd-equipment-specs">
+            <div class="dd-spec"><span>WORKING AREA</span><strong>1300 x 2500 mm / 2100 x 2800 mm</strong></div>
+            <div class="dd-spec"><span>TOOL CHANGER</span><strong>8/12 Slots Linear ATC</strong></div>
+            <div class="dd-spec"><span>SPINDLE POWER</span><strong>9.0KW Air-Cooled</strong></div>
+            <div class="dd-spec"><span>VACUUM SYSTEM</span><strong>High-Flow 7.5KW Pump</strong></div>
+          </div>
+        </div>
+        <div class="dd-equipment-cta">
+          <a href="/products/lz-1325-atc-cnc-router" class="dd-btn-primary">VIEW PRODUCT SPECS</a>
+          <a href="#consultation" class="dd-btn-secondary">CUSTOMIZE MY SYSTEM</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 07: PRODUCTION ASSETS -->
+  <section class="dd-doc-section dd-white" id="results">
+    <div class="dd-container">
+      <h2 class="dd-kicker">04. PROJECTS PRODUCED BY THE WORKSHOP</h2>
+      <div class="dd-section-title">Diverse Furniture Manufacturing</div>
+      <div class="dd-doc-grid">
+        <div class="dd-doc-card">
+          <div class="dd-evidence-frame-v3">
+            <span class="dd-evidence-label">STORAGE</span>
+            <img src="https://sc02.alicdn.com/kf/A71bfb29364b7434797f0e00a38139549l.png" alt="Wooden decorative storage" class="dd-evidence-img">
+          </div>
+          <p class="dd-card-caption">DECORATIVE STORAGE</p>
+          <p class="dd-card-desc">Intricate wooden storage units produced for the local Georgia market.</p>
+        </div>
+        <div class="dd-doc-card">
+          <div class="dd-evidence-frame-v3">
+            <span class="dd-evidence-label">CABINETRY</span>
+            <img src="https://sc02.alicdn.com/kf/Ab0b11a47abc744869132377a9098cc30q.png" alt="Furniture components" class="dd-evidence-img">
+          </div>
+          <p class="dd-card-caption">FURNITURE COMPONENTS</p>
+          <p class="dd-card-desc">Precision-milled panels for custom cabinetry and furniture assembly.</p>
+        </div>
+        <div class="dd-doc-card">
+          <div class="dd-evidence-frame-v3">
+            <span class="dd-evidence-label">LOGISTICS</span>
+            <img src="https://sc02.alicdn.com/kf/Ac6846eae53cf433abd83efd4d463c3f6A.png" alt="Secure Packing" class="dd-evidence-img">
+          </div>
+          <p class="dd-card-caption">ZERO-DAMAGE PACKING</p>
+          <p class="dd-card-desc">Export-standard reinforcement ensures structural integrity during sea transit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 08: THE TRUST MATRIX -->
+  <section class="dd-doc-section dd-dark">
+    <div class="dd-container">
+      <h2 class="dd-kicker">05. THE TRUST MATRIX</h2>
+      <div class="dd-section-title">Why Repeat Orders Matter</div>
+      <p class="dd-section-copy">The strongest evidence of reliability is not the first machine—it is the decision to return for the second. This case study demonstrates a multi-year partnership built on performance.</p>
+      
+      <div class="dd-quotes-matrix">
+        <div class="dd-quote-unit">
+          <span class="dd-quote-large">“</span>
+          <p>We saw machine which another customer bought in your company... Is it exactly this machine?</p>
+          <div style="font-size: 8px; opacity: 0.4; margin-top: 10px; letter-spacing: 2px;">2023: FIRST CONTACT</div>
+        </div>
+        <div class="dd-quote-unit">
+          <span class="dd-quote-large">“</span>
+          <p>We want the size of the work table to be 2.10*2.80 so that we can put a countertop tile.</p>
+          <div style="font-size: 8px; opacity: 0.4; margin-top: 10px; letter-spacing: 2px;">2026: CAPACITY EXPANSION</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 09: FINAL CTA -->
+  <section class="dd-doc-section dd-white" id="consultation">
+    <div class="dd-container" style="text-align: center;">
+      <h2 class="dd-section-title">Need Similar Results For Your Workshop?</h2>
+      <p class="dd-section-copy" style="margin: 0 auto 48px;">Whether you're starting with your first CNC or upgrading to an automated ATC system, our team provides the technical roadmap for your success.</p>
+      <div class="dd-hero-cta" style="justify-content: center;">
+        <a href="#consultation" class="dd-btn-primary">GET MACHINE RECOMMENDATION</a>
+        <a href="#consultation" class="dd-btn-secondary">REQUEST A QUOTE</a>
+      </div>
+      
+      <div style="margin-top: 80px; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 40px; text-align: left;">
+        <a href="/pages/case-studies" style="font-size: 10px; font-weight: 700; letter-spacing: 2px; color: #000; opacity: 0.5; text-decoration: none;">← ALL CASE STUDIES</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "DD Case Study 002 Georgia",
+  "settings": [],
+  "presets": [{"name": "DD Case Study 002 Georgia"}]
+}
+{% endschema %}

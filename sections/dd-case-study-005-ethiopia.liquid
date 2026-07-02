@@ -1,0 +1,679 @@
+{% comment %}
+  Dragon Diamond CASE_005 Ethiopia
+  Evidence-First Documentary Version (Visual V2 - Israel Framework)
+  Focus: Discovery → Factory Audit → Technical Verification → Training → Logistics
+{% endcomment %}
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&display=swap');
+
+  .dd-ethiopia-case-v2 {
+    background: #0F1115;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+  }
+
+  .dd-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .dd-kicker {
+    font-family: "Archivo Narrow", sans-serif;
+    color: #00A3AD;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    display: block;
+  }
+
+  .dd-section {
+    padding: 110px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .dd-section-light {
+    background: #fff;
+    color: #111;
+  }
+
+  .dd-section-dark {
+    background: #0F1115;
+  }
+
+  .dd-section-mid {
+    background: #11141A;
+  }
+
+  .dd-title {
+    font-size: 54px;
+    line-height: 1.05;
+    font-weight: 850;
+    letter-spacing: -2px;
+    margin: 0 0 28px;
+  }
+
+  .dd-h2 {
+    font-size: 42px;
+    line-height: 1.12;
+    font-weight: 850;
+    letter-spacing: -1px;
+    margin: 0 0 24px;
+  }
+
+  .dd-copy {
+    max-width: 780px;
+    font-size: 18px;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.68);
+  }
+
+  .dd-section-light .dd-copy {
+    color: #555;
+  }
+
+  .dd-hero {
+    position: relative;
+    min-height: 86vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .dd-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .dd-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .55;
+  }
+
+  .dd-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(15,17,21,.96) 0%, rgba(15,17,21,.72) 48%, rgba(15,17,21,.18) 100%);
+    z-index: 1;
+  }
+
+  .dd-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+  }
+
+  .dd-hero-sub {
+    font-size: 21px;
+    line-height: 1.6;
+    color: rgba(255,255,255,.76);
+    max-width: 760px;
+    margin-bottom: 42px;
+  }
+
+  .dd-hero-cta {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .dd-btn-primary,
+  .dd-btn-secondary {
+    display: inline-block;
+    padding: 18px 32px;
+    font-size: 13px;
+    font-weight: 850;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .dd-btn-primary {
+    background: #00A3AD;
+    color: #fff;
+  }
+
+  .dd-btn-secondary {
+    border: 1px solid rgba(255,255,255,.28);
+    color: #fff;
+  }
+
+  .dd-overview {
+    background: #11141A;
+  }
+
+  .dd-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .dd-overview-item {
+    padding: 44px 26px;
+    border-right: 1px solid rgba(255,255,255,.06);
+    text-align: center;
+  }
+
+  .dd-overview-item:last-child {
+    border-right: none;
+  }
+
+  .dd-overview-item span {
+    display: block;
+    font-family: "Archivo Narrow", sans-serif;
+    color: #00A3AD;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .dd-overview-item strong {
+    font-size: 18px;
+    font-weight: 850;
+  }
+
+  .dd-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 42px;
+    margin-top: 56px;
+  }
+
+  .dd-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 34px;
+    margin-top: 56px;
+  }
+
+  .dd-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    margin-top: 56px;
+  }
+
+  .dd-evidence-card {
+    background: #171A20;
+    border: 1px solid rgba(255,255,255,.07);
+  }
+
+  .dd-img-frame {
+    position: relative;
+    height: 360px;
+    overflow: hidden;
+    background: #181B20;
+  }
+
+  .dd-img-frame.tall {
+    height: 520px;
+  }
+
+  .dd-img-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .dd-label {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    z-index: 2;
+    padding: 7px 11px;
+    background: rgba(15,17,21,.84);
+    border: 1px solid rgba(0,163,173,.48);
+    color: #fff;
+    font-family: "Archivo Narrow", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+  }
+
+  .dd-card-body {
+    padding: 24px;
+  }
+
+  .dd-card-title {
+    font-family: "Archivo Narrow", sans-serif;
+    color: #00A3AD;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .dd-card-text {
+    font-size: 15px;
+    line-height: 1.65;
+    color: rgba(255,255,255,.62);
+  }
+
+  .dd-timeline {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 14px;
+  }
+
+  .dd-step {
+    background: #171A20;
+    border: 1px solid rgba(255,255,255,.07);
+    padding: 24px 18px;
+    min-height: 170px;
+  }
+
+  .dd-step-num {
+    font-family: "Archivo Narrow", sans-serif;
+    color: #00A3AD;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+
+  .dd-step-title {
+    font-size: 17px;
+    font-weight: 850;
+    margin-bottom: 10px;
+  }
+
+  .dd-step-copy {
+    font-size: 14px;
+    line-height: 1.55;
+    color: rgba(255,255,255,.58);
+  }
+
+  .dd-equipment-panel {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 40px;
+    background: #171A20;
+    border: 1px solid rgba(255,255,255,.07);
+    padding: 46px;
+  }
+
+  .dd-equipment-name {
+    font-size: 34px;
+    line-height: 1.12;
+    font-weight: 850;
+    margin-bottom: 20px;
+  }
+
+  .dd-spec-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 34px;
+  }
+
+  .dd-spec {
+    border-top: 1px solid rgba(255,255,255,.1);
+    padding-top: 16px;
+  }
+
+  .dd-spec span {
+    display: block;
+    font-family: "Archivo Narrow", sans-serif;
+    color: #00A3AD;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .dd-spec strong {
+    font-size: 16px;
+  }
+
+  @media (max-width: 1024px) {
+    .dd-overview-grid, .dd-grid-2, .dd-grid-3, .dd-grid-4, .dd-timeline, .dd-equipment-panel, .dd-spec-grid {
+      grid-template-columns: 1fr;
+    }
+    .dd-img-frame, .dd-img-frame.tall { height: auto; }
+    .dd-section { padding: 76px 0; }
+  }
+</style>
+
+<div class="dd-ethiopia-case-v2">
+
+  <!-- HERO -->
+  <header class="dd-hero">
+    <div class="dd-hero-bg">
+      <img
+        src="https://sc02.alicdn.com/kf/A40abebafe10d44009c1d8f37f7cd0e06E.png"
+        alt="Ethiopian customer visiting Dragon Diamond factory for CNC and Laser verification"
+        loading="eager"
+      >
+    </div>
+
+    <div class="dd-container">
+      <div class="dd-hero-inner">
+        <span class="dd-kicker">CASE STUDY: ETHIOPIA · ADVERTISING & SIGNAGE</span>
+        <h1 class="dd-title">From ChatGPT Search To Factory Verification</h1>
+        <p class="dd-hero-sub">
+          An Addis Ababa signage company discovered Dragon Diamond through ChatGPT, then traveled to Guangzhou to verify our manufacturing capability before deploying a complete advertising production solution.
+        </p>
+
+        <div class="dd-hero-cta">
+          <a href="#consultation" class="dd-btn-primary">Request Factory Tour Info</a>
+          <a href="#consultation" class="dd-btn-secondary">Get a Quote</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- OVERVIEW -->
+  <section class="dd-overview">
+    <div class="dd-container">
+      <div class="dd-overview-grid">
+        <div class="dd-overview-item">
+          <span>Location</span>
+          <strong>Ethiopia (Addis Ababa)</strong>
+        </div>
+        <div class="dd-overview-item">
+          <span>Industry</span>
+          <strong>Advertising & Signage</strong>
+        </div>
+        <div class="dd-overview-item">
+          <span>Solution</span>
+          <strong>CNC Router + CO2 Laser</strong>
+        </div>
+        <div class="dd-overview-item">
+          <span>Status</span>
+          <strong>Production Running</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISCOVERY JOURNEY -->
+  <section class="dd-section dd-section-dark">
+    <div class="dd-container">
+      <span class="dd-kicker">01. THE DISCOVERY</span>
+      <h2 class="dd-h2">Global sourcing starts with digital trust.</h2>
+      <p class="dd-copy">
+        The customer used ChatGPT to find reliable CNC router and laser cutting machine suppliers in China for their new signage production facility in Ethiopia. Dragon Diamond was identified as a top recommendation for factory-direct engineering.
+      </p>
+
+      <div class="dd-timeline">
+        <div class="dd-step">
+          <div class="dd-step-num">01</div>
+          <div class="dd-step-title">Discovery</div>
+          <div class="dd-step-copy">Found Dragon Diamond via ChatGPT while researching signage equipment.</div>
+        </div>
+        <div class="dd-step">
+          <div class="dd-step-num">02</div>
+          <div class="dd-step-title">Audit</div>
+          <div class="dd-step-copy">Flew to Guangzhou for a comprehensive physical factory audit.</div>
+        </div>
+        <div class="dd-step">
+          <div class="dd-step-num">03</div>
+          <div class="dd-step-title">Validation</div>
+          <div class="dd-step-copy">Performed live material tests on PVC, Acrylic, and MDF boards.</div>
+        </div>
+        <div class="dd-step">
+          <div class="dd-step-num">04</div>
+          <div class="dd-step-title">Training</div>
+          <div class="dd-step-copy">Completed 3-day on-site technical training at the factory.</div>
+        </div>
+        <div class="dd-step">
+          <div class="dd-step-num">05</div>
+          <div class="dd-step-title">Delivery</div>
+          <div class="dd-step-copy">Export-grade packaging and container loading for Addis Ababa.</div>
+        </div>
+        <div class="dd-step">
+          <div class="dd-step-num">06</div>
+          <div class="dd-step-title">Launch</div>
+          <div class="dd-step-copy">Full production launched in Ethiopia for local signage market.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACTORY VERIFICATION -->
+  <section class="dd-section dd-section-dark">
+    <div class="dd-container">
+      <span class="dd-kicker">02. MACHINE VERIFICATION</span>
+      <h2 class="dd-h2">Testing the limits of precision before export.</h2>
+      <p class="dd-copy">
+        The customer verified camera-assisted contour cutting, spindle stability, and edge quality on real advertising materials before final shipment confirmation.
+      </p>
+
+      <div class="dd-grid-4">
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <span class="dd-label">CONTOUR CUTTING</span>
+            <img src="https://sc01.alicdn.com/kf/Ac15df9101a4147e59abab72c68eb22d0o.png" alt="Camera-assisted contour cutting in factory" loading="lazy">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">CONTOUR PRECISION</div>
+            <div class="dd-card-text">Verification of camera-assisted cutting on printed PVC foam board.</div>
+          </div>
+        </div>
+
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <span class="dd-label">PVC ROUTING</span>
+            <img src="https://sc01.alicdn.com/kf/A4929117a0e344064b9360b54ed59a519i.png" alt="PVC lettering precision routing" loading="lazy">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">LETTERING QUALITY</div>
+            <div class="dd-card-text">Testing smooth edge finishes on PVC advertising materials.</div>
+          </div>
+        </div>
+
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <span class="dd-label">LIVE TESTING</span>
+            <img src="https://sc01.alicdn.com/kf/A012052b8a58e486ca431fb0429928fcfx.jpg" alt="Customer observing live testing" loading="lazy">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">ON-SITE AUDIT</div>
+            <div class="dd-card-text">Direct observation of machine performance on the factory floor.</div>
+          </div>
+        </div>
+
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <span class="dd-label">TECH REVIEW</span>
+            <img src="https://sc02.alicdn.com/kf/Ab3fe7b455806491a9bb2f9b77552cb48A.png" alt="Technical requirement review" loading="lazy">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">SPEC CONFIRMATION</div>
+            <div class="dd-card-text">Finalizing machine configuration with the engineering team.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNICAL TRAINING -->
+  <section class="dd-section dd-section-mid">
+    <div class="dd-container">
+      <span class="dd-kicker">03. TECHNICAL TRAINING</span>
+      <h2 class="dd-h2">Ensuring factory-level precision from day one.</h2>
+      <p class="dd-copy">
+        A comprehensive training cycle covered software workflow, nesting efficiency, parameter configuration, and hands-on controller practice.
+      </p>
+
+      <div class="dd-grid-4">
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame tall">
+            <span class="dd-label">SOFTWARE</span>
+            <img src="https://sc02.alicdn.com/kf/A17477961d4c84a3798f25561c9f9b2acG.png" alt="Software Workflow Training" loading="lazy">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">Digital Workflow</div>
+            <div class="dd-card-text">Mastering nesting and toolpath optimization for sign production.</div>
+          </div>
+        </div>
+
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame tall">
+            <span class="dd-label">PARAMETERS</span>
+            <img src="https://sc02.alicdn.com/kf/A2202b42ebe314b48b51a7e4230661e17d.png" alt="Parameter Configuration Training" loading="lazy">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">Process Optimization</div>
+            <div class="dd-card-text">Fine-tuning speeds and power settings for different materials.</div>
+          </div>
+        </div>
+
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame tall">
+            <span class="dd-label">OPERATION</span>
+            <img src="https://sc02.alicdn.com/kf/A3ea0c6d090404ff1928c3c5e2f69d7be0.png" alt="Controller Operation Training" loading="lazy">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">Hands-On Practice</div>
+            <div class="dd-card-text">Mastering the DSP controller for autonomous machine operation.</div>
+          </div>
+        </div>
+
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame tall">
+            <span class="dd-label">DOCUMENTATION</span>
+            <img src="https://sc01.alicdn.com/kf/A78a42bdcddd445d39b8ad391033794fa2.png" alt="Technical Documentation Transfer" loading="lazy">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">Knowledge Transfer</div>
+            <div class="dd-card-text">Receiving operation manuals and maintenance protocols.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPMENT CONFIGURATION -->
+  <section class="dd-section dd-section-dark">
+    <div class="dd-container">
+      <span class="dd-kicker">04. EQUIPMENT SOLUTION</span>
+      <h2 class="dd-h2">A dual-system setup for full advertising capability.</h2>
+      
+      <div class="dd-grid-2">
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <span class="dd-label">CO2 LASER</span>
+            <img src="https://sc02.alicdn.com/kf/A1c0a05f90fdf42e6bdeacae7722f5d273.png" alt="LZ-1390 CO2 Laser" loading="lazy">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">LZ-1390 LASER CUTTER</div>
+            <div class="dd-card-text">Used for high-speed acrylic cutting, polishing, and precise engraving of advertising components.</div>
+          </div>
+        </div>
+
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <span class="dd-label">CNC ROUTER</span>
+            <img src="https://sc01.alicdn.com/kf/Ad9d3714b68ef4b7eb64cfb061596f265W.png" alt="Advertising CNC Router" loading="lazy">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">SIGNAGE CNC ROUTER</div>
+            <div class="dd-card-text">A heavy-duty system for routing PVC, ACP, and MDF boards for large-scale outdoor signage.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGISTICS & LOADING -->
+  <section class="dd-section dd-section-mid">
+    <div class="dd-container">
+      <span class="dd-kicker">05. LOGISTICS & DELIVERY</span>
+      <h2 class="dd-h2">Trans-Africa delivery from Guangzhou to Ethiopia.</h2>
+      
+      <div class="dd-grid-2">
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <span class="dd-label">EXPORT CRATING</span>
+            <img src="https://sc02.alicdn.com/kf/Af48a1d7f8d554a938c41f97486e969a5p.png" alt="Wooden crate packaging" loading="lazy">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">PROTECTIVE PACKAGING</div>
+            <div class="dd-card-text">Export-grade wooden crating ensures safe transit across international shipping routes.</div>
+          </div>
+        </div>
+
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <span class="dd-label">CONTAINER LOADING</span>
+            <img src="https://sc01.alicdn.com/kf/Ab2d8ec11322f462f9a7ef2045511e649R.png" alt="Container loading" loading="lazy">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">AFRICA DEPLOYMENT</div>
+            <div class="dd-card-text">Final container loading for the journey to the customer's facility in Addis Ababa.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED CASES -->
+  <section class="dd-section dd-section-dark">
+    <div class="dd-container">
+      <span class="dd-kicker">RELATED SUCCESS STORIES</span>
+      <h2 class="dd-h2">More documented overseas deployments.</h2>
+
+      <div class="dd-related-grid">
+        <a class="dd-related-card" href="/pages/case-uganda-sign-factory">
+          <span>CASE_001 · UGANDA</span>
+          <strong>Signage Factory Setup With CO2 Laser And CNC Router</strong>
+        </a>
+
+        <a class="dd-related-card" href="/pages/case-study-georgia">
+          <span>CASE_002 · GEORGIA</span>
+          <strong>Furniture Workshop Referral And Repeat Purchase Journey</strong>
+        </a>
+
+        <a class="dd-related-card" href="/pages/case-study-israel">
+          <span>CASE_004 · ISRAEL</span>
+          <strong>From Factory Visit To Event Production In Israel</strong>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section id="consultation" class="dd-section dd-section-mid">
+    <div class="dd-container">
+      <span class="dd-kicker">START A SIMILAR PROJECT</span>
+      <h2 class="dd-h2">Need a CNC and Laser solution for your advertising workshop?</h2>
+      <p class="dd-copy">
+        Share your materials, production goals, and location. Dragon Diamond can help you audit the right equipment before international shipment.
+      </p>
+
+      <div class="dd-hero-cta" style="margin-top: 36px;">
+        <a href="/pages/contact" class="dd-btn-primary">Contact Dragon Diamond</a>
+        <a href="/collections/cnc-router" class="dd-btn-secondary">View CNC Router Series</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+{% schema %}
+{
+  "name": "DD Case Study Ethiopia V2",
+  "settings": [],
+  "presets": [
+    {
+      "name": "DD Case Study Ethiopia V2"
+    }
+  ]
+}
+{% endschema %}

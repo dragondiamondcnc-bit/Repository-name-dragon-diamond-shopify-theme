@@ -1,0 +1,55 @@
+<!-- Custom Category Grid V2.0 - Industrial Minimalist Matrix -->
+{{ 'home-v2.css' | asset_url | stylesheet_tag }}
+
+<section class="category-grid-section">
+  <div class="grid-container">
+    <div class="grid-header">
+      <span class="grid-subtitle">OUR CAPABILITIES</span>
+      <h2 class="grid-title">MAIN PRODUCT CATEGORIES</h2>
+    </div>
+
+    <div class="matrix-grid">
+      <!-- CO2 Laser Card -->
+      <a href="/collections/co2-laser-cutting-machine" class="category-card">
+        <span class="card-label">INDUSTRIAL CUTTING</span>
+        <h3 class="card-title">CO2 LASER CUTTING MACHINE</h3>
+        <div class="card-visual">
+          <img src="https://sc02.alicdn.com/kf/A21c60f50a7a244bfa4a954b2600060c74.png" alt="CO2 Laser Cutting Machine" class="card-img">
+        </div>
+        <div class="card-link">View Details</div>
+      </a>
+
+      <!-- Fiber Marking Card -->
+      <a href="/collections/fiber-laser-marking-machine" class="category-card">
+        <span class="card-label">DIY MARKING</span>
+        <h3 class="card-title">LASER MARKING MACHINE</h3>
+        <div class="card-visual">
+          <img src="https://sc02.alicdn.com/kf/Aae25089d11e44ee6859d98f892d150e41.png" alt="Laser Marking Machine" class="card-img">
+        </div>
+        <div class="card-link">View Details</div>
+      </a>
+
+      <!-- CNC Router Card -->
+      <a href="/collections/cnc-router-machine" class="category-card">
+        <span class="card-label">SHEET PANEL CUTTING</span>
+        <h3 class="card-title">CNC ROUTER MACHINES</h3>
+        <div class="card-visual">
+          <img src="https://sc02.alicdn.com/kf/A70d9a4e6e5574ce3be25b0eca0f6bb88a.png" alt="CNC Router Machine" class="card-img">
+        </div>
+        <div class="card-link">View Details</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Category Grid V2",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Category Grid V2"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,361 @@
+{% comment %}
+  DD Home Worldwide Footprint V5
+  Section 03 - Lightweight global presence layer
+{% endcomment %}
+
+<section class="dd-home-footprint-v5" id="worldwide-customer-footprint">
+  <div class="dd-footprint-grid-bg" aria-hidden="true"></div>
+  <div class="dd-container">
+    <div class="dd-footprint-header">
+      <span class="dd-sub">VERIFIED INTERNATIONAL DEPLOYMENTS</span>
+      <h2 class="dd-title">Worldwide Customer Footprint</h2>
+      <p class="dd-footprint-lead">
+        Verified deployments and completed customer projects across selected international markets, showing how Dragon Diamond systems support signage, display, routing, and fabrication businesses.
+      </p>
+    </div>
+
+    <div class="dd-presence-summary" aria-label="Worldwide customer footprint metrics">
+      <span><strong>4</strong> verified markets</span>
+      <span><strong>3-Year+</strong> production reference</span>
+      <span><strong>Multi-System</strong> delivery experience</span>
+      <span><strong>Remote</strong> training & support</span>
+    </div>
+
+    {% assign country_numbers = "01,02,03,04" | split: "," %}
+    {% assign country_names = "Uganda,Israel,Georgia,Ethiopia" | split: "," %}
+    {% assign country_applications = "Sign Fabrication,Display & Event Production,CNC Routing & Panel Fabrication,Advertising & Signage Production" | split: "," %}
+    {% assign country_systems = "CO2 Laser System,Heavy-Duty CNC Router,ATC CNC Router,CO2 Laser + CNC Router" | split: "," %}
+
+    <div class="dd-presence-map" aria-label="Verified international deployment presence">
+      <div class="dd-presence-axis" aria-hidden="true"></div>
+      {% for country in country_names %}
+        <article class="dd-presence-node dd-presence-node-{{ forloop.index }}">
+          <span class="dd-presence-number">{{ country_numbers[forloop.index0] }}</span>
+          <div>
+            <h3>{{ country }}</h3>
+            <p>{{ country_applications[forloop.index0] }}</p>
+            <small>{{ country_systems[forloop.index0] }}</small>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+
+    <div class="dd-footprint-transition" aria-label="Section transition">
+      <span>Global Presence</span>
+      <strong>Real Production Evidence</strong>
+    </div>
+  </div>
+</section>
+
+<style>
+  .dd-home-footprint-v5 {
+    position: relative;
+    overflow: hidden;
+    padding: 96px 0 78px;
+    background: #0F1115;
+    color: #FFF;
+  }
+
+  .dd-footprint-grid-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.12;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+    background-size: 64px 64px;
+    pointer-events: none;
+  }
+
+  .dd-home-footprint-v5 .dd-container {
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .dd-footprint-header {
+    max-width: 860px;
+    margin-bottom: 34px;
+  }
+
+  .dd-footprint-header .dd-title {
+    margin: 14px 0 18px;
+    color: #FFF;
+    font-size: 48px;
+    font-weight: 850;
+    letter-spacing: -2px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .dd-footprint-lead {
+    max-width: 760px;
+    margin: 0;
+    color: rgba(255,255,255,0.66);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .dd-presence-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+
+  .dd-presence-summary span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.035);
+    color: rgba(255,255,255,0.7);
+    padding: 10px 13px;
+    font-size: 10px;
+    font-weight: 850;
+    letter-spacing: 1px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .dd-presence-summary strong {
+    color: #00A3AD;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 15px;
+    font-weight: 850;
+  }
+
+  .dd-presence-map {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    padding: 32px 0 28px;
+  }
+
+  .dd-presence-axis {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    right: 8%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0,163,173,0.55), transparent);
+  }
+
+  .dd-presence-node {
+    position: relative;
+    min-height: 172px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 26px;
+    border: 1px solid rgba(255,255,255,0.11);
+    background: rgba(15,17,21,0.72);
+    padding: 18px;
+  }
+
+  .dd-presence-node::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 5px);
+    left: 18px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #00A3AD;
+    box-shadow: 0 0 0 5px rgba(0,163,173,0.13);
+  }
+
+  .dd-presence-node > div {
+    padding-left: 20px;
+  }
+
+  .dd-presence-number {
+    align-self: flex-end;
+    color: rgba(255,255,255,0.34);
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 12px;
+    font-weight: 850;
+    letter-spacing: 1.8px;
+  }
+
+  .dd-presence-node h3 {
+    margin: 0 0 10px;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 850;
+    letter-spacing: -0.4px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .dd-presence-node p {
+    margin: 0 0 9px;
+    color: rgba(255,255,255,0.68);
+    font-size: 13px;
+    font-weight: 650;
+    line-height: 1.35;
+  }
+
+  .dd-presence-node small {
+    display: inline-flex;
+    color: #00A3AD;
+    font-size: 10px;
+    font-weight: 850;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .dd-footprint-transition {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 42px auto 0;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.52);
+    font-size: 12px;
+    font-weight: 850;
+    letter-spacing: 1.5px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .dd-footprint-transition::before,
+  .dd-footprint-transition::after {
+    content: "";
+    width: 34px;
+    height: 1px;
+    background: rgba(0,163,173,0.45);
+  }
+
+  .dd-footprint-transition strong {
+    color: #FFF;
+    font: inherit;
+  }
+
+  .dd-footprint-transition span::after {
+    content: "→";
+    display: inline-block;
+    margin-left: 14px;
+    color: #00A3AD;
+  }
+
+  @media (max-width: 1024px) {
+    .dd-presence-map {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 900px) {
+    .dd-home-footprint-v5 {
+      padding: 84px 0 70px;
+    }
+
+    .dd-footprint-header .dd-title {
+      font-size: 38px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .dd-home-footprint-v5 {
+      padding: 76px 0 64px;
+    }
+
+    .dd-home-footprint-v5 .dd-container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .dd-footprint-header {
+      margin-bottom: 28px;
+    }
+
+    .dd-presence-summary {
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .dd-presence-summary span {
+      width: 100%;
+      box-sizing: border-box;
+      justify-content: space-between;
+      padding: 9px 11px;
+    }
+
+    .dd-presence-map {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      padding: 16px 0 12px;
+    }
+
+    .dd-presence-axis {
+      top: 18px;
+      bottom: 18px;
+      left: 23px;
+      right: auto;
+      width: 1px;
+      height: auto;
+      background: linear-gradient(180deg, transparent, rgba(0,163,173,0.55), transparent);
+    }
+
+    .dd-presence-node {
+      min-height: auto;
+      padding: 15px 15px 15px 42px;
+      gap: 10px;
+    }
+
+    .dd-presence-node::before {
+      top: 18px;
+      left: 18px;
+    }
+
+    .dd-presence-node > div {
+      padding-left: 0;
+    }
+
+    .dd-presence-number {
+      align-self: flex-start;
+      font-size: 10px;
+    }
+
+    .dd-presence-node h3 {
+      font-size: 22px;
+    }
+
+    .dd-footprint-transition {
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 30px;
+      padding-top: 24px;
+      font-size: 11px;
+      line-height: 1.35;
+    }
+
+    .dd-footprint-transition::before,
+    .dd-footprint-transition::after {
+      width: 42px;
+    }
+
+    .dd-footprint-transition span::after {
+      display: block;
+      margin: 6px 0 0;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "DD Worldwide Footprint",
+  "settings": [],
+  "presets": [{"name": "DD Worldwide Footprint"}]
+}
+{% endschema %}

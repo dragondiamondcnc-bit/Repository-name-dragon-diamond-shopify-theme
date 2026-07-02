@@ -1,0 +1,54 @@
+<section class="success-gallery-section" id="success-gallery-{{ section.id }}">
+  <div id="sg-v13-anchor">Loading success stories...</div>
+</section>
+
+<script>
+(function() {
+  const content = `
+    <div class="container-v2">
+      <div class="section-header-v2">
+        <h2 class="section-title-v2">SUCCESS CASE GALLERY</h2>
+        <p class="section-subtitle-v2">Explore how Dragon Diamond's Industrial 4.0 solutions empower global signage, textile, and furniture manufacturers.</p>
+      </div>
+      <div class="success-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+        <div class="success-card" style="width: 250px; text-align: center;">
+          <img src="https://sc01.alicdn.com/kf/H724740e42dd24a6f93f4c7d211467496j.png" style="width: 180px; height: 180px; object-fit: cover;">
+          <h3 style="font-size: 16px; margin: 10px 0;">Signage Excellence (Africa)</h3>
+          <p style="font-size: 12px; color: #666;">Market: Africa / Nigeria</p>
+        </div>
+        <div class="success-card" style="width: 250px; text-align: center;">
+          <img src="https://sc01.alicdn.com/kf/Hbb59fa86a8404b7f9ffa7a197985b759t.png" style="width: 180px; height: 180px; object-fit: cover;">
+          <h3 style="font-size: 16px; margin: 10px 0;">Textile Precision (Uzbekistan)</h3>
+          <p style="font-size: 12px; color: #666;">Market: Central Asia</p>
+        </div>
+        <div class="success-card" style="width: 250px; text-align: center;">
+          <img src="https://sc01.alicdn.com/kf/H5592889fd05a4926af9c895580fc0a58l.png" style="width: 180px; height: 180px; object-fit: cover;">
+          <h3 style="font-size: 16px; margin: 10px 0;">Custom Furniture (Georgia)</h3>
+          <p style="font-size: 12px; color: #666;">Market: Georgia / Gocha</p>
+        </div>
+        <div class="success-card" style="width: 250px; text-align: center;">
+          <img src="https://sc01.alicdn.com/kf/H909e78c2eeb54708a31b02b6b4ca8e9aQ.png" style="width: 180px; height: 180px; object-fit: cover;">
+          <h3 style="font-size: 16px; margin: 10px 0;">Acrylic Design (Italy)</h3>
+          <p style="font-size: 12px; color: #666;">Market: Italy / Venice</p>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  function inject() {
+    const anchor = document.getElementById('sg-v13-anchor');
+    if (anchor) {
+      anchor.innerHTML = content;
+      console.log('SG V13 Injected');
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', inject);
+  } else {
+    inject();
+  }
+})();
+</script>
+
+{% schema %} { "name": "SG V13 JS", "presets": [{"name": "SG V13 JS"}] } {% endschema %}

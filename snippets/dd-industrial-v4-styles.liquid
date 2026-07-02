@@ -1,0 +1,91 @@
+{% comment %}
+  Dragon Diamond Industrial V4 Global Styles
+  Swiss Industrial Design // Archivo Narrow // Dark Theme
+{% endcomment %}
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap');
+
+  :root {
+    --dd-black: #0F1115;
+    --dd-white: #FFFFFF;
+    --dd-cyan: #00A3AD;
+    --dd-gray-900: #1A1C20;
+    --dd-gray-800: #26282D;
+    --dd-gray-100: #F9FAFB;
+    --dd-border: rgba(255,255,255,0.12);
+    --dd-border-dark: rgba(0,0,0,0.08);
+    --dd-easing: cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  body {
+    background: var(--dd-black);
+    color: var(--dd-white);
+    font-family: 'Archivo Narrow', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .dd-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .dd-sub {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--dd-cyan);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  .dd-title {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin: 0 0 32px;
+    text-transform: uppercase;
+  }
+
+  .dd-btn-solid, .dd-btn-outline {
+    display: inline-block;
+    padding: 24px 40px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: all 0.2s linear;
+    border: 1px solid var(--dd-border);
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .dd-btn-solid { background: rgba(255,255,255,0.05); color: #FFF; }
+  .dd-btn-outline { background: transparent; color: #FFF; border-left: none; }
+  
+  .dd-btn-solid:hover, .dd-btn-outline:hover {
+    background: var(--dd-white);
+    color: var(--dd-black);
+    border-color: var(--dd-white);
+  }
+
+  .dd-img-industrial {
+    width: 100%;
+    filter: grayscale(0.4) contrast(1.1) brightness(0.95);
+    transition: filter 0.3s ease;
+  }
+  .dd-img-industrial:hover { filter: grayscale(0) contrast(1.2); }
+
+  @media (max-width: 1024px) {
+    .dd-container { padding: 0 32px; }
+  }
+  @media (max-width: 768px) {
+    .dd-container { padding: 0 24px; }
+    .dd-title { font-size: 24px; }
+  }
+</style>

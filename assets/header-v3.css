@@ -1,0 +1,175 @@
+/* Advanced GZCNC Style Header - Final Implementation */
+
+.header-v2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: 'Archivo Narrow', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Row 1: Top Bar */
+.header-top-bar {
+  background-color: #333333;
+  color: #cccccc;
+  padding: 6px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.header-top-bar .social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.header-top-bar .social-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.header-top-bar .lang-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-top-bar .lang-selector img {
+  width: 18px;
+  height: auto;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.header-top-bar .lang-selector img:hover {
+  opacity: 1;
+}
+
+/* Row 2: Logo & Slogan Aligned */
+.header-middle-bar {
+  background-color: #ffffff;
+  padding: 10px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.brand-logo-img {
+  height: 60px;
+  width: auto;
+}
+
+.brand-text-group {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid #006841;
+  padding-left: 15px;
+}
+
+.brand-main-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+.brand-slogan {
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+  margin-top: 5px;
+  letter-spacing: 1px;
+}
+
+.header-contact-v2 {
+  display: flex;
+  gap: 30px;
+}
+
+.contact-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-box .icon-circle {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #006841;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #006841;
+  font-size: 16px;
+}
+
+.contact-box .info-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-box .info-label {
+  font-size: 10px;
+  color: #999;
+}
+
+.contact-box .info-value {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* Row 3: Navigation Menu Bar */
+.header-nav-row {
+  background-color: #006841;
+  padding: 0 5%;
+}
+
+.nav-menu-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu-item {
+  position: relative;
+}
+
+.nav-menu-link {
+  display: block;
+  padding: 12px 25px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.nav-menu-item:hover .nav-menu-link {
+  background-color: #004d2c;
+  color: #fff;
+}
+
+/* Mobile */
+@media screen and (max-width: 990px) {
+  .header-v2 { position: relative; }
+  .header-middle-bar { flex-direction: column; gap: 15px; }
+  .header-contact-v2 { display: none; }
+  .brand-text-group { border-left: none; padding-left: 0; align-items: center; }
+}

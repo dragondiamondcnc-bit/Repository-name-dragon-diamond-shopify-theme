@@ -1,0 +1,89 @@
+{% comment %}
+  About Company Split Section (Text Left, Image Slider Right) for DRAGON DIAMOND
+{% endcomment %}
+
+<div class="about-split-section" style="background-color: #1A1A1B; padding: 120px 0; border-bottom: 2px solid #008F5A;">
+  <div class="page-width">
+    <div class="split-container" style="display: flex; gap: 80px; align-items: center;">
+      
+      <!-- Text Side -->
+      <div class="text-side" style="flex: 1.1; color: #FFFFFF;">
+        <h2 style="color: #008F5A; font-size: 14px; letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 10px;">Precision Engineering, Global Trust</h2>
+        <h1 style="color: #FFFFFF; font-size: 42px; margin: 15px 0 25px; line-height: 1.15; font-weight: 800;">13+ Years of Excellence in CNC & Laser Solutions.</h1>
+        <p style="color: #BBBBBB; line-height: 1.9; margin-bottom: 35px; font-size: 16px;">
+          <strong>DRAGON DIAMOND</strong> is a professional high-tech manufacturer specializing in the R&D and production of industrial-grade CNC equipment. Operating from our <strong>2,000m² state-of-the-art workshop</strong>, we have mastered the art of high-stability laser cutting and CNC routing since 2012.
+        </p>
+        <p style="color: #BBBBBB; line-height: 1.9; margin-bottom: 35px; font-size: 16px;">
+          With a core philosophy of "Survival by Quality," we ensure every <strong>DRAGON DIAMOND</strong> system undergoes a rigorous <strong>72-hour stress-test</strong> before shipment. Today, our machines empower professionals in <strong>50+ countries</strong>, providing reliable solutions for the advertising, woodworking, and manufacturing industries.
+        </p>
+        
+        <div class="trust-indicators" style="display: flex; gap: 40px; margin-top: 50px; border-top: 1px solid #333; padding-top: 30px;">
+          <div class="trust-item">
+            <strong style="display: block; font-size: 28px; color: #008F5A;">13+</strong>
+            <span style="font-size: 12px; color: #888; letter-spacing: 0.1em; text-transform: uppercase;">Years Expertise</span>
+          </div>
+          <div class="trust-item">
+            <strong style="display: block; font-size: 28px; color: #008F5A;">2000m²</strong>
+            <span style="font-size: 12px; color: #888; letter-spacing: 0.1em; text-transform: uppercase;">Workshop Area</span>
+          </div>
+          <div class="trust-item">
+            <strong style="display: block; font-size: 28px; color: #008F5A;">50+</strong>
+            <span style="font-size: 12px; color: #888; letter-spacing: 0.1em; text-transform: uppercase;">Global Markets</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider Side -->
+      <div class="slider-side" style="flex: 0.9; position: relative;">
+        <div class="about-image-wrapper" style="width: 100%; border-radius: 4px; overflow: hidden; box-shadow: 0 40px 100px rgba(0,0,0,0.6); border: 1px solid #333;">
+          <div class="about-slider-container" style="display: flex; transition: transform 0.6s ease-in-out;">
+            <img src="https://sc02.alicdn.com/kf/Afad200fdd9a1477ba3d2a6951ef53cafT.png" alt="DRAGON DIAMOND Factory" style="min-width: 100%; display: block; object-fit: cover; aspect-ratio: 4/3;">
+            <img src="https://sc02.alicdn.com/kf/A1143d317e27944569b52b7ea71794bf5e.png" alt="Engineering Team" style="min-width: 100%; display: block; object-fit: cover; aspect-ratio: 4/3;">
+            <img src="https://sc02.alicdn.com/kf/A9ef6f1c8c92b48efa24c85e394323586V.png" alt="R&D Lab" style="min-width: 100%; display: block; object-fit: cover; aspect-ratio: 4/3;">
+          </div>
+        </div>
+        
+        <!-- Progress Indicators -->
+        <div class="about-dots" style="position: absolute; bottom: 20px; right: 20px; display: flex; gap: 8px;">
+          <span class="dot active" style="width: 10px; height: 10px; border-radius: 50%; background: #008F5A; cursor: pointer;"></span>
+          <span class="dot" style="width: 10px; height: 10px; border-radius: 50%; background: #FFFFFF; cursor: pointer; opacity: 0.5;"></span>
+          <span class="dot" style="width: 10px; height: 10px; border-radius: 50%; background: #FFFFFF; cursor: pointer; opacity: 0.5;"></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  let currentAboutSlide = 0;
+  function showAboutSlide(index) {
+    const container = document.querySelector('.about-slider-container');
+    const dots = document.querySelectorAll('.about-dots .dot');
+    const total = 3;
+    if (index >= total) currentAboutSlide = 0;
+    else if (index < 0) currentAboutSlide = total - 1;
+    else currentAboutSlide = index;
+    
+    container.style.transform = `translateX(-${currentAboutSlide * 100}%)`;
+    dots.forEach((dot, i) => {
+      dot.style.background = (i === currentAboutSlide) ? '#008F5A' : '#FFFFFF';
+      dot.style.opacity = (i === currentAboutSlide) ? '1' : '0.5';
+    });
+  }
+  setInterval(() => {
+    showAboutSlide(currentAboutSlide + 1);
+  }, 6000);
+</script>
+
+<style>
+@media screen and (max-width: 1199px) {
+  .split-container { gap: 40px; }
+  .text-side h1 { font-size: 32px !important; }
+}
+@media screen and (max-width: 989px) {
+  .split-container { flex-direction: column; text-align: center; }
+  .trust-indicators { justify-content: center; }
+  .text-side h1 { font-size: 28px !important; }
+}
+</style>

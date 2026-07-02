@@ -1,0 +1,120 @@
+<!-- Custom Hero Slider V2.9 - Target Audience Selection Edition -->
+{{ 'home-v2.css' | asset_url | stylesheet_tag }}
+
+<section class="hero-slider-v2" id="hero-slider">
+  <!-- Slide 1: SIGNAGE & ADVERTISING (CO2 Laser) -->
+  <div class="slide-item active" data-index="0">
+    <!-- Application Background Visual Proof -->
+    <div class="slide-visual-proof" style="background-image: url('https://sc02.alicdn.com/kf/A9072f4eb322a4aae822a9d00d2855909a.png');"></div>
+
+    <div class="hero-content-wrap">
+      <div class="hero-text-side">
+        <span class="audience-label">SIGNAGE & ADVERTISING INDUSTRY</span>
+        <h1 class="hero-main-title">Precision Cutting<br>For Complex Designs</h1>
+        <p class="hero-description">
+          Industrial CO2 Laser systems engineered for high-precision acrylic, wood, and non-metal processing. Elevate your creative production with LZ-1390.
+        </p>
+        <div class="hero-cta-group">
+          <a href="/products/lz-1390-industrial-co2-laser-cutting-machine" class="btn-primary-hero">Get Industrial Solution</a>
+        </div>
+      </div>
+
+      <div class="hero-image-side">
+        <div class="machine-container">
+          <!-- Logo Mask Layer (Clean Pure White) -->
+          <div class="logo-mask"></div>
+          <img src="https://gzddlaser.com/cdn/shop/files/A2d9725cf4a494c0abf67d1febb0c36e9u.webp" alt="LZ-1390 Industrial Machine" class="hero-machine-img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 2: METAL & HARDWARE (Fiber Marking) -->
+  <div class="slide-item" data-index="1">
+    <div class="slide-visual-proof" style="background-image: url('https://sc02.alicdn.com/kf/Afd219ebd8b2241b48630996fd34d6f8aH.png');"></div>
+
+    <div class="hero-content-wrap">
+      <div class="hero-text-side">
+        <span class="audience-label">METAL & HARDWARE MANUFACTURING</span>
+        <h1 class="hero-main-title">Permanent Precision<br>At High Speed</h1>
+        <p class="hero-description">
+          Fiber Laser Marking solutions for automotive, tool, and medical industry. Raycus laser source powered for uncompromising quality.
+        </p>
+        <div class="hero-cta-group">
+          <a href="/collections/fiber-laser-marking-machine" class="btn-primary-hero">Explore Fiber Systems</a>
+        </div>
+      </div>
+
+      <div class="hero-image-side">
+        <div class="machine-container">
+          <img src="https://sc02.alicdn.com/kf/Hfd13337a72664d5098797f1cc6da5e656.png" alt="Fiber Laser Marker" class="hero-machine-img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3: FURNITURE & WOODWORKING (CNC Router) -->
+  <div class="slide-item" data-index="2">
+    <div class="slide-visual-proof" style="background-image: url('https://sc02.alicdn.com/kf/H76d05908990d40219195b699977823e59.jpg');"></div>
+
+    <div class="hero-content-wrap">
+      <div class="hero-text-side">
+        <span class="audience-label">FURNITURE & WOODWORKING</span>
+        <h1 class="hero-main-title">Heavy-Duty Carving<br>Accuracy 0.01MM</h1>
+        <p class="hero-description">
+          Industrial CNC Routers for high-speed furniture production and architectural carving. Built for stability and large-scale manufacturing.
+        </p>
+        <div class="hero-cta-group">
+          <a href="/collections/cnc-router-machine" class="btn-primary-hero">Request CNC Solution</a>
+        </div>
+      </div>
+
+      <div class="hero-image-side">
+        <div class="machine-container">
+          <img src="https://sc02.alicdn.com/kf/H76d05908990d40219195b699977823e59.jpg" alt="CNC Router" class="hero-machine-img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Controls -->
+  <div class="slider-nav">
+    <div class="nav-dot active" onclick="switchSlide(0)"></div>
+    <div class="nav-dot" onclick="switchSlide(1)"></div>
+    <div class="nav-dot" onclick="switchSlide(2)"></div>
+  </div>
+</section>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide-item');
+  const dots = document.querySelectorAll('.nav-dot');
+
+  function switchSlide(index) {
+    slides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+    
+    currentSlide = index;
+    
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+  }
+
+  // Auto Rotation
+  setInterval(() => {
+    let next = (currentSlide + 1) % slides.length;
+    switchSlide(next);
+  }, 6000);
+</script>
+
+{% schema %}
+{
+  "name": "Hero Slider V2",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Hero Slider V2"
+    }
+  ]
+}
+{% endschema %}

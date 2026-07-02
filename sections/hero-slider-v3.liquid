@@ -1,0 +1,250 @@
+<!-- Custom Hero Slider V3.0 - Industrial 4.0 Audience Targeting -->
+{{ 'home-v2.css' | asset_url | stylesheet_tag }}
+
+<style>
+/* Global Success Stories - FORCED INLINE FIX */
+.success-gallery-section {
+  background: #ffffff !important;
+  padding: 40px 0 !important;
+  border-top: 1px solid #f0f0f0 !important;
+}
+
+.success-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 15px !important;
+  max-width: 1300px !important;
+  margin: 0 auto !important;
+  width: 90% !important;
+}
+
+.success-card {
+  background: #ffffff !important;
+  border: 1px solid #f5f5f5 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  text-align: left !important;
+  padding: 12px !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+}
+
+.success-card:hover {
+  border-color: #006841 !important;
+  transform: translateY(-3px) !important;
+}
+
+.card-image-wrapper {
+  width: 50px !important;
+  height: 50px !important;
+  margin-right: 12px !important;
+  margin-bottom: 0 !important;
+  flex-shrink: 0 !important;
+  overflow: hidden !important;
+  border-radius: 4px !important;
+}
+
+.card-image-wrapper img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.industry-tag { display: none !important; }
+
+.card-info { flex: 1 !important; }
+
+.card-title {
+  font-family: 'Archivo Narrow', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  color: #1a1a1a !important;
+  margin: 0 0 2px 0 !important;
+  text-transform: uppercase !important;
+}
+
+.card-desc {
+  font-size: 10px !important;
+  line-height: 1.3 !important;
+  color: #999 !important;
+  margin: 0 0 4px 0 !important;
+  height: auto !important;
+  max-height: 26px !important;
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+}
+
+.card-link {
+  font-size: 8px !important;
+  font-weight: 900 !important;
+  color: #006841 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+@media (max-width: 990px) {
+  .success-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 640px) {
+  .success-grid { grid-template-columns: 1fr !important; }
+}
+</style>
+
+<section class="hero-slider-v3" id="main-hero-slider">
+  <div class="slider-track">
+    
+    <!-- SLIDE 1: CO2 LASER (SIGNAGE & ADVERTISING) -->
+    <div class="slide-item active" data-index="0">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <span class="audience-tag">FOR SIGNAGE & ADVERTISING</span>
+            <h2 class="hero-title">PRECISION CUTTING<br>FOR COMPLEX DESIGNS</h2>
+            
+            <div class="hero-actions">
+              <a href="/products/lz-1390-industrial-co2-laser-cutting-machine" class="btn-primary">Explore LZ-1390</a>
+              <a href="/pages/contact" class="btn-outline">Request Quote</a>
+            </div>
+
+            <div class="app-grid-inline">
+              <div class="app-item">
+                <img src="https://sc01.alicdn.com/kf/Hfe0c5a2bc11d4e74b1c839dd631ee833p.png" alt="Leather">
+                <span class="app-label">Leather</span>
+              </div>
+              <div class="app-item">
+                <img src="https://sc01.alicdn.com/kf/H30d3f1265d5c4d25bee84b36630d6a00G.png" alt="Paper">
+                <span class="app-label">Paper</span>
+              </div>
+              <div class="app-item">
+                <img src="https://sc01.alicdn.com/kf/Hd1065beeb8c648748c18937ba4271837E.png" alt="Wood">
+                <span class="app-label">Wood</span>
+              </div>
+              <div class="app-item">
+                <img src="https://sc01.alicdn.com/kf/H5e2011c862ed47b7bb840e78c22bbc67F.png" alt="Acrylic">
+                <span class="app-label">Acrylic</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="machine-wrapper">
+              <img src="https://sc02.alicdn.com/kf/Ad1c7ee249dc1402abc83fa01924b96ba8.png" alt="LZ-1390 Industrial Laser" class="machine-img">
+              
+              <div class="machine-specs-bar">
+                <div class="spec-item">
+                  <div class="spec-dot"></div>
+                  <span class="spec-text">Ruida Control System</span>
+                </div>
+                <div class="spec-item">
+                  <div class="spec-dot"></div>
+                  <span class="spec-text">Reci CO2 Tube (150W)</span>
+                </div>
+                <div class="spec-item">
+                  <div class="spec-dot"></div>
+                  <span class="spec-text">High-Speed Motors</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2: FIBER MARKING (METAL & HARDWARE) -->
+    <div class="slide-item" data-index="1">
+      <div class="slide-bg-proof" style="background-image: url('https://sc02.alicdn.com/kf/Af15bc7efafbc4b93b687f8f4959eb9406.png'); opacity: 0.08;"></div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <span class="audience-tag">FOR METAL & HARDWARE</span>
+            <h2 class="hero-title">Permanent Precision<br>At High Speed</h2>
+            <p class="hero-desc">Professional Fiber Laser Marking solutions for automotive, electronics, and tool industries. High stability with Raycus power source.</p>
+            <div class="hero-actions">
+              <a href="/collections/fiber-laser-marking-machine" class="btn-primary">Fiber Marking Series</a>
+              <a href="/pages/contact" class="btn-outline">Technical Specs</a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="machine-wrapper">
+              <img src="{{ 'fiber-marker.png' | asset_url }}" alt="Fiber Marking Machine" class="machine-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3: CNC ROUTER (FURNITURE & CRAFTS) -->
+    <div class="slide-item" data-index="2">
+      <div class="slide-bg-proof" style="background-image: url('https://sc02.alicdn.com/kf/Afd219ebd8b2241b48630996fd34d6f8aH.png'); opacity: 0.05;"></div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <span class="audience-tag">FOR FURNITURE & CRAFTS</span>
+            <h2 class="hero-title">Heavy-Duty Carving<br>Accuracy 0.01MM</h2>
+            <p class="hero-desc">Industrial CNC Routers for high-speed furniture production and architectural carving. Built for stability and 24/7 manufacturing.</p>
+            <div class="hero-actions">
+              <a href="/collections/cnc-router-machine" class="btn-primary">CNC Router Series</a>
+              <a href="/pages/contact" class="btn-outline">Custom Solution</a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="machine-wrapper">
+              <img src="{{ 'cnc-router.jpg' | asset_url }}" alt="CNC Router Machine" class="machine-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SLIDER CONTROLS -->
+  <div class="slider-controls">
+    <div class="control-dot active" onclick="goToSlide(0)"></div>
+    <div class="control-dot" onclick="goToSlide(1)"></div>
+    <div class="control-dot" onclick="goToSlide(2)"></div>
+  </div>
+
+  <!-- FIXED TRUST BAR (STAYS CONSTANT) -->
+  <div class="slider-trust-bar">
+    <div class="trust-container">
+      <div class="trust-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg> Factory Direct</div>
+      <div class="trust-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> CE/FDA Certified</div>
+      <div class="trust-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg> Global Shipping</div>
+      <div class="trust-pill"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/></svg> 24/7 Support</div>
+    </div>
+  </div>
+</section>
+
+<script>
+  let slideIndex = 0;
+  const slideItems = document.querySelectorAll('#main-hero-slider .slide-item');
+  const controlDots = document.querySelectorAll('#main-hero-slider .control-dot');
+
+  function goToSlide(idx) {
+    slideItems[slideIndex].classList.remove('active');
+    controlDots[slideIndex].classList.remove('active');
+    slideIndex = idx;
+    slideItems[slideIndex].classList.add('active');
+    controlDots[slideIndex].classList.add('active');
+  }
+
+  setInterval(() => {
+    let nextIdx = (slideIndex + 1) % slideItems.length;
+    goToSlide(nextIdx);
+  }, 7000);
+</script>
+
+{% schema %}
+{
+  "name": "Hero Slider V3",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Hero Slider V3"
+    }
+  ]
+}
+{% endschema %}

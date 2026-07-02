@@ -1,0 +1,992 @@
+{% comment %}
+  Dragon Diamond CASE_004 Israel
+  Evidence-First Documentary Version
+  Focus: Factory Visit → Technical Verification → Shipment → Remote Support → Real Production → Customer Feedback
+{% endcomment %}
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&display=swap');
+
+  .dd-israel-case {
+    background: #0F1115;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+  }
+
+  .dd-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .dd-kicker {
+    font-family: "Archivo Narrow", sans-serif;
+    color: #00A3AD;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    display: block;
+  }
+
+  .dd-section {
+    padding: 110px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .dd-section-light {
+    background: #fff;
+    color: #111;
+  }
+
+  .dd-section-dark {
+    background: #0F1115;
+  }
+
+  .dd-section-mid {
+    background: #11141A;
+  }
+
+  .dd-title {
+    font-size: 54px;
+    line-height: 1.05;
+    font-weight: 850;
+    letter-spacing: -2px;
+    margin: 0 0 28px;
+  }
+
+  .dd-h2 {
+    font-size: 42px;
+    line-height: 1.12;
+    font-weight: 850;
+    letter-spacing: -1px;
+    margin: 0 0 24px;
+  }
+
+  .dd-copy {
+    max-width: 780px;
+    font-size: 18px;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.68);
+  }
+
+  .dd-section-light .dd-copy {
+    color: #555;
+  }
+
+  .dd-hero {
+    position: relative;
+    min-height: 86vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .dd-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .dd-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .55;
+  }
+
+  .dd-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(15,17,21,.96) 0%, rgba(15,17,21,.72) 48%, rgba(15,17,21,.18) 100%);
+    z-index: 1;
+  }
+
+  .dd-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+  }
+
+  .dd-hero-sub {
+    font-size: 21px;
+    line-height: 1.6;
+    color: rgba(255,255,255,.76);
+    max-width: 760px;
+    margin-bottom: 42px;
+  }
+
+  .dd-hero-cta {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .dd-btn-primary,
+  .dd-btn-secondary {
+    display: inline-block;
+    padding: 18px 32px;
+    font-size: 13px;
+    font-weight: 850;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .dd-btn-primary {
+    background: #00A3AD;
+    color: #fff;
+  }
+
+  .dd-btn-secondary {
+    border: 1px solid rgba(255,255,255,.28);
+    color: #fff;
+  }
+
+  .dd-overview {
+    background: #11141A;
+  }
+
+  .dd-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .dd-overview-item {
+    padding: 44px 26px;
+    border-right: 1px solid rgba(255,255,255,.06);
+    text-align: center;
+  }
+
+  .dd-overview-item:last-child {
+    border-right: none;
+  }
+
+  .dd-overview-item span {
+    display: block;
+    font-family: "Archivo Narrow", sans-serif;
+    color: #00A3AD;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .dd-overview-item strong {
+    font-size: 18px;
+    font-weight: 850;
+  }
+
+  .dd-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 42px;
+    margin-top: 56px;
+  }
+
+  .dd-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 34px;
+    margin-top: 56px;
+  }
+
+  .dd-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    margin-top: 56px;
+  }
+
+  .dd-evidence-card {
+    background: #171A20;
+    border: 1px solid rgba(255,255,255,.07);
+  }
+
+  .dd-section-light .dd-evidence-card {
+    background: #F5F6F7;
+    border-color: rgba(0,0,0,.08);
+  }
+
+  .dd-img-frame {
+    position: relative;
+    height: 360px;
+    overflow: hidden;
+    background: #181B20;
+  }
+
+  .dd-img-frame.tall {
+    height: 520px;
+  }
+
+  .dd-img-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .dd-img-frame.contain img {
+    object-fit: contain;
+    background: #11141A;
+  }
+
+  .dd-label {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    z-index: 2;
+    padding: 7px 11px;
+    background: rgba(15,17,21,.84);
+    border: 1px solid rgba(0,163,173,.48);
+    color: #fff;
+    font-family: "Archivo Narrow", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+  }
+
+  .dd-card-body {
+    padding: 24px;
+  }
+
+  .dd-card-title {
+    font-family: "Archivo Narrow", sans-serif;
+    color: #00A3AD;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .dd-card-text {
+    font-size: 15px;
+    line-height: 1.65;
+    color: rgba(255,255,255,.62);
+  }
+
+  .dd-section-light .dd-card-text {
+    color: #555;
+  }
+
+  .dd-timeline {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 14px;
+  }
+
+  .dd-step {
+    background: #171A20;
+    border: 1px solid rgba(255,255,255,.07);
+    padding: 24px 18px;
+    min-height: 170px;
+  }
+
+  .dd-step-num {
+    font-family: "Archivo Narrow", sans-serif;
+    color: #00A3AD;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+
+  .dd-step-title {
+    font-size: 17px;
+    font-weight: 850;
+    margin-bottom: 10px;
+  }
+
+  .dd-step-copy {
+    font-size: 14px;
+    line-height: 1.55;
+    color: rgba(255,255,255,.58);
+  }
+
+  .dd-equipment-panel {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 40px;
+    background: #171A20;
+    border: 1px solid rgba(255,255,255,.07);
+    padding: 46px;
+  }
+
+  .dd-equipment-name {
+    font-size: 34px;
+    line-height: 1.12;
+    font-weight: 850;
+    margin-bottom: 20px;
+  }
+
+  .dd-spec-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 34px;
+  }
+
+  .dd-spec {
+    border-top: 1px solid rgba(255,255,255,.1);
+    padding-top: 16px;
+  }
+
+  .dd-spec span {
+    display: block;
+    font-family: "Archivo Narrow", sans-serif;
+    color: #00A3AD;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .dd-spec strong {
+    font-size: 16px;
+  }
+
+  .dd-quote-box {
+    margin-top: 56px;
+    background: #171A20;
+    border-left: 4px solid #00A3AD;
+    padding: 44px;
+  }
+
+  .dd-quote {
+    font-size: 30px;
+    line-height: 1.35;
+    font-weight: 750;
+    letter-spacing: -0.5px;
+    margin-bottom: 20px;
+  }
+
+  .dd-quote-source {
+    font-family: "Archivo Narrow", sans-serif;
+    color: #00A3AD;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .dd-related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 48px;
+  }
+
+  .dd-related-card {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    background: #171A20;
+    border: 1px solid rgba(255,255,255,.07);
+    padding: 28px;
+  }
+
+  .dd-related-card span {
+    display: block;
+    font-family: "Archivo Narrow", sans-serif;
+    color: #00A3AD;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .dd-related-card strong {
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  @media (max-width: 1024px) {
+    .dd-container { padding: 0 22px; }
+    .dd-title { font-size: 42px; }
+    .dd-h2 { font-size: 32px; }
+    .dd-hero { min-height: 78vh; }
+    .dd-overview-grid,
+    .dd-grid-2,
+    .dd-grid-3,
+    .dd-grid-4,
+    .dd-timeline,
+    .dd-equipment-panel,
+    .dd-spec-grid,
+    .dd-related-grid {
+      grid-template-columns: 1fr;
+    }
+    .dd-img-frame,
+    .dd-img-frame.tall {
+      height: auto;
+      max-height: none;
+    }
+    .dd-img-frame img {
+      height: auto;
+      display: block;
+    }
+    .dd-section { padding: 76px 0; }
+  }
+</style>
+
+<div class="dd-israel-case">
+
+  <!-- HERO -->
+  <header class="dd-hero">
+    <div class="dd-hero-bg">
+      <img
+        src="{{ 'israel-factory-visit-hero.jpg' | asset_url }}"
+        alt="Israel customer visiting Dragon Diamond factory for CNC router verification"
+        loading="eager"
+      >
+    </div>
+
+    <div class="dd-container">
+      <div class="dd-hero-inner">
+        <span class="dd-kicker">CASE STUDY: ISRAEL · EVENT DECORATION</span>
+        <h1 class="dd-title">From Factory Visit To Production Launch: Israel CNC Router Case Study</h1>
+        <p class="dd-hero-sub">
+          How an Israeli event decoration company evaluated, tested, received, and launched a Dragon Diamond LZ-1325 CNC router for commercial decorative panel production.
+        </p>
+
+        <div class="dd-hero-cta">
+          <a href="#consultation" class="dd-btn-primary">Request Similar CNC Solution</a>
+          <a href="/products/lz-1325-cnc-router" class="dd-btn-secondary">View CNC Router Specs</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- OVERVIEW -->
+  <section class="dd-overview">
+    <div class="dd-container">
+      <div class="dd-overview-grid">
+        <div class="dd-overview-item">
+          <span>Location</span>
+          <strong>Israel</strong>
+        </div>
+        <div class="dd-overview-item">
+          <span>Industry</span>
+          <strong>Event Decoration</strong>
+        </div>
+        <div class="dd-overview-item">
+          <span>Machine</span>
+          <strong>LZ-1325 CNC Router</strong>
+        </div>
+        <div class="dd-overview-item">
+          <span>Evidence Chain</span>
+          <strong>Visit · Test · Ship · Use</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOMER CHALLENGE -->
+  <section class="dd-section dd-section-light">
+    <div class="dd-container">
+      <span class="dd-kicker">01. CUSTOMER APPLICATION</span>
+      <h2 class="dd-h2">Event decoration production needs more than a standard CNC router.</h2>
+      <p class="dd-copy">
+        The customer produces customized event decoration assets, including printed foam board displays, themed panels, birthday and Bat Mitzvah backdrops, and decorative structures. Their challenge was not simply buying a machine — they needed a stable production system that could support real commercial event work.
+      </p>
+
+      <div class="dd-grid-2">
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame tall">
+            <span class="dd-label">FINAL APPLICATION</span>
+            <img
+              src="{{ 'israel-application-bat-mitzvah.jpg' | asset_url }}"
+              alt="Bat Mitzvah event decoration produced with CNC cut panels in Israel"
+              loading="lazy"
+            >
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">Bat Mitzvah Decoration</div>
+            <div class="dd-card-text">Finished decorative panels used in a real event environment after machine launch.</div>
+          </div>
+        </div>
+
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame tall">
+            <span class="dd-label">EVENT BACKDROP</span>
+            <img
+              src="{{ 'israel-application-event-backdrop.jpg' | asset_url }}"
+              alt="Custom event backdrop panels produced by Israel customer using CNC router"
+              loading="lazy"
+            >
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">Commercial Event Output</div>
+            <div class="dd-card-text">The machine supports customized decorative structures and printed panel cutting for event production.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DECISION TIMELINE -->
+  <section class="dd-section dd-section-mid">
+    <div class="dd-container">
+      <span class="dd-kicker">02. PROCUREMENT JOURNEY</span>
+      <h2 class="dd-h2">A documented decision path from inquiry to production launch.</h2>
+      <p class="dd-copy">
+        This case is valuable because the complete buying process was documented: technical communication, factory visit, machine testing, configuration confirmation, shipment, remote support, and final production.
+      </p>
+
+      <div class="dd-timeline">
+        <div class="dd-step">
+          <div class="dd-step-num">STEP 01</div>
+          <div class="dd-step-title">Customer Inquiry</div>
+          <div class="dd-step-copy">The customer contacted Dragon Diamond while evaluating CNC solutions for event decoration production.</div>
+        </div>
+        <div class="dd-step">
+          <div class="dd-step-num">STEP 02</div>
+          <div class="dd-step-title">Technical Evaluation</div>
+          <div class="dd-step-copy">The team reviewed materials, cutting needs, software workflow, and tooling requirements.</div>
+        </div>
+        <div class="dd-step">
+          <div class="dd-step-num">STEP 03</div>
+          <div class="dd-step-title">Factory Visit</div>
+          <div class="dd-step-copy">The customer visited Dragon Diamond in Guangzhou to verify capability before purchase.</div>
+        </div>
+        <div class="dd-step">
+          <div class="dd-step-num">STEP 04</div>
+          <div class="dd-step-title">Sample Testing</div>
+          <div class="dd-step-copy">On-site cutting and machine inspection helped confirm the right configuration.</div>
+        </div>
+        <div class="dd-step">
+          <div class="dd-step-num">STEP 05</div>
+          <div class="dd-step-title">Shipment</div>
+          <div class="dd-step-copy">The machine was packed in export-grade wooden crating for international delivery.</div>
+        </div>
+        <div class="dd-step">
+          <div class="dd-step-num">STEP 06</div>
+          <div class="dd-step-title">Remote Support</div>
+          <div class="dd-step-copy">Technical guidance supported software, tooling, and operation after arrival.</div>
+        </div>
+        <div class="dd-step">
+          <div class="dd-step-num">STEP 07</div>
+          <div class="dd-step-title">Production Launch</div>
+          <div class="dd-step-copy">The customer began producing real event decoration assets in Israel.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACTORY VERIFICATION -->
+  <section class="dd-section dd-section-dark">
+    <div class="dd-container">
+      <span class="dd-kicker">03. FACTORY VERIFICATION</span>
+      <h2 class="dd-h2">The customer flew to Guangzhou to verify the factory, the team, and the machine.</h2>
+      <p class="dd-copy">
+        Instead of relying only on online communication, the customer inspected Dragon Diamond’s factory, discussed production requirements face to face, and checked machine performance before final confirmation.
+      </p>
+
+      <div class="dd-grid-3">
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <span class="dd-label">TECHNICAL MEETING</span>
+            <img src="{{ 'israel-factory-meeting.jpg' | asset_url }}" alt="Israel customer technical meeting at Dragon Diamond factory" loading="lazy">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">Requirement Discussion</div>
+            <div class="dd-card-text">Machine configuration, material processing, and application requirements were reviewed in person.</div>
+          </div>
+        </div>
+
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <span class="dd-label">MACHINE INSPECTION</span>
+            <img src="{{ 'israel-customer-inspection.jpg' | asset_url }}" alt="Israel customer inspecting Dragon Diamond CNC router during factory visit" loading="lazy">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">ON-SITE MACHINE CHECK</div>
+            <div class="dd-card-text">The customer reviewed CNC router structure, components, cutting quality, and workflow before making the final purchasing decision.</div>
+          </div>
+        </div>
+
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <span class="dd-label">FACTORY VISIT</span>
+            <img src="{{ 'israel-factory-group-photo.jpg' | asset_url }}" alt="Israel customer group photo at Dragon Diamond factory entrance" loading="lazy">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">FACTORY VISIT CONFIRMED</div>
+            <div class="dd-card-text">A real factory visit provides stronger verification than online communication alone and helps build long-term trust.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MACHINE CONFIGURATION -->
+  <section class="dd-section dd-section-mid">
+    <div class="dd-container">
+      <span class="dd-kicker">04. MACHINE CONFIGURATION</span>
+      <h2 class="dd-h2">LZ-1325 CNC router configured for event decoration production.</h2>
+      <p class="dd-copy">
+        The final setup focused on stable material holding, printed panel processing, knife tooling, and real workshop operation.
+      </p>
+
+      <div class="dd-equipment-panel">
+        <div>
+          <div class="dd-equipment-name">LZ-1325 CNC Router<br>Event Decoration Configuration</div>
+          <p class="dd-copy">
+            A practical CNC router setup for event decoration workshops processing foam board, printed panels, decorative boards, and customized display components.
+          </p>
+
+          <div class="dd-spec-grid">
+            <div class="dd-spec">
+              <span>Working Area</span>
+              <strong>1300 × 2500 mm</strong>
+            </div>
+            <div class="dd-spec">
+              <span>Application</span>
+              <strong>Event Decoration Panels</strong>
+            </div>
+            <div class="dd-spec">
+              <span>Tooling</span>
+              <strong>Router Bits / Knife Tooling</strong>
+            </div>
+            <div class="dd-spec">
+              <span>Support</span>
+              <strong>Factory Visit + Remote Training</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="dd-equipment-cta">
+          <a href="/products/lz-1325-cnc-router" class="dd-btn-primary">View CNC Router Specs</a>
+          <a href="#consultation" class="dd-btn-secondary">Customize Similar System</a>
+        </div>
+      </div>
+
+    <div class="dd-grid-3">
+      <!-- CARD 1: MACHINE DETAIL -->
+      <div class="dd-evidence-card">
+        <div class="dd-img-frame">
+          <span class="dd-label">MACHINE DETAIL</span>
+          <img
+            src="{{ 'israel-machine-front-view.jpg' | asset_url }}"
+            alt="Dragon Diamond LZ-1325 CNC router front view before shipment"
+            loading="lazy"
+          >
+        </div>
+        <div class="dd-card-body">
+          <div class="dd-card-title">LZ-1325 CNC ROUTER</div>
+          <div class="dd-card-text">
+            The final machine configuration was prepared for event decoration production, with a large working area and stable table structure.
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2: PRE-SHIPMENT -->
+      <div class="dd-evidence-card">
+        <div class="dd-img-frame">
+          <span class="dd-label">PRE-SHIPMENT</span>
+          <img
+            src="{{ 'israel-machine-packed-film.jpg' | asset_url }}"
+            alt="LZ-1325 CNC router wrapped before shipment to Israel"
+            loading="lazy"
+          >
+        </div>
+        <div class="dd-card-body">
+          <div class="dd-card-title">MACHINE PREPARED</div>
+          <div class="dd-card-text">
+            After configuration and inspection, the machine was protected with wrapping film before export crating.
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3: EXPORT CRATE -->
+      <div class="dd-evidence-card">
+        <div class="dd-img-frame">
+          <span class="dd-label">EXPORT CRATE</span>
+          <img
+            src="{{ 'israel-export-wooden-crate.jpg' | asset_url }}"
+            alt="Export wooden crate for CNC router shipment to Israel"
+            loading="lazy"
+          >
+        </div>
+        <div class="dd-card-body">
+          <div class="dd-card-title">EXPORT PACKAGING</div>
+          <div class="dd-card-text">
+            Export-grade wooden crating helped reduce transport risk during international shipping.
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- DEPLOYMENT TIMELINE -->
+  <section class="dd-section dd-section-dark">
+    <div class="dd-container">
+      <span class="dd-kicker">05. DEPLOYMENT TIMELINE</span>
+      <h2 class="dd-h2">From shipment preparation to production launch.</h2>
+      <p class="dd-copy">
+        The machine journey was documented from factory preparation, customer unloading, workshop installation, and remote commissioning support.
+      </p>
+
+      <div class="dd-grid-4">
+        <!-- CARD 1: STEP 01 -->
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <span class="dd-label">STEP 01</span>
+            <img src="{{ 'israel-machine-packed-film.jpg' | asset_url }}" alt="CNC router wrapped and prepared for shipment to Israel" loading="lazy">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">PRE-SHIPMENT PREPARATION</div>
+            <div class="dd-card-text">The CNC router was protected and prepared for international shipment.</div>
+          </div>
+        </div>
+
+        <!-- CARD 2: STEP 02 -->
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <span class="dd-label">STEP 02</span>
+            <img src="{{ 'israel-customer-unloading.jpg' | asset_url }}" alt="Customer unloading CNC router in Israel" loading="lazy">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">CUSTOMER UNLOADING</div>
+            <div class="dd-card-text">The machine arrived safely and was unloaded at the customer site in Israel.</div>
+          </div>
+        </div>
+
+        <!-- CARD 3: STEP 03 -->
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <span class="dd-label">STEP 03</span>
+            <img src="{{ 'israel-machine-arrived-workshop.jpg' | asset_url }}" alt="CNC router arrived at customer workshop in Israel" loading="lazy">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">WORKSHOP INSTALLATION</div>
+            <div class="dd-card-text">The CNC router entered the production environment and was prepared for operation.</div>
+          </div>
+        </div>
+
+        <!-- CARD 4: STEP 04 -->
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame" style="height: 360px;">
+            <span class="dd-label">STEP 04</span>
+            <img src="{{ 'israel-remote-support-chat.png' | asset_url }}" alt="Remote commissioning support chat record" style="object-fit: cover; object-position: bottom left;" loading="lazy">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">REMOTE COMMISSIONING</div>
+            <div class="dd-card-text">Software workflow, tooling selection, and machine parameters were verified remotely after installation.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTION LAUNCH -->
+  <section class="dd-section dd-section-light">
+    <div class="dd-container">
+      <span class="dd-kicker">06. PRODUCTION LAUNCH</span>
+      <h2 class="dd-h2">The strongest evidence is not the machine — it is what the customer produced with it.</h2>
+      <p class="dd-copy">
+        After installation and support, the customer began using the CNC router for real event decoration work. These production photos connect the machine directly to commercial output.
+      </p>
+
+      <div class="dd-grid-3">
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame tall">
+            <span class="dd-label">CUSTOMER WORKSHOP</span>
+            <img src="{{ 'israel-workshop-cutting-bunny.jpg' | asset_url }}" alt="Israel customer using CNC router to cut printed bunny decoration board" loading="lazy">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">Printed Board Cutting</div>
+            <div class="dd-card-text">The machine processes printed decorative boards for event production.</div>
+          </div>
+        </div>
+
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame tall">
+            <span class="dd-label">REAL PRODUCTION</span>
+            <img src="{{ 'israel-cnc-production-panel.jpg' | asset_url }}" alt="CNC router cutting decorative event panel in Israel workshop" loading="lazy">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">Workshop Operation</div>
+            <div class="dd-card-text">The customer moved from setup to repeatable cutting operation in their own workshop.</div>
+          </div>
+        </div>
+
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame tall">
+            <span class="dd-label">COMMERCIAL RESULT</span>
+            <img src="https://sc01.alicdn.com/kf/H8d1438ea0fb54a54a3777a77dc362233p.jpg" alt="Finished decoration component produced by Israel customer" loading="lazy">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">FINISHED DECORATION COMPONENT</div>
+            <div class="dd-card-text">Decorative elements were successfully cut and prepared for final event assembly in the customer's workshop.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dd-evidence-card" style="margin-top: 56px; border-left: 4px solid #00A3AD; background: #11141A;">
+        <div class="dd-card-body">
+          <div class="dd-card-title" style="color: #fff; font-size: 18px;">PRODUCTION OUTCOMES OBSERVED</div>
+          <div class="dd-card-text" style="color: #00A3AD; font-size: 13px; font-family: 'Archivo Narrow', sans-serif; letter-spacing: 1px; margin-bottom: 20px;">Verified during post-installation follow-up.</div>
+          <div class="dd-card-text">
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="margin-bottom: 12px; display: flex; align-items: start; gap: 12px;"><span style="color: #00A3AD;">✓</span> LZ-1325 CNC Router installed and commissioned successfully</li>
+              <li style="margin-bottom: 12px; display: flex; align-items: start; gap: 12px;"><span style="color: #00A3AD;">✓</span> Production started after remote training and support</li>
+              <li style="margin-bottom: 12px; display: flex; align-items: start; gap: 12px;"><span style="color: #00A3AD;">✓</span> Machine integrated into the customer's event decoration workflow</li>
+              <li style="margin-bottom: 12px; display: flex; align-items: start; gap: 12px;"><span style="color: #00A3AD;">✓</span> No additional onsite engineering visit required for production launch</li>
+              <li style="margin-bottom: 12px; display: flex; align-items: start; gap: 12px;"><span style="color: #00A3AD;">✓</span> Customer provided positive operational feedback after deployment</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOMER FEEDBACK -->
+  <section class="dd-section dd-section-mid">
+    <div class="dd-container">
+      <span class="dd-kicker">07. CUSTOMER FEEDBACK</span>
+      <h2 class="dd-h2">Real customer feedback after production use.</h2>
+      <p class="dd-copy">
+        Instead of using generic marketing claims, this case uses the customer's own words after the machine had already entered production.
+      </p>
+
+      <div class="dd-grid-2">
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame contain tall">
+            <span class="dd-label">CUSTOMER MESSAGE</span>
+            <img src="{{ 'israel-customer-feedback-chat.png' | asset_url }}" alt="Israel customer feedback message about Dragon Diamond CNC router" loading="lazy">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">Original Feedback Record</div>
+            <div class="dd-card-text">The customer shared satisfaction after using the machine in real production.</div>
+          </div>
+        </div>
+
+        <div class="dd-quote-box">
+          <div class="dd-quote">
+            “The team is very good with the machine. I am very satisfied with the machine. It met all my expectations.”
+          </div>
+          <div class="dd-quote-source">Israel Customer Feedback</div>
+
+          <div style="height: 32px;"></div>
+
+          <div class="dd-quote">
+            “Maybe I'll open another factory.”
+          </div>
+          <div class="dd-quote-source">Expansion Signal After Production Use</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPLOYMENT VERIFICATION -->
+  <section class="dd-section dd-section-dark">
+    <div class="dd-container">
+      <span class="dd-kicker">INDUSTRIAL AUDIT</span>
+      <h2 class="dd-h2">DEPLOYMENT VERIFICATION</h2>
+      <p class="dd-copy">
+        Documented milestones confirmed through deployment records, factory photos, support communications, and post-installation follow-up.
+      </p>
+
+      <div style="margin-top: 56px; border: 1px solid rgba(255,255,255,0.07); background: #171A20; padding: 40px;">
+        <table style="width: 100%; border-collapse: collapse; color: #fff;">
+          <thead>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <th style="text-align: left; padding: 15px; font-family: 'Archivo Narrow', sans-serif; letter-spacing: 2px; color: #00A3AD;">VERIFICATION ITEM</th>
+              <th style="text-align: right; padding: 15px; font-family: 'Archivo Narrow', sans-serif; letter-spacing: 2px; color: #00A3AD;">STATUS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 20px 15px; font-size: 16px;">Customer Factory Visit Completed</td>
+              <td style="padding: 20px 15px; text-align: right; color: #00A3AD; font-weight: 700;">✓ Verified</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 20px 15px; font-size: 16px;">Machine Inspection Completed</td>
+              <td style="padding: 20px 15px; text-align: right; color: #00A3AD; font-weight: 700;">✓ Verified</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 20px 15px; font-size: 16px;">Shipment Delivered</td>
+              <td style="padding: 20px 15px; text-align: right; color: #00A3AD; font-weight: 700;">✓ Verified</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 20px 15px; font-size: 16px;">Remote Installation Support Provided</td>
+              <td style="padding: 20px 15px; text-align: right; color: #00A3AD; font-weight: 700;">✓ Verified</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 20px 15px; font-size: 16px;">Production Launch Confirmed</td>
+              <td style="padding: 20px 15px; text-align: right; color: #00A3AD; font-weight: 700;">✓ Verified</td>
+            </tr>
+            <tr>
+              <td style="padding: 20px 15px; font-size: 16px;">Customer Feedback Received</td>
+              <td style="padding: 20px 15px; text-align: right; color: #00A3AD; font-weight: 700;">✓ Verified</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED CASES -->
+  <section class="dd-section dd-section-dark">
+    <div class="dd-container">
+      <span class="dd-kicker">RELATED SUCCESS STORIES</span>
+      <h2 class="dd-h2">More documented overseas deployments.</h2>
+
+      <div class="dd-related-grid">
+        <a class="dd-related-card" href="/pages/case-uganda-sign-factory">
+          <span>CASE_001 · UGANDA</span>
+          <strong>Signage Factory Setup With CO2 Laser And CNC Router</strong>
+        </a>
+
+        <a class="dd-related-card" href="/pages/case-study-georgia">
+          <span>CASE_002 · GEORGIA</span>
+          <strong>Furniture Workshop Referral And Repeat Purchase Journey</strong>
+        </a>
+
+        <a class="dd-related-card" href="/pages/case-study-ethiopia">
+          <span>CASE_003 · ETHIOPIA</span>
+          <strong>Factory Verification Journey For Advertising Production</strong>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section id="consultation" class="dd-section dd-section-mid">
+    <div class="dd-container">
+      <span class="dd-kicker">START A SIMILAR PROJECT</span>
+      <h2 class="dd-h2">Need a CNC router solution for event decoration, signage, or custom panel production?</h2>
+      <p class="dd-copy">
+        Share your materials, product photos, working size, and production goals. Dragon Diamond can help you evaluate the right machine configuration before purchase.
+      </p>
+
+      <div class="dd-hero-cta" style="margin-top: 36px;">
+        <a href="/pages/contact" class="dd-btn-primary">Contact Dragon Diamond</a>
+        <a href="/collections/cnc-router" class="dd-btn-secondary">View CNC Router Series</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+{% schema %}
+{
+  "name": "DD Case Study Israel",
+  "settings": [],
+  "presets": [
+    {
+      "name": "DD Case Study Israel"
+    }
+  ]
+}
+{% endschema %}

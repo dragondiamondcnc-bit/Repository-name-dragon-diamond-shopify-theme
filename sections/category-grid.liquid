@@ -1,0 +1,78 @@
+{% comment %}
+  Category Navigation Grid for DRAGON DIAMOND
+  Displays the 3 main product pillars with high-quality visual cards.
+{% endcomment %}
+
+<div class="category-grid-section" style="background-color: #FFFFFF; padding: 120px 0;">
+  <div class="page-width">
+    <div class="section-header" style="text-align: center; margin-bottom: 70px;">
+      <h2 style="color: #1A1A1B; font-size: 36px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 800;">DRAGON DIAMOND Product Categories</h2>
+      <p style="color: #666; font-size: 18px; margin: 20px 0 0;">Industrial-grade performance across all manufacturing sectors.</p>
+      <div style="width: 70px; height: 4px; background-color: #008F5A; margin: 15px auto 0;"></div>
+    </div>
+
+    <div class="category-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
+      
+      <!-- CO2 Laser -->
+      <a href="/collections/co2-laser-machines" class="category-card" style="text-decoration: none; position: relative; overflow: hidden; display: flex; flex-direction: column; background-color: #F8F8F8; border-bottom: 5px solid #EEEEEE; transition: all 0.4s ease;">
+        <div class="category-image-wrapper" style="width: 100%; aspect-ratio: 4/3; overflow: hidden; background: #000;">
+          <img src="https://sc02.alicdn.com/kf/A6dc133f92dd34bceb7c31b9adf45deb8O.png" alt="CO2 Laser Cutting Machine" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.85; transition: transform 0.5s ease;">
+        </div>
+        <div class="category-info" style="padding: 35px 30px; text-align: left; background: #FFFFFF; transition: all 0.4s ease;">
+          <h3 style="margin: 0; font-size: 20px; color: #1A1A1B; font-weight: 800; letter-spacing: 0.05em;">CO2 Laser Cutting Machine</h3>
+          <p style="color: #666; font-size: 14px; margin: 15px 0 25px; line-height: 1.6;">Precision cutting & engraving for acrylic, wood, fabric, and leather.</p>
+          <span style="font-size: 13px; font-weight: bold; color: #008F5A; text-transform: uppercase; letter-spacing: 0.1em;">View Series →</span>
+        </div>
+      </a>
+
+      <!-- Fiber Marking -->
+      <a href="/collections/fiber-marking-machines" class="category-card" style="text-decoration: none; position: relative; overflow: hidden; display: flex; flex-direction: column; background-color: #F8F8F8; border-bottom: 5px solid #EEEEEE; transition: all 0.4s ease;">
+        <div class="category-image-wrapper" style="width: 100%; aspect-ratio: 4/3; overflow: hidden; background: #000;">
+          <img src="https://sc02.alicdn.com/kf/A3ebcb95f7586406b98ee384130d891der.png" alt="Fiber Laser Marking Machine" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.85; transition: transform 0.5s ease;">
+        </div>
+        <div class="category-info" style="padding: 35px 30px; text-align: left; background: #FFFFFF; transition: all 0.4s ease;">
+          <h3 style="margin: 0; font-size: 20px; color: #1A1A1B; font-weight: 800; letter-spacing: 0.05em;">Fiber Laser Marking Machine</h3>
+          <p style="color: #666; font-size: 14px; margin: 15px 0 25px; line-height: 1.6;">High-speed metal and plastic permanent marking for industrial tracing.</p>
+          <span style="font-size: 13px; font-weight: bold; color: #008F5A; text-transform: uppercase; letter-spacing: 0.1em;">View Series →</span>
+        </div>
+      </a>
+
+      <!-- CNC Router -->
+      <a href="/collections/cnc-router-machines" class="category-card" style="text-decoration: none; position: relative; overflow: hidden; display: flex; flex-direction: column; background-color: #F8F8F8; border-bottom: 5px solid #EEEEEE; transition: all 0.4s ease;">
+        <div class="category-image-wrapper" style="width: 100%; aspect-ratio: 4/3; overflow: hidden; background: #000;">
+          <img src="https://sc02.alicdn.com/kf/H2357b979868242ba844b84d7fdc6e7da6.jpg" alt="CNC Router Machine" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.85; transition: transform 0.5s ease;">
+        </div>
+        <div class="category-info" style="padding: 35px 30px; text-align: left; background: #FFFFFF; transition: all 0.4s ease;">
+          <h3 style="margin: 0; font-size: 20px; color: #1A1A1B; font-weight: 800; letter-spacing: 0.05em;">CNC Router Machine</h3>
+          <p style="color: #666; font-size: 14px; margin: 15px 0 25px; line-height: 1.6;">Heavy-duty 3D routing for wood, furniture, and large-scale industrial crafts.</p>
+          <span style="font-size: 13px; font-weight: bold; color: #008F5A; text-transform: uppercase; letter-spacing: 0.1em;">View Series →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<style>
+.category-card:hover {
+  border-bottom: 5px solid #008F5A !important;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+}
+.category-card:hover .category-image-wrapper img {
+  transform: scale(1.1);
+  opacity: 1;
+}
+.category-card:hover .category-info {
+  background-color: #F4F4F4;
+}
+@media screen and (max-width: 1199px) {
+  .category-grid { gap: 30px; }
+}
+@media screen and (max-width: 989px) {
+  .category-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media screen and (max-width: 749px) {
+  .category-grid { grid-template-columns: 1fr; }
+  .section-header h2 { font-size: 28px !important; }
+}
+</style>

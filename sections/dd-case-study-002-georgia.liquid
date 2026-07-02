@@ -1,0 +1,987 @@
+{% comment %}
+  Dragon Diamond CASE_002 Georgia
+  Evidence-First Documentary Version
+  Focus: Referral → Custom Engineering → Production → Installation → Repeat Purchase
+{% endcomment %}
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&display=swap');
+
+  .dd-georgia-case {
+    background: #0F1115 !important;
+    color: #ffffff !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+  }
+
+  .dd-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .dd-kicker {
+    font-family: "Archivo Narrow", sans-serif;
+    color: #00A3AD !important;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    display: block;
+  }
+
+  .dd-section {
+    padding: 110px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .dd-section-light {
+    background: #ffffff !important;
+    color: #111111 !important;
+  }
+
+  .dd-section-light .dd-title,
+  .dd-section-light .dd-h2,
+  .dd-section-light h2 {
+    color: #111111 !important;
+  }
+
+  .dd-section-dark {
+    background: #0F1115 !important;
+    color: #ffffff !important;
+  }
+
+  .dd-section-dark .dd-title,
+  .dd-section-dark .dd-h2,
+  .dd-section-dark h2 {
+    color: #ffffff !important;
+  }
+
+  .dd-section-mid {
+    background: #11141A !important;
+    color: #ffffff !important;
+  }
+
+  .dd-section-mid .dd-title,
+  .dd-section-mid .dd-h2,
+  .dd-section-mid h2 {
+    color: #ffffff !important;
+  }
+
+  .dd-title {
+    font-size: 54px;
+    line-height: 1.05;
+    font-weight: 850;
+    letter-spacing: -2px;
+    margin: 0 0 28px;
+    color: #ffffff !important;
+  }
+
+  .dd-h2 {
+    font-size: 42px;
+    line-height: 1.12;
+    font-weight: 850;
+    letter-spacing: -1px;
+    margin: 0 0 24px;
+    color: #ffffff !important;
+  }
+
+  .dd-copy {
+    max-width: 780px;
+    font-size: 18px;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.68) !important;
+  }
+
+  .dd-section-light .dd-copy {
+    color: #555555 !important;
+  }
+
+  .dd-hero {
+    position: relative;
+    min-height: 550px;
+    height: 75vh;
+    max-height: 800px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #0F1115 !important;
+  }
+
+  .dd-hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: #0F1115 !important;
+  }
+
+  .dd-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .55;
+    display: block;
+  }
+
+  .dd-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(15,17,21,.96) 0%, rgba(15,17,21,.72) 48%, rgba(15,17,21,.18) 100%);
+    z-index: 1;
+  }
+
+  .dd-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+  }
+
+  .dd-hero-sub {
+    font-size: 21px;
+    line-height: 1.6;
+    color: rgba(255,255,255,.76) !important;
+    max-width: 760px;
+    margin-bottom: 42px;
+  }
+
+  .dd-hero-cta {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .dd-btn-primary,
+  .dd-btn-secondary {
+    display: inline-block;
+    padding: 18px 32px;
+    font-size: 13px;
+    font-weight: 850;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .dd-btn-primary {
+    background: #00A3AD !important;
+    color: #ffffff !important;
+  }
+
+  .dd-btn-secondary {
+    border: 1px solid rgba(255,255,255,.28) !important;
+    color: #ffffff !important;
+    background: transparent !important;
+  }
+
+  .dd-overview {
+    background: #11141A !important;
+  }
+
+  .dd-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .dd-overview-item {
+    padding: 44px 26px;
+    border-right: 1px solid rgba(255,255,255,.06);
+    text-align: center;
+  }
+
+  .dd-overview-item:last-child {
+    border-right: none;
+  }
+
+  .dd-overview-item span {
+    display: block;
+    font-family: "Archivo Narrow", sans-serif;
+    color: #00A3AD;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .dd-overview-item strong {
+    font-size: 18px;
+    font-weight: 850;
+  }
+
+  .dd-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 42px;
+    margin-top: 56px;
+  }
+
+  .dd-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 34px;
+    margin-top: 56px;
+  }
+
+  .dd-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 56px;
+  }
+
+  .dd-evidence-card {
+    background: #171A20;
+    border: 1px solid rgba(255,255,255,.07);
+  }
+
+  .dd-section-light .dd-evidence-card {
+    background: #F5F6F7;
+    border-color: rgba(0,0,0,.08);
+  }
+
+  .dd-img-frame {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+    background: #181B20;
+  }
+
+  .dd-img-frame.tall {
+    height: 320px;
+  }
+
+  .dd-img-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .dd-img-frame.contain img {
+    object-fit: contain;
+    background: #11141A;
+  }
+
+  .dd-label {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    z-index: 2;
+    padding: 7px 11px;
+    background: rgba(15,17,21,.84);
+    border: 1px solid rgba(0,163,173,.48);
+    color: #fff;
+    font-family: "Archivo Narrow", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+  }
+
+  .dd-card-body {
+    padding: 24px;
+  }
+
+  .dd-card-title {
+    font-family: "Archivo Narrow", sans-serif;
+    color: #00A3AD;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .dd-card-text {
+    font-size: 15px;
+    line-height: 1.65;
+    color: rgba(255,255,255,.62) !important;
+  }
+
+  .dd-section-light .dd-card-text {
+    color: #555555 !important;
+  }
+
+  .dd-timeline {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+
+  .dd-step {
+    background: #171A20;
+    border: 1px solid rgba(255,255,255,.07);
+    padding: 24px 18px;
+    min-height: 170px;
+  }
+
+  .dd-step-num {
+    font-family: "Archivo Narrow", sans-serif;
+    color: #00A3AD;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+
+  .dd-step-title {
+    font-size: 17px;
+    font-weight: 850;
+    margin-bottom: 10px;
+  }
+
+  .dd-step-copy {
+    font-size: 14px;
+    line-height: 1.55;
+    color: rgba(255,255,255,.58);
+  }
+
+  .dd-related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 48px;
+  }
+
+  .dd-related-card {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    background: #171A20;
+    border: 1px solid rgba(255,255,255,.07);
+    padding: 28px;
+  }
+
+  .dd-related-card span {
+    display: block;
+    font-family: "Archivo Narrow", sans-serif;
+    color: #00A3AD;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .dd-related-card strong {
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  /* Section 02 Visual Focal Point Refinement */
+  .dd-referral-grid .dd-img-frame.tall {
+    height: 360px;
+  }
+  .dd-referral-grid .dd-card-body {
+    padding: 14px 24px 18px;
+  }
+
+  /* Section 10 Asymmetric Grid */
+  .dd-asymmetric-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+    gap: 60px;
+    margin-top: 56px;
+  }
+
+  @media (max-width: 1024px) {
+    .dd-container { padding: 0 22px; }
+    .dd-title { font-size: 42px; }
+    .dd-h2 { font-size: 32px; }
+    .dd-hero { min-height: 450px; }
+    .dd-overview-grid,
+    .dd-grid-2,
+    .dd-grid-3,
+    .dd-grid-4,
+    .dd-asymmetric-grid,
+    .dd-timeline,
+    .dd-related-grid {
+      grid-template-columns: 1fr;
+    }
+    .dd-img-frame,
+    .dd-img-frame.tall {
+      height: 260px !important;
+      max-height: 260px !important;
+    }
+    .dd-img-frame img {
+      height: 100% !important;
+      object-fit: cover !important;
+      display: block;
+    }
+    .dd-section { padding: 76px 0; }
+  }
+</style>
+
+<div class="dd-georgia-case">
+
+  <!-- 01. HERO -->
+  <header class="dd-hero">
+    <div class="dd-hero-bg">
+      <img
+        src="{{ 'georgia-hero-workshop-1.jpg' | file_url }}"
+        alt="Georgia customer furniture workshop featuring Dragon Diamond CNC router"
+        loading="eager"
+      >
+    </div>
+
+    <div class="dd-container">
+      <div class="dd-hero-inner">
+        <span class="dd-kicker">CASE STUDY: GEORGIA · FURNITURE MANUFACTURING</span>
+        <h1 class="dd-title">From Local Referral To Long-Term Partnership In Georgia</h1>
+        <p class="dd-hero-sub">
+          A custom 2100×2800mm CNC router project that progressed from referral validation to repeat purchase and long-term cooperation.
+        </p>
+
+        <div class="dd-hero-cta">
+          <a href="#consultation" class="dd-btn-primary">Talk With Our Engineering Team</a>
+          <a href="/products/custom-cnc-router" class="dd-btn-secondary">View Custom Solutions</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 02. OVERVIEW (Metrics) -->
+  <section class="dd-overview">
+    <div class="dd-container">
+      <div class="dd-overview-grid">
+        <div class="dd-overview-item">
+          <span>Location</span>
+          <strong>Georgia</strong>
+        </div>
+        <div class="dd-overview-item">
+          <span>Industry</span>
+          <strong>Furniture Manufacturing</strong>
+        </div>
+        <div class="dd-overview-item">
+          <span>Configuration</span>
+          <strong>2100×2800mm Custom</strong>
+        </div>
+        <div class="dd-overview-item">
+          <span>Relationship</span>
+          <strong>Repeat Purchase Customer</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02. CUSTOMER SNAPSHOT -->
+  <section class="dd-section dd-section-dark">
+    <div class="dd-container">
+      <span class="dd-kicker">01. CUSTOMER SNAPSHOT</span>
+      <h2 class="dd-h2">High-end furniture manufacturing in Georgia.</h2>
+      
+      <div class="dd-grid-2">
+        <div class="dd-evidence-card">
+          <div class="dd-card-body">
+            <div class="dd-card-title">CUSTOMER PROFILE</div>
+            <div class="dd-card-text">
+              <strong>Name:</strong> Gocha D.<br>
+              <strong>Country:</strong> Georgia<br>
+              <strong>Industry:</strong> Furniture Manufacturing<br>
+              <strong>Application:</strong> Custom Wood Products
+            </div>
+          </div>
+        </div>
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <img src="{{ 'georgia-workshop-received-1.jpg' | file_url }}" alt="Georgia customer workshop photo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03. REFERRAL VALIDATION -->
+  <section class="dd-section dd-section-light">
+    <div class="dd-container">
+      <span class="dd-kicker">02. REFERRAL EVIDENCE</span>
+      <h2 class="dd-h2">A local customer recommendation started the project.</h2>
+      <p class="dd-copy">
+        The project did not start from an ad. It started when Gocha saw a Dragon Diamond machine already operating successfully at Ms. Nino Razmadze's facility in Georgia.
+      </p>
+
+      <div class="dd-grid-2">
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame tall" style="background: #f7f2ea !important;">
+            <span class="dd-label">WHATSAPP RECORD</span>
+            <img src="{{ 'georgia-referral-final-v5.jpg' | file_url }}" alt="Referral evidence from Georgia customer" style="object-fit: contain !important; object-position: center center !important;">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">REFERRAL SOURCE</div>
+            <div class="dd-card-text">"We saw machine which Mis Nino Razmadze bought in your company... and its exactly these machine in video?"</div>
+          </div>
+        </div>
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame tall">
+             <span class="dd-label">NINO'S MACHINE IN GEORGIA</span>
+             <img src="{{ 'georgia-nino-machine.jpg' | file_url }}" alt="Nino's operating machine in Georgia">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">OPERATIONAL PROOF</div>
+            <div class="dd-card-text">The existing machine in Georgia served as the primary trust foundation for this new investment.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04. REQUIREMENT DISCOVERY -->
+  <section class="dd-section dd-section-dark">
+    <div class="dd-container">
+      <span class="dd-kicker">03. TECHNICAL REQUIREMENTS</span>
+      <h2 class="dd-h2">Defining the right CNC router configuration.</h2>
+      
+      <div class="dd-grid-2">
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame tall" style="background: #ffffff !important;">
+            <span class="dd-label">CUSTOMER SPECIFICATION</span>
+            <img src="{{ 'georgia-config-spec-v3.jpg' | file_url }}" alt="Requirement discovery chat" style="object-fit: cover; object-position: center top;">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">CUSTOM CONFIGURATION REQUEST</div>
+            <div class="dd-card-text">Before requesting a quotation, the customer provided a detailed technical specification list covering working area dimensions, spindle power, servo motion systems, ATC requirements, and target materials. This document became the foundation for the final machine configuration and production plan.</div>
+          </div>
+        </div>
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame tall">
+            <span class="dd-label">PRODUCTION CONFIRMED</span>
+            <img src="{{ 'georgia-production-confirmed-2023.jpg' | file_url }}" alt="Dragon Diamond factory machine verification" style="object-fit: cover; object-position: center;">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">CONFIGURATION VERIFIED</div>
+            <div class="dd-card-text">After confirming the technical specifications, Dragon Diamond completed machine assembly and conducted internal verification before shipment. The customer reviewed the final machine preparation status and approved the order for delivery to Georgia.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05. COMMERCIAL COMMITMENT STAGE -->
+  <section class="dd-section dd-section-light">
+    <div class="dd-container">
+      <span class="dd-kicker">04. COMMERCIAL COMMITMENT STAGE</span>
+      <h2 class="dd-h2">Order approval and project authorization.</h2>
+      
+      <div class="dd-grid-2">
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame tall">
+            <span class="dd-label">PURCHASE DECISION</span>
+            <img src="{{ 'georgia-purchase-decision-2023.jpg' | file_url }}" alt="Customer purchase confirmation chat" style="object-fit: cover; object-position: center;">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">ORDER CONFIRMED</div>
+            <div class="dd-card-text">After reviewing the custom configuration and technical alignment, the customer officially confirmed the purchase intent and authorized the project launch.</div>
+          </div>
+        </div>
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame tall">
+            <span class="dd-label">DEPOSIT RECEIVED</span>
+            <img src="{{ 'georgia-deposit-received-2023.jpg' | file_url }}" alt="Deposit receipt verification" style="object-fit: cover; object-position: center;">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">PRODUCTION AUTHORIZED</div>
+            <div class="dd-card-text">With the initial deposit successfully verified, the project moved into the active production phase at the Dragon Diamond facility.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06. PRODUCTION LAUNCH -->
+  <section class="dd-section dd-section-dark">
+    <div class="dd-container">
+      <span class="dd-kicker">05. PRODUCTION LAUNCH</span>
+      <h2 class="dd-h2">The approved project entered production.</h2>
+      
+      <p class="dd-copy">
+        Once the project was approved, Dragon Diamond released the order into production and began machine assembly according to the confirmed specifications.
+      </p>
+
+      <div class="dd-grid-2" style="margin-top: 56px;">
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame tall">
+            <span class="dd-label">FRAME ASSEMBLY</span>
+            <img src="{{ 'georgia-frame-assembly-2023.jpg' | file_url }}" alt="Factory machine frame assembly" style="object-fit: cover; object-position: center center;">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">MACHINE STRUCTURE BUILD</div>
+            <div class="dd-card-text">Engineers began assembling the machine frame and structural components according to the approved production drawings. This stage transformed the customer's requirements into the physical foundation of the CNC router.</div>
+          </div>
+        </div>
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame tall">
+            <span class="dd-label">SYSTEM INTEGRATION</span>
+            <img src="{{ 'georgia-production-launch-team.jpg' | file_url }}" alt="Dragon Diamond engineering team system integration" style="object-fit: cover; object-position: center center;">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">ELECTRICAL & MOTION SETUP</div>
+            <div class="dd-card-text">Electrical wiring, motion control systems, and machine subsystems were integrated and verified before entering factory testing. Each component was checked to ensure compliance with the approved configuration.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 & 08. FACTORY TESTING -->
+  <section class="dd-section dd-section-mid">
+    <div class="dd-container">
+      <span class="dd-kicker">06. FACTORY TESTING</span>
+      <h2 class="dd-h2">Manufacturing and testing before shipment.</h2>
+      
+      <p class="dd-copy">
+        After assembly was completed, the machine entered the factory testing stage. Mechanical systems, electrical components, and motion accuracy were verified before export packaging and shipment preparation.
+      </p>
+      
+      <div class="dd-grid-3" style="margin-top: 56px;">
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <span class="dd-label">FACTORY BUILD</span>
+             <img src="{{ 'georgia-factory-assembly-2023.jpg' | file_url }}" alt="CNC router assembly completed">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">ASSEMBLY COMPLETED</div>
+            <div class="dd-card-text">The custom CNC router entered the final assembly stage. Mechanical, electrical, and control systems were integrated according to the approved specifications.</div>
+          </div>
+        </div>
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <span class="dd-label">FACTORY TESTING</span>
+             <img src="{{ 'georgia-factory-testing-v3.jpg' | file_url }}" alt="CNC router factory testing" style="object-fit: cover; object-position: center center;">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">PRE-SHIPMENT VERIFICATION</div>
+            <div class="dd-card-text">Before shipment, the machine underwent operational testing to verify motion accuracy, spindle performance, and overall system stability. The completed unit was approved for export preparation.</div>
+          </div>
+        </div>
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <span class="dd-label">EXPORT PACKAGING</span>
+             <img src="{{ 'georgia-protective-wrapping-2.jpg' | file_url }}" alt="Machine ready for export packaging">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">READY FOR DELIVERY</div>
+            <div class="dd-card-text">After successful testing, the machine was protected with export-grade packaging and prepared for international shipment to Georgia.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09. SHIPMENT PREPARATION -->
+  <section class="dd-section dd-section-dark">
+    <div class="dd-container">
+      <span class="dd-kicker">07. SHIPMENT PREPARATION</span>
+      <h2 class="dd-h2">Preparing for international shipment.</h2>
+      
+      <p class="dd-copy">
+        After factory testing was completed, the machine entered the export preparation stage. Packaging, container planning, and logistics coordination were completed before shipment to Georgia.
+      </p>
+
+      <div class="dd-grid-3" style="margin-top: 56px;">
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <span class="dd-label">CONTAINER PLANNING</span>
+            <img src="{{ 'georgia-container-loading-sim.jpg' | file_url }}" alt="Export container loading simulation">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">EXPORT DIMENSION CHECK</div>
+            <div class="dd-card-text">The machine dimensions were verified against container limitations to ensure safe and efficient international transportation.</div>
+          </div>
+        </div>
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <span class="dd-label">PROTECTIVE PACKAGING</span>
+            <img src="{{ 'georgia-protective-wrapping-3.jpg' | file_url }}" alt="Protective export wrapping">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">EXPORT PROTECTION</div>
+            <div class="dd-card-text">The machine was wrapped and protected to prevent moisture, dust, and transportation damage during overseas transit.</div>
+          </div>
+        </div>
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <span class="dd-label">WOODEN CRATING</span>
+            <img src="{{ 'georgia-wooden-crate-4.jpg' | file_url }}" alt="Export grade wooden crating">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">READY FOR EXPORT</div>
+            <div class="dd-card-text">The completed machine was secured inside an export-grade wooden crate and prepared for shipment from China to Georgia.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. INSTALLATION & COMMISSIONING -->
+  <section class="dd-section dd-section-light">
+    <div class="dd-container">
+      <span class="dd-kicker">08. INSTALLATION & COMMISSIONING</span>
+      <h2 class="dd-h2">From delivery to daily production.</h2>
+      <p class="dd-copy">
+        After arriving in Georgia, the CNC router was installed inside the customer's workshop and commissioned according to the approved specifications. Once operational verification was completed, the machine became part of the customer's daily furniture manufacturing workflow.
+      </p>
+
+      <div class="dd-grid-3" style="margin-top: 56px;">
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame tall">
+            <span class="dd-label">INSTALLATION COMPLETED</span>
+            <img src="{{ 'georgia-workshop-received-1.jpg' | file_url }}" alt="CNC router installed in Georgian workshop" style="object-fit: cover; object-position: center;">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">MACHINE DEPLOYED</div>
+            <div class="dd-card-text">The CNC router was installed inside the customer's production facility and prepared for commissioning and operational verification.</div>
+          </div>
+        </div>
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame tall">
+            <span class="dd-label">WORKSHOP COMMISSIONING</span>
+            <img src="{{ 'machine-in-customer-workshop-01.jpg' | file_url }}" alt="Dragon Diamond CNC machine commissioned in Georgia" style="object-fit: cover; object-position: center;">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">READY FOR PRODUCTION</div>
+            <div class="dd-card-text">Following installation, the machine was connected to the customer's production environment and prepared for routine manufacturing operations.</div>
+          </div>
+        </div>
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame tall">
+            <span class="dd-label">DAILY OPERATION</span>
+            <img src="{{ 'machine-in-customer-workshop-02.jpg' | file_url }}" alt="Dragon Diamond CNC machine running in customer workshop" style="object-fit: cover; object-position: center;">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">ENTERED COMMERCIAL USE</div>
+            <div class="dd-card-text">The CNC router entered daily production and began processing customized furniture components for local customer orders.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 & 12. COMMERCIAL PRODUCTION OUTPUT -->
+  <section class="dd-section dd-section-dark">
+    <div class="dd-container">
+      <span class="dd-kicker">09. COMMERCIAL PRODUCTION OUTPUT</span>
+      <h2 class="dd-h2">From machine installation to commercial products.</h2>
+      <p class="dd-copy">
+        After commissioning was completed, the CNC router entered daily production inside the customer's furniture workshop. The machine was used to manufacture customized plywood products, decorative furniture, and children's wooden products for the local Georgian market, demonstrating the commercial value of the investment.
+      </p>
+
+      <div class="dd-grid-3" style="margin-top: 56px;">
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <span class="dd-label">PRODUCT OUTPUT</span>
+            <img src="{{ 'georgia-product-cart.jpg' | file_url }}" alt="Customized plywood storage unit">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">CUSTOM WOODEN STORAGE UNIT</div>
+            <div class="dd-card-text">Customized plywood storage products manufactured using the Dragon Diamond CNC router. The machine enabled accurate cutting, engraving, and repeatable production for commercial furniture applications.</div>
+          </div>
+        </div>
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <span class="dd-label">PRECISION MACHINING</span>
+            <img src="{{ 'georgia-product-table-front.jpg' | file_url }}" alt="Decorative furniture component front view">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">DECORATIVE FURNITURE COMPONENT</div>
+            <div class="dd-card-text">Complex contour cutting and decorative machining were completed with high dimensional accuracy and surface consistency. The project demonstrates the machine's capability for customized furniture production.</div>
+          </div>
+        </div>
+        <div class="dd-evidence-card">
+          <div class="dd-img-frame">
+            <span class="dd-label">COMMERCIAL APPLICATION</span>
+            <img src="{{ 'georgia-product-table-side.jpg' | file_url }}" alt="Market-ready wood products side view">
+          </div>
+          <div class="dd-card-body">
+            <div class="dd-card-title">MARKET-READY PRODUCTS</div>
+            <div class="dd-card-text">Finished products entered commercial use after production. The CNC router became part of the customer's daily manufacturing workflow and contributed directly to product output and business growth.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. REPEAT PURCHASE -->
+  <section class="dd-section dd-section-mid">
+    <div class="dd-container">
+      <span class="dd-kicker">10. REPEAT ORDER & LONG-TERM PARTNERSHIP</span>
+      <h2 class="dd-h2">The Strongest Proof:<br>A Second Order Three Years Later.</h2>
+      <p class="dd-copy">
+        The first CNC router was delivered in 2023 and entered daily production inside the customer's furniture workshop. After more than three years of operation, the customer expanded production capacity and returned to Dragon Diamond to purchase a second machine, demonstrating long-term confidence in machine performance, reliability, and technical support.
+      </p>
+
+      <div class="dd-asymmetric-grid">
+        <!-- LEFT COLUMN: CUSTOMER JOURNEY TIMELINE -->
+        <div style="position: relative;">
+          <!-- Vertical Connector Line -->
+          <div style="position: absolute; left: 34px; top: 40px; bottom: 40px; width: 2px; background: rgba(0,163,173,0.24); z-index: 0;"></div>
+
+          <div style="display: flex; flex-direction: column; gap: 48px; position: relative; z-index: 1;">
+            
+            <!-- 2023 -->
+            <div style="display: flex; gap: 24px;">
+              <div style="flex-shrink: 0; width: 70px; height: 70px; border-radius: 50%; background: #171A20; border: 2px solid #00A3AD; display: flex; align-items: center; justify-content: center; font-family: 'Archivo Narrow', sans-serif; font-weight: 700; color: #00A3AD; font-size: 14px;">2023</div>
+              <div class="dd-evidence-card" style="flex-grow: 1; margin: 0;">
+                <div class="dd-img-frame" style="height: 180px;">
+                  <span class="dd-label">2023 CUSTOMER FEEDBACK</span>
+                  <img src="{{ 'georgia-feedback-2023-v3.jpg' | file_url }}" alt="2023 Customer satisfaction feedback" style="object-fit: cover; object-position: center;">
+                </div>
+                <div class="dd-card-body">
+                  <div class="dd-card-title">Satisfied With The First Machine</div>
+                  <div class="dd-card-text">Several months after installation, the customer confirmed that the CNC router was operating successfully inside the furniture workshop. The feedback validated machine performance, stability, and production capability in daily operation.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2025 -->
+            <div style="display: flex; gap: 24px;">
+              <div style="flex-shrink: 0; width: 70px; height: 70px; border-radius: 50%; background: #171A20; border: 2px solid #00A3AD; display: flex; align-items: center; justify-content: center; font-family: 'Archivo Narrow', sans-serif; font-weight: 700; color: #00A3AD; font-size: 14px;">2025</div>
+              <div class="dd-evidence-card" style="flex-grow: 1; margin: 0;">
+                <div class="dd-img-frame" style="height: 180px;">
+                  <span class="dd-label">2025 EXPANSION INQUIRY</span>
+                  <img src="{{ 'georgia-repeat-order-inquiry-2025-v3.jpg' | file_url }}" alt="2025 Repeat order inquiry" style="object-fit: cover; object-position: center;">
+                </div>
+                <div class="dd-card-body">
+                  <div class="dd-card-title">Looking For A Larger Machine</div>
+                  <div class="dd-card-text">After more than two years of production, the customer contacted Dragon Diamond again to discuss capacity expansion and requested recommendations for a larger CNC router. This inquiry marked the beginning of the customer's second investment plan.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2026 -->
+            <div style="display: flex; gap: 24px;">
+              <div style="flex-shrink: 0; width: 70px; height: 70px; border-radius: 50%; background: #171A20; border: 2px solid #00A3AD; display: flex; align-items: center; justify-content: center; font-family: 'Archivo Narrow', sans-serif; font-weight: 700; color: #00A3AD; font-size: 14px;">2026</div>
+              <div class="dd-evidence-card" style="flex-grow: 1; margin: 0;">
+                <div class="dd-img-frame" style="height: 180px;">
+                  <span class="dd-label">2026 SECOND ORDER CONFIRMED</span>
+                  <img src="{{ 'georgia-repeat-order-deposit-2026-v4.jpg' | file_url }}" alt="2026 Repeat purchase authorization" style="object-fit: cover; object-position: center;">
+                </div>
+                <div class="dd-card-body">
+                  <div class="dd-card-title">Deposit Arranged For Expansion</div>
+                  <div class="dd-card-text">After reviewing the machine configuration, the customer confirmed the purchase decision and arranged the deposit payment for a second Dragon Diamond CNC router. The order officially entered production after payment confirmation.</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: REPEAT ORDER SNAPSHOT -->
+        <div>
+          <div class="dd-evidence-card" style="position: sticky; top: 40px; margin-top: 10px; padding: 15px; background: rgba(255,255,255,0.02);">
+            <div class="dd-img-frame" style="height: 360px;">
+              <span class="dd-label">SECOND ORDER CONFIRMED</span>
+              <img src="{{ 'georgia-lz2030-atc-technical-v2.jpg' | file_url }}" alt="2026 Expansion machine" style="object-fit: cover; object-position: center;">
+            </div>
+            <div class="dd-card-body" style="padding: 24px 0 0;">
+              <div class="dd-card-title" style="color: #fff; font-size: 15px; letter-spacing: 1px;">2026 EXPANSION MACHINE</div>
+              <div class="dd-card-text">
+                <div style="display: flex; flex-direction: column; gap: 20px; margin-top: 20px;">
+                  <div>
+                    <span style="display: block; color: #00A3AD; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 4px;">First Machine Delivered</span>
+                    <strong style="font-size: 16px; color: #fff;">2023</strong>
+                  </div>
+                  <div>
+                    <span style="display: block; color: #00A3AD; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 4px;">Running Period</span>
+                    <strong style="font-size: 16px; color: #fff;">3+ Years</strong>
+                  </div>
+                  <div>
+                    <span style="display: block; color: #00A3AD; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 4px;">Customer Status</span>
+                    <strong style="font-size: 16px; color: #fff;">ACTIVE MANUFACTURER</strong>
+                  </div>
+                  <div>
+                    <span style="display: block; color: #00A3AD; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 4px;">Second Order</span>
+                    <strong style="font-size: 16px; color: #fff;">CONFIRMED 2026</strong>
+                  </div>
+                  <div>
+                    <span style="display: block; color: #00A3AD; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 4px;">Purpose</span>
+                    <strong style="font-size: 16px; color: #fff;">Production Capacity Expansion</strong>
+                  </div>
+                </div>
+                <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 24px 0;">
+                <div style="font-size: 13px; color: rgba(255,255,255,0.5);">
+                  <strong>Model:</strong> LZ-2030 ATC CNC Router
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 48px; padding: 32px; border-left: 3px solid #00A3AD; background: rgba(255,255,255,0.03);">
+        <p class="dd-copy" style="font-size: 17px; line-height: 1.6; margin: 0; color: rgba(255,255,255,0.9);">
+          The first CNC router was delivered in 2023. After more than three years of production, the customer expanded capacity and purchased a second Dragon Diamond machine. For Dragon Diamond, this repeat order is the strongest evidence that machine performance, reliability, and support continued to deliver value long after installation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13.8. RELATED PROJECTS (GLOBAL VALIDATION) -->
+  <section class="dd-section dd-section-mid">
+    <div class="dd-container">
+      <span class="dd-kicker">EXPLORE PROJECTS</span>
+      <h2 class="dd-h2">Explore More Customer Projects</h2>
+      
+      <div class="dd-grid-3" style="margin-top: 48px;">
+        <a href="/pages/case-study-uganda" class="dd-related-card">
+          <span>CASE_001 · UGANDA</span>
+          <strong>Uganda Signage Factory</strong>
+          <div class="dd-card-text" style="margin-top: 14px;">
+            <strong>Industry:</strong> Advertisement Signage<br>
+            <strong>Machine Type:</strong> Multi-Head Acrylic Cutting CNC<br>
+            <strong>Outcome:</strong> Scaled commercial signage production with 100% remote self-installation.
+          </div>
+        </a>
+        <a href="/pages/case-study-israel" class="dd-related-card">
+          <span>CASE_004 · ISRAEL</span>
+          <strong>Israel Event Decoration</strong>
+          <div class="dd-card-text" style="margin-top: 14px;">
+            <strong>Industry:</strong> Event & PVC Cutting<br>
+            <strong>Machine Type:</strong> Heavy-Duty Woodworking CNC<br>
+            <strong>Outcome:</strong> Replaced local sub-contracting with 24/7 in-house production capability.
+          </div>
+        </a>
+        <a href="/pages/case-study-ethiopia" class="dd-related-card">
+          <span>CASE_003 · ETHIOPIA</span>
+          <strong>Ethiopia Manufacturing Project</strong>
+          <div class="dd-card-text" style="margin-top: 14px;">
+            <strong>Industry:</strong> Manufacturing<br>
+            <strong>Machine Type:</strong> CNC Router / Laser Cutting Solution<br>
+            <strong>Outcome:</strong> Expanded production capability through Dragon Diamond machine deployment.
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14. CTA -->
+  <section id="consultation" class="dd-section dd-section-dark">
+    <div class="dd-container">
+      <span class="dd-kicker">START A SIMILAR PROJECT</span>
+      <h2 class="dd-h2">Need a Custom CNC Router For Furniture Manufacturing?</h2>
+      <p class="dd-copy">
+        A Georgian furniture manufacturer purchased a second Dragon Diamond CNC router after more than three years of production. Talk with our engineering team to configure the right CNC solution for your factory.
+      </p>
+
+      <div class="dd-hero-cta" style="margin-top: 36px;">
+        <a href="/pages/contact" class="dd-btn-primary">Talk With Our Engineering Team</a>
+        <a href="/collections/cnc-router" class="dd-btn-secondary">View CNC Router Series</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+{% schema %}
+{
+  "name": "DD Case Study Georgia",
+  "settings": [],
+  "presets": [
+    {
+      "name": "DD Case Study Georgia"
+    }
+  ]
+}
+{% endschema %}

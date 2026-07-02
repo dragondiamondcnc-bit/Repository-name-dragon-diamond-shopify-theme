@@ -1,0 +1,72 @@
+{% comment %}
+  DD Home Support V2 - Deployment Timeline
+{% endcomment %}
+<section class="dd-home-support">
+  <div class="dd-container">
+    <div class="dd-section-header">
+      <span class="dd-sub">LIFECYCLE // SUPPORT_SYSTEM</span>
+      <h2 class="dd-title">SUPPORT BEYOND DELIVERY.</h2>
+    </div>
+
+    <div class="dd-support-timeline">
+      <!-- 01 Shipping -->
+      <div class="dd-support-step">
+        <div class="dd-s-icon">LOGISTICS</div>
+        <div class="dd-s-info">
+          <h3>01 // SHIPPING</h3>
+          <p>Export-grade 12mm plywood crating. Ocean/Land freight documentation and tracking provided for every global destination.</p>
+        </div>
+      </div>
+
+      <!-- 02 Installation -->
+      <div class="dd-support-step">
+        <div class="dd-s-icon">SETUP</div>
+        <div class="dd-s-info">
+          <h3>02 // INSTALLATION</h3>
+          <p>Step-by-step unboxing guidelines and remote engineering support to ensure correct assembly and site preparation.</p>
+        </div>
+      </div>
+
+      <!-- 03 Training -->
+      <div class="dd-support-step">
+        <div class="dd-s-icon">KNOWLEDGE</div>
+        <div class="dd-s-info">
+          <h3>03 // TRAINING</h3>
+          <p>Technical sessions covering software workflow (ArtCAM/Ruida), tooling selection, and operational safety protocols.</p>
+        </div>
+      </div>
+
+      <!-- 04 Production -->
+      <div class="dd-support-step">
+        <div class="dd-s-icon">OUTPUT</div>
+        <div class="dd-s-info">
+          <h3>04 // PRODUCTION LAUNCH</h3>
+          <p>Post-deployment audit. We verify your machine is producing commercial-grade output before finalizing the support session.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .dd-home-support { padding: 120px 0; background: #0F1115; color: #FFF; }
+  .dd-home-support .dd-title { color: #FFF; }
+  .dd-support-timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-top: 64px; }
+  .dd-support-step { border-left: 2px solid rgba(255,255,255,0.1); padding-left: 32px; transition: border-color 0.3s ease; }
+  .dd-support-step:hover { border-left-color: #00A3AD; }
+  .dd-s-icon { font-size: 10px; font-weight: 700; color: #00A3AD; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 24px; }
+  .dd-s-info h3 { font-size: 18px; font-weight: 800; margin: 0 0 16px; letter-spacing: 1px; }
+  .dd-s-info p { font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.6); margin: 0; }
+  
+  @media (max-width: 1024px) {
+    .dd-support-timeline { grid-template-columns: 1fr; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "DD Home Support",
+  "settings": [],
+  "presets": [{"name": "DD Home Support"}]
+}
+{% endschema %}

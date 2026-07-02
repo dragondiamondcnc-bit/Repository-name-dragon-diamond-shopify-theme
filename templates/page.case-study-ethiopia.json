@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "dd-case-study-003-ethiopia",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

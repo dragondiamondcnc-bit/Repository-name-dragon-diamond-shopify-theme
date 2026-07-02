@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "dd-case-studies-center-v2",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,80 @@
+{% comment %}
+  DD Home Feedback V2 - Operator Reports
+  No marketing polish. Real evidence.
+{% endcomment %}
+<section class="dd-home-feedback">
+  <div class="dd-container">
+    <div class="dd-section-header">
+      <span class="dd-sub">FIELD_LOGS // OPERATOR_REPORTS</span>
+      <h2 class="dd-title">REAL-WORLD PRODUCTION FEEDBACK.</h2>
+    </div>
+
+    <div class="dd-feedback-grid">
+      <!-- 01 Israel -->
+      <div class="dd-feedback-item">
+        <div class="dd-fb-visual">
+          <img src="https://sc01.alicdn.com/kf/Abbf2a5a57a744366a82bc0aa3c201bb8f.jpg" alt="Israel Production">
+          <div class="dd-fb-tag">CASE_004 // ISRAEL</div>
+        </div>
+        <div class="dd-fb-content">
+          <p class="dd-fb-quote">“The team is very good with the machine. I am very satisfied with the machine. It met all my expectations.”</p>
+          <div class="dd-fb-meta">
+            <strong>STATUS:</strong> Verified Operator (Event Decoration)<br>
+            <strong>VERDICT:</strong> Production stability confirmed.
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 Uganda -->
+      <div class="dd-feedback-item">
+        <div class="dd-fb-visual">
+          <img src="https://sc01.alicdn.com/kf/A3e4f0d8eee9c4f47b81bfa6ad09ff5f2f.jpg" alt="Uganda Production">
+          <div class="dd-fb-tag">CASE_001 // UGANDA</div>
+        </div>
+        <div class="dd-fb-content">
+          <p class="dd-fb-quote">“Machine running daily in our sign shop. Remote support helped us launch production in under 48 hours.”</p>
+          <div class="dd-fb-meta">
+            <strong>STATUS:</strong> Sign Factory Manager<br>
+            <strong>VERDICT:</strong> Remote deployment successful.
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 Georgia -->
+      <div class="dd-feedback-item">
+        <div class="dd-fb-visual">
+          <img src="https://sc01.alicdn.com/kf/Afbcd3eaf228148329979dd09d1ea9ab87.jpg" alt="Georgia Production">
+          <div class="dd-fb-tag">CASE_002 // GEORGIA</div>
+        </div>
+        <div class="dd-fb-content">
+          <p class="dd-fb-quote">“Returning for second machine LZ-2030 ATC. Reliability over 3 years was the primary decision factor.”</p>
+          <div class="dd-fb-meta">
+            <strong>STATUS:</strong> Repeat Purchase (Furniture/CNC)<br>
+            <strong>VERDICT:</strong> 3-year reliability verified.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .dd-home-feedback { padding: 120px 0; background: #F9FAFB; }
+  .dd-feedback-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+  .dd-feedback-item { background: #FFF; border: 1px solid #EEE; display: flex; flex-direction: column; }
+  .dd-fb-visual { position: relative; aspect-ratio: 16/10; overflow: hidden; background: #000; }
+  .dd-fb-visual img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; }
+  .dd-fb-tag { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(15,17,21,0.9); color: #FFF; padding: 10px 20px; font-size: 10px; font-weight: 700; letter-spacing: 2px; }
+  .dd-fb-content { padding: 32px; flex-grow: 1; display: flex; flex-direction: column; gap: 24px; }
+  .dd-fb-quote { font-size: 16px; font-style: italic; line-height: 1.6; color: #111; margin: 0; }
+  .dd-fb-meta { font-size: 12px; color: #666; line-height: 1.8; border-top: 1px solid #EEE; padding-top: 24px; margin-top: auto; }
+  .dd-fb-meta strong { color: #00A3AD; font-family: 'Archivo Narrow', sans-serif; letter-spacing: 1px; }
+</style>
+
+{% schema %}
+{
+  "name": "DD Home Feedback",
+  "settings": [],
+  "presets": [{"name": "DD Home Feedback"}]
+}
+{% endschema %}

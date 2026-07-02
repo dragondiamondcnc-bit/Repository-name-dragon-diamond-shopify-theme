@@ -1,0 +1,387 @@
+<!-- 
+  Product Template: 1390 Expert Layout V2.0 
+  Style: Industrial 4.0 / Advanced Gallery
+  Compatibility: 1300x900mm CO2 Laser Machine
+-->
+{{ 'home-v2.css' | asset_url | stylesheet_tag }}
+
+<div class="p-1390-wrapper">
+  <!-- 1. HERO SECTION -->
+  <section class="p-1390-hero">
+    <div class="p-container">
+      <div class="p-hero-grid">
+        <!-- Left: Image Gallery (Advanced Carousel) -->
+        <div class="p-hero-gallery">
+          <div class="main-img-wrapper">
+            <img src="https://sc01.alicdn.com/kf/S71806385d8984950a312e75e9b889ebdp.jpg" alt="LZ-1390 CO2 Laser Machine" id="main-product-img">
+          </div>
+          
+          <div class="thumb-carousel-container">
+            <button class="nav-arrow left" onclick="scrollThumbs(-1)">&#8249;</button>
+            <div class="thumb-scroll-window" id="thumb-scroll">
+              <div class="thumb-grid-v2">
+                 <img src="https://sc01.alicdn.com/kf/S71806385d8984950a312e75e9b889ebdp.jpg" class="thumb-v2 active" onclick="changeImg(this)">
+                 <img src="https://sc01.alicdn.com/kf/S34e9e42930264026857f620f4c9359e38.jpg" class="thumb-v2" onclick="changeImg(this)">
+                 <img src="https://sc01.alicdn.com/kf/Sf3b5f799298e4bc39294248464efc7893.jpg" class="thumb-v2" onclick="changeImg(this)">
+                 <img src="https://sc01.alicdn.com/kf/S053075c2e0b144b6b66e60b21703c162X.jpg" class="thumb-v2" onclick="changeImg(this)">
+                 <img src="https://sc01.alicdn.com/kf/S8f9c1f6c4491410684f0975e6488a034q.jpg" class="thumb-v2" onclick="changeImg(this)">
+                 <img src="https://sc01.alicdn.com/kf/Sf65511b0e9984918901f4c39c8949826v.jpg" class="thumb-v2" onclick="changeImg(this)">
+              </div>
+            </div>
+            <button class="nav-arrow right" onclick="scrollThumbs(1)">&#8250;</button>
+          </div>
+        </div>
+
+        <!-- Right: Purchase Info -->
+        <div class="p-hero-content">
+          <h1 class="p-title">LZ-1390 | Industrial CO2 Laser Cutting & Engraving Machine</h1>
+          <p class="p-description">Intelligent and high-quality LZ-1390 CO2 laser cutter with integrated cooling and exhaust systems, providing you with professional and versatile material processing solutions.</p>
+          
+          <div class="p-info-block">
+            <h4 class="info-header">Configuration Highlights:</h4>
+            <ul class="info-list bullet">
+              <li><strong>Working Area:</strong> 1300mm x 900mm</li>
+              <li><strong>Laser Power:</strong> 90W / 100W / 130W / 150W (Optional)</li>
+              <li><strong>Cooling Mode:</strong> CW5200 Industrial Water Chiller</li>
+              <li><strong>Position Accuracy:</strong> ±0.01mm</li>
+              <li><strong>Software:</strong> RDWorks / LightBurn (Optional)</li>
+            </ul>
+          </div>
+
+          <div class="p-info-block">
+            <h4 class="info-header">Applicable Industries:</h4>
+            <ul class="info-list bullet">
+              <li><strong>Advertising & Signage:</strong> Letter cutting, logo engraving, and acrylic fabrication.</li>
+              <li><strong>Manufacturing:</strong> Models, woodcrafts, furniture, and industrial parts.</li>
+              <li><strong>Textiles:</strong> Precision leather and fabric cutting for fashion and upholstery.</li>
+              <li><strong>Gifts & Personalization:</strong> Custom engraving on glass, wood, and marble.</li>
+            </ul>
+          </div>
+
+          <div class="p-actions">
+            <a href="/pages/contact" class="btn-primary-v2">GET A QUOTE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. TRUST BAR V2 (4 Pillars) -->
+  <section class="p-trust-bar-v2">
+    <div class="trust-grid-v2">
+      <div class="trust-item-v2 blue">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <strong>Reliable Quality</strong>
+        <p>Professional R&D team control, strict testing.</p>
+      </div>
+      <div class="trust-item-v2 cream">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 7v14M13 3l-6 4M13 3l6 4M13 3v18"/></svg>
+        </div>
+        <strong>Source Factory</strong>
+        <p>Factory direct sales, cost efficiency.</p>
+      </div>
+      <div class="trust-item-v2 blue">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <strong>Fast Shipping</strong>
+        <p>Sufficient inventory, fast worldwide delivery.</p>
+      </div>
+      <div class="trust-item-v2 cream">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <strong>Complete Service</strong>
+        <p>24/7 technical support and after-sales.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. PRODUCT DETAILS BODY -->
+  <section class="p-1390-body-details">
+    <div class="p-container">
+      <div class="p-body-section">
+        <h2 class="section-title">Key Features</h2>
+        <ul class="feature-detail-list">
+          <li>Equipped with high-precision linear guide rails for stable movement.</li>
+          <li>Genuine RECI CO2 laser tube ensures long lifespan and stable output.</li>
+          <li>Advanced Ruida 8445G control system with multi-language support.</li>
+          <li>Industrial-grade heavy-duty frame effectively reduces vibration during high-speed work.</li>
+          <li>Motorized up-down table supports materials up to 300mm thickness.</li>
+        </ul>
+      </div>
+
+      <!-- 4. MATERIAL MATRIX (NEW) -->
+      <div class="p-body-section">
+        <h2 class="section-title">Applicable Materials</h2>
+        <div class="material-grid">
+          <div class="material-card">
+            <div class="m-img"><img src="https://sc01.alicdn.com/kf/S7e0085a6a57840138548c7a6e7687588e.jpg" alt="Acrylic"></div>
+            <div class="m-info"><strong>Acrylic</strong><span>Cutting & Engraving</span></div>
+          </div>
+          <div class="material-card">
+            <div class="m-img"><img src="https://sc01.alicdn.com/kf/S4d3c3587848c4146a788e04e6c359573r.jpg" alt="Wood"></div>
+            <div class="m-info"><strong>Wood/MDF</strong><span>Cutting & Engraving</span></div>
+          </div>
+          <div class="material-card">
+            <div class="m-img"><img src="https://sc01.alicdn.com/kf/Sb3b5f799298e4bc39294248464efc7893.jpg" alt="Leather"></div>
+            <div class="m-info"><strong>Leather/Fabric</strong><span>Precision Cutting</span></div>
+          </div>
+          <div class="material-card">
+            <div class="m-img"><img src="https://sc01.alicdn.com/kf/S55511b0e9984918901f4c39c8949826v.jpg" alt="Paper"></div>
+            <div class="m-info"><strong>Paper/Cardboard</strong><span>Intricate Design</span></div>
+          </div>
+          <div class="material-card">
+            <div class="m-img"><img src="https://sc01.alicdn.com/kf/Sa3b5f799298e4bc39294248464efc7893.jpg" alt="Glass"></div>
+            <div class="m-info"><strong>Glass/Stone</strong><span>Surface Engraving</span></div>
+          </div>
+          <div class="material-card">
+            <div class="m-img"><img src="https://sc01.alicdn.com/kf/S3b5f799298e4bc39294248464efc7893v.jpg" alt="Plastic"></div>
+            <div class="m-info"><strong>Plastic/Rubber</strong><span>Versatile Processing</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  /* 1390 ADVANCED LAYOUT */
+  .p-1390-wrapper { background: #fff; font-family: 'Archivo Narrow', sans-serif; }
+  .p-container { max-width: 1300px; margin: 0 auto; width: 95%; }
+  
+  .p-1390-hero { padding: 60px 0; }
+  .p-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+  
+  /* GALLERY (Matching Reference Image) */
+  .p-hero-gallery { position: sticky; top: 20px; }
+  .main-img-wrapper { border: 1px solid #f0f0f0; margin-bottom: 20px; background: #fff; }
+  .main-img-wrapper img { width: 100%; height: auto; display: block; }
+  
+  .thumb-carousel-container { position: relative; display: flex; align-items: center; gap: 10px; padding: 0 30px; }
+  .thumb-scroll-window { overflow-x: auto; scroll-behavior: smooth; display: flex; scrollbar-width: none; -ms-overflow-style: none; }
+  .thumb-scroll-window::-webkit-scrollbar { display: none; }
+  
+  .thumb-grid-v2 { display: flex; gap: 10px; padding: 5px 0; }
+  .thumb-v2 { width: 85px; height: 85px; object-fit: cover; border: 1px solid #ddd; cursor: pointer; transition: 0.2s; flex-shrink: 0; }
+  .thumb-v2:hover { border-color: #004d30; }
+  .thumb-v2.active { border-color: #006841; border-width: 2px; }
+
+  .nav-arrow { position: absolute; background: #fff; border: 1px solid #ddd; color: #666; width: 24px; height: 50px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; z-index: 5; transition: 0.2s; }
+  .nav-arrow:hover { background: #f5f5f5; color: #000; }
+  .nav-arrow.left { left: 0; }
+  .nav-arrow.right { right: 0; }
+
+  /* CONTENT (Matching Reference Image) */
+  .p-title { font-size: 28px; font-weight: 800; color: #1a1a1a; margin: 0 0 15px 0; line-height: 1.2; }
+  .p-description { font-size: 15px; color: #555; line-height: 1.6; margin-bottom: 25px; }
+  
+  .p-info-block { margin-bottom: 25px; }
+  .info-header { font-size: 16px; font-weight: 800; color: #1a1a1a; margin-bottom: 12px; }
+  .info-list { padding-left: 18px; margin: 0; list-style-type: decimal; }
+  .info-list li { font-size: 14px; color: #555; margin-bottom: 8px; line-height: 1.4; }
+  .info-list.bullet { list-style-type: disc; }
+  .info-list.bullet li strong { color: #333; }
+  
+  .p-actions { margin-top: 35px; }
+  .btn-primary-v2 { background: #004d30; color: #fff; text-decoration: none; padding: 15px 45px; font-weight: 700; font-size: 14px; border-radius: 2px; display: inline-block; transition: 0.3s; letter-spacing: 0.5px; }
+  .btn-primary-v2:hover { background: #006841; }
+  
+  /* TRUST BAR V2 */
+  .p-trust-bar-v2 { border-top: 1px solid #f0f0f0; border-bottom: 1px solid #f0f0f0; margin-bottom: 40px; }
+  .trust-grid-v2 { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .trust-item-v2 { padding: 40px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+  .trust-item-v2.blue { background-color: #f4f9ff; }
+  .trust-item-v2.cream { background-color: #fffcf8; }
+  .trust-icon { width: 30px; height: 30px; color: #4a90e2; margin-bottom: 15px; }
+  .trust-item-v2.cream .trust-icon { color: #f5a623; }
+  .trust-item-v2 strong { font-size: 18px; color: #1a1a1a; margin-bottom: 10px; display: block; font-weight: 800; }
+  .trust-item-v2 p { font-size: 14px; color: #666; margin: 0; line-height: 1.4; }
+
+  /* BODY DETAILS */
+  .p-1390-body-details { padding: 40px 0 80px; }
+  .p-body-section { margin-bottom: 60px; }
+  .section-title { font-size: 24px; font-weight: 800; color: #1a1a1a; border-left: 4px solid #006841; padding-left: 15px; margin-bottom: 30px; text-transform: uppercase; }
+  .feature-detail-list { list-style: none; padding: 0; }
+  .feature-detail-list li { font-size: 16px; color: #444; padding: 15px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; }
+  .feature-detail-list li::before { content: "•"; color: #006841; font-weight: bold; display: inline-block; width: 1em; margin-left: 5px; font-size: 20px; }
+
+      <!-- 5. TECH SPEC TABLE (NEW) -->
+      <div class="p-body-section">
+        <h2 class="section-title">Technical Specifications</h2>
+        <div class="spec-table-wrapper">
+          <table class="spec-zebra-table">
+            <thead>
+              <tr>
+                <th>Parameters</th>
+                <th>Specifications</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Model</td>
+                <td>LZ-1390 Industrial CO2 Laser Machine</td>
+              </tr>
+              <tr>
+                <td>Working Area</td>
+                <td>1300mm x 900mm (51.2" x 35.4")</td>
+              </tr>
+              <tr>
+                <td>Laser Power</td>
+                <td>90W / 100W / 130W / 150W RECI CO2 Laser Tube</td>
+              </tr>
+              <tr>
+                <td>Control System</td>
+                <td>Ruida 8445G (Optional RDWorks / LightBurn)</td>
+              </tr>
+              <tr>
+                <td>Engraving Speed</td>
+                <td>0 - 60,000 mm/min</td>
+              </tr>
+              <tr>
+                <td>Cutting Speed</td>
+                <td>0 - 30,000 mm/min</td>
+              </tr>
+              <tr>
+                <td>Positioning Accuracy</td>
+                <td>±0.01 mm</td>
+              </tr>
+              <tr>
+                <td>Working Table</td>
+                <td>Knife Table / Honeycomb Table (Optional)</td>
+              </tr>
+              <tr>
+                <td>Z-Axis Movement</td>
+                <td>Motorized Up-Down (300mm Stroke)</td>
+              </tr>
+              <tr>
+                <td>Cooling System</td>
+                <td>CW5200 Industrial Water Chiller (Integrated S&A)</td>
+              </tr>
+              <tr>
+                <td>Drive System</td>
+                <td>Leadshine Stepper Motor & Driver</td>
+              </tr>
+              <tr>
+                <td>Graphic Formats</td>
+                <td>AI, DXF, PLT, BMP, JPG, DST, etc.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  /* 1390 ADVANCED LAYOUT */
+  .p-1390-wrapper { background: #fff; font-family: 'Archivo Narrow', sans-serif; }
+  .p-container { max-width: 1300px; margin: 0 auto; width: 95%; }
+  
+  .p-1390-hero { padding: 60px 0; }
+  .p-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+  
+  /* GALLERY (Matching Reference Image) */
+  .p-hero-gallery { position: sticky; top: 20px; }
+  .main-img-wrapper { border: 1px solid #f0f0f0; margin-bottom: 20px; background: #fff; }
+  .main-img-wrapper img { width: 100%; height: auto; display: block; }
+  
+  .thumb-carousel-container { position: relative; display: flex; align-items: center; gap: 10px; padding: 0 30px; }
+  .thumb-scroll-window { overflow-x: auto; scroll-behavior: smooth; display: flex; scrollbar-width: none; -ms-overflow-style: none; }
+  .thumb-scroll-window::-webkit-scrollbar { display: none; }
+  
+  .thumb-grid-v2 { display: flex; gap: 10px; padding: 5px 0; }
+  .thumb-v2 { width: 85px; height: 85px; object-fit: cover; border: 1px solid #ddd; cursor: pointer; transition: 0.2s; flex-shrink: 0; }
+  .thumb-v2:hover { border-color: #004d30; }
+  .thumb-v2.active { border-color: #006841; border-width: 2px; }
+
+  .nav-arrow { position: absolute; background: #fff; border: 1px solid #ddd; color: #666; width: 24px; height: 50px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; z-index: 5; transition: 0.2s; }
+  .nav-arrow:hover { background: #f5f5f5; color: #000; }
+  .nav-arrow.left { left: 0; }
+  .nav-arrow.right { right: 0; }
+
+  /* CONTENT (Matching Reference Image) */
+  .p-title { font-size: 28px; font-weight: 800; color: #1a1a1a; margin: 0 0 15px 0; line-height: 1.2; }
+  .p-description { font-size: 15px; color: #555; line-height: 1.6; margin-bottom: 25px; }
+  
+  .p-info-block { margin-bottom: 25px; }
+  .info-header { font-size: 16px; font-weight: 800; color: #1a1a1a; margin-bottom: 12px; }
+  .info-list { padding-left: 18px; margin: 0; list-style-type: decimal; }
+  .info-list li { font-size: 14px; color: #555; margin-bottom: 8px; line-height: 1.4; }
+  .info-list.bullet { list-style-type: disc; }
+  .info-list.bullet li strong { color: #333; }
+  
+  .p-actions { margin-top: 35px; }
+  .btn-primary-v2 { background: #004d30; color: #fff; text-decoration: none; padding: 15px 45px; font-weight: 700; font-size: 14px; border-radius: 2px; display: inline-block; transition: 0.3s; letter-spacing: 0.5px; }
+  .btn-primary-v2:hover { background: #006841; }
+  
+  /* TRUST BAR V2 */
+  .p-trust-bar-v2 { border-top: 1px solid #f0f0f0; border-bottom: 1px solid #f0f0f0; margin-bottom: 40px; }
+  .trust-grid-v2 { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .trust-item-v2 { padding: 40px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+  .trust-item-v2.blue { background-color: #f4f9ff; }
+  .trust-item-v2.cream { background-color: #fffcf8; }
+  .trust-icon { width: 30px; height: 30px; color: #4a90e2; margin-bottom: 15px; }
+  .trust-item-v2.cream .trust-icon { color: #f5a623; }
+  .trust-item-v2 strong { font-size: 18px; color: #1a1a1a; margin-bottom: 10px; display: block; font-weight: 800; }
+  .trust-item-v2 p { font-size: 14px; color: #666; margin: 0; line-height: 1.4; }
+
+  /* BODY DETAILS */
+  .p-1390-body-details { padding: 40px 0 80px; }
+  .p-body-section { margin-bottom: 60px; }
+  .section-title { font-size: 24px; font-weight: 800; color: #1a1a1a; border-left: 4px solid #006841; padding-left: 15px; margin-bottom: 30px; text-transform: uppercase; }
+  .feature-detail-list { list-style: none; padding: 0; }
+  .feature-detail-list li { font-size: 16px; color: #444; padding: 15px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; }
+  .feature-detail-list li::before { content: "•"; color: #006841; font-weight: bold; display: inline-block; width: 1em; margin-left: 5px; font-size: 20px; }
+
+  /* MATERIAL MATRIX */
+  .material-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; }
+  .material-card { background: #f9f9f9; border-radius: 8px; overflow: hidden; transition: 0.3s; border: 1px solid #eee; }
+  .material-card:hover { transform: translateY(-5px); border-color: #006841; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+  .m-img { aspect-ratio: 1; overflow: hidden; }
+  .m-img img { width: 100%; height: 100%; object-fit: cover; }
+  .m-info { padding: 15px; text-align: center; }
+  .m-info strong { display: block; font-size: 16px; color: #1a1a1a; margin-bottom: 5px; }
+  .m-info span { display: block; font-size: 12px; color: #888; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  /* TECH SPEC TABLE */
+  .spec-table-wrapper { overflow-x: auto; margin-top: 20px; border: 1px solid #f0f0f0; border-radius: 8px; }
+  .spec-zebra-table { width: 100%; border-collapse: collapse; font-size: 15px; text-align: left; }
+  .spec-zebra-table th { background: #004d30; color: #fff; padding: 18px 25px; font-weight: 800; text-transform: uppercase; }
+  .spec-zebra-table td { padding: 15px 25px; color: #444; border-bottom: 1px solid #f0f0f0; }
+  .spec-zebra-table tr:nth-child(even) { background-color: #fafafa; }
+  .spec-zebra-table tr:hover { background-color: #f1f8f5; }
+  .spec-zebra-table td:first-child { font-weight: 700; color: #1a1a1a; width: 30%; background: #fcfcfc; border-right: 1px solid #f5f5f5; }
+
+  @media (max-width: 1024px) {
+    .material-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (max-width: 900px) {
+    .p-hero-grid { grid-template-columns: 1fr; }
+    .p-hero-gallery { position: static; }
+    .material-grid { grid-template-columns: repeat(2, 1fr); }
+    .spec-zebra-table td:first-child { width: 40%; }
+  }
+</style>
+
+<script>
+function changeImg(el) {
+  const main = document.getElementById('main-product-img');
+  main.src = el.src;
+  
+  const thumbs = document.querySelectorAll('.thumb-v2');
+  thumbs.forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+}
+
+function scrollThumbs(direction) {
+  const container = document.getElementById('thumb-scroll');
+  const scrollAmount = 100;
+  container.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+}
+</script>

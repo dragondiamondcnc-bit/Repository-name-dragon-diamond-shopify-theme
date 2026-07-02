@@ -1,0 +1,89 @@
+<!-- Global Shipping Map Section - DRAGON DIAMOND 2026 Edition -->
+<section class="global-shipping-map" style="background-color: #1A1A1B; color: #FFFFFF; padding: 60px 0; overflow: hidden; position: relative;">
+  <div class="page-width">
+    <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+      <h2 style="color: #FFFFFF; font-size: 32px; font-weight: bold;">Global Delivery Map</h2>
+      <p style="color: #008F5A; font-size: 18px;">Real-time industrial reach from DRAGON DIAMOND</p>
+    </div>
+
+    <div class="map-container" style="position: relative; max-width: 1000px; margin: 0 auto;">
+      <!-- Global Map Background -->
+      <img src="https://sc02.alicdn.com/kf/A6dc133f92dd34bceb7c31b9adf45deb8O.png" alt="World Map Background" style="width: 100%; opacity: 0.1; filter: grayscale(100%);">
+      
+      <!-- Corrected DRAGON DIAMOND Pulse Dots -->
+      <div class="pulse-dot" style="top: 35%; left: 48%;" data-tooltip="Italy (Bologna): 25+ DRAGON DIAMOND Units Annually"></div>
+      <div class="pulse-dot" style="top: 48%; left: 18%;" data-tooltip="Mexico (Monterrey): Tailored DRAGON DIAMOND 1390 Systems (Nov 2021)"></div>
+      <div class="pulse-dot" style="top: 38%; left: 62%;" data-tooltip="Uzbekistan (Tashkent): 13 DRAGON DIAMOND CCD Camera Lasers (Sept 2021)"></div>
+      <div class="pulse-dot" style="top: 48%; left: 58%;" data-tooltip="UAE (Dubai): DRAGON DIAMOND LZ-1390 Industrial Batch (Apr 2026)"></div>
+      <div class="pulse-dot" style="top: 38%; left: 15%;" data-tooltip="USA (California): DRAGON DIAMOND High-Power 150W Systems"></div>
+    </div>
+
+    <div class="shipping-feed" style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+      <div class="feed-item" style="border-left: 2px solid #008F5A; padding-left: 15px;">
+        <h4 style="color: #008F5A; margin-bottom: 5px;">Italy</h4>
+        <p style="font-size: 14px; color: #CCC;">Bologna: 25+ DRAGON DIAMOND units annually.</p>
+      </div>
+      <div class="feed-item" style="border-left: 2px solid #008F5A; padding-left: 15px;">
+        <h4 style="color: #008F5A; margin-bottom: 5px;">Mexico</h4>
+        <p style="font-size: 14px; color: #CCC;">Monterrey: 20'GP container of DRAGON DIAMOND 1390s delivered.</p>
+      </div>
+      <div class="feed-item" style="border-left: 2px solid #008F5A; padding-left: 15px;">
+        <h4 style="color: #008F5A; margin-bottom: 5px;">UAE</h4>
+        <p style="font-size: 14px; color: #CCC;">Dubai: DRAGON DIAMOND LZ-1390 Industrial Batch (Apr 2026).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.pulse-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #008F5A;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.pulse-dot::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: #008F5A;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 2s infinite ease-out;
+}
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+  100% { transform: translate(-50%, -50%) scale(4); opacity: 0; }
+}
+.pulse-dot:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #FFF;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 10;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Global Shipping Map",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Global Shipping Map"
+    }
+  ]
+}
+{% endschema %}

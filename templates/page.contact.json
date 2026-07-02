@@ -1,0 +1,96 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "padding-block-start": 40,
+        "padding-block-end": 0,
+        "color_scheme": ""
+      },
+      "blocks": {
+        "title": {
+          "type": "text",
+          "name": "t:names.title",
+          "settings": {
+            "text": "<h1>Contact Dragon Diamond Tech</h1>",
+            "type_preset": "h2",
+            "alignment": "center",
+            "max_width": "normal"
+          }
+        },
+        "content": {
+          "type": "text",
+          "name": "t:names.content",
+          "settings": {
+            "text": "<p>Need a customized laser solution or a bulk order quote? Our expert engineers are ready to assist you. Fill out the form below or contact us directly.</p>",
+            "type_preset": "rte",
+            "alignment": "center",
+            "max_width": "narrow"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "content"
+      ]
+    },
+    "form": {
+      "type": "section",
+      "name": "Contact Information & Inquiry Form",
+      "settings": {
+        "section_width": "page-width",
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "space-between",
+        "vertical_alignment": "flex-start",
+        "gap": 64,
+        "padding-block-start": 48,
+        "padding-block-end": 84,
+        "color_scheme": "scheme-1"
+      },
+      "blocks": {
+        "contact_info": {
+          "type": "text",
+          "name": "Contact Details",
+          "settings": {
+            "text": "<h3>Direct Contact</h3><p><strong>Email:</strong> gzddlaser@gmail.com<br><strong>WhatsApp/WeChat:</strong> +86 139 2215 5005<br><strong>Address:</strong> Guangzhou Dragon Diamond Technology Co., Ltd., China</p><h3>Business Hours</h3><p>Monday - Friday: 9:00 AM - 6:00 PM (GMT+8)<br>24/7 Inquiry Response via Email/WhatsApp</p>",
+            "alignment": "left",
+            "width": "40%",
+            "type_preset": "rte"
+          }
+        },
+        "contact_form": {
+          "type": "contact-form",
+          "settings": {
+            "width": "custom",
+            "custom_width": 55,
+            "width_mobile": "custom",
+            "custom_width_mobile": 100
+          },
+          "blocks": {
+            "submit-button": {
+              "type": "contact-form-submit-button",
+              "static": true,
+              "settings": {
+                "label": "Send Inquiry & Get Quote",
+                "style_class": "button-primary",
+                "width": "fill"
+              }
+            }
+          },
+          "block_order": []
+        }
+      },
+      "block_order": [
+        "contact_info",
+        "contact_form"
+      ]
+    }
+  },
+  "order": [
+    "main",
+    "form"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "laser-1390-final",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

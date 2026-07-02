@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "dd-case-study-004-israel",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

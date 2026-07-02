@@ -1,0 +1,142 @@
+{
+  "sections": {
+    "banner": {
+      "type": "hero",
+      "name": "About Dragon Diamond",
+      "settings": {
+        "image_1": "shopify://shop_images/A3f70219ddf1c4a05b41d3c5346a8c2b1t.webp",
+        "media_type_1": "image",
+        "section_height": "medium",
+        "color_scheme": "scheme-6",
+        "toggle_overlay": true,
+        "overlay_color": "#12121266"
+      },
+      "blocks": {
+        "title": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Manufacturing Excellence Since 2012</h1>",
+            "type_preset": "h1",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": ["title"]
+    },
+    "intro": {
+      "type": "main-page",
+      "name": "Company Intro",
+      "settings": {
+        "padding-block-start": 60,
+        "padding-block-end": 40,
+        "gap": 24
+      },
+      "blocks": {
+        "content": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Your Trusted Partner in Laser Technology</h3><p>Guangzhou Dragon Diamond Technology Co., Ltd. is a global leader in the manufacturing of industrial CO2 laser cutting and engraving systems. Headquartered in Guangzhou, China, we combine advanced engineering with high-tier components like Reci and Ruida to deliver unmatched precision to workshops and studios worldwide.</p>",
+            "type_preset": "rte",
+            "alignment": "center",
+            "max_width": "normal"
+          }
+        }
+      },
+      "block_order": ["content"]
+    },
+    "gallery_manufacturing": {
+      "type": "hero",
+      "name": "Manufacturing Strength",
+      "settings": {
+        "image_1": "shopify://shop_images/A66c8105148f34f9cbebffa8488a9068a8.webp",
+        "media_type_1": "image",
+        "section_height": "small",
+        "color_scheme": "scheme-2",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      },
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Industrial Scale Assembly Line</h3>",
+            "alignment": "center",
+            "type_preset": "h3"
+          }
+        },
+        "desc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every Dragon Diamond machine undergoes a rigorous 48-hour continuous aging test and precision alignment process before shipping.</p>",
+            "alignment": "center",
+            "type_preset": "rte"
+          }
+        }
+      },
+      "block_order": ["heading", "desc"]
+    },
+    "gallery_trust": {
+      "type": "hero",
+      "name": "Global Footprint",
+      "settings": {
+        "image_1": "shopify://shop_images/A18c03dcd05e243b68b0373b5f9af58d4U.webp",
+        "media_type_1": "image",
+        "section_height": "small",
+        "color_scheme": "scheme-2",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      },
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Globally Trusted by 5,000+ Studios</h3>",
+            "alignment": "center",
+            "type_preset": "h3"
+          }
+        },
+        "desc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From technical training in Dubai to machine installations in the USA, our engineers travel globally to ensure our partners succeed.</p>",
+            "alignment": "center",
+            "type_preset": "rte"
+          }
+        }
+      },
+      "block_order": ["heading", "desc"]
+    },
+    "shipping": {
+      "type": "hero",
+      "name": "Global Export",
+      "settings": {
+        "image_1": "shopify://shop_images/Af74a3729e0dd46beaa75f9ebe36d9a3cc.webp",
+        "media_type_1": "image",
+        "section_height": "small",
+        "color_scheme": "scheme-2",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      },
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Professional Export Packaging</h3>",
+            "alignment": "center",
+            "type_preset": "h3"
+          }
+        },
+        "desc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Standard export-grade wooden crate packaging ensures your machine arrives in perfect condition, no matter where you are.</p>",
+            "alignment": "center",
+            "type_preset": "rte"
+          }
+        }
+      },
+      "block_order": ["heading", "desc"]
+    }
+  },
+  "order": ["banner", "intro", "gallery_manufacturing", "gallery_trust", "shipping"]
+}

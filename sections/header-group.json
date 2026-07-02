@@ -1,0 +1,16 @@
+{
+  "name": "Header",
+  "type": "header",
+  "sections": {
+    "header_v2_main": {
+      "type": "header-v2",
+      "settings": {
+        "logo_width": 180,
+        "menu": "main-menu"
+      }
+    }
+  },
+  "order": [
+    "header_v2_main"
+  ]
+}

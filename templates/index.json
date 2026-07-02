@@ -1,0 +1,45 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "v2_1_hero": {
+      "type": "dd-home-hero-v5",
+      "settings": {}
+    },
+    "v2_1_applications": {
+      "type": "dd-home-workflows-v2",
+      "settings": {}
+    },
+    "v2_1_systems": {
+      "type": "dd-home-systems-v2",
+      "settings": {}
+    },
+    "v2_1_proof": {
+      "type": "dd-home-worldwide-footprint-v5",
+      "settings": {}
+    },
+    "v2_1_cases": {
+      "type": "dd-home-deployments-v2",
+      "settings": {}
+    },
+    "v2_1_conversion": {
+      "type": "dd-home-cta-v2",
+      "settings": {}
+    }
+  },
+  "order": [
+    "v2_1_hero",
+    "v2_1_applications",
+    "v2_1_proof",
+    "v2_1_cases",
+    "v2_1_systems",
+    "v2_1_conversion"
+  ]
+}

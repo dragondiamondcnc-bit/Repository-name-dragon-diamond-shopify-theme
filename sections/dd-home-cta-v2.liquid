@@ -1,0 +1,40 @@
+{% comment %}
+  DD Home CTA V2 - Engineering Consultation
+{% endcomment %}
+<section class="dd-home-cta-final">
+  <div class="dd-container">
+    <div class="dd-cta-box">
+      <span class="dd-sub" style="color: #00A3AD;">PROJECT_INITIATION</span>
+      <h2 class="dd-title" style="color: #FFF; font-size: 56px;">TELL US WHAT YOU PRODUCE.</h2>
+      <p class="dd-cta-lead">Talk with our engineering team about your materials, production workflow, and machine requirements. We build systems for specific commercial output.</p>
+      
+      <div class="dd-cta-actions">
+        <a href="/pages/rfq" class="dd-btn-solid" style="background: #FFF; color: #000;">START YOUR PROJECT //</a>
+        <a href="/pages/contact" class="dd-btn-outline" style="border-color: rgba(255,255,255,0.3); color: #FFF;">TALK TO ENGINEERING</a>
+        <a href="https://wa.me/your-whatsapp" class="dd-btn-whatsapp">WHATSAPP CONSULTATION</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .dd-home-cta-final { padding: 140px 0; background: #000; }
+  .dd-cta-box { max-width: 900px; margin: 0 auto; text-align: center; }
+  .dd-cta-lead { font-size: 20px; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 56px; }
+  .dd-cta-actions { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
+  .dd-btn-whatsapp { background: #25D366; color: #FFF; padding: 20px 40px; text-decoration: none; font-weight: 700; letter-spacing: 1px; display: inline-block; }
+  
+  @media (max-width: 768px) {
+    .dd-cta-actions { flex-direction: column; }
+    .dd-cta-actions a { width: 100%; box-sizing: border-box; text-align: center; }
+    .dd-title { font-size: 36px !important; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "DD Home CTA",
+  "settings": [],
+  "presets": [{"name": "DD Home CTA"}]
+}
+{% endschema %}

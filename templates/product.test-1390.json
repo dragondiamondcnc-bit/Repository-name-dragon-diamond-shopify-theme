@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main_v2": {
+      "type": "product-1390-v3",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main_v2"
+  ]
+}

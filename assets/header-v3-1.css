@@ -1,0 +1,215 @@
+/* Custom Header Styles V4.0 - Advanced B2B Nav with Quote Button */
+
+.header-v2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: 'Archivo Narrow', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* Row 1: Top Bar */
+.header-top-bar {
+  background-color: #222;
+  color: #fff;
+  padding: 8px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-top-bar .social-links {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.header-top-bar .social-links svg {
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+}
+
+.lang-selector {
+  display: flex;
+  gap: 15px;
+}
+
+.lang-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 11px;
+  transition: color 0.3s ease;
+}
+
+.lang-item:hover {
+  color: #006841;
+}
+
+.lang-item img {
+  width: 18px;
+  height: auto;
+  border-radius: 2px;
+}
+
+/* Row 2: Aligned Middle Bar */
+.header-middle-bar {
+  background-color: #ffffff;
+  padding: 12px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.brand-logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff !important;
+  border: none !important;
+  padding: 0;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.brand-logo-img {
+  height: 85px;
+  width: auto;
+  display: block;
+}
+
+.brand-text-group {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid #006841;
+  padding-left: 20px;
+}
+
+.brand-main-title {
+  font-size: 28px;
+  font-weight: 900;
+  color: #1a1a1a;
+  line-height: 1;
+  letter-spacing: 0.5px;
+}
+
+.brand-slogan {
+  font-size: 12px;
+  color: #006841;
+  text-transform: uppercase;
+  margin-top: 6px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.header-contact-v2 {
+  display: flex;
+  gap: 35px;
+}
+
+.contact-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-box .icon-circle {
+  width: 38px;
+  height: 38px;
+  border: 2px solid #006841;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #006841;
+  font-size: 18px;
+}
+
+.contact-box .info-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-box .info-label {
+  font-size: 10px;
+  color: #999;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.contact-box .info-value {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+/* Row 3: Navigation Menu Bar */
+.header-nav-row {
+  background-color: #006841;
+  padding: 0 5%;
+}
+
+.nav-menu-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-menu-item {
+  position: relative;
+}
+
+.nav-menu-link {
+  display: block;
+  padding: 14px 22px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background 0.3s ease;
+}
+
+.nav-menu-item:hover .nav-menu-link {
+  background-color: #003d24;
+}
+
+/* Quote Button Item - Push to far right */
+.quote-btn-item {
+  margin-left: auto;
+}
+
+.quote-nav-btn {
+  background-color: #ffffff !important;
+  color: #006841 !important;
+  border-radius: 4px;
+  margin: 6px 0;
+  padding: 8px 25px !important;
+  font-weight: 800 !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: all 0.3s ease !important;
+}
+
+.quote-nav-btn:hover {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
