@@ -122,6 +122,20 @@
   </div>
 </header>
 
+<script>
+  (() => {
+    const header = document.querySelector('.dd-header-v4-9');
+    if (!header) return;
+
+    const syncHeaderState = () => {
+      header.classList.toggle('is-scrolled', window.scrollY > 30);
+    };
+
+    syncHeaderState();
+    window.addEventListener('scroll', syncHeaderState, { passive: true });
+  })();
+</script>
+
 <style>
   :root {
     --dd-dark: #0F1115;
@@ -129,10 +143,27 @@
     --dd-border: rgba(15, 17, 21, 0.08);
   }
 
-  .dd-header-v4-9 { width: 100%; position: sticky; top: 0; z-index: 3000; }
+  .dd-header-v4-9 {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3000;
+    background: rgba(0,0,0,0.25);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 0;
+    transition: background 0.28s ease, backdrop-filter 0.28s ease;
+  }
+
+  .dd-header-v4-9.is-scrolled {
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
 
   /* LAYER 1: TOP UTILITY BAR */
-  .dd-top-utility { background: var(--dd-dark); height: 40px; display: flex; align-items: center; }
+  .dd-top-utility { display: none; }
   .dd-top-utility .dd-container { max-width: 1240px; width: 100%; margin: 0 auto; padding: 0 32px; }
   .dd-top-utility-inner { display: flex; justify-content: space-between; align-items: center; width: 100%; }
   
@@ -149,16 +180,25 @@
   .dd-top-search a:hover svg { color: var(--dd-cyan); }
 
   /* LAYER 2: MAIN HEADER */
-  .dd-main-header { background: #FFFFFF; border-bottom: 1px solid var(--dd-border); }
+  .dd-main-header { background: transparent; border: 0; }
   .dd-main-header .dd-container { max-width: 1240px; width: 100%; margin: 0 auto; padding: 0 32px; }
-  .dd-main-inner { height: 100px; display: flex; justify-content: space-between; align-items: center; position: relative; }
+  .dd-main-inner {
+    height: 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: height 0.28s ease;
+  }
+  .dd-header-v4-9.is-scrolled .dd-main-inner { height: 88px; }
 
   /* Brand Identity */
-  .dd-brand-main { display: flex; align-items: center; gap: 20px; text-decoration: none; }
-  .dd-brand-icon { width: 80px; height: 80px; border-radius: 4px; overflow: hidden; background: #000; flex-shrink: 0; }
+  .dd-brand-main { display: flex; align-items: center; gap: 16px; text-decoration: none; transition: opacity 0.3s; }
+  .dd-brand-main:hover { opacity: 0.82; }
+  .dd-brand-icon { width: 64px; height: 64px; border-radius: 0; overflow: hidden; background: transparent; flex-shrink: 0; }
   .dd-brand-icon img { width: 100%; height: 100%; object-fit: cover; }
   .dd-brand-text { display: flex; flex-direction: column; gap: 2px; }
-  .dd-brand-name { font-size: 20px; font-weight: 700; color: var(--dd-dark); letter-spacing: 0.5px; line-height: 1.1; font-family: 'Archivo Narrow', sans-serif; }
+  .dd-brand-name { font-size: 20px; font-weight: 700; color: #FFFFFF; letter-spacing: 0.5px; line-height: 1.1; font-family: 'Archivo Narrow', sans-serif; }
   .dd-brand-slogan { font-size: 11px; font-weight: 700; color: var(--dd-cyan); text-transform: uppercase; letter-spacing: 1.2px; opacity: 0.8; }
 
   /* Navigation Center */
@@ -170,17 +210,18 @@
     align-items: center;
   }
   .dd-nav-center > a, .dd-nav-trigger {
-    font-size: 11px; font-weight: 700; color: var(--dd-dark); text-decoration: none; letter-spacing: 1.2px;
-    opacity: 0.5; transition: all 0.3s; position: relative; padding: 10px 0; white-space: nowrap; cursor: pointer;
+    font-size: 11px; font-weight: 700; color: #FFFFFF; text-decoration: none; letter-spacing: 1.2px;
+    opacity: 0.86; transition: opacity 0.3s, color 0.3s; position: relative; padding: 10px 0; white-space: nowrap; cursor: pointer;
   }
-  .dd-nav-center > a:hover, .dd-nav-center > a.active, .dd-nav-trigger:hover { opacity: 1; }
+  .dd-nav-center > a:hover, .dd-nav-center > a.active, .dd-nav-trigger:hover { opacity: 1; color: var(--dd-cyan); }
   
   /* Dropdown Logic */
   .dd-nav-dropdown-wrap { position: relative; display: flex; align-items: center; }
   .dd-dropdown-panel {
     position: absolute; top: 100%; left: 0; width: 600px;
-    background: #FFF; border-bottom: 2px solid var(--dd-dark);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.88); border: 0;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     padding: 30px; box-sizing: border-box;
     opacity: 0; visibility: hidden; transform: translateY(10px);
     transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
@@ -191,8 +232,8 @@
   .dd-dropdown-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   .dd-drop-item { text-decoration: none; border-left: 1.5px solid #EEE; padding-left: 15px; display: flex; flex-direction: column; gap: 4px; transition: 0.3s; }
   .dd-drop-item:hover { border-left-color: var(--dd-cyan); }
-  .dd-drop-title { font-size: 13px; font-weight: 800; color: var(--dd-dark); text-transform: uppercase; display: block; }
-  .dd-drop-desc { font-size: 10px; color: #999; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .dd-drop-title { font-size: 13px; font-weight: 800; color: #FFFFFF; text-transform: uppercase; display: block; }
+  .dd-drop-desc { font-size: 10px; color: rgba(255,255,255,0.62); display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
   /* Underline Feedback */
   .dd-nav-center a:after, .dd-nav-trigger:after {
@@ -203,7 +244,7 @@
 
   /* Mobile Toggle */
   .dd-toggle-v3 { display: none; background: none; border: none; flex-direction: column; gap: 6px; cursor: pointer; }
-  .dd-toggle-v3 span { width: 20px; height: 2px; background: var(--dd-dark); }
+  .dd-toggle-v3 span { width: 20px; height: 2px; background: #FFFFFF; }
 
   @media (max-width: 1366px) {
     .dd-nav-center { position: static; transform: none; margin: 0 40px; }

@@ -5,6 +5,7 @@
   Visual: Single CO2 Acrylic Cutting Production Panel
 {% endcomment %}
 
+<!-- HERO V2.2 STABLE LOCKED VERSION -->
 <section class="dd-hero-v5" id="hero-v5">
   <div class="dd-container">
     <div class="dd-hero-grid">
@@ -29,15 +30,9 @@
         </div>
       </div>
 
-      <!-- 2. CONSOLIDATED EVIDENCE CARD (40%) -->
+      <!-- 2. CO2 ACRYLIC CUTTING SCENE (40%) -->
       <div class="dd-hero-visual">
-        <div class="dd-evidence-card-final" role="img" aria-label="CO2 laser cutting acrylic signage components in a production workshop">
-          <div class="dd-hero-v5__evidence-tag">
-            <span class="dd-hero-v5__evidence-kicker">Acrylic Sign Fabrication</span>
-            <strong>CO2 Laser Cutting System</strong>
-            <span>Sample Output &amp; Production Setup</span>
-          </div>
-        </div>
+        <img src="{{ 'hero-v22-co2-acrylic-cutting-progress.png' | asset_url }}">
       </div>
 
     </div>
@@ -46,94 +41,76 @@
 
 <style>
   /* Base Reset & Variables */
-  .dd-hero-v5 { padding: 60px 0 80px; background: #FFF; overflow: hidden; border-bottom: 1px solid #EEE; }
-  .dd-hero-grid { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 80px; align-items: center; }
+  .dd-hero-v5 {
+    position: relative;
+    min-height: 100vh;
+    padding: 0;
+    background: #050607;
+    overflow: hidden;
+    border: 0;
+    color: #FFFFFF;
+  }
+
+  .dd-hero-v5 .dd-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1240px;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 150px 32px 96px;
+    box-sizing: border-box;
+  }
+
+  .dd-hero-grid {
+    min-height: calc(100vh - 246px);
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: 64px;
+    align-items: center;
+  }
 
   /* Left: Content - Proportional Balance */
-  .dd-hero-content { padding-left: 40px; }
+  .dd-hero-content { padding-left: 0; position: relative; z-index: 2; }
   .dd-industry-badge { display: inline-block; background: #00A3AD; color: #FFF; padding: 6px 14px; font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 32px; }
-  .dd-hero-h1 { font-size: 56px; font-weight: 850; color: #111; line-height: 0.95; letter-spacing: -3px; margin: 0 0 32px; text-transform: uppercase; font-family: 'Archivo Narrow', sans-serif; }
-  .dd-hero-lead { font-size: 18px; line-height: 1.6; color: rgba(15,17,21,0.7); max-width: 580px; margin-bottom: 32px; }
-  
-  .dd-systems-preview { font-size: 13px; font-weight: 700; color: #111; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 40px; border-top: 1px solid #EEE; padding-top: 24px; display: flex; align-items: center; gap: 12px; }
+  .dd-hero-h1 { font-size: 56px; font-weight: 850; color: #FFFFFF; line-height: 0.95; letter-spacing: -3px; margin: 0 0 32px; text-transform: uppercase; font-family: 'Archivo Narrow', sans-serif; }
+  .dd-hero-lead { font-size: 18px; line-height: 1.6; color: rgba(255,255,255,0.74); max-width: 580px; margin-bottom: 32px; }
+
+  .dd-systems-preview { font-size: 13px; font-weight: 700; color: #FFFFFF; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 40px; border-top: 1px solid rgba(0,163,173,0.75); padding-top: 24px; display: flex; align-items: center; gap: 12px; }
   .dd-systems-preview .dot { color: #00A3AD; font-size: 20px; }
 
-  .dd-btn-v5 { background: #111; color: #FFF; padding: 22px 48px; text-decoration: none; font-weight: 800; letter-spacing: 1.5px; display: inline-block; font-size: 13px; transition: 0.3s; }
-  .dd-btn-v5:hover { background: #00A3AD; }
+  .dd-btn-v5 { background: #00A3AD; color: #FFF; padding: 22px 48px; text-decoration: none; font-weight: 800; letter-spacing: 1.5px; display: inline-block; font-size: 13px; transition: 0.3s; }
+  .dd-btn-v5:hover { background: #008B94; }
 
-  /* Right: Consolidated Evidence Card - Industrial Quality */
-  .dd-evidence-card-final { 
-    position: relative;
-    min-height: 560px;
-    background: #111;
-    background-image: linear-gradient(180deg, rgba(15,17,21,0.08), rgba(15,17,21,0.26)), url('https://cdn.shopify.com/s/files/1/0824/6319/5356/files/He090c30b17f04f96bc455dabb2de31e8X.webp?v=1782717917');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 0; 
-    display: flex; 
-    flex-direction: column; 
-    box-shadow: 0 40px 80px rgba(0,0,0,0.08); 
-    transform: scale(1.02); 
-    transform-origin: center right; 
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid #EEE;
-  }
-  .dd-hero-v5__evidence-tag {
+  /* Right: Stable single-source image */
+  .dd-hero-visual {
     position: absolute;
-    top: 18px;
-    left: 18px;
-    z-index: 2;
-    display: inline-flex;
-    flex-direction: column;
-    gap: 3px;
-    width: fit-content;
-    max-width: 260px;
-    box-sizing: border-box;
-    border: 1px solid rgba(255,255,255,0.16);
-    border-radius: 4px;
-    background: rgba(15,17,21,0.62);
-    color: #FFF;
-    padding: 10px 12px;
+    inset: 0;
+    z-index: 1;
+    transform: none;
+    border-radius: 0;
+    overflow: hidden;
+    border: 0;
+    pointer-events: none;
   }
 
-  .dd-hero-v5__evidence-tag span,
-  .dd-hero-v5__evidence-tag strong {
+  .dd-hero-visual img {
     display: block;
-    text-transform: uppercase;
-  }
-
-  .dd-hero-v5__evidence-kicker {
-    color: #00A3AD;
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: 1.1px;
-  }
-
-  .dd-hero-v5__evidence-tag strong {
-    font-size: 14px;
-    font-weight: 750;
-    line-height: 1.15;
-    letter-spacing: 0;
-  }
-
-  .dd-hero-v5__evidence-tag span:not(.dd-hero-v5__evidence-kicker) {
-    color: rgba(255,255,255,0.7);
-    font-size: 11px;
-    font-weight: 650;
-    letter-spacing: 0.5px;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    object-fit: cover;
+    object-position: center right;
+    opacity: 0.72;
   }
 
   @media (max-width: 1024px) {
-    .dd-hero-v5 { padding: 40px 0 60px; }
+    .dd-hero-v5 .dd-container { padding: 120px 24px 72px; }
     .dd-hero-grid { grid-template-columns: 1fr; gap: 48px; }
     .dd-hero-h1 { font-size: 40px; margin-bottom: 24px; }
     .dd-hero-lead { font-size: 15px; margin-bottom: 24px; }
-    .dd-hero-content { padding-left: 0; }
-    .dd-evidence-card-final { transform: none; width: 100%; max-width: 540px; min-height: 520px; margin: 0 auto; }
-    .dd-hero-v5__evidence-tag { top: 12px; left: 12px; max-width: calc(100% - 24px); padding: 9px 10px; }
-    .dd-hero-v5__evidence-tag strong { font-size: 13px; }
+    .dd-hero-visual { width: 100%; max-width: none; margin: 0; }
+    .dd-hero-visual img { min-height: 100vh; opacity: 0.42; }
   }
 </style>
 
