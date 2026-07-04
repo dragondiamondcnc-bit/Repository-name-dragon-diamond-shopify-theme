@@ -113,6 +113,20 @@
           <a href="/pages/contact">CONTACT</a>
         </nav>
 
+        <div class="dd-header-locale">
+          <span class="dd-header-divider" aria-hidden="true"></span>
+          <a href="/search" class="dd-header-globe" aria-label="Search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M3 12h18"></path>
+              <path d="M12 3c2.2 2.5 3.3 5.5 3.3 9s-1.1 6.5-3.3 9"></path>
+              <path d="M12 3c-2.2 2.5-3.3 5.5-3.3 9s1.1 6.5 3.3 9"></path>
+            </svg>
+          </a>
+          <a href="/" class="dd-header-lang">EN</a>
+          <span class="dd-header-caret" aria-hidden="true">⌄</span>
+        </div>
+
         <!-- Mobile Toggle -->
         <button class="dd-toggle-v3" aria-label="Menu">
           <span></span><span></span>
@@ -149,9 +163,9 @@
     top: 0;
     left: 0;
     z-index: 3000;
-    background: linear-gradient(180deg, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.2) 62%, rgba(0,0,0,0) 100%);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+    background: linear-gradient(180deg, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.22) 66%, rgba(0,0,0,0) 100%);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
     border: 0;
     transition: background 0.28s ease, backdrop-filter 0.28s ease;
   }
@@ -183,34 +197,34 @@
   .dd-main-header { background: transparent; border: 0; }
   .dd-main-header .dd-container { max-width: 1240px; width: 100%; margin: 0 auto; padding: 0 32px; }
   .dd-main-inner {
-    height: 96px;
+    height: 104px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     transition: height 0.28s ease;
   }
-  .dd-header-v4-9.is-scrolled .dd-main-inner { height: 88px; }
+  .dd-header-v4-9.is-scrolled .dd-main-inner { height: 92px; }
 
   /* Brand Identity */
-  .dd-brand-main { display: flex; align-items: center; gap: 16px; text-decoration: none; transition: opacity 0.3s; }
+  .dd-brand-main { display: flex; align-items: center; gap: 14px; text-decoration: none; transition: opacity 0.3s; }
   .dd-brand-main:hover { opacity: 0.82; }
-  .dd-brand-icon { width: 64px; height: 64px; border-radius: 0; overflow: hidden; background: transparent; flex-shrink: 0; }
+  .dd-brand-icon { width: 58px; height: 58px; border-radius: 0; overflow: hidden; background: transparent; flex-shrink: 0; }
   .dd-brand-icon img { width: 100%; height: 100%; object-fit: cover; }
   .dd-brand-text { display: flex; flex-direction: column; gap: 2px; }
-  .dd-brand-name { font-size: 20px; font-weight: 700; color: #FFFFFF; letter-spacing: 0.5px; line-height: 1.1; font-family: 'Archivo Narrow', sans-serif; }
-  .dd-brand-slogan { font-size: 11px; font-weight: 700; color: var(--dd-cyan); text-transform: uppercase; letter-spacing: 1.2px; opacity: 0.8; }
+  .dd-brand-name { font-size: 24px; font-weight: 800; color: #FFFFFF; letter-spacing: 0.3px; line-height: 1; font-family: 'Archivo Narrow', sans-serif; }
+  .dd-brand-slogan { display: none; }
 
   /* Navigation Center */
   .dd-nav-center { 
     display: flex; 
-    gap: 32px; 
+    gap: 34px;
     margin-left: auto; 
-    margin-right: 40px;
+    margin-right: 34px;
     align-items: center;
   }
   .dd-nav-center > a, .dd-nav-trigger {
-    font-size: 11px; font-weight: 700; color: #FFFFFF; text-decoration: none; letter-spacing: 1.2px;
+    font-size: 13px; font-weight: 800; color: #FFFFFF; text-decoration: none; letter-spacing: 0.6px;
     opacity: 0.92; transition: opacity 0.3s, color 0.3s; position: relative; padding: 10px 0; white-space: nowrap; cursor: pointer;
   }
   .dd-nav-center > a:hover, .dd-nav-center > a.active, .dd-nav-trigger:hover { opacity: 1; color: var(--dd-cyan); }
@@ -242,6 +256,47 @@
   }
   .dd-nav-center a:hover:after, .dd-nav-center a.active:after, .dd-nav-trigger:hover:after { width: 100%; }
 
+  .dd-header-locale {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: #FFFFFF;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  .dd-header-divider {
+    width: 1px;
+    height: 34px;
+    margin-right: 24px;
+    background: rgba(0,216,230,0.7);
+  }
+
+  .dd-header-globe,
+  .dd-header-lang {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s, opacity 0.3s;
+  }
+
+  .dd-header-globe:hover,
+  .dd-header-lang:hover {
+    color: var(--dd-cyan);
+  }
+
+  .dd-header-globe svg {
+    display: block;
+    width: 23px;
+    height: 23px;
+  }
+
+  .dd-header-caret {
+    color: rgba(255,255,255,0.82);
+    font-size: 14px;
+    line-height: 1;
+  }
+
   /* Mobile Toggle */
   .dd-toggle-v3 { display: none; background: none; border: none; flex-direction: column; gap: 6px; cursor: pointer; }
   .dd-toggle-v3 span { width: 20px; height: 2px; background: #FFFFFF; }
@@ -251,7 +306,7 @@
   }
 
   @media (max-width: 1024px) {
-    .dd-nav-center, .dd-top-utility { display: none; }
+    .dd-nav-center, .dd-top-utility, .dd-header-locale { display: none; }
     .dd-main-inner { height: 80px; }
     .dd-brand-icon { width: 60px; height: 60px; }
     .dd-toggle-v3 { display: flex; }

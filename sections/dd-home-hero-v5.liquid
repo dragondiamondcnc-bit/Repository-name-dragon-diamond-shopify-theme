@@ -1,46 +1,45 @@
 {% comment %}
-  DD Home Hero V5 - Solution Provider Focus (Final Locked Version)
-  Positioning: Sign Manufacturing Solution Provider
-  Layout: 60/40 Split
-  Visual: Single CO2 Acrylic Cutting Production Panel
+  DD Home Hero V5 - Hero V2.2 Final Visual System
+  First screen: single cinematic industrial production frame
+  Visual source: one CO2 acrylic cutting production scene
 {% endcomment %}
 
-<!-- HERO V2.2 STABLE LOCKED VERSION -->
+<!-- HERO V2.2 FINAL CINEMATIC SYSTEM -->
 <section class="dd-hero-v5" id="hero-v5">
-  <!-- 2. CO2 ACRYLIC CUTTING SCENE (SINGLE VISUAL SOURCE) -->
-  <div class="dd-hero-visual">
+  <div class="dd-hero-visual" aria-hidden="true">
     <img src="{{ 'hero-v22-co2-acrylic-cutting-progress.png' | asset_url }}">
   </div>
 
   <div class="dd-container">
     <div class="dd-hero-grid">
-      
-      <!-- 1. SOLUTION IDENTITY (60%) -->
       <div class="dd-hero-content">
-        <div class="dd-industry-badge">Built For Sign Production Teams</div>
-        <h1 class="dd-hero-h1">Production Solutions For Sign Manufacturers</h1>
-        <p class="dd-hero-lead">
-          Verified production deployments across multiple international markets, helping sign manufacturers build and expand production capabilities with CO2 laser, CNC router, fiber laser, and UV printing solutions.
-        </p>
-        
+        <div class="dd-industry-badge">Laser &amp; CNC Solutions. Verified In Production.</div>
+        <h1 class="dd-hero-h1">Production Solutions for Sign &amp; Industrial Fabrication</h1>
+        <div class="dd-title-rule" aria-hidden="true"></div>
+
         <div class="dd-systems-preview">
-          <span>CO2 Laser</span> <span class="dot">·</span> 
-          <span>CNC Router</span> <span class="dot">·</span> 
-          <span>Fiber Laser</span> <span class="dot">·</span> 
-          <span>UV Flatbed</span>
+          <span>CO2 Laser</span><span class="dot">&bull;</span>
+          <span>CNC Router</span><span class="dot">&bull;</span>
+          <span>Fiber Laser</span><span class="dot">&bull;</span>
+          <span>UV Printer</span>
         </div>
+
+        <p class="dd-hero-lead">Verified production deployments across 4 global markets.</p>
 
         <div class="dd-hero-actions">
-          <a href="#v2_1_conversion" class="dd-btn-v5">Request A Quote</a>
+          <a href="#v2_1_conversion" class="dd-btn-v5">Get A Quote <span aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <div class="dd-hero-response-note">
+          <span class="dd-response-icon" aria-hidden="true"></span>
+          <span>Engineering consultation within 24&ndash;48 hours</span>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
 <style>
-  /* Base Reset & Variables */
   .dd-hero-v5 {
     position: relative;
     min-height: 100vh;
@@ -57,43 +56,158 @@
     inset: 0;
     z-index: 1;
     background:
-      linear-gradient(90deg, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.74) 35%, rgba(0,0,0,0.22) 62%, rgba(0,0,0,0.08) 100%),
-      linear-gradient(180deg, rgba(0,0,0,0.86) 0%, rgba(0,0,0,0.18) 28%, rgba(0,0,0,0.16) 72%, rgba(0,0,0,0.76) 100%);
+      linear-gradient(90deg, rgba(0,0,0,0.96) 0%, rgba(0,0,0,0.84) 30%, rgba(0,0,0,0.34) 58%, rgba(0,0,0,0.08) 100%),
+      linear-gradient(180deg, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.14) 70%, rgba(0,0,0,0.82) 100%);
     pointer-events: none;
   }
 
   .dd-hero-v5 .dd-container {
     position: relative;
     z-index: 2;
-    max-width: 1240px;
+    max-width: 1280px;
     width: 100%;
     min-height: 100vh;
     margin: 0 auto;
-    padding: 152px 32px 88px;
+    padding: 168px 40px 82px;
     box-sizing: border-box;
   }
 
   .dd-hero-grid {
-    min-height: calc(100vh - 240px);
+    min-height: calc(100vh - 250px);
     display: grid;
-    grid-template-columns: minmax(0, 0.52fr) minmax(0, 0.48fr);
+    grid-template-columns: minmax(0, 0.54fr) minmax(0, 0.46fr);
     gap: 56px;
     align-items: center;
   }
 
-  /* Left: Content - Proportional Balance */
-  .dd-hero-content { display: flex; flex-direction: column; justify-content: center; padding-left: 0; position: relative; z-index: 2; max-width: 590px; }
-  .dd-industry-badge { display: inline-block; width: fit-content; background: transparent; color: #00D8E6; padding: 0; font-size: 13px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 30px; }
-  .dd-hero-h1 { font-size: clamp(48px, 5vw, 76px); font-weight: 850; color: #FFFFFF; line-height: 0.95; letter-spacing: 0; margin: 0 0 34px; text-transform: none; font-family: 'Archivo Narrow', sans-serif; }
-  .dd-hero-lead { font-size: 18px; line-height: 1.6; color: rgba(255,255,255,0.74); max-width: 580px; margin-bottom: 32px; }
+  .dd-hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 620px;
+    position: relative;
+    z-index: 2;
+  }
 
-  .dd-systems-preview { font-size: 20px; font-weight: 700; color: #FFFFFF; text-transform: none; letter-spacing: 0; margin-bottom: 28px; border-top: 2px solid #00A3AD; width: fit-content; padding-top: 28px; display: flex; align-items: center; gap: 14px; }
-  .dd-systems-preview .dot { color: #00A3AD; font-size: 20px; }
+  .dd-industry-badge {
+    width: fit-content;
+    margin-bottom: 28px;
+    color: #00D8E6;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+  }
 
-  .dd-btn-v5 { background: linear-gradient(180deg, #04A6D8 0%, #007BB0 100%); color: #FFF; padding: 22px 48px; text-decoration: none; font-weight: 800; letter-spacing: 1.5px; display: inline-block; font-size: 13px; transition: opacity 0.3s; }
-  .dd-btn-v5:hover { opacity: 0.86; }
+  .dd-hero-h1 {
+    max-width: 600px;
+    margin: 0 0 30px;
+    color: #FFFFFF;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: clamp(54px, 5.3vw, 82px);
+    font-weight: 850;
+    line-height: 0.98;
+    letter-spacing: 0;
+    text-transform: none;
+  }
 
-  /* Right: Stable single-source image */
+  .dd-title-rule {
+    width: 56px;
+    height: 2px;
+    margin: 0 0 28px;
+    background: #00D8E6;
+  }
+
+  .dd-systems-preview {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: fit-content;
+    margin-bottom: 24px;
+    color: #FFFFFF;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  .dd-systems-preview .dot {
+    color: #00D8E6;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .dd-hero-lead {
+    max-width: 560px;
+    margin: 0 0 46px;
+    color: rgba(255,255,255,0.86);
+    font-size: 19px;
+    line-height: 1.55;
+  }
+
+  .dd-btn-v5 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    min-width: 250px;
+    padding: 24px 34px;
+    border: 1px solid rgba(0,216,230,0.42);
+    background: linear-gradient(180deg, #04A6D8 0%, #007BB0 100%);
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: opacity 0.3s;
+  }
+
+  .dd-btn-v5:hover {
+    opacity: 0.86;
+  }
+
+  .dd-hero-response-note {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 42px;
+    color: rgba(255,255,255,0.88);
+    font-size: 17px;
+    font-weight: 650;
+  }
+
+  .dd-response-icon {
+    position: relative;
+    flex: 0 0 auto;
+    width: 28px;
+    height: 28px;
+    border: 2px solid #00D8E6;
+    border-radius: 50%;
+  }
+
+  .dd-response-icon::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 6px;
+    width: 2px;
+    height: 9px;
+    background: #00D8E6;
+  }
+
+  .dd-response-icon::after {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 13px;
+    width: 7px;
+    height: 2px;
+    background: #00D8E6;
+    transform: rotate(28deg);
+    transform-origin: left center;
+  }
+
   .dd-hero-visual {
     position: absolute;
     inset: 0;
@@ -107,16 +221,53 @@
     height: 100%;
     min-height: 100vh;
     object-fit: cover;
-    object-position: center right;
+    object-position: 66% center;
   }
 
   @media (max-width: 1024px) {
-    .dd-hero-v5 .dd-container { padding: 124px 24px 64px; }
-    .dd-hero-grid { grid-template-columns: 1fr; min-height: calc(100vh - 188px); gap: 0; align-items: center; }
-    .dd-hero-h1 { font-size: 40px; margin-bottom: 24px; }
-    .dd-hero-lead { font-size: 15px; margin-bottom: 24px; }
-    .dd-systems-preview { flex-wrap: wrap; font-size: 16px; }
-    .dd-hero-visual img { min-height: 100vh; object-position: 68% center; }
+    .dd-hero-v5 .dd-container {
+      padding: 126px 24px 64px;
+    }
+
+    .dd-hero-grid {
+      grid-template-columns: 1fr;
+      min-height: calc(100vh - 190px);
+      gap: 0;
+      align-items: center;
+    }
+
+    .dd-industry-badge {
+      font-size: 13px;
+    }
+
+    .dd-hero-h1 {
+      font-size: 40px;
+      margin-bottom: 24px;
+    }
+
+    .dd-systems-preview {
+      flex-wrap: wrap;
+      font-size: 16px;
+    }
+
+    .dd-hero-lead {
+      margin-bottom: 30px;
+      font-size: 15px;
+    }
+
+    .dd-btn-v5 {
+      min-width: 220px;
+      padding: 20px 28px;
+    }
+
+    .dd-hero-response-note {
+      margin-top: 30px;
+      font-size: 14px;
+    }
+
+    .dd-hero-visual img {
+      object-position: 68% center;
+    }
   }
 </style>
 
