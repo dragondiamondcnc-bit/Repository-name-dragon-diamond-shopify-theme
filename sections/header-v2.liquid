@@ -57,7 +57,7 @@
         <div class="dd-brand-identity">
           <a href="/" class="dd-brand-main">
             <div class="dd-brand-icon">
-              <img src="https://sc01.alicdn.com/kf/H5e7d57adb8584ee697446dbc5303863cL.jpg" alt="Dragon Icon">
+              <img src="{{ 'dragon-mark-transparent.png' | asset_url }}" alt="Dragon Diamond dragon mark">
             </div>
             <div class="dd-brand-text">
               <span class="dd-brand-name">DRAGON DIAMOND</span>
@@ -209,8 +209,13 @@
   /* Brand Identity */
   .dd-brand-main { display: flex; align-items: center; gap: 14px; text-decoration: none; transition: opacity 0.3s; }
   .dd-brand-main:hover { opacity: 0.82; }
-  .dd-brand-icon { width: 62px; height: 62px; border-radius: 0; overflow: hidden; background: transparent; flex-shrink: 0; }
-  .dd-brand-icon img { width: 100%; height: 100%; object-fit: cover; }
+  .dd-brand-icon { width: 62px; height: 62px; border-radius: 0; overflow: visible; background: transparent; flex-shrink: 0; }
+  .dd-brand-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(0, 216, 230, 0.35)) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.55));
+  }
   .dd-brand-text { display: flex; flex-direction: column; gap: 2px; }
   .dd-brand-name { font-size: 25px; font-weight: 800; color: #FFFFFF; letter-spacing: 0.2px; line-height: 1; font-family: 'Archivo Narrow', sans-serif; }
   .dd-brand-slogan { display: none; }
