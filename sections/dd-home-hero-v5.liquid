@@ -14,7 +14,7 @@
     <div class="dd-hero-grid">
       <div class="dd-hero-content">
         <div class="dd-industry-badge">Laser &amp; CNC Solutions. Verified In Production.</div>
-        <h1 class="dd-hero-h1">Production Solutions for Sign &amp; Industrial Fabrication</h1>
+        <h1 class="dd-hero-title dd-hero-h1"><span>Production Solutions</span><span>for Sign &amp; Industrial Fabrication</span></h1>
         <div class="dd-title-rule" aria-hidden="true"></div>
 
         <div class="dd-systems-preview">
@@ -84,7 +84,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 610px;
+    max-width: 620px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     position: relative;
     z-index: 2;
   }
@@ -99,16 +101,21 @@
     text-transform: uppercase;
   }
 
-  .dd-hero-h1 {
-    max-width: 650px;
-    margin: 0 0 28px;
+  .dd-hero-title {
+    max-width: 18ch;
+    margin: 0 0 14px;
     color: #FFFFFF;
     font-family: 'Archivo Narrow', sans-serif;
-    font-size: clamp(44px, 4.15vw, 64px);
-    font-weight: 850;
-    line-height: 1.02;
-    letter-spacing: 0;
+    font-size: clamp(42px, 3.2vw, 66px);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
     text-transform: none;
+  }
+
+  .dd-hero-title span {
+    display: block;
+    white-space: nowrap;
   }
 
   .dd-title-rule {
@@ -240,9 +247,10 @@
       font-size: 13px;
     }
 
-    .dd-hero-h1 {
-      font-size: 40px;
-      margin-bottom: 24px;
+    .dd-hero-title {
+      max-width: 18ch;
+      margin-bottom: 14px;
+      font-size: clamp(38px, 8vw, 46px);
     }
 
     .dd-systems-preview {
