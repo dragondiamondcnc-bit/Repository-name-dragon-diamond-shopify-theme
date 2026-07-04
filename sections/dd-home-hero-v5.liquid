@@ -7,6 +7,11 @@
 
 <!-- HERO V2.2 STABLE LOCKED VERSION -->
 <section class="dd-hero-v5" id="hero-v5">
+  <!-- 2. CO2 ACRYLIC CUTTING SCENE (SINGLE VISUAL SOURCE) -->
+  <div class="dd-hero-visual">
+    <img src="{{ 'hero-v22-co2-acrylic-cutting-progress.png' | asset_url }}">
+  </div>
+
   <div class="dd-container">
     <div class="dd-hero-grid">
       
@@ -30,11 +35,6 @@
         </div>
       </div>
 
-      <!-- 2. CO2 ACRYLIC CUTTING SCENE (40%) -->
-      <div class="dd-hero-visual">
-        <img src="{{ 'hero-v22-co2-acrylic-cutting-progress.png' | asset_url }}">
-      </div>
-
     </div>
   </div>
 </section>
@@ -51,6 +51,17 @@
     color: #FFFFFF;
   }
 
+  .dd-hero-v5::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+      linear-gradient(90deg, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.74) 35%, rgba(0,0,0,0.22) 62%, rgba(0,0,0,0.08) 100%),
+      linear-gradient(180deg, rgba(0,0,0,0.86) 0%, rgba(0,0,0,0.18) 28%, rgba(0,0,0,0.16) 72%, rgba(0,0,0,0.76) 100%);
+    pointer-events: none;
+  }
+
   .dd-hero-v5 .dd-container {
     position: relative;
     z-index: 2;
@@ -58,40 +69,36 @@
     width: 100%;
     min-height: 100vh;
     margin: 0 auto;
-    padding: 150px 32px 96px;
+    padding: 152px 32px 88px;
     box-sizing: border-box;
   }
 
   .dd-hero-grid {
-    min-height: calc(100vh - 246px);
+    min-height: calc(100vh - 240px);
     display: grid;
-    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-    gap: 64px;
+    grid-template-columns: minmax(0, 0.52fr) minmax(0, 0.48fr);
+    gap: 56px;
     align-items: center;
   }
 
   /* Left: Content - Proportional Balance */
-  .dd-hero-content { padding-left: 0; position: relative; z-index: 2; }
-  .dd-industry-badge { display: inline-block; background: #00A3AD; color: #FFF; padding: 6px 14px; font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 32px; }
-  .dd-hero-h1 { font-size: 56px; font-weight: 850; color: #FFFFFF; line-height: 0.95; letter-spacing: -3px; margin: 0 0 32px; text-transform: uppercase; font-family: 'Archivo Narrow', sans-serif; }
+  .dd-hero-content { display: flex; flex-direction: column; justify-content: center; padding-left: 0; position: relative; z-index: 2; max-width: 590px; }
+  .dd-industry-badge { display: inline-block; width: fit-content; background: transparent; color: #00D8E6; padding: 0; font-size: 13px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 30px; }
+  .dd-hero-h1 { font-size: clamp(48px, 5vw, 76px); font-weight: 850; color: #FFFFFF; line-height: 0.95; letter-spacing: 0; margin: 0 0 34px; text-transform: none; font-family: 'Archivo Narrow', sans-serif; }
   .dd-hero-lead { font-size: 18px; line-height: 1.6; color: rgba(255,255,255,0.74); max-width: 580px; margin-bottom: 32px; }
 
-  .dd-systems-preview { font-size: 13px; font-weight: 700; color: #FFFFFF; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 40px; border-top: 1px solid rgba(0,163,173,0.75); padding-top: 24px; display: flex; align-items: center; gap: 12px; }
+  .dd-systems-preview { font-size: 20px; font-weight: 700; color: #FFFFFF; text-transform: none; letter-spacing: 0; margin-bottom: 28px; border-top: 2px solid #00A3AD; width: fit-content; padding-top: 28px; display: flex; align-items: center; gap: 14px; }
   .dd-systems-preview .dot { color: #00A3AD; font-size: 20px; }
 
-  .dd-btn-v5 { background: #00A3AD; color: #FFF; padding: 22px 48px; text-decoration: none; font-weight: 800; letter-spacing: 1.5px; display: inline-block; font-size: 13px; transition: 0.3s; }
-  .dd-btn-v5:hover { background: #008B94; }
+  .dd-btn-v5 { background: linear-gradient(180deg, #04A6D8 0%, #007BB0 100%); color: #FFF; padding: 22px 48px; text-decoration: none; font-weight: 800; letter-spacing: 1.5px; display: inline-block; font-size: 13px; transition: opacity 0.3s; }
+  .dd-btn-v5:hover { opacity: 0.86; }
 
   /* Right: Stable single-source image */
   .dd-hero-visual {
     position: absolute;
     inset: 0;
-    z-index: 1;
-    transform: none;
-    border-radius: 0;
+    z-index: 0;
     overflow: hidden;
-    border: 0;
-    pointer-events: none;
   }
 
   .dd-hero-visual img {
@@ -101,16 +108,15 @@
     min-height: 100vh;
     object-fit: cover;
     object-position: center right;
-    opacity: 0.72;
   }
 
   @media (max-width: 1024px) {
-    .dd-hero-v5 .dd-container { padding: 120px 24px 72px; }
-    .dd-hero-grid { grid-template-columns: 1fr; gap: 48px; }
+    .dd-hero-v5 .dd-container { padding: 124px 24px 64px; }
+    .dd-hero-grid { grid-template-columns: 1fr; min-height: calc(100vh - 188px); gap: 0; align-items: center; }
     .dd-hero-h1 { font-size: 40px; margin-bottom: 24px; }
     .dd-hero-lead { font-size: 15px; margin-bottom: 24px; }
-    .dd-hero-visual { width: 100%; max-width: none; margin: 0; }
-    .dd-hero-visual img { min-height: 100vh; opacity: 0.42; }
+    .dd-systems-preview { flex-wrap: wrap; font-size: 16px; }
+    .dd-hero-visual img { min-height: 100vh; object-position: 68% center; }
   }
 </style>
 
