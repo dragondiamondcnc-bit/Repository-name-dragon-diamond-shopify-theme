@@ -17,9 +17,73 @@
       "type": "dd-home-workflows-v2",
       "settings": {}
     },
-    "v2_1_systems": {
-      "type": "dd-home-systems-v2",
-      "settings": {}
+    "v5_05_systems": {
+      "type": "dd-home-production-systems-v5",
+      "blocks": {
+        "co2_laser_system": {
+          "type": "system",
+          "settings": {
+            "title": "CO2 Laser Cutting System",
+            "short_description": "Precision non-metal cutting\nfor signage and acrylic production.",
+            "image": "",
+            "purpose": "Build repeatable non-metal cutting and engraving capacity for signage and acrylic workflows.",
+            "applications": "<ul><li>Sign Manufacturing</li><li>Acrylic Fabrication</li><li>Display Production</li></ul>",
+            "equipment": "CO2 Laser Cutting Machines",
+            "link": "/collections/co2-laser",
+            "cta": "Explore System"
+          }
+        },
+        "cnc_router_system": {
+          "type": "system",
+          "settings": {
+            "title": "CNC Router System",
+            "short_description": "Heavy-duty routing solutions\nfor large-format fabrication.",
+            "image": "",
+            "purpose": "Establish large-format routing capacity for panels, structures and custom fabricated components.",
+            "applications": "<ul><li>Panel Fabrication</li><li>Display Structures</li><li>Custom Components</li></ul>",
+            "equipment": "CNC Router Machines",
+            "link": "/collections/cnc-router",
+            "cta": "Explore System"
+          }
+        },
+        "fiber_laser_system": {
+          "type": "system",
+          "settings": {
+            "title": "Fiber Laser Cutting System",
+            "short_description": "Industrial metal processing\nfor precision fabrication.",
+            "image": "",
+            "purpose": "Build precision sheet-metal cutting capacity for stainless and carbon steel production.",
+            "applications": "<ul><li>Metal Fabrication</li><li>Stainless Steel</li><li>Carbon Steel</li></ul>",
+            "equipment": "Fiber Laser Cutting Machines",
+            "link": "/collections/fiber-laser",
+            "cta": "Explore System"
+          }
+        },
+        "uv_flatbed_system": {
+          "type": "system",
+          "settings": {
+            "title": "UV Flatbed Printing System",
+            "short_description": "Direct-to-substrate printing\nfor customized production.",
+            "image": "",
+            "purpose": "Establish direct-to-substrate print capacity for customized graphics and finished products.",
+            "applications": "<ul><li>Acrylic Printing</li><li>Display Graphics</li><li>Custom Products</li></ul>",
+            "equipment": "UV Flatbed Printers",
+            "link": "/collections/uv-flatbed-printer",
+            "cta": "Explore System"
+          }
+        }
+      },
+      "block_order": [
+        "co2_laser_system",
+        "cnc_router_system",
+        "fiber_laser_system",
+        "uv_flatbed_system"
+      ],
+      "settings": {
+        "eyebrow": "MANUFACTURING CAPABILITY SYSTEMS",
+        "heading": "Production Systems",
+        "description": "Integrated production systems designed around the manufacturing capabilities your operation needs to build."
+      }
     },
     "v2_1_proof": {
       "type": "dd-home-worldwide-footprint-v5",
@@ -39,7 +103,7 @@
     "v2_1_applications",
     "v2_1_proof",
     "v5_05_process",
-    "v2_1_systems",
+    "v5_05_systems",
     "v2_1_conversion"
   ]
 }
