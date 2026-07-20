@@ -25,8 +25,8 @@
       "type": "dd-home-worldwide-footprint-v5",
       "settings": {}
     },
-    "v2_1_cases": {
-      "type": "dd-home-deployments-v2",
+    "v5_05_process": {
+      "type": "dd-home-inquiry-to-production-v2",
       "settings": {}
     },
     "v2_1_conversion": {
@@ -38,7 +38,7 @@
     "v2_1_hero",
     "v2_1_applications",
     "v2_1_proof",
-    "v2_1_cases",
+    "v5_05_process",
     "v2_1_systems",
     "v2_1_conversion"
   ]

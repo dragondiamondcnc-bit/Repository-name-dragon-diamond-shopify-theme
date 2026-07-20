@@ -1,0 +1,324 @@
+<section id="v2_1_workflow" class="dd-workflow-section">
+  <div class="dd-workflow-container">
+    <header class="dd-workflow-header">
+      <span>PRODUCTION DEPLOYMENT WORKFLOW</span>
+      <h2>From Inquiry To Production</h2>
+      <p>
+        A structured engineering process that transforms production requirements into a fully operational manufacturing system.
+      </p>
+    </header>
+
+    {% assign workflow_numbers = '01||02||03||04||05' | split: '||' %}
+    {% assign workflow_titles = 'Production Requirement Analysis||Application Validation||System Configuration||Deployment & Commissioning||Production Support' | split: '||' %}
+    {% assign workflow_descriptions = 'Understand product type, materials and output requirements before defining the production direction.||Review samples, production workflow and processing requirements to confirm the suitable solution.||Define machine selection, technical specifications and production system configuration.||Complete manufacturing, inspection, installation and operator training for production readiness.||Provide technical assistance and continuous support for long-term production operation.' | split: '||' %}
+    {% assign workflow_outputs = 'Production Direction||Suitable Processing Solution||Production System Proposal||Production Ready System||Stable Production Operation' | split: '||' %}
+
+    <div class="dd-workflow-timeline" aria-label="Production deployment workflow">
+      {% for workflow_title in workflow_titles %}
+        <article class="dd-workflow-step">
+          <span>{{ workflow_numbers[forloop.index0] }}</span>
+          <h3>{{ workflow_title }}</h3>
+          <p>{{ workflow_descriptions[forloop.index0] }}</p>
+          <dl>
+            <dt>Output</dt>
+            <dd>{{ workflow_outputs[forloop.index0] }}</dd>
+          </dl>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+  .dd-workflow-section {
+    --dd-workflow-accent: #00A3AD;
+    --dd-workflow-white: #FFFFFF;
+    --dd-workflow-muted: rgba(255, 255, 255, 0.66);
+    --dd-workflow-line: rgba(255, 255, 255, 0.14);
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 88px 0 96px;
+    background: #0F1115;
+    color: var(--dd-workflow-white);
+  }
+
+  .dd-workflow-section *,
+  .dd-workflow-section *::before,
+  .dd-workflow-section *::after {
+    box-sizing: border-box;
+  }
+
+  .dd-workflow-container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  .dd-workflow-header {
+    max-width: 820px;
+    margin-bottom: 64px;
+  }
+
+  .dd-workflow-header span {
+    display: block;
+    margin-bottom: 16px;
+    color: var(--dd-workflow-accent);
+    font-family: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .dd-workflow-header h2 {
+    max-width: 760px;
+    margin: 0 0 18px;
+    color: var(--dd-workflow-white);
+    font-family: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
+    font-size: clamp(40px, 4vw, 64px);
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 0.98;
+    text-transform: uppercase;
+  }
+
+  .dd-workflow-header p {
+    max-width: 720px;
+    margin: 0;
+    color: var(--dd-workflow-muted);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .dd-workflow-timeline {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    padding-top: 1px;
+    border-top: 1px solid var(--dd-workflow-line);
+    border-bottom: 1px solid var(--dd-workflow-line);
+  }
+
+  .dd-workflow-timeline::before {
+    position: absolute;
+    top: 49px;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background: var(--dd-workflow-line);
+    content: '';
+  }
+
+  .dd-workflow-step {
+    position: relative;
+    min-width: 0;
+    padding: 30px 24px 32px 0;
+  }
+
+  .dd-workflow-step + .dd-workflow-step {
+    padding-left: 24px;
+  }
+
+  .dd-workflow-step::before {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    z-index: 1;
+    width: 9px;
+    height: 9px;
+    border: 1px solid var(--dd-workflow-accent);
+    background: #0F1115;
+    content: '';
+  }
+
+  .dd-workflow-step + .dd-workflow-step::before {
+    left: 24px;
+  }
+
+  .dd-workflow-step::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--dd-workflow-line);
+    content: '';
+  }
+
+  .dd-workflow-step:last-child {
+    padding-right: 0;
+  }
+
+  .dd-workflow-step:last-child::after {
+    display: none;
+  }
+
+  .dd-workflow-step > span {
+    display: block;
+    margin-bottom: 66px;
+    color: rgba(255, 255, 255, 0.36);
+    font-family: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
+    font-size: 46px;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 0.9;
+  }
+
+  .dd-workflow-step h3 {
+    min-height: 78px;
+    margin: 0 0 16px;
+    color: var(--dd-workflow-white);
+    font-family: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 1.08;
+    text-transform: uppercase;
+  }
+
+  .dd-workflow-step p {
+    min-height: 112px;
+    margin: 0 0 28px;
+    color: var(--dd-workflow-muted);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .dd-workflow-step dl {
+    margin: 0;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+  }
+
+  .dd-workflow-step dt {
+    margin-bottom: 8px;
+    color: var(--dd-workflow-accent);
+    font-family: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .dd-workflow-step dd {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.45;
+  }
+
+  @media (max-width: 1080px) {
+    .dd-workflow-step {
+      padding-right: 18px;
+    }
+
+    .dd-workflow-step + .dd-workflow-step {
+      padding-left: 18px;
+    }
+
+    .dd-workflow-step + .dd-workflow-step::before {
+      left: 18px;
+    }
+
+    .dd-workflow-step h3 {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .dd-workflow-section {
+      padding: 64px 0 70px;
+    }
+
+    .dd-workflow-container {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .dd-workflow-header {
+      margin-bottom: 42px;
+    }
+
+    .dd-workflow-header h2 {
+      font-size: 40px;
+      line-height: 1.02;
+    }
+
+    .dd-workflow-header p {
+      font-size: 15px;
+    }
+
+    .dd-workflow-timeline {
+      grid-template-columns: 1fr;
+      padding-top: 0;
+      padding-left: 42px;
+      border-top: 1px solid var(--dd-workflow-line);
+      border-bottom: 1px solid var(--dd-workflow-line);
+    }
+
+    .dd-workflow-timeline::before {
+      top: 0;
+      right: auto;
+      bottom: 0;
+      left: 6px;
+      width: 1px;
+      height: auto;
+    }
+
+    .dd-workflow-step,
+    .dd-workflow-step + .dd-workflow-step,
+    .dd-workflow-step:last-child {
+      padding: 28px 0 30px;
+    }
+
+    .dd-workflow-step + .dd-workflow-step {
+      border-top: 1px solid var(--dd-workflow-line);
+    }
+
+    .dd-workflow-step::before,
+    .dd-workflow-step + .dd-workflow-step::before {
+      top: 38px;
+      left: -40px;
+    }
+
+    .dd-workflow-step::after {
+      display: none;
+    }
+
+    .dd-workflow-step > span {
+      margin-bottom: 22px;
+      font-size: 38px;
+    }
+
+    .dd-workflow-step h3 {
+      min-height: 0;
+      margin-bottom: 14px;
+      font-size: 22px;
+    }
+
+    .dd-workflow-step p {
+      min-height: 0;
+      margin-bottom: 22px;
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .dd-workflow-header h2 {
+      font-size: 36px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "DD Workflow V2",
+  "settings": [],
+  "presets": [{"name": "DD Workflow V2"}]
+}
+{% endschema %}
