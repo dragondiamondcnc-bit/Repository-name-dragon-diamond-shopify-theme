@@ -16,11 +16,11 @@
     <div class="dd-workflow-timeline" aria-label="Production deployment workflow">
       {% for workflow_title in workflow_titles %}
         <article class="dd-workflow-step">
-          <span>{{ workflow_numbers[forloop.index0] }}</span>
+          <span>{{ workflow_numbers[forloop.index0] }} //</span>
           <h3>{{ workflow_title }}</h3>
           <p>{{ workflow_descriptions[forloop.index0] }}</p>
           <dl>
-            <dt>Output</dt>
+            <dt>Output //</dt>
             <dd>{{ workflow_outputs[forloop.index0] }}</dd>
           </dl>
         </article>
@@ -34,7 +34,8 @@
     --dd-workflow-accent: #00A3AD;
     --dd-workflow-white: #FFFFFF;
     --dd-workflow-muted: rgba(255, 255, 255, 0.66);
-    --dd-workflow-line: rgba(255, 255, 255, 0.14);
+    --dd-workflow-line: rgba(255, 255, 255, 0.11);
+    --dd-workflow-connector: rgba(166, 174, 184, 0.2);
     box-sizing: border-box;
     overflow: hidden;
     padding: 88px 0 96px;
@@ -58,7 +59,7 @@
 
   .dd-workflow-header {
     max-width: 820px;
-    margin-bottom: 64px;
+    margin-bottom: 52px;
   }
 
   .dd-workflow-header span {
@@ -108,7 +109,7 @@
     right: 0;
     left: 0;
     height: 1px;
-    background: var(--dd-workflow-line);
+    background: var(--dd-workflow-connector);
     content: '';
   }
 
@@ -159,7 +160,7 @@
   .dd-workflow-step > span {
     display: block;
     margin-bottom: 66px;
-    color: rgba(255, 255, 255, 0.36);
+    color: var(--dd-workflow-accent);
     font-family: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
     font-size: 46px;
     font-weight: 800;
@@ -168,7 +169,8 @@
   }
 
   .dd-workflow-step h3 {
-    min-height: 78px;
+    min-height: 52px;
+    max-width: 205px;
     margin: 0 0 16px;
     color: var(--dd-workflow-white);
     font-family: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
@@ -176,6 +178,7 @@
     font-weight: 800;
     letter-spacing: 0;
     line-height: 1.08;
+    text-wrap: balance;
     text-transform: uppercase;
   }
 
@@ -190,7 +193,7 @@
   .dd-workflow-step dl {
     margin: 0;
     padding-top: 18px;
-    border-top: 1px solid rgba(255, 255, 255, 0.09);
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
   }
 
   .dd-workflow-step dt {
@@ -241,7 +244,7 @@
     }
 
     .dd-workflow-header {
-      margin-bottom: 42px;
+      margin-bottom: 34px;
     }
 
     .dd-workflow-header h2 {
@@ -297,6 +300,7 @@
 
     .dd-workflow-step h3 {
       min-height: 0;
+      max-width: none;
       margin-bottom: 14px;
       font-size: 22px;
     }
