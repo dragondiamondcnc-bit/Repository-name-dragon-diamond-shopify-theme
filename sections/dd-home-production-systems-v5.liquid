@@ -13,6 +13,15 @@
     <div class="dd-production-systems__layout">
       <div class="dd-production-systems__navigation" role="tablist" aria-label="Production systems">
         {% for block in section.blocks %}
+          {% if forloop.first %}
+            <div class="dd-production-systems__group" role="presentation">
+              <span>Primary Production Systems</span>
+            </div>
+          {% elsif forloop.index == 4 %}
+            <div class="dd-production-systems__group" role="presentation">
+              <span>Industrial Processing Systems</span>
+            </div>
+          {% endif %}
           <button
             class="dd-production-systems__tab{% if forloop.first %} is-active{% endif %}"
             type="button"
@@ -37,9 +46,13 @@
             {% when 2 %}
               {% assign production_asset = 'section05-cnc-production.jpg' %}
             {% when 3 %}
-              {% assign production_asset = 'section05-fiber-production.jpg' %}
-            {% else %}
               {% assign production_asset = 'section05-uv-production.jpg' %}
+            {% when 4 %}
+              {% assign production_asset = 'section05-fiber-production.jpg' %}
+            {% when 5 %}
+              {% assign production_asset = 'section05-welding-production.jpg' %}
+            {% else %}
+              {% assign production_asset = 'section05-marking-production.jpg' %}
           {% endcase %}
 
           <article
@@ -186,6 +199,18 @@
 
   .dd-production-systems__navigation {
     border-right: 1px solid var(--dd-production-line);
+  }
+
+  .dd-production-systems__group {
+    padding: 17px 24px 15px 0;
+    border-bottom: 1px solid var(--dd-production-line);
+    color: rgba(255, 255, 255, 0.44);
+    font-family: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 1.25;
+    text-transform: uppercase;
   }
 
   .dd-production-systems__tab {
@@ -439,6 +464,10 @@
       padding: 19px 0;
     }
 
+    .dd-production-systems__group {
+      padding: 15px 0 13px;
+    }
+
     .dd-production-systems__tab-title {
       font-size: 18px;
     }
@@ -524,7 +553,7 @@
 {% schema %}
 {
   "name": "DD Production Systems",
-  "max_blocks": 4,
+  "max_blocks": 6,
   "settings": [
     {
       "type": "text",
@@ -603,6 +632,8 @@
     {
       "name": "DD Production Systems",
       "blocks": [
+        { "type": "system" },
+        { "type": "system" },
         { "type": "system" },
         { "type": "system" },
         { "type": "system" },

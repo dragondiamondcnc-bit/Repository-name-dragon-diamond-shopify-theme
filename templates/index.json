@@ -46,19 +46,6 @@
             "cta": "Explore System"
           }
         },
-        "fiber_laser_system": {
-          "type": "system",
-          "settings": {
-            "title": "Fiber Laser Cutting System",
-            "short_description": "Industrial metal processing\nfor precision fabrication.",
-            "image": "",
-            "purpose": "Build precision sheet-metal cutting capacity for stainless and carbon steel production.",
-            "applications": "<ul><li>Metal Fabrication</li><li>Stainless Steel</li><li>Carbon Steel</li></ul>",
-            "equipment": "Fiber Laser Cutting Machines",
-            "link": "/collections/fiber-laser",
-            "cta": "Explore System"
-          }
-        },
         "uv_flatbed_system": {
           "type": "system",
           "settings": {
@@ -71,13 +58,54 @@
             "link": "/collections/uv-flatbed-printer",
             "cta": "Explore System"
           }
+        },
+        "fiber_laser_system": {
+          "type": "system",
+          "settings": {
+            "title": "Fiber Laser Cutting System",
+            "short_description": "Industrial metal processing\nfor precision fabrication.",
+            "image": "",
+            "purpose": "Industrial metal processing for precision fabrication.",
+            "applications": "<ul><li>Metal Fabrication</li><li>Stainless Steel</li><li>Carbon Steel</li></ul>",
+            "equipment": "Fiber Laser Cutting Machines",
+            "link": "/collections/fiber-laser",
+            "cta": "Explore System"
+          }
+        },
+        "laser_welding_system": {
+          "type": "system",
+          "settings": {
+            "title": "Laser Welding System",
+            "short_description": "Precision laser joining\nfor fabricated metal assemblies.",
+            "image": "",
+            "purpose": "Metal joining solutions for industrial fabrication.",
+            "applications": "<ul><li>Sheet Metal Fabrication</li><li>Stainless Steel Joining</li><li>Precision Components</li></ul>",
+            "equipment": "Laser Welding Machines",
+            "link": "/collections/laser-welding",
+            "cta": "Explore System"
+          }
+        },
+        "laser_marking_system": {
+          "type": "system",
+          "settings": {
+            "title": "Laser Marking System",
+            "short_description": "Industrial marking capability\nfor products and components.",
+            "image": "",
+            "purpose": "Permanent identification and traceability solutions.",
+            "applications": "<ul><li>Product Identification</li><li>Serial Number Marking</li><li>Industrial Traceability</li></ul>",
+            "equipment": "Laser Marking Machines",
+            "link": "/collections/laser-marking",
+            "cta": "Explore System"
+          }
         }
       },
       "block_order": [
         "co2_laser_system",
         "cnc_router_system",
+        "uv_flatbed_system",
         "fiber_laser_system",
-        "uv_flatbed_system"
+        "laser_welding_system",
+        "laser_marking_system"
       ],
       "settings": {
         "eyebrow": "MANUFACTURING CAPABILITY SYSTEMS",
