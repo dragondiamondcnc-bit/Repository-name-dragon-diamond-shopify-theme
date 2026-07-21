@@ -1,0 +1,294 @@
+<section id="v2_1_trust_framework" class="dd-trust-framework">
+  <div class="dd-trust-framework__container">
+    <div class="dd-trust-framework__layout">
+      <header class="dd-trust-framework__header">
+        <span class="dd-trust-framework__eyebrow">{{ section.settings.eyebrow }}</span>
+        <h2 class="dd-trust-framework__heading">{{ section.settings.heading | newline_to_br }}</h2>
+        <p class="dd-trust-framework__description">{{ section.settings.description | newline_to_br }}</p>
+      </header>
+
+      <div class="dd-trust-framework__principles" aria-label="Why production teams choose Dragon Diamond">
+        {% for block in section.blocks %}
+          <article class="dd-trust-framework__principle" {{ block.shopify_attributes }}>
+            <span class="dd-trust-framework__number">
+              {{ forloop.index | prepend: '0' }} <small>//</small>
+            </span>
+            <div class="dd-trust-framework__principle-content">
+              <h3>{{ block.settings.title }}</h3>
+              <p>{{ block.settings.text | newline_to_br }}</p>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .dd-trust-framework {
+    --dd-trust-accent: #00A3AD;
+    --dd-trust-white: #FFFFFF;
+    --dd-trust-muted: rgba(255, 255, 255, 0.66);
+    --dd-trust-line: rgba(255, 255, 255, 0.11);
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 120px 0;
+    background: #0F1115;
+    color: var(--dd-trust-white);
+  }
+
+  .dd-trust-framework *,
+  .dd-trust-framework *::before,
+  .dd-trust-framework *::after {
+    box-sizing: border-box;
+  }
+
+  .dd-trust-framework__container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  .dd-trust-framework__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 38fr) minmax(0, 62fr);
+    gap: 64px;
+    align-items: start;
+  }
+
+  .dd-trust-framework__header {
+    max-width: 460px;
+    padding-right: 24px;
+  }
+
+  .dd-trust-framework__eyebrow {
+    display: block;
+    margin-bottom: 18px;
+    color: var(--dd-trust-accent);
+    font-family: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 1.3;
+    text-transform: uppercase;
+  }
+
+  .dd-trust-framework__heading {
+    margin: 0 0 24px;
+    color: var(--dd-trust-white);
+    font-family: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 0.98;
+  }
+
+  .dd-trust-framework__description {
+    max-width: 420px;
+    margin: 0;
+    color: var(--dd-trust-muted);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .dd-trust-framework__principles {
+    border-top: 1px solid var(--dd-trust-line);
+  }
+
+  .dd-trust-framework__principle {
+    display: grid;
+    grid-template-columns: 132px minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+    padding: 32px 0 34px;
+    border-bottom: 1px solid var(--dd-trust-line);
+  }
+
+  .dd-trust-framework__number {
+    color: rgba(255, 255, 255, 0.34);
+    font-family: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
+    font-size: 46px;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 0.9;
+  }
+
+  .dd-trust-framework__number small {
+    color: var(--dd-trust-accent);
+    font-size: 12px;
+    font-weight: 800;
+    vertical-align: 0.65em;
+  }
+
+  .dd-trust-framework__principle-content h3 {
+    margin: 0 0 12px;
+    color: var(--dd-trust-white);
+    font-family: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 1.05;
+    text-transform: uppercase;
+  }
+
+  .dd-trust-framework__principle-content p {
+    max-width: 560px;
+    margin: 0;
+    color: var(--dd-trust-muted);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 1100px) {
+    .dd-trust-framework__layout {
+      gap: 48px;
+    }
+
+    .dd-trust-framework__heading {
+      font-size: 48px;
+    }
+
+    .dd-trust-framework__principle {
+      grid-template-columns: 108px minmax(0, 1fr);
+    }
+  }
+
+  @media (max-width: 860px) {
+    .dd-trust-framework {
+      padding: 80px 0;
+    }
+
+    .dd-trust-framework__layout {
+      grid-template-columns: 1fr;
+      gap: 52px;
+    }
+
+    .dd-trust-framework__header {
+      max-width: 680px;
+      padding-right: 0;
+    }
+
+    .dd-trust-framework__heading {
+      max-width: 620px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .dd-trust-framework {
+      padding: 64px 0;
+    }
+
+    .dd-trust-framework__container {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .dd-trust-framework__layout {
+      gap: 40px;
+    }
+
+    .dd-trust-framework__eyebrow {
+      margin-bottom: 16px;
+    }
+
+    .dd-trust-framework__heading {
+      margin-bottom: 20px;
+      font-size: 40px;
+      line-height: 1;
+    }
+
+    .dd-trust-framework__description {
+      font-size: 15px;
+    }
+
+    .dd-trust-framework__principle {
+      grid-template-columns: 64px minmax(0, 1fr);
+      gap: 16px;
+      padding: 25px 0 27px;
+    }
+
+    .dd-trust-framework__number {
+      font-size: 32px;
+    }
+
+    .dd-trust-framework__number small {
+      font-size: 9px;
+    }
+
+    .dd-trust-framework__principle-content h3 {
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .dd-trust-framework__principle-content p {
+      font-size: 14px;
+      line-height: 1.55;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .dd-trust-framework__heading {
+      font-size: 36px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "DD Trust Framework",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "WHY PRODUCTION TEAMS CHOOSE DRAGON DIAMOND"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Built Around Production,\nNot Just Machines."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "We help production teams select, deploy and operate reliable manufacturing systems based on real production requirements."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "principle",
+      "name": "Principle",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Production Principle"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Explain how this principle supports reliable production."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "DD Trust Framework",
+      "blocks": [
+        { "type": "principle" },
+        { "type": "principle" },
+        { "type": "principle" },
+        { "type": "principle" }
+      ]
+    }
+  ]
+}
+{% endschema %}

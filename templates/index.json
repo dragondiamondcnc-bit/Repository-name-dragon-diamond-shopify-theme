@@ -113,6 +113,50 @@
         "description": "Integrated production systems designed around the manufacturing capabilities your operation needs to build."
       }
     },
+    "v5_06_trust": {
+      "type": "dd-home-why-production-teams-v1",
+      "blocks": {
+        "production_understanding": {
+          "type": "principle",
+          "settings": {
+            "title": "Production Understanding",
+            "text": "Every project starts by understanding\nyour workflow, materials and output goals."
+          }
+        },
+        "application_engineering": {
+          "type": "principle",
+          "settings": {
+            "title": "Application-Based Engineering",
+            "text": "Systems are configured around\nreal production requirements,\nnot standard machine lists."
+          }
+        },
+        "deployment_experience": {
+          "type": "principle",
+          "settings": {
+            "title": "Deployment Experience",
+            "text": "Experience from different markets\nhelps us understand practical production challenges."
+          }
+        },
+        "production_support": {
+          "type": "principle",
+          "settings": {
+            "title": "Long-Term Production Support",
+            "text": "We stay connected after delivery\nto support stable daily operation."
+          }
+        }
+      },
+      "block_order": [
+        "production_understanding",
+        "application_engineering",
+        "deployment_experience",
+        "production_support"
+      ],
+      "settings": {
+        "eyebrow": "WHY PRODUCTION TEAMS CHOOSE DRAGON DIAMOND",
+        "heading": "Built Around Production,\nNot Just Machines.",
+        "description": "We help production teams select,\ndeploy and operate reliable manufacturing systems\nbased on real production requirements."
+      }
+    },
     "v2_1_proof": {
       "type": "dd-home-worldwide-footprint-v5",
       "settings": {}
@@ -132,6 +176,7 @@
     "v2_1_proof",
     "v5_05_process",
     "v5_05_systems",
+    "v5_06_trust",
     "v2_1_conversion"
   ]
 }
