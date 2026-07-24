@@ -67,5 +67,7 @@
     {% if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add-modal' %}
     {% endif %}
+
+    <script src="{{ 'dd-conversion-tracking-v1.js' | asset_url }}" defer></script>
   </body>
 </html>

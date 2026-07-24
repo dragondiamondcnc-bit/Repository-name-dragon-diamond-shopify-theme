@@ -24,12 +24,26 @@
 
         <div class="dd-project-initiation__actions">
           {% if section.settings.primary_button_url != blank and section.settings.primary_button_text != blank %}
-            <a class="dd-project-initiation__primary" href="{{ section.settings.primary_button_url }}">
+            <a
+              class="dd-project-initiation__primary"
+              href="{{ section.settings.primary_button_url }}"
+              data-track="cta"
+              data-cta-id="home_start_project"
+              data-section="start_project"
+            >
               <span>{{ section.settings.primary_button_text }}</span>
               <span aria-hidden="true">&rarr;</span>
             </a>
           {% endif %}
-          <a class="dd-project-initiation__secondary" href="/pages/contact">Talk To Engineering</a>
+          <a
+            class="dd-project-initiation__secondary"
+            href="/pages/contact"
+            data-track="cta"
+            data-cta-id="home_contact_engineering"
+            data-section="start_project"
+          >
+            Talk To Engineering
+          </a>
         </div>
       </div>
     </div>

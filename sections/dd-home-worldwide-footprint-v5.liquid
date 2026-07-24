@@ -60,6 +60,10 @@
             class="dd-reference-link"
             href="{{ country_links[forloop.index0] }}"
             aria-label="View {{ country }} case study"
+            data-track="case-study"
+            data-market="{{ country | escape }}"
+            data-system="{{ country_systems[forloop.index0] | escape }}"
+            data-application="{{ country_applications[forloop.index0] | escape }}"
           >
             View Case Study <span aria-hidden="true">→</span>
           </a>

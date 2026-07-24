@@ -110,7 +110,13 @@
               </dl>
 
               {% if block.settings.link != blank %}
-                <a class="dd-production-systems__link" href="{{ block.settings.link }}">
+                <a
+                  class="dd-production-systems__link"
+                  href="{{ block.settings.link }}"
+                  data-track="product-system"
+                  data-system-name="{{ block.settings.title | escape }}"
+                  data-system-category="{% if forloop.index <= 3 %}primary_production_systems{% else %}industrial_processing_systems{% endif %}"
+                >
                   {{ block.settings.cta }} <span aria-hidden="true">&rarr;</span>
                 </a>
               {% endif %}
