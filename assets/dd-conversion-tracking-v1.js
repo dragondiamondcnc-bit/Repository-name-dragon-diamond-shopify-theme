@@ -13,12 +13,6 @@
 
   const elementText = (element) => element.textContent.trim().replace(/\s+/g, ' ');
 
-  const deviceType = () => {
-    if (window.innerWidth <= 767) return 'mobile';
-    if (window.innerWidth <= 1024) return 'tablet';
-    return 'desktop';
-  };
-
   const buttonPosition = (element) => {
     if (element.dataset.buttonPosition) return element.dataset.buttonPosition;
 
@@ -78,12 +72,12 @@
 
     const whatsappLink = clickEvent.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"]');
 
-    if (whatsappLink) {
+    if (whatsappLink && buttonPosition(whatsappLink) === 'floating') {
       pushEvent({
         event: 'whatsapp_click',
+        button_position: 'floating',
         page_location: window.location.href,
-        button_position: buttonPosition(whatsappLink),
-        device: deviceType(),
+        device: /mobile/i.test(navigator.userAgent) ? 'mobile' : 'desktop',
       });
     }
   });

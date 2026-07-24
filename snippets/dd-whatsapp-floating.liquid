@@ -1,0 +1,80 @@
+{% doc %}
+  Renders the temporary Dragon Diamond floating WhatsApp engineering support link.
+{% enddoc %}
+
+<a
+  class="dd-whatsapp-floating"
+  href="https://wa.me/YOUR_NUMBER"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="WhatsApp engineering support"
+  data-button-position="floating"
+>
+  <span class="dd-whatsapp-floating__channel">WhatsApp</span>
+  <span class="dd-whatsapp-floating__support">Engineering Support</span>
+</a>
+
+{% stylesheet %}
+  .dd-whatsapp-floating {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 50;
+    display: grid;
+    min-width: 194px;
+    gap: 4px;
+    padding: 14px 18px 14px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-left: 3px solid #00a3ad;
+    background: #0f1115;
+    color: #ffffff;
+    font-family: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.2;
+    text-align: left;
+    text-decoration: none;
+  }
+
+  .dd-whatsapp-floating:hover {
+    border-color: rgba(255, 255, 255, 0.32);
+    border-left-color: #00a3ad;
+    background: #15191e;
+    color: #ffffff;
+  }
+
+  .dd-whatsapp-floating:focus-visible {
+    outline: 2px solid #00a3ad;
+    outline-offset: 3px;
+  }
+
+  .dd-whatsapp-floating__channel {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .dd-whatsapp-floating__support {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 640px) {
+    .dd-whatsapp-floating {
+      right: 16px;
+      bottom: 16px;
+      min-width: 174px;
+      padding: 12px 15px 12px 13px;
+    }
+
+    .dd-whatsapp-floating__channel {
+      font-size: 13px;
+    }
+
+    .dd-whatsapp-floating__support {
+      font-size: 10px;
+    }
+  }
+{% endstylesheet %}
