@@ -30,6 +30,33 @@
     return 'inline';
   };
 
+  const trackInquirySuccess = () => {
+    const successMessages = document.querySelectorAll('.contact-form__success');
+
+    successMessages.forEach((successMessage) => {
+      const contactForm = successMessage.closest('form.contact-form__form');
+
+      if (!contactForm || !contactForm.id) return;
+
+      const storageKey = `dd_inquiry_submit:${contactForm.id}`;
+
+      try {
+        if (window.sessionStorage.getItem(storageKey)) return;
+        window.sessionStorage.setItem(storageKey, 'true');
+      } catch {
+        return;
+      }
+
+      pushEvent({
+        event: 'inquiry_submit',
+        form_type: 'shopify_contact',
+        form_id: contactForm.id,
+        page_location: window.location.href,
+        device: /mobile/i.test(navigator.userAgent) ? 'mobile' : 'desktop',
+      });
+    });
+  };
+
   document.addEventListener('click', (clickEvent) => {
     if (!(clickEvent.target instanceof Element)) return;
 
@@ -81,4 +108,6 @@
       });
     }
   });
+
+  trackInquirySuccess();
 })();
