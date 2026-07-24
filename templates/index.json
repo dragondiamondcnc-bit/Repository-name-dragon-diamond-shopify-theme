@@ -166,8 +166,42 @@
       "settings": {}
     },
     "v2_1_conversion": {
-      "type": "dd-home-cta-v2",
-      "settings": {}
+      "type": "dd-home-start-project-v1",
+      "blocks": {
+        "production_application": {
+          "type": "project_step",
+          "settings": {
+            "title": "Production Application",
+            "text": "Tell us your products,\nmaterials and application scenario."
+          }
+        },
+        "production_requirements": {
+          "type": "project_step",
+          "settings": {
+            "title": "Production Requirements",
+            "text": "Understand your workflow,\noutput goals and production capacity."
+          }
+        },
+        "engineering_recommendation": {
+          "type": "project_step",
+          "settings": {
+            "title": "Engineering Recommendation",
+            "text": "Develop a suitable production system\nbased on your actual requirements."
+          }
+        }
+      },
+      "block_order": [
+        "production_application",
+        "production_requirements",
+        "engineering_recommendation"
+      ],
+      "settings": {
+        "eyebrow": "PROJECT INITIATION",
+        "heading": "START YOUR PRODUCTION PROJECT",
+        "description": "Tell us what you produce.\n\nWe help define the right manufacturing\nsystem based on your materials,\nworkflow and production goals.",
+        "primary_button_text": "START YOUR PROJECT",
+        "primary_button_url": "/pages/rfq"
+      }
     }
   },
   "order": [

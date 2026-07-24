@@ -1,0 +1,376 @@
+<section id="v2_1_project_initiation" class="dd-project-initiation">
+  <div class="dd-project-initiation__container">
+    <div class="dd-project-initiation__layout">
+      <header class="dd-project-initiation__header">
+        <span class="dd-project-initiation__eyebrow">{{ section.settings.eyebrow }}</span>
+        <h2 class="dd-project-initiation__heading">{{ section.settings.heading | newline_to_br }}</h2>
+        <p class="dd-project-initiation__description">{{ section.settings.description | newline_to_br }}</p>
+      </header>
+
+      <div class="dd-project-initiation__framework">
+        <div class="dd-project-initiation__steps" aria-label="Production project initiation steps">
+          {% for block in section.blocks %}
+            <article class="dd-project-initiation__step" {{ block.shopify_attributes }}>
+              <span class="dd-project-initiation__number">
+                {{ forloop.index | prepend: '0' }} <small>//</small>
+              </span>
+              <div class="dd-project-initiation__step-content">
+                <h3>{{ block.settings.title }}</h3>
+                <p>{{ block.settings.text | newline_to_br }}</p>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+
+        <div class="dd-project-initiation__actions">
+          {% if section.settings.primary_button_url != blank and section.settings.primary_button_text != blank %}
+            <a class="dd-project-initiation__primary" href="{{ section.settings.primary_button_url }}">
+              <span>{{ section.settings.primary_button_text }}</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          {% endif %}
+          <a class="dd-project-initiation__secondary" href="/pages/contact">Talk To Engineering</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .dd-project-initiation {
+    --dd-project-accent: #00A3AD;
+    --dd-project-white: #FFFFFF;
+    --dd-project-muted: rgba(255, 255, 255, 0.64);
+    --dd-project-line: rgba(255, 255, 255, 0.14);
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 112px 0;
+    background: #000000;
+    color: var(--dd-project-white);
+  }
+
+  .dd-project-initiation *,
+  .dd-project-initiation *::before,
+  .dd-project-initiation *::after {
+    box-sizing: border-box;
+  }
+
+  .dd-project-initiation__container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  .dd-project-initiation__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 42fr) minmax(0, 58fr);
+    gap: 64px;
+    align-items: start;
+  }
+
+  .dd-project-initiation__header {
+    max-width: 500px;
+  }
+
+  .dd-project-initiation__eyebrow {
+    display: block;
+    margin-bottom: 18px;
+    color: var(--dd-project-accent);
+    font-family: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 1.3;
+    text-transform: uppercase;
+  }
+
+  .dd-project-initiation__heading {
+    margin: 0 0 26px;
+    color: var(--dd-project-white);
+    font-family: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 0.98;
+    text-transform: uppercase;
+    text-wrap: balance;
+  }
+
+  .dd-project-initiation__description {
+    max-width: 450px;
+    margin: 0;
+    color: var(--dd-project-muted);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .dd-project-initiation__steps {
+    border-top: 1px solid var(--dd-project-line);
+  }
+
+  .dd-project-initiation__step {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+    padding: 30px 0 32px;
+    border-bottom: 1px solid var(--dd-project-line);
+  }
+
+  .dd-project-initiation__number {
+    color: rgba(255, 255, 255, 0.42);
+    font-family: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 0.9;
+  }
+
+  .dd-project-initiation__number small {
+    color: var(--dd-project-accent);
+    font-size: 11px;
+    font-weight: 800;
+    vertical-align: 0.65em;
+  }
+
+  .dd-project-initiation__step-content h3 {
+    margin: 0 0 11px;
+    color: var(--dd-project-white);
+    font-family: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 1.05;
+    text-transform: uppercase;
+  }
+
+  .dd-project-initiation__step-content p {
+    max-width: 520px;
+    margin: 0;
+    color: var(--dd-project-muted);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .dd-project-initiation__actions {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    padding-top: 34px;
+  }
+
+  .dd-project-initiation__primary {
+    display: inline-flex;
+    min-height: 54px;
+    padding: 16px 22px;
+    gap: 28px;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--dd-project-white);
+    color: #000000;
+    font-family: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .dd-project-initiation__primary:hover,
+  .dd-project-initiation__primary:focus-visible {
+    background: var(--dd-project-accent);
+    color: #000000;
+  }
+
+  .dd-project-initiation__secondary {
+    color: var(--dd-project-white);
+    font-family: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    line-height: 1.2;
+    text-decoration-color: var(--dd-project-accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 6px;
+    text-transform: uppercase;
+  }
+
+  .dd-project-initiation__secondary:hover,
+  .dd-project-initiation__secondary:focus-visible {
+    color: var(--dd-project-accent);
+  }
+
+  @media (max-width: 1100px) {
+    .dd-project-initiation__layout {
+      gap: 48px;
+    }
+
+    .dd-project-initiation__heading {
+      font-size: 48px;
+    }
+
+    .dd-project-initiation__step {
+      grid-template-columns: 96px minmax(0, 1fr);
+    }
+  }
+
+  @media (max-width: 860px) {
+    .dd-project-initiation {
+      padding: 80px 0;
+    }
+
+    .dd-project-initiation__layout {
+      grid-template-columns: 1fr;
+      gap: 52px;
+    }
+
+    .dd-project-initiation__header {
+      max-width: 680px;
+    }
+
+    .dd-project-initiation__description {
+      max-width: 560px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .dd-project-initiation {
+      padding: 64px 0;
+    }
+
+    .dd-project-initiation__container {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .dd-project-initiation__layout {
+      gap: 40px;
+    }
+
+    .dd-project-initiation__eyebrow {
+      margin-bottom: 16px;
+    }
+
+    .dd-project-initiation__heading {
+      margin-bottom: 22px;
+      font-size: 40px;
+      line-height: 1;
+    }
+
+    .dd-project-initiation__description {
+      font-size: 15px;
+    }
+
+    .dd-project-initiation__step {
+      grid-template-columns: 64px minmax(0, 1fr);
+      gap: 16px;
+      padding: 25px 0 27px;
+    }
+
+    .dd-project-initiation__number {
+      font-size: 32px;
+    }
+
+    .dd-project-initiation__number small {
+      font-size: 9px;
+    }
+
+    .dd-project-initiation__step-content h3 {
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .dd-project-initiation__step-content p {
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .dd-project-initiation__actions {
+      flex-direction: column;
+      gap: 24px;
+      align-items: flex-start;
+      padding-top: 30px;
+    }
+
+    .dd-project-initiation__primary {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .dd-project-initiation__heading {
+      font-size: 36px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "DD Start Project",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "PROJECT INITIATION"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "START YOUR PRODUCTION PROJECT"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Tell us what you produce.\n\nWe help define the right manufacturing system based on your materials, workflow and production goals."
+    },
+    {
+      "type": "text",
+      "id": "primary_button_text",
+      "label": "Primary button text",
+      "default": "START YOUR PROJECT"
+    },
+    {
+      "type": "url",
+      "id": "primary_button_url",
+      "label": "Primary button URL"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "project_step",
+      "name": "Project step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Project Step"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Describe this project initiation step."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "DD Start Project",
+      "blocks": [
+        { "type": "project_step" },
+        { "type": "project_step" },
+        { "type": "project_step" }
+      ]
+    }
+  ]
+}
+{% endschema %}
