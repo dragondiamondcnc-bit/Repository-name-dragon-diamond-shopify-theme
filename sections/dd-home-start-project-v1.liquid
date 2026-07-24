@@ -3,7 +3,7 @@
     <div class="dd-project-initiation__layout">
       <header class="dd-project-initiation__header">
         <span class="dd-project-initiation__eyebrow">{{ section.settings.eyebrow }}</span>
-        <h2 class="dd-project-initiation__heading">{{ section.settings.heading | newline_to_br }}</h2>
+        <h2 class="dd-project-initiation__heading">{{ section.settings.heading | replace: 'PRODUCTION PROJECT', '<span class="dd-project-initiation__heading-phrase">PRODUCTION PROJECT</span>' | newline_to_br }}</h2>
         <p class="dd-project-initiation__description">{{ section.settings.description | newline_to_br }}</p>
       </header>
 
@@ -44,7 +44,7 @@
     --dd-project-line: rgba(255, 255, 255, 0.14);
     box-sizing: border-box;
     overflow: hidden;
-    padding: 112px 0;
+    padding: 100px 0;
     background: #000000;
     color: var(--dd-project-white);
   }
@@ -76,7 +76,7 @@
 
   .dd-project-initiation__eyebrow {
     display: block;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     color: var(--dd-project-accent);
     font-family: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
     font-size: 12px;
@@ -87,7 +87,7 @@
   }
 
   .dd-project-initiation__heading {
-    margin: 0 0 26px;
+    margin: 0 0 22px;
     color: var(--dd-project-white);
     font-family: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
     font-size: 56px;
@@ -104,6 +104,10 @@
     color: var(--dd-project-muted);
     font-size: 16px;
     line-height: 1.65;
+  }
+
+  .dd-project-initiation__heading-phrase {
+    white-space: nowrap;
   }
 
   .dd-project-initiation__steps {
@@ -258,6 +262,10 @@
       margin-bottom: 22px;
       font-size: 40px;
       line-height: 1;
+    }
+
+    .dd-project-initiation__heading-phrase {
+      white-space: normal;
     }
 
     .dd-project-initiation__description {
