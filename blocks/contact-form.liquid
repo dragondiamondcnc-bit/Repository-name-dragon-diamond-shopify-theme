@@ -16,6 +16,8 @@
   {{ block.shopify_attributes }}
 >
   {% assign form_id = block.id | default: section.id | prepend: 'ContactForm-' %}
+  <h2 class="contact-form__heading">Discuss Your Production Project</h2>
+
   {%- form 'contact', id: form_id, class: 'contact-form__form' -%}
     <input
       name="contact[id]"
@@ -36,56 +38,79 @@
       </div>
     {%- endif -%}
 
-    {%- if form.posted_successfully? and form.id == form_id -%}
+    {%- if form.posted_successfully? -%}
       <div
         class="contact-form__success"
         tabindex="-1"
         autofocus
       >
         {{- 'icon-checkmark.svg' | inline_asset_content -}}
-        {{- 'blocks.contact_form.post_success' | t -}}
+        <div>
+          <p>Thank you for your project inquiry.</p>
+          <p>Our engineering team will review your requirements and contact you within 24-48 hours.</p>
+          <p>For urgent questions, you can also contact us directly via WhatsApp.</p>
+        </div>
       </div>
     {%- endif -%}
 
     <div class="contact-form__form-row">
       <label class="visually-hidden" for="ContactForm-name">{{ 'blocks.contact_form.name' | t }}</label>
-      <input type="text" id="ContactForm-name" class="contact-form__input" autocomplete="name" name="contact[name]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ 'blocks.contact_form.name' | t }} *">
+      <input type="text" id="ContactForm-name" class="contact-form__input" autocomplete="name" name="contact[name]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="Your name *">
 
       <label class="visually-hidden" for="ContactForm-email">{{ 'blocks.contact_form.email' | t }}</label>
-      <input type="email" id="ContactForm-email" class="contact-form__input" autocomplete="email" name="contact[email]" spellcheck="false" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}" aria-required="true" placeholder="{{ 'blocks.contact_form.email' | t }} *">
+      <input type="email" id="ContactForm-email" class="contact-form__input" autocomplete="email" name="contact[email]" spellcheck="false" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}" aria-required="true" placeholder="Business email address *">
     </div>
 
     <div class="contact-form__form-row">
       <label class="visually-hidden" for="ContactForm-company">Company Name</label>
-      <input type="text" id="ContactForm-company" class="contact-form__input" name="contact[company]" placeholder="Company Name">
+      <input type="text" id="ContactForm-company" class="contact-form__input" autocomplete="organization" name="contact[company]" placeholder="Company / organization">
 
       <label class="visually-hidden" for="ContactForm-country">Country / Region</label>
-      <input type="text" id="ContactForm-country" class="contact-form__input" name="contact[country]" placeholder="Country / Region *">
+      <input type="text" id="ContactForm-country" class="contact-form__input" autocomplete="country-name" name="contact[country]" placeholder="Project country / region *">
     </div>
 
     <div class="contact-form__form-row">
       <label class="visually-hidden" for="ContactForm-phone">{{ 'blocks.contact_form.phone' | t }}</label>
-      <input type="tel" id="ContactForm-phone" class="contact-form__input" autocomplete="tel" name="contact[phone]" pattern="[0-9\-]*" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" placeholder="{{ 'blocks.contact_form.phone' | t }} *">
+      <input type="tel" id="ContactForm-phone" class="contact-form__input" autocomplete="tel" name="contact[phone]" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" placeholder="Phone / WhatsApp number with country code *">
 
-      <label class="visually-hidden" for="ContactForm-materials">Processing Materials</label>
-      <select id="ContactForm-materials" class="contact-form__input" name="contact[processing_materials]">
-        <option value="" disabled selected>Processing Materials</option>
-        <option value="Acrylic">Acrylic</option>
-        <option value="Wood/MDF">Wood/MDF</option>
-        <option value="Leather/Fabric">Leather/Fabric</option>
-        <option value="Paper">Paper</option>
-        <option value="Other Non-metals">Other Non-metals</option>
+      <label class="visually-hidden" for="ContactForm-system">Interested System</label>
+      <select id="ContactForm-system" class="contact-form__input" name="contact[Interested System]">
+        <option value="" disabled selected>Interested system</option>
+        <option value="Laser Cutting System">Laser Cutting System</option>
+        <option value="Laser Engraving System">Laser Engraving System</option>
+        <option value="Laser Marking System">Laser Marking System</option>
+        <option value="Laser Welding System">Laser Welding System</option>
+        <option value="Customized Automation System">Customized Automation System</option>
+        <option value="Not Sure - Engineering Advice Needed">Not Sure - Engineering Advice Needed</option>
       </select>
     </div>
 
+    <label class="visually-hidden" for="ContactForm-application">Main Application</label>
+    <select id="ContactForm-application" class="contact-form__input" name="contact[Main Application]">
+      <option value="" disabled selected>Main application / production process</option>
+      <option value="Cutting">Cutting</option>
+      <option value="Engraving">Engraving</option>
+      <option value="Marking and Coding">Marking and Coding</option>
+      <option value="Welding">Welding</option>
+      <option value="Cleaning">Cleaning</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label class="visually-hidden" for="ContactForm-material-thickness">Material &amp; Thickness</label>
+    <textarea rows="4" id="ContactForm-material-thickness" class="contact-form__input contact-form__input--textarea" name="contact[Material and Thickness]" placeholder="Material &amp; thickness (for example: 3 mm stainless steel, 10 mm acrylic, or 18 mm MDF)"></textarea>
+
     <label class="visually-hidden" for="ContactForm-body">{{ 'blocks.contact_form.comment' | t }}</label>
-    <textarea rows="6" id="ContactForm-body" class="contact-form__input contact-form__input--textarea" name="contact[body]" placeholder="Describe your processing needs (Material, Thickness, Speed, etc.)">{{- form.body -}}</textarea>
+    <textarea rows="6" id="ContactForm-body" class="contact-form__input contact-form__input--textarea" name="contact[body]" placeholder="Describe your production requirements, target output, part dimensions, tolerances, and project timeline">{{- form.body -}}</textarea>
 
     {{ submit_button }}
   {%- endform -%}
 </div>
 
 {% stylesheet %}
+  .contact-form__heading {
+    margin-block: 0 var(--gap-lg);
+  }
+
   .contact-form__form {
     display: flex;
     flex-direction: column;
@@ -131,8 +156,16 @@
   .contact-form__error,
   .contact-form__success {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: var(--gap-xs);
+  }
+
+  .contact-form__success p {
+    margin: 0;
+  }
+
+  .contact-form__success p + p {
+    margin-block-start: var(--gap-xs);
   }
 {% endstylesheet %}
 

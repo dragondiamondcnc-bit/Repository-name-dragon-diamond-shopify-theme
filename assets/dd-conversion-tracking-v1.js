@@ -31,31 +31,39 @@
   };
 
   const trackInquirySuccess = () => {
-    const successMessages = document.querySelectorAll('.contact-form__success');
+    const urlParameters = new URLSearchParams(window.location.search);
 
-    successMessages.forEach((successMessage) => {
-      const contactForm = successMessage.closest('form.contact-form__form');
+    if (urlParameters.get('contact_posted') !== 'true') return;
 
-      if (!contactForm || !contactForm.id) return;
+    const contactForm = document.querySelector('form.contact-form__form');
 
-      const storageKey = `dd_inquiry_submit:${contactForm.id}`;
+    if (!contactForm || !contactForm.id) return;
 
-      try {
-        if (window.sessionStorage.getItem(storageKey)) return;
-        window.sessionStorage.setItem(storageKey, 'true');
-      } catch {
-        return;
-      }
-
-      pushEvent({
-        event: 'inquiry_submit',
-        form_type: 'shopify_contact',
-        form_id: contactForm.id,
-        page_location: window.location.href,
-        device: /mobile/i.test(navigator.userAgent) ? 'mobile' : 'desktop',
-      });
+    pushEvent({
+      event: 'inquiry_submit',
+      form_type: 'shopify_contact',
+      form_id: contactForm.id,
+      page_location: window.location.href,
     });
   };
+
+  const trackCtaClick = (clickEvent) => {
+    if (!(clickEvent.target instanceof Element)) return;
+
+    const ctaElement = clickEvent.target.closest('[data-track="cta"]');
+
+    if (!ctaElement) return;
+
+    pushEvent({
+      event: 'cta_click',
+      cta_name: ctaElement.dataset.ctaId || elementText(ctaElement),
+      section_name: ctaElement.dataset.section || '',
+      destination_url: destinationUrl(ctaElement),
+      page_location: window.location.href,
+    });
+  };
+
+  document.addEventListener('click', trackCtaClick, true);
 
   document.addEventListener('click', (clickEvent) => {
     if (!(clickEvent.target instanceof Element)) return;
@@ -64,16 +72,6 @@
 
     if (trackedElement) {
       const trackingType = trackedElement.dataset.track;
-
-      if (trackingType === 'cta') {
-        pushEvent({
-          event: 'cta_click',
-          cta_name: trackedElement.dataset.ctaId || elementText(trackedElement),
-          section_name: trackedElement.dataset.section || '',
-          destination_url: destinationUrl(trackedElement),
-          page_location: window.location.href,
-        });
-      }
 
       if (trackingType === 'case-study') {
         pushEvent({
@@ -102,7 +100,7 @@
     if (whatsappLink && buttonPosition(whatsappLink) === 'floating') {
       pushEvent({
         event: 'whatsapp_click',
-        button_position: 'floating',
+        button_position: 'floating_whatsapp',
         page_location: window.location.href,
         device: /mobile/i.test(navigator.userAgent) ? 'mobile' : 'desktop',
       });
