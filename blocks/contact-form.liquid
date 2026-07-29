@@ -16,6 +16,54 @@
   {{ block.shopify_attributes }}
 >
   {% assign form_id = block.id | default: section.id | prepend: 'ContactForm-' %}
+  <script>
+    if (new URLSearchParams(window.location.search).get('contact_posted') === 'true') {
+      document.currentScript.parentElement.classList.add('contact-form--posted');
+    }
+  </script>
+
+  <div class="contact-form__confirmation" aria-live="polite">
+    <span class="contact-form__confirmation-eyebrow">INQUIRY RECEIVED</span>
+    <h2 class="contact-form__confirmation-heading">Inquiry Submitted Successfully</h2>
+    <div class="contact-form__confirmation-copy">
+      <p>Thank you for your project inquiry.</p>
+      <p>Our engineering team has received your requirements and will review your application details.</p>
+      <p>We will contact you within 24–48 hours with the next steps.</p>
+    </div>
+
+    <div class="contact-form__status">
+      <h3>PROJECT INQUIRY STATUS</h3>
+      <dl>
+        <div>
+          <dt>STATUS</dt>
+          <dd>RECEIVED</dd>
+        </div>
+        <div>
+          <dt>NEXT STEP</dt>
+          <dd>Engineering Review</dd>
+        </div>
+        <div>
+          <dt>RESPONSE TIME</dt>
+          <dd>24–48 Hours</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="contact-form__confirmation-actions">
+      <a class="button contact-form__confirmation-primary" href="{{ routes.root_url }}">
+        Continue Exploring Production Solutions <span aria-hidden="true">&rarr;</span>
+      </a>
+      <a
+        class="contact-form__confirmation-whatsapp"
+        href="https://wa.me/YOUR_NUMBER"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Contact via WhatsApp <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </div>
+
   <h2 class="contact-form__heading">Discuss Your Production Project</h2>
 
   {%- form 'contact', id: form_id, class: 'contact-form__form' -%}
@@ -107,6 +155,106 @@
 </div>
 
 {% stylesheet %}
+  .contact-form__confirmation {
+    display: none;
+  }
+
+  .contact-form--posted .contact-form__confirmation {
+    display: block;
+  }
+
+  .contact-form--posted > .contact-form__heading,
+  .contact-form--posted > .contact-form__form {
+    display: none;
+  }
+
+  .contact-form__confirmation-eyebrow {
+    display: block;
+    margin-block-end: var(--gap-sm);
+    color: var(--color-foreground);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+
+  .contact-form__confirmation-heading {
+    margin: 0;
+    max-width: 14ch;
+  }
+
+  .contact-form__confirmation-copy {
+    margin-block-start: var(--gap-lg);
+    max-width: 42rem;
+  }
+
+  .contact-form__confirmation-copy p {
+    margin: 0;
+  }
+
+  .contact-form__confirmation-copy p + p {
+    margin-block-start: var(--gap-sm);
+  }
+
+  .contact-form__status {
+    margin-block-start: var(--gap-xl);
+    border: 1px solid var(--color-border);
+  }
+
+  .contact-form__status h3 {
+    margin: 0;
+    padding: var(--padding-md) var(--padding-lg);
+    border-block-end: 1px solid var(--color-border);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+  }
+
+  .contact-form__status dl {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 0;
+  }
+
+  .contact-form__status dl > div {
+    min-width: 0;
+    padding: var(--padding-lg);
+  }
+
+  .contact-form__status dl > div + div {
+    border-inline-start: 1px solid var(--color-border);
+  }
+
+  .contact-form__status dt {
+    margin-block-end: var(--gap-xs);
+    color: var(--color-foreground);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+
+  .contact-form__status dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+    font-weight: 600;
+  }
+
+  .contact-form__confirmation-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-lg);
+    align-items: center;
+    margin-block-start: var(--gap-xl);
+  }
+
+  .contact-form__confirmation-primary {
+    text-decoration: none;
+  }
+
+  .contact-form__confirmation-whatsapp {
+    color: inherit;
+    font-weight: 600;
+    text-underline-offset: 0.3em;
+  }
+
   .contact-form__heading {
     margin-block: 0 var(--gap-lg);
   }
@@ -166,6 +314,27 @@
 
   .contact-form__success p + p {
     margin-block-start: var(--gap-xs);
+  }
+
+  @media screen and (max-width: 749px) {
+    .contact-form__status dl {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-form__status dl > div + div {
+      border-block-start: 1px solid var(--color-border);
+      border-inline-start: 0;
+    }
+
+    .contact-form__confirmation-actions {
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    .contact-form__confirmation-primary {
+      width: 100%;
+      white-space: normal;
+    }
   }
 {% endstylesheet %}
 
