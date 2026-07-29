@@ -51,7 +51,7 @@
 
     <div class="contact-form__confirmation-actions">
       <a class="button contact-form__confirmation-primary" href="{{ routes.root_url }}">
-        Continue Exploring Production Solutions <span aria-hidden="true">&rarr;</span>
+        Explore Production Systems <span aria-hidden="true">&rarr;</span>
       </a>
       <a
         class="contact-form__confirmation-whatsapp"
@@ -246,7 +246,17 @@
   }
 
   .contact-form__confirmation-primary {
+    --button-color: #0f1115;
+    --button-background-color: #00a3ad;
+    --button-border-color: #00a3ad;
+
     text-decoration: none;
+  }
+
+  .contact-form__confirmation-primary:hover {
+    --button-color: #ffffff;
+    --button-background-color: #007e86;
+    --button-border-color: #007e86;
   }
 
   .contact-form__confirmation-whatsapp {
