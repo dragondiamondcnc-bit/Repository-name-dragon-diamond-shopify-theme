@@ -114,7 +114,7 @@
                   class="dd-production-systems__link"
                   href="{{ block.settings.link }}"
                   data-track="cta"
-                  data-cta-id="production_system_cta"
+                  data-cta-id="{% if block.settings.link == '/pages/co2-laser-cutting-solution' %}co2_solution_explore{% else %}production_system_cta{% endif %}"
                   data-section="production_systems"
                   data-system-name="{{ block.settings.title | escape }}"
                   data-system-category="{% if forloop.index <= 3 %}primary_production_systems{% else %}industrial_processing_systems{% endif %}"
