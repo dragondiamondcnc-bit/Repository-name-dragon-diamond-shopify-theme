@@ -1,0 +1,145 @@
+{
+  "sections": {
+    "systems_hero": {
+      "type": "dd-systems-hero-v1",
+      "settings": {
+        "eyebrow": "PRODUCTION SYSTEMS",
+        "heading": "Engineering Solutions For Sign & Industrial Fabrication",
+        "description": "Select a production system around the materials, applications and output requirements of your operation."
+      }
+    },
+    "systems_overview": {
+      "type": "dd-systems-overview-v1",
+      "blocks": {
+        "co2": {
+          "type": "system",
+          "settings": {
+            "group": "primary",
+            "title": "CO₂ Laser Cutting",
+            "best_for": "Precision non-metal cutting and engraving",
+            "applications": "Signage, acrylic letters, displays, packaging and decorative fabrication",
+            "materials": "Acrylic, wood, MDF, fabric, leather, paper and selected plastics",
+            "link": "/pages/co2-laser-cutting-solution"
+          }
+        },
+        "cnc": {
+          "type": "system",
+          "settings": {
+            "group": "primary",
+            "title": "CNC Router",
+            "best_for": "Large-format panels and dimensional components",
+            "applications": "Display structures, cabinetry, furniture, signage and panel processing",
+            "materials": "Wood, MDF, plywood, acrylic, PVC, ACP and selected non-ferrous metals",
+            "link": ""
+          }
+        },
+        "uv": {
+          "type": "system",
+          "settings": {
+            "group": "primary",
+            "title": "UV Flatbed Printing",
+            "best_for": "Direct printing onto rigid and flexible substrates",
+            "applications": "Display graphics, branded panels, signs, packaging and customized products",
+            "materials": "Acrylic, PVC, glass, wood, metal, board and flexible media",
+            "link": ""
+          }
+        },
+        "fiber": {
+          "type": "system",
+          "settings": {
+            "group": "primary",
+            "title": "Fiber Laser Cutting",
+            "best_for": "Precision sheet-metal and component cutting",
+            "applications": "Metal signage, enclosures, fabricated parts and industrial components",
+            "materials": "Carbon steel, stainless steel, aluminum, brass and copper",
+            "link": ""
+          }
+        },
+        "welding": {
+          "type": "system",
+          "settings": {
+            "group": "industrial",
+            "title": "Laser Welding",
+            "best_for": "Controlled joining of fabricated metal assemblies",
+            "applications": "Sheet-metal assemblies, stainless fabrication, enclosures and precision joints",
+            "materials": "Stainless steel, carbon steel, aluminum and selected alloys",
+            "link": ""
+          }
+        },
+        "marking": {
+          "type": "system",
+          "settings": {
+            "group": "industrial",
+            "title": "Laser Marking",
+            "best_for": "Permanent identification and traceability",
+            "applications": "Serial numbers, data plates, logos, component IDs and product coding",
+            "materials": "Metals, coated metals and selected engineering plastics",
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["co2", "cnc", "uv", "fiber", "welding", "marking"],
+      "settings": {
+        "eyebrow": "SYSTEM SELECTION / 01",
+        "heading": "Production System Overview",
+        "description": "Review each system by production purpose, application range and material capability."
+      }
+    },
+    "decision_guide": {
+      "type": "dd-systems-decision-guide-v1",
+      "blocks": {
+        "signage": { "type": "decision", "settings": { "requirement": "Signage & Acrylic", "system": "CO₂ Laser", "note": "Precision cutting, engraving and polished acrylic profiles" } },
+        "panels": { "type": "decision", "settings": { "requirement": "Large Panels", "system": "CNC Router", "note": "Large-format routing for sheet materials and structural components" } },
+        "metal": { "type": "decision", "settings": { "requirement": "Metal Components", "system": "Fiber Laser", "note": "Accurate cutting for fabricated sheet-metal parts" } },
+        "printing": { "type": "decision", "settings": { "requirement": "Direct Printing", "system": "UV Flatbed", "note": "Direct-to-substrate graphics without mounting or transfer steps" } }
+      },
+      "block_order": ["signage", "panels", "metal", "printing"],
+      "settings": {
+        "eyebrow": "DECISION GUIDE / 02",
+        "heading": "Start With The Production Requirement",
+        "description": "A practical first filter for identifying the system category that fits your core output."
+      }
+    },
+    "applications": {
+      "type": "dd-systems-applications-v1",
+      "blocks": {
+        "sign_manufacturing": { "type": "application", "settings": { "industry": "Sign Manufacturing", "systems": "CO₂ Laser", "output": "Acrylic letters, illuminated signs and engraved components" } },
+        "display": { "type": "application", "settings": { "industry": "Display Production", "systems": "CNC Router + UV Flatbed", "output": "Printed panels, retail displays and dimensional structures" } },
+        "acrylic": { "type": "application", "settings": { "industry": "Acrylic Fabrication", "systems": "CO₂ Laser", "output": "Cut profiles, display parts and precision engraved products" } },
+        "metal_fabrication": { "type": "application", "settings": { "industry": "Metal Fabrication", "systems": "Fiber Laser", "output": "Sheet-metal parts, signs, enclosures and fabricated components" } }
+      },
+      "block_order": ["sign_manufacturing", "display", "acrylic", "metal_fabrication"],
+      "settings": {
+        "eyebrow": "APPLICATION MAPPING / 03",
+        "heading": "Industries Connected To Production Systems",
+        "description": "System selection becomes clearer when it is mapped to the finished work your operation must deliver."
+      }
+    },
+    "evidence": {
+      "type": "dd-systems-evidence-v1",
+      "blocks": {
+        "uganda": { "type": "evidence", "settings": { "country": "Uganda", "system": "CO₂ Laser Cutting", "application": "High-volume signage fabrication", "status": "Production running", "link": "/pages/case-uganda-sign-factory" } },
+        "ethiopia": { "type": "evidence", "settings": { "country": "Ethiopia", "system": "CO₂ Laser + CNC Router", "application": "Advertising and signage production", "status": "Production running", "link": "/pages/case-study-ethiopia" } },
+        "georgia": { "type": "evidence", "settings": { "country": "Georgia", "system": "CNC Router", "application": "Furniture and panel processing", "status": "Repeat purchase", "link": "/pages/case-study-georgia" } },
+        "israel": { "type": "evidence", "settings": { "country": "Israel", "system": "CNC Router", "application": "Display and event production", "status": "Production running", "link": "/pages/case-study-israel" } }
+      },
+      "block_order": ["uganda", "ethiopia", "georgia", "israel"],
+      "settings": {
+        "eyebrow": "VERIFIED EVIDENCE / 04",
+        "heading": "Production Systems In Operation",
+        "description": "Documented deployments connect system selection with real applications and operating status."
+      }
+    },
+    "systems_cta": {
+      "type": "dd-systems-cta-v1",
+      "settings": {
+        "eyebrow": "ENGINEERING CONSULTATION / 05",
+        "heading": "Discuss Your Production Requirement",
+        "description": "Share your materials, products and expected output. Our engineering team will help define the appropriate production system.",
+        "button_text": "Discuss Your Production Requirement",
+        "button_url": "/pages/contact?source=production-systems"
+      }
+    }
+  },
+  "order": ["systems_hero", "systems_overview", "decision_guide", "applications", "evidence", "systems_cta"]
+}

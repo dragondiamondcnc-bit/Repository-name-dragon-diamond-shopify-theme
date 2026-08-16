@@ -1,0 +1,42 @@
+<section class="dd-systems-cta" aria-labelledby="DDSystemsCtaHeading-{{ section.id }}">
+  <div class="dd-systems-cta__frame">
+    <p class="dd-systems-cta__eyebrow">{{ section.settings.eyebrow }}</p>
+    <div class="dd-systems-cta__content">
+      <h2 id="DDSystemsCtaHeading-{{ section.id }}">{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.description }}</p>
+      <a href="{{ section.settings.button_url }}" data-track="cta" data-cta-id="production_systems_discuss_requirement" data-section="production_systems_cta">
+        {{ section.settings.button_text }} <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .dd-systems-cta { background: #00a3ad; color: #071014; font-family: 'Archivo Narrow', sans-serif; }
+  .dd-systems-cta__frame { display: grid; grid-template-columns: 1fr 2fr; gap: 64px; width: min(100% - 64px, 1240px); margin: 0 auto; padding: 104px 0 112px; }
+  .dd-systems-cta__eyebrow { margin: 8px 0 0; font-size: 11px; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; }
+  .dd-systems-cta__content h2 { max-width: 14ch; margin: 0; font-size: clamp(42px, 5.5vw, 72px); line-height: .98; letter-spacing: -.03em; text-transform: uppercase; }
+  .dd-systems-cta__content p { max-width: 620px; margin: 30px 0 40px; font-size: 18px; line-height: 1.6; }
+  .dd-systems-cta__content a { display: inline-flex; align-items: center; justify-content: space-between; gap: 32px; min-height: 58px; padding: 0 28px; border: 1px solid #071014; background: #071014; color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-decoration: none; text-transform: uppercase; }
+  .dd-systems-cta__content a:hover, .dd-systems-cta__content a:focus-visible { background: transparent; color: #071014; }
+  .dd-systems-cta__content a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+  @media (max-width: 760px) {
+    .dd-systems-cta__frame { grid-template-columns: 1fr; gap: 28px; width: min(100% - 40px, 1240px); padding: 76px 0 84px; }
+    .dd-systems-cta__content p { font-size: 16px; }
+    .dd-systems-cta__content a { width: 100%; min-height: 64px; box-sizing: border-box; }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "DD Systems CTA V1",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "ENGINEERING CONSULTATION / 05" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Discuss Your Production Requirement" },
+    { "type": "textarea", "id": "description", "label": "Description", "default": "Share your materials, products and expected output. Our engineering team will help define the appropriate production system." },
+    { "type": "text", "id": "button_text", "label": "Button text", "default": "Discuss Your Production Requirement" },
+    { "type": "url", "id": "button_url", "label": "Button link" }
+  ],
+  "presets": [{ "name": "DD Systems CTA V1" }]
+}
+{% endschema %}

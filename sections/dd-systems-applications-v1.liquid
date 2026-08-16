@@ -1,0 +1,61 @@
+<section class="dd-systems-applications" aria-labelledby="DDSystemsApplicationsHeading-{{ section.id }}">
+  <div class="dd-systems-applications__frame">
+    <header class="dd-systems-applications__header">
+      <p class="dd-systems-applications__eyebrow">{{ section.settings.eyebrow }}</p>
+      <h2 id="DDSystemsApplicationsHeading-{{ section.id }}">{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.description }}</p>
+    </header>
+    <div class="dd-systems-applications__map">
+      {% for block in section.blocks %}
+        <article class="dd-systems-applications__entry" {{ block.shopify_attributes }}>
+          <div class="dd-systems-applications__industry"><span>Industry / {{ forloop.index | prepend: '0' }}</span><h3>{{ block.settings.industry }}</h3></div>
+          <div class="dd-systems-applications__system"><span>System connection</span><strong>{{ block.settings.systems }}</strong></div>
+          <div class="dd-systems-applications__output"><span>Production output</span><p>{{ block.settings.output }}</p></div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .dd-systems-applications { background: #fff; color: #0f1115; font-family: 'Archivo Narrow', sans-serif; }
+  .dd-systems-applications__frame { width: min(100% - 64px, 1240px); margin: 0 auto; padding: 112px 0 120px; }
+  .dd-systems-applications__header { display: grid; grid-template-columns: 1fr 2fr; gap: 24px 64px; padding-bottom: 56px; border-bottom: 1px solid rgba(15,17,21,.22); }
+  .dd-systems-applications__eyebrow { margin: 0; color: #007d86; font-size: 11px; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; }
+  .dd-systems-applications__header h2 { margin: 0; font-size: clamp(38px, 4.5vw, 62px); line-height: 1; letter-spacing: -.025em; text-transform: uppercase; }
+  .dd-systems-applications__header > p:last-child { grid-column: 2; max-width: 620px; margin: 0; color: rgba(15,17,21,.62); font-size: 17px; line-height: 1.6; }
+  .dd-systems-applications__entry { display: grid; grid-template-columns: 1.05fr .95fr 1.2fr; border-bottom: 1px solid rgba(15,17,21,.22); }
+  .dd-systems-applications__entry > div { min-width: 0; padding: 34px 32px 38px 0; }
+  .dd-systems-applications__entry > div + div { padding-left: 32px; border-left: 1px solid rgba(15,17,21,.22); }
+  .dd-systems-applications__entry span { display: block; margin-bottom: 13px; color: #007d86; font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+  .dd-systems-applications__entry h3, .dd-systems-applications__entry strong { margin: 0; font-size: clamp(22px, 2.5vw, 32px); line-height: 1.12; text-transform: uppercase; }
+  .dd-systems-applications__entry p { max-width: 420px; margin: 0; color: rgba(15,17,21,.65); font-size: 15px; line-height: 1.6; }
+  @media (max-width: 760px) {
+    .dd-systems-applications__frame { width: min(100% - 40px, 1240px); padding: 80px 0; }
+    .dd-systems-applications__header { grid-template-columns: 1fr; padding-bottom: 40px; }
+    .dd-systems-applications__header > p:last-child { grid-column: 1; }
+    .dd-systems-applications__entry { grid-template-columns: 1fr; padding: 26px 0; }
+    .dd-systems-applications__entry > div, .dd-systems-applications__entry > div + div { padding: 10px 0; border-left: 0; }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "DD Systems App Map V1",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "APPLICATION MAPPING / 03" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Industries Connected To Production Systems" },
+    { "type": "textarea", "id": "description", "label": "Description", "default": "Map the finished work your operation delivers to the required production capability." }
+  ],
+  "blocks": [{
+    "type": "application",
+    "name": "Application mapping",
+    "settings": [
+      { "type": "text", "id": "industry", "label": "Industry" },
+      { "type": "text", "id": "systems", "label": "Connected systems" },
+      { "type": "textarea", "id": "output", "label": "Production output" }
+    ]
+  }],
+  "presets": [{ "name": "DD Systems App Map V1" }]
+}
+{% endschema %}

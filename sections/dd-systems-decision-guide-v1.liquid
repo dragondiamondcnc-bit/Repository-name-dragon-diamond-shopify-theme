@@ -1,0 +1,64 @@
+<section class="dd-systems-guide" aria-labelledby="DDSystemsGuideHeading-{{ section.id }}">
+  <div class="dd-systems-guide__frame">
+    <header class="dd-systems-guide__header">
+      <p class="dd-systems-guide__eyebrow">{{ section.settings.eyebrow }}</p>
+      <h2 id="DDSystemsGuideHeading-{{ section.id }}">{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.description }}</p>
+    </header>
+    <div class="dd-systems-guide__list">
+      {% for block in section.blocks %}
+        <article class="dd-systems-guide__row" {{ block.shopify_attributes }}>
+          <span class="dd-systems-guide__number">{{ forloop.index | prepend: '0' }}</span>
+          <div><p>Production requirement</p><h3>{{ block.settings.requirement }}</h3></div>
+          <span class="dd-systems-guide__direction" aria-hidden="true">→</span>
+          <div><p>Recommended system</p><strong>{{ block.settings.system }}</strong><small>{{ block.settings.note }}</small></div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .dd-systems-guide { background: #f4f5f5; color: #0f1115; font-family: 'Archivo Narrow', sans-serif; }
+  .dd-systems-guide__frame { width: min(100% - 64px, 1240px); margin: 0 auto; padding: 112px 0 120px; }
+  .dd-systems-guide__header { display: grid; grid-template-columns: 1fr 2fr; gap: 24px 64px; margin-bottom: 64px; }
+  .dd-systems-guide__eyebrow { margin: 0; color: #007d86; font-size: 11px; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; }
+  .dd-systems-guide__header h2 { margin: 0; font-size: clamp(38px, 4.5vw, 62px); line-height: 1; letter-spacing: -.025em; text-transform: uppercase; }
+  .dd-systems-guide__header > p:last-child { grid-column: 2; max-width: 620px; margin: 0; color: rgba(15,17,21,.62); font-size: 17px; line-height: 1.6; }
+  .dd-systems-guide__list { border-top: 1px solid rgba(15,17,21,.22); }
+  .dd-systems-guide__row { display: grid; grid-template-columns: 64px minmax(0, 1fr) 80px minmax(0, 1fr); gap: 24px; align-items: center; padding: 32px 0; border-bottom: 1px solid rgba(15,17,21,.22); }
+  .dd-systems-guide__number { align-self: start; color: #007d86; font-size: 11px; font-weight: 700; letter-spacing: .14em; }
+  .dd-systems-guide__row p { margin: 0 0 8px; color: rgba(15,17,21,.52); font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+  .dd-systems-guide__row h3, .dd-systems-guide__row strong { display: block; margin: 0; font-size: clamp(24px, 3vw, 36px); line-height: 1.1; text-transform: uppercase; }
+  .dd-systems-guide__row small { display: block; max-width: 440px; margin-top: 10px; color: rgba(15,17,21,.62); font-size: 14px; line-height: 1.5; }
+  .dd-systems-guide__direction { color: #007d86; font-size: 34px; }
+  @media (max-width: 760px) {
+    .dd-systems-guide__frame { width: min(100% - 40px, 1240px); padding: 80px 0; }
+    .dd-systems-guide__header { grid-template-columns: 1fr; margin-bottom: 44px; }
+    .dd-systems-guide__header > p:last-child { grid-column: 1; }
+    .dd-systems-guide__row { grid-template-columns: 38px 1fr; gap: 18px; padding: 28px 0; }
+    .dd-systems-guide__direction { grid-column: 2; transform: rotate(90deg); transform-origin: left center; font-size: 24px; }
+    .dd-systems-guide__row > div:last-child { grid-column: 2; }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "DD Systems Guide V1",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "DECISION GUIDE / 02" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Start With The Production Requirement" },
+    { "type": "textarea", "id": "description", "label": "Description", "default": "A practical first filter for identifying the system category that fits your core output." }
+  ],
+  "blocks": [{
+    "type": "decision",
+    "name": "Decision mapping",
+    "settings": [
+      { "type": "text", "id": "requirement", "label": "Production requirement" },
+      { "type": "text", "id": "system", "label": "Recommended system" },
+      { "type": "textarea", "id": "note", "label": "Selection note" }
+    ]
+  }],
+  "presets": [{ "name": "DD Systems Guide V1" }]
+}
+{% endschema %}

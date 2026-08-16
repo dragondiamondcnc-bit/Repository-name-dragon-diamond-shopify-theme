@@ -127,6 +127,18 @@
         {% endfor %}
       </div>
     </div>
+
+    <div class="dd-production-systems__hub-navigation">
+      <a
+        class="dd-production-systems__hub-link"
+        href="/pages/production-systems"
+        data-track="cta"
+        data-cta-id="production_systems_hub_cta"
+        data-section="production_systems"
+      >
+        EXPLORE ALL PRODUCTION SYSTEMS <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -424,6 +436,31 @@
     outline-offset: 5px;
   }
 
+  .dd-production-systems__hub-navigation {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 24px;
+  }
+
+  .dd-production-systems__hub-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    color: var(--dd-production-accent);
+    font-family: 'Archivo Narrow', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .dd-production-systems__hub-link:focus-visible {
+    outline: 1px solid var(--dd-production-accent);
+    outline-offset: 5px;
+  }
+
   @media (max-width: 990px) {
     .dd-production-systems__layout {
       grid-template-columns: 260px minmax(0, 1fr);
@@ -490,6 +527,10 @@
 
     .dd-production-systems__content {
       padding-bottom: 26px;
+    }
+
+    .dd-production-systems__hub-navigation {
+      justify-content: flex-start;
     }
 
     .dd-production-systems__intro h3 {
