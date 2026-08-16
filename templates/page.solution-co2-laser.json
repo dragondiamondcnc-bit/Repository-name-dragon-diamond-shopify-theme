@@ -1,0 +1,75 @@
+{
+  "sections": {
+    "solution_hero": { "type": "dd-solution-hero-v1", "settings": { "button_url": "/pages/contact?source=co2-laser-solution" } },
+    "solution_requirements": {
+      "type": "dd-solution-requirements-v1",
+      "blocks": {
+        "edge": { "type": "requirement", "settings": { "title": "CLEAN EDGE QUALITY", "description": "Process selection is reviewed around the edge condition required for signs, displays and finished components." } },
+        "materials": { "type": "requirement", "settings": { "title": "FLEXIBLE MATERIAL PROCESSING", "description": "Support for acrylic, wood, MDF, plywood and selected sheet materials after application review." } },
+        "batch": { "type": "requirement", "settings": { "title": "REPEATABLE BATCH OUTPUT", "description": "Digital production supports consistent geometry across repeated component and signage work." } },
+        "shapes": { "type": "requirement", "settings": { "title": "CUSTOM SHAPE PRODUCTION", "description": "Vector-driven cutting and engraving supports custom profiles, lettering and detailed fabrication work." } }
+      },
+      "block_order": ["edge", "materials", "batch", "shapes"], "settings": {}
+    },
+    "solution_architecture": {
+      "type": "dd-solution-architecture-v1",
+      "blocks": {
+        "digital_input": { "type": "step", "settings": { "title": "DIGITAL INPUT", "description": "CAD / Vector production file" } },
+        "material_input": { "type": "step", "settings": { "title": "MATERIAL INPUT", "description": "Acrylic / Wood / MDF / Plywood / application-reviewed compatible materials" } },
+        "laser_process": { "type": "step", "settings": { "title": "CO₂ LASER PROCESS", "description": "Cutting / Engraving" } },
+        "production_output": { "type": "step", "settings": { "title": "PRODUCTION OUTPUT", "description": "Signs / Displays / Panels / Custom Components" } }
+      },
+      "block_order": ["digital_input", "material_input", "laser_process", "production_output"], "settings": {}
+    },
+    "solution_applications": {
+      "type": "dd-solution-applications-v1",
+      "blocks": {
+        "sign": { "type": "application", "settings": { "image_alt": "CO2 laser cutting transparent acrylic letters for signage component production", "title": "SIGN COMPONENT PRODUCTION", "material": "Acrylic / Wood / selected sheet materials", "process": "Cutting / Engraving", "output": "Letters / Logos / Sign components / Decorative panels", "description": "Production of shaped and engraved components for sign manufacturing and visual communication projects." } },
+        "display": { "type": "application", "settings": { "image_alt": "CO2 laser processing branded acrylic panels for display fabrication", "title": "ACRYLIC DISPLAY FABRICATION", "material": "Cast acrylic / Extruded acrylic", "process": "Cutting / Engraving", "output": "Display panels / Product stands / Custom shapes / Branded fixtures", "description": "Digital fabrication of acrylic elements used in retail, exhibition and branded display production." } },
+        "wood": { "type": "application", "settings": { "image_alt": "CO2 laser cutting repeated wood panel components for batch production", "title": "WOOD & PANEL PROCESSING", "material": "Wood / MDF / Plywood", "process": "Cutting / Engraving", "output": "Decorative panels / Components / Fixtures / Custom parts", "description": "Processing for decorative, architectural and assembly-ready wood-based components." } },
+        "custom": { "type": "application", "settings": { "image_alt": "Custom laser cut and engraved acrylic decorative component with complex geometry", "title": "CUSTOM FABRICATION", "material": "Application-reviewed compatible materials", "process": "Low-volume / Customized / Complex geometry", "output": "Prototypes / Bespoke components / Short production runs", "description": "Flexible digital production for low-volume work, customized output and geometry that requires application-specific review." } }
+      },
+      "block_order": ["sign", "display", "wood", "custom"], "settings": {}
+    },
+    "solution_configuration": {
+      "type": "dd-solution-configuration-v1",
+      "blocks": {
+        "material": { "type": "configuration", "settings": { "requirement": "Material Type", "consideration": "Process Suitability" } },
+        "thickness": { "type": "configuration", "settings": { "requirement": "Material Thickness", "consideration": "Laser Power Requirement" } },
+        "sheet": { "type": "configuration", "settings": { "requirement": "Sheet Size", "consideration": "Working Area" } },
+        "volume": { "type": "configuration", "settings": { "requirement": "Production Volume", "consideration": "Motion / Operating Configuration" } },
+        "operation": { "type": "configuration", "settings": { "requirement": "Cutting vs Engraving", "consideration": "Process / Optical Configuration" } },
+        "workflow": { "type": "configuration", "settings": { "requirement": "Workflow", "consideration": "Standalone or Integrated System" } }
+      },
+      "block_order": ["material", "thickness", "sheet", "volume", "operation", "workflow"], "settings": {}
+    },
+    "solution_workflow": {
+      "type": "dd-solution-workflow-v1",
+      "blocks": {
+        "design": { "type": "step", "settings": { "title": "DESIGN", "description": "CAD / Vector File" } },
+        "material": { "type": "step", "settings": { "title": "MATERIAL PREPARATION", "description": "Sheet Selection & Setup" } },
+        "laser": { "type": "step", "settings": { "title": "LASER PROCESSING", "description": "Cutting / Engraving" } },
+        "finishing": { "type": "step", "settings": { "title": "FINISHING", "description": "Cleaning / Edge / Secondary Process" } },
+        "output": { "type": "step", "settings": { "title": "ASSEMBLY OR OUTPUT", "description": "Finished Component" } }
+      },
+      "block_order": ["design", "material", "laser", "finishing", "output"], "settings": {}
+    },
+    "solution_evidence": {
+      "type": "dd-solution-evidence-v1",
+      "blocks": {
+        "uganda": { "type": "deployment", "settings": { "location": "UGANDA", "context": "SIGN PRODUCTION", "system": "CO₂ Laser Cutting System", "status": "Active Production", "image_alt": "Uganda sign production deployment", "link_label": "VIEW CASE STUDY", "link_url": "/pages/case-uganda-sign-factory" } },
+        "ethiopia": { "type": "deployment", "settings": { "location": "ETHIOPIA", "context": "INTEGRATED FABRICATION", "system": "CO₂ Laser + CNC Router", "status": "Production Commissioned", "image_alt": "Ethiopia integrated fabrication deployment", "link_label": "VIEW CASE STUDY", "link_url": "/pages/case-study-ethiopia" } }
+      },
+      "block_order": ["uganda", "ethiopia"], "settings": {}
+    },
+    "solution_products": {
+      "type": "dd-solution-products-v1",
+      "blocks": {
+        "lz1390": { "type": "product", "settings": { "model_name": "LZ-1390", "system_name": "CO₂ Laser Cutting System", "image_alt": "LZ-1390 CO₂ laser cutting system", "working_area": "1300 × 900 mm", "applications": "Acrylic / Sign Components / Custom Fabrication", "link_label": "VIEW SYSTEM DETAILS", "link_url": "/products/lz-1390-industrial-co2-laser-cutting-machine" } }
+      },
+      "block_order": ["lz1390"], "settings": {}
+    },
+    "solution_cta": { "type": "dd-solution-cta-v1", "settings": { "button_url": "/pages/contact?source=co2-laser-solution" } }
+  },
+  "order": ["solution_hero", "solution_requirements", "solution_architecture", "solution_applications", "solution_configuration", "solution_workflow", "solution_evidence", "solution_products", "solution_cta"]
+}

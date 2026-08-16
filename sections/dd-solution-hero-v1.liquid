@@ -1,0 +1,21 @@
+<section class="dd-solution-hero" aria-labelledby="DDSolutionHero-{{ section.id }}">
+  <div class="dd-solution-hero__media">
+    {% if section.settings.image != blank %}
+      {{ section.settings.image | image_url: width: 2200 | image_tag: class: 'dd-solution-hero__image', loading: 'eager', fetchpriority: 'high', widths: '750, 1100, 1500, 1800, 2200', sizes: '100vw', alt: section.settings.image_alt }}
+    {% else %}
+      <img class="dd-solution-hero__image" src="{{ 'hero-v22-co2-acrylic-cutting-progress.png' | asset_url }}" alt="CO₂ laser processing acrylic during production" width="1600" height="900" loading="eager" fetchpriority="high">
+    {% endif %}
+  </div>
+  <div class="dd-solution-hero__frame">
+    <div class="dd-solution-hero__content">
+      <p class="dd-solution-hero__eyebrow">{{ section.settings.eyebrow }}</p>
+      <h1 id="DDSolutionHero-{{ section.id }}">{{ section.settings.heading }}</h1>
+      <p class="dd-solution-hero__copy">{{ section.settings.description }}</p>
+      <a class="dd-solution-hero__cta" href="{{ section.settings.button_url }}" data-track="cta" data-cta-id="co2_solution_hero_discuss_project" data-section="solution_hero">{{ section.settings.button_text }} <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+{% stylesheet %}
+  .dd-solution-hero{position:relative;min-height:720px;overflow:hidden;background:#07090c;color:#fff;font-family:'Archivo Narrow',sans-serif}.dd-solution-hero__media{position:absolute;inset:0}.dd-solution-hero__media:after{content:'';position:absolute;inset:0;background:rgba(7,9,12,.7)}.dd-solution-hero__image{width:100%;height:100%;object-fit:cover;filter:grayscale(28%) contrast(1.08)}.dd-solution-hero__frame{position:relative;z-index:1;display:grid;align-items:end;width:min(100% - 64px,1240px);min-height:720px;margin:auto;padding:180px 0 80px}.dd-solution-hero__content{max-width:820px;padding-left:40px;border-left:1px solid rgba(255,255,255,.28)}.dd-solution-hero__eyebrow{margin:0 0 28px;color:#00a3ad;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase}.dd-solution-hero h1{max-width:17ch;margin:0;font-size:clamp(46px,5.8vw,80px);line-height:.96;letter-spacing:-.035em;text-transform:uppercase}.dd-solution-hero__copy{max-width:650px;margin:30px 0;color:rgba(255,255,255,.76);font-size:18px;line-height:1.6}.dd-solution-hero__cta{display:inline-flex;align-items:center;gap:16px;min-height:48px;border-bottom:1px solid #00a3ad;color:#fff;font-size:12px;font-weight:700;letter-spacing:.14em;text-decoration:none;text-transform:uppercase}.dd-solution-hero__cta:focus-visible{outline:2px solid #fff;outline-offset:5px}@media(max-width:760px){.dd-solution-hero,.dd-solution-hero__frame{min-height:660px}.dd-solution-hero__frame{width:min(100% - 40px,1240px);padding:140px 0 56px}.dd-solution-hero__content{padding-left:20px}.dd-solution-hero h1{font-size:clamp(38px,11.5vw,56px)}.dd-solution-hero__copy{font-size:16px}}
+{% endstylesheet %}
+{% schema %}{"name":"DD Solution Hero V1","settings":[{"type":"text","id":"eyebrow","label":"Eyebrow","default":"PRODUCTION SYSTEM // CO₂ LASER CUTTING"},{"type":"textarea","id":"heading","label":"Heading","default":"CO₂ Laser Cutting Solutions for Sign & Industrial Fabrication"},{"type":"textarea","id":"description","label":"Description","default":"A production system for acrylic, wood, signage, display components and custom fabrication, configured around the material and required output."},{"type":"image_picker","id":"image","label":"Production process image"},{"type":"text","id":"image_alt","label":"Image alt text","default":"CO₂ laser processing material during production"},{"type":"text","id":"button_text","label":"CTA label","default":"DISCUSS YOUR PROJECT"},{"type":"url","id":"button_url","label":"CTA link"}],"presets":[{"name":"DD Solution Hero V1"}]}{% endschema %}
