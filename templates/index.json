@@ -42,7 +42,7 @@
             "purpose": "Establish large-format routing capacity for panels, structures and custom fabricated components.",
             "applications": "<ul><li>Panel Fabrication</li><li>Display Structures</li><li>Custom Components</li></ul>",
             "equipment": "CNC Router Machines",
-            "link": "/collections/cnc-router",
+            "link": "",
             "cta": "Explore System"
           }
         },
@@ -55,7 +55,7 @@
             "purpose": "Establish direct-to-substrate print capacity for customized graphics and finished products.",
             "applications": "<ul><li>Acrylic Printing</li><li>Display Graphics</li><li>Custom Products</li></ul>",
             "equipment": "UV Flatbed Printers",
-            "link": "/collections/uv-flatbed-printer",
+            "link": "",
             "cta": "Explore System"
           }
         },
@@ -68,7 +68,7 @@
             "purpose": "Industrial metal processing for precision fabrication.",
             "applications": "<ul><li>Metal Fabrication</li><li>Stainless Steel</li><li>Carbon Steel</li></ul>",
             "equipment": "Fiber Laser Cutting Machines",
-            "link": "/collections/fiber-laser",
+            "link": "",
             "cta": "Explore System"
           }
         },
@@ -81,7 +81,7 @@
             "purpose": "Metal joining solutions for industrial fabrication.",
             "applications": "<ul><li>Sheet Metal Fabrication</li><li>Stainless Steel Joining</li><li>Precision Components</li></ul>",
             "equipment": "Laser Welding Machines",
-            "link": "/collections/laser-welding",
+            "link": "",
             "cta": "Explore System"
           }
         },
@@ -94,7 +94,7 @@
             "purpose": "Permanent identification and traceability solutions.",
             "applications": "<ul><li>Product Identification</li><li>Serial Number Marking</li><li>Industrial Traceability</li></ul>",
             "equipment": "Laser Marking Machines",
-            "link": "/collections/laser-marking",
+            "link": "",
             "cta": "Explore System"
           }
         }
