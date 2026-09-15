@@ -77,7 +77,7 @@
   >
 {%- endif -%}
 
-{%- if request.page_type == 'product' -%}
+{%- if request.page_type == 'product' and product.handle != 'lz-1325-cnc-router' -%}
   <meta
     property="og:price:amount"
     content="{{ product.price | money_without_currency | strip_html }}"
