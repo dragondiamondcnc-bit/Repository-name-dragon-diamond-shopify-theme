@@ -33,7 +33,6 @@
     "inventory_status": "Inventory status",
     "localization_region_and_language": "Region and language selector",
     "menu": "Menu",
-    // This is the label for the header navigation menu when using screen readers, it will read "Primary navigation"
     "header_navigation_label": "Primary",
     "nested_product": "{{ product_title }} for {{ parent_title }}",
     "new_window": "Opens in a new window.",
@@ -66,52 +65,40 @@
     "price_filter_high": "High price"
   },
   "actions": {
-    // Quick add button on product cards, shortened version of add to cart
     "add": "Add",
     "add_to_cart": "Add to cart",
-    // Success message shown after adding item to cart
     "added": "Added",
-    // Button to apply discount code to cart
     "apply": "Apply",
     "back": "Back",
     "back_to": "Back to {{ title }}",
     "choose": "Choose",
-    // Button to reset current selection or input
     "clear": "Clear",
-    // Button to remove all applied product filters
     "clear_all": "Clear all",
     "close": "Close",
     "open": "Open",
-    // Continue shopping link on the cart page which takes the user back to a collection page
     "continue_shopping": "Continue shopping",
     "enter_password": "Enter password",
     "log_in_html": "Have an account? <a href=\"{{ link }}\">Log in</a> to check out faster.",
     "log_in": "Sign in",
     "log_out": "Log out",
     "open_image_in_full_screen": "Open image in full screen",
-    // Button to remove applied filters from search/collection results
     "remove": "Remove",
     "remove_discount": "Remove discount {{ code }}",
-    // Button to expand hidden product variant options
     "show_all_options": "Show all options",
     "see_items": {
       "one": "See {{ count }} item",
-      // Button to view filtered product results and close filter dialog
       "other": "See {{ count }} items"
     },
     "show_filters": "Filter",
     "show_less": "Show less",
     "show_more": "Show more",
     "sign_in_options": "Other sign in options",
-    // AR button to view 3D product model in physical space
     "view_in_your_space": "View in your space",
-    // Button to view complete collection/product list
     "view_all": "View all",
     "more": "More",
     "zoom": "Zoom",
     "zoom_media": "Zoom media {{ index }}",
     "close_dialog": "Close dialog",
-    // Button to clear search filter and restore default view
     "reset": "Reset",
     "enter_using_password": "Enter using password",
     "sign_up": "Sign up",
@@ -257,7 +244,6 @@
     "search_results_no_results_check_spelling": "No results found for \"{{ terms }}\". Check the spelling or use a different word or phrase.",
     "search_results_resource_articles": "Blog posts",
     "search_results_resource_collections": "Collections",
-    // Section heading for Shopify store pages in search results
     "search_results_resource_pages": "Pages",
     "search_results_resource_products": "Products",
     "search_results_resource_products_count": {
@@ -274,10 +260,8 @@
       "one": "1 item added to cart",
       "other": "{{ count }} items added to cart"
     },
-    // Button to go from search preview to full search results page
     "search_results_view_all": "View all",
     "search_results_view_all_button": "View all",
-    // Label for customer's note to seller during checkout
     "seller_note": "Special instructions",
     "shipping_policy": "Shipping calculated at checkout.",
     "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
@@ -293,7 +277,6 @@
     "taxes_included_shipping_at_checkout_without_policy_without_discounts": "Taxes included. Shipping is calculated at checkout.",
     "unavailable": "Unavailable",
     "use_fewer_filters_html": "Try using fewer filters, or <a class=\"{{ class }}\" href=\"{{ link }}\">clear all filters</a>.",
-    // Link or button to expand additional information
     "view_more_details": "View more details",
     "volume_pricing_available": "Volume pricing available",
     "volume_pricing": "Volume pricing",
@@ -306,7 +289,6 @@
     "product_count": "Product count",
     "errors": "Errors",
     "wrong_password": "Wrong password",
-    // Legend text for gift card delivery options
     "recipient_form_send_to": "Send to",
     "recipient_form_email_label": "Recipient’s email",
     "recipient_form_email_label_my_email": "My email",
@@ -322,7 +304,6 @@
     "product_custom_property_character_count": "{{ used_chars }}/{{ max_chars }} characters used"
   },
   "fields": {
-    // Separates min and max values in price range filter
     "separator": "to"
   },
   "gift_cards": {
@@ -366,6 +347,126 @@
       "in_cart": "in cart",
       "default_title": "Default Title",
       "sticky_add_to_cart": "Quick add to cart bar"
+    }
+  },
+  "dd_product": {
+    "common": {
+      "navigation": "Product information",
+      "overview": "Overview",
+      "results": "Processing results",
+      "configuration": "Configuration",
+      "case": "Customer case",
+      "support": "Delivery & support",
+      "details": "Specifications & FAQs",
+      "manufacturer": "Dragon Diamond / Manufacturer",
+      "quote": "Get a Quote",
+      "explore": "Explore Applications",
+      "image_note": "Machine shown for reference. Your quotation confirms the supplied configuration.",
+      "results_intro": "Explore applications for your production. Share your material and design so we can test the result before confirming the equipment solution.",
+      "test_title": "Test Your Material Before Choosing",
+      "test_body": "Send your drawing, material details and required finish. We can arrange sample processing to check whether the proposed setup meets your needs.",
+      "test_button": "Discuss a Sample Test",
+      "configuration_title": "Choose the Setup for Your Work",
+      "standard": "Standard configuration",
+      "options": "Optional equipment",
+      "configuration_note": "Your quotation confirms the equipment and options included for your application.",
+      "case_note": "Customer projects may use different configurations. We will confirm the specification for your application in your quotation.",
+      "case_button": "View Customer Case",
+      "support_title": "From Sample Testing to Daily Operation",
+      "service_1": "Sample processing",
+      "service_1_body": "We can test your materials and designs before confirming the equipment solution.",
+      "service_2": "Complementary equipment",
+      "service_2_body": "We can recommend and supply complementary equipment, including CNC routers, CO₂ laser machines and UV printers, around your production needs.",
+      "service_3": "English guides & training",
+      "service_3_body": "English manuals, instructional videos and remote installation and operation training help your team get started.",
+      "service_4": "Technical support",
+      "service_4_body": "Our technical team works directly with you online on daily operating questions. On-site training and technical support can also be arranged.",
+      "service_5": "Spare parts",
+      "service_5_body": "We prepare corresponding spare parts for each machine. The parts list and supply arrangements are confirmed for your order.",
+      "details_title": "Details for Your Equipment Review",
+      "specs": "Technical specifications",
+      "inquiry_title": "Discuss Your Application",
+      "inquiry_body": "Tell us your material, thickness, part size and required finish. You can also request a sample test.",
+      "name": "Name",
+      "email": "Email",
+      "requirements": "Processing requirements",
+      "submit": "Send Inquiry",
+      "success": "Thank you. Your inquiry has been submitted. Our team will review your requirements and contact you."
+    },
+    "laser": {
+      "title": "LZ-1390 CO₂ Laser Cutting & Engraving Machine",
+      "intro": "For sign components, display parts and custom crafts. Built by Dragon Diamond, with sample testing, equipment configuration and technical support for your production needs.",
+      "results_title": "See What You Can Make",
+      "application_1": "Laser-cut acrylic letters",
+      "application_1_body": "Material: clear acrylic. Process: laser cutting. Dimensional letters for signs and display graphics.",
+      "application_2": "Acrylic decorative lighting",
+      "application_2_body": "Material: acrylic. Process: contour cutting and engraving. Shaped artwork shown assembled with a separate light base.",
+      "application_3": "Wooden craft components",
+      "application_3_body": "Material: wood-based sheet. Process: laser cutting and engraving. Interlocking dice panels with engraved dots, shown before assembly.",
+      "fabric_note": "Planning fabric cutting? Share the fabric composition, piece dimensions and feeding needs so we can review suitability before recommending a setup.",
+      "options": "Camera · Height-adjustable table · Rotary attachment",
+      "options_alt": "Optional equipment for the LZ-1390",
+      "selection": "The optional camera supports cutting acrylic sheets after UV flatbed printing. Share your printed artwork and material so we can review the setup and arrange sample testing. A UV printer is separate equipment.",
+      "camera_badge": "Optional camera required",
+      "camera_title": "Cutting UV-Printed Acrylic",
+      "camera_body": "Material: UV-printed acrylic. Process: laser cutting with the optional camera fitted. The sheet is printed on a UV flatbed printer before laser cutting; the laser machine does not print the graphics.",
+      "camera_workflow": "UV flatbed printing → Laser cutting with the camera option → Printed acrylic components. We can review the equipment combination and test your artwork and material before confirming the solution.",
+      "camera_link": "Explore Configuration Options",
+      "camera_alt": "Laser cutting UV-printed acrylic with the optional camera fitted",
+      "case_title": "Uganda · Sign Manufacturing",
+      "case_body": "Explore an LZ-1390 customer project covering equipment selection, technical support and sign production in Uganda.",
+      "case_alt": "LZ-1390 customer project in Uganda",
+      "faq_1": "Can you test my material first?",
+      "faq_1_answer": "Yes. Share your material, drawing and expected finish. We can arrange sample processing before confirming the equipment solution.",
+      "faq_2": "What is included as standard?",
+      "faq_2_answer": "The standard setup includes a 150 W laser, S&A CW5200 water chiller and blade table. A camera, height-adjustable table and rotary attachment are optional.",
+      "faq_3": "Can I use this machine for fabric cutting?",
+      "faq_3_answer": "Share the fabric composition, piece dimensions and whether you use individual pieces or rolls. We will review processing and feeding requirements before recommending a setup.",
+      "faq_4": "How will my team learn to use the machine?",
+      "faq_4_answer": "We provide English manuals, videos and remote installation and operation training. Our team provides online support; on-site service can also be arranged.",
+      "spec_1_label": "Working area",
+      "spec_1_value": "1300 × 900 mm",
+      "spec_2_label": "Laser power",
+      "spec_2_value": "150 W",
+      "spec_3_label": "Water chiller",
+      "spec_3_value": "S&A CW5200",
+      "spec_4_label": "Worktable",
+      "spec_4_value": "Blade table"
+    },
+    "router": {
+      "title": "LZ-1325 CNC Router",
+      "intro": "For signage, display components, furniture parts and decorative woodworking. Built by Dragon Diamond, with configuration guidance, training and technical support for your production needs.",
+      "results_title": "From Sheet Material to Finished Components",
+      "application_1": "Signs & displays",
+      "application_1_body": "Dimensional lettering for signs and displays. Share your sheet material and design so we can review the routing setup.",
+      "application_2": "Furniture & woodworking",
+      "application_2_body": "Wood-based decorative panels with cutout patterns for interiors and furniture details.",
+      "application_3": "Craft production",
+      "application_3_body": "Interlocking sheet components assembled into a horse-head craft. Machining is followed by assembly to create the finished piece.",
+      "options": "Vacuum hold-down system: vacuum table + vacuum pump.",
+      "options_alt": "Optional vacuum table for the LZ-1325",
+      "selection": "Share your sheet dimensions, material and part layout so our team can review whether vacuum workholding suits your application.",
+      "case_title": "Israel · Event & Display Fabrication",
+      "case_body": "Explore an LZ-1325 customer project covering equipment evaluation, delivery and decorative panel production for events and displays.",
+      "case_alt": "LZ-1325 processing decorative panels in an Israel customer workshop",
+      "faq_1": "Does the standard machine include a vacuum table?",
+      "faq_1_answer": "The standard worktable is aluminum profile + PVC. A vacuum table and vacuum pump are available together as an optional system.",
+      "faq_2": "Which spindle and dust collection are included?",
+      "faq_2_answer": "The standard configuration uses a 3.0 kW water-cooled spindle and includes dust collection equipment. Equipment details are confirmed in your quotation.",
+      "faq_3": "Can you test my material and drawing?",
+      "faq_3_answer": "Yes. Share your material, thickness, part dimensions and required finish. We can arrange sample processing before confirming the machine solution.",
+      "faq_4": "How do you help with installation and operation?",
+      "faq_4_answer": "We provide English manuals, videos and remote training, together with online technical support. On-site training and technical support are available by arrangement.",
+      "spec_1_label": "Working area",
+      "spec_1_value": "1300 × 2500 mm",
+      "spec_2_label": "Spindle",
+      "spec_2_value": "3.0 kW, water-cooled",
+      "spec_3_label": "Worktable",
+      "spec_3_value": "Aluminum profile + PVC",
+      "spec_4_label": "Control",
+      "spec_4_value": "3-axis CNC control system",
+      "spec_5_label": "Dust collection",
+      "spec_5_value": "Included"
     }
   }
 }

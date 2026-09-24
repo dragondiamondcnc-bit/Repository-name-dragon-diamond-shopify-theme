@@ -1,0 +1,28 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "dd-product-six",
+      "settings": {
+        "model": "laser",
+        "hero_image": "shopify://shop_images/lz-1390-cutout-v1.png",
+        "sample_1": "shopify://shop_images/laser-sample-acrylic-letters.jpg",
+        "sample_2": "shopify://shop_images/laser-sample-acrylic-lamp.jpg",
+        "sample_3": "shopify://shop_images/laser-sample-wood-dice-panels.jpg",
+        "sample_4": "shopify://shop_images/laser-sample-uv-acrylic-camera.jpg",
+        "case_url": "/pages/case-uganda-sign-factory"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
