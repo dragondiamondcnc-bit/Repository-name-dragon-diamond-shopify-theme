@@ -4,7 +4,8 @@
 
 {% capture children %}
   {% unless product == blank %}
-    <div
+    {% if product.handle != 'lz-1390-industrial-co2-laser-cutting-machine' and product.handle != 'lz-1325-cnc-router' %}
+<div
       class="product-badges product-badges--{{ settings.badge_position }}"
       style="
         --badge-border-radius: {{ settings.badge_corner_radius }}px;
@@ -26,7 +27,8 @@
         </div>
       {%- endif -%}
     </div>
-    {%  if settings.quick_add or settings.mobile_quick_add %}
+    {% endif %}
+{%  if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add', product: product, section_id: section.id %}
     {% endif %}
   {% endunless %}

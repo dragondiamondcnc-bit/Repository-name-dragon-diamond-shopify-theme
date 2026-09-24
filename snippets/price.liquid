@@ -7,6 +7,7 @@
   @param {boolean} [show_sale_price_first] - Whether to show the sale price first
 {%- enddoc -%}
 
+{% if product_resource.handle != 'lz-1390-industrial-co2-laser-cutting-machine' and product_resource.handle != 'lz-1325-cnc-router' %}
 {%- liquid
   assign show_unit_price = show_unit_price | default: false
   assign show_sale_price_first = show_sale_price_first | default: false
@@ -145,3 +146,5 @@
     {{- 'content.volume_pricing_available' | t -}}
   </small>
 {%- endif -%}
+
+{% else %}<span class="b2b-quote-label">{{ 'dd_product.common.quote' | t }}</span>{% endif %}
