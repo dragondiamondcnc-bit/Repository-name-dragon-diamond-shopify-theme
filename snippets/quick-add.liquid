@@ -1,3 +1,9 @@
+{% liquid
+  assign dd_inquiry_product = false
+  if product.tags contains 'b2b-inquiry'
+    assign dd_inquiry_product = true
+  endif
+%}
 {%- doc -%}
   Renders a quick add component.
 
@@ -28,7 +34,7 @@
   endif
 %}
 
-{% if product.handle != 'lz-1390-industrial-co2-laser-cutting-machine' and product.handle != 'lz-1325-cnc-router' %}
+{% if product.handle != 'lz-1390-industrial-co2-laser-cutting-machine' and product.handle != 'lz-1325-cnc-router' and dd_inquiry_product == false %}
 <quick-add-component
   class="quick-add color-{{ color_scheme }} "
   ref="quickAdd"

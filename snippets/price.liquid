@@ -1,3 +1,9 @@
+{% liquid
+  assign dd_inquiry_product = false
+  if product_resource.tags contains 'b2b-inquiry'
+    assign dd_inquiry_product = true
+  endif
+%}
 {%- doc -%}
   This snippet is used to render a product card.
   It is used in the product block,featured product block, and the product card block.
@@ -7,7 +13,7 @@
   @param {boolean} [show_sale_price_first] - Whether to show the sale price first
 {%- enddoc -%}
 
-{% if product_resource.handle != 'lz-1390-industrial-co2-laser-cutting-machine' and product_resource.handle != 'lz-1325-cnc-router' %}
+{% if product_resource.handle != 'lz-1390-industrial-co2-laser-cutting-machine' and product_resource.handle != 'lz-1325-cnc-router' and dd_inquiry_product == false %}
 {%- liquid
   assign show_unit_price = show_unit_price | default: false
   assign show_sale_price_first = show_sale_price_first | default: false
