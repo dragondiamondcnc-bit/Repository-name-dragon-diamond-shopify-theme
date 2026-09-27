@@ -1,0 +1,29 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "dd-fiber-cutting-product",
+      "settings": {
+        "sample_description": "Metal sheet cutting for signage, decorative panels and custom metal parts.",
+        "sample_intro": "Explore decorative metal panels and shaped sheet-metal parts. Confirm material, thickness and edge finish with a free sample test.",
+        "application_image_1": "shopify://shop_images/fiber-metal-cutting-original-samples.jpg",
+        "application_title_1": "Decorative Metal Panels",
+        "application_subtitle_1": "Signage · Interior decoration · Custom patterns",
+        "application_image_2": "shopify://shop_images/fiber-metal-cutting-original-samples.jpg",
+        "application_title_2": "Custom Sheet-Metal Parts",
+        "application_subtitle_2": "Shaped components · Metal crafts · Fabrication"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
