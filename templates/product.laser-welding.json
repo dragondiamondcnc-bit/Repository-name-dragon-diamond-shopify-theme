@@ -1,0 +1,29 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "dd-welding-product",
+      "settings": {
+        "sample_intro": "See handheld welding in progress and a finished stainless steel joint. Send your own metal and joint requirements for a free sample test.",
+        "sample_description": "Real welding demonstration frames.",
+        "application_image_1": "shopify://shop_images/laser-welding-process-sample.jpg",
+        "application_title_1": "Handheld Welding in Action",
+        "application_subtitle_1": "Metal joints · Fabrication · Repair work",
+        "application_image_2": "shopify://shop_images/laser-welding-stainless-joint-sample.jpg",
+        "application_title_2": "Stainless Steel Joint",
+        "application_subtitle_2": "Corner seam · Visible weld detail"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
