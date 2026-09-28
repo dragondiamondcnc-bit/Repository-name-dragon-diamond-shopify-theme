@@ -1,0 +1,28 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "dd-printer-product",
+      "settings": {
+        "sample_intro": "Explore layered UV printing on clear panels and the finished color artwork. Send your own design and substrate for a free sample test.",
+        "application_image_1": "shopify://shop_images/uv-printed-panels-sample.jpg",
+        "application_title_1": "Color Artwork on Clear Panels",
+        "application_subtitle_1": "Display graphics · Decorative panels",
+        "application_image_2": "shopify://shop_images/uv-printing-process-sample.jpg",
+        "application_title_2": "Color + White Printing",
+        "application_subtitle_2": "Reverse printing · Layered ink application"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
