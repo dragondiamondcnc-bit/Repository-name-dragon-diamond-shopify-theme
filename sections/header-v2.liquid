@@ -7,57 +7,15 @@
 <header class="dd-header-v4-9">
   
   <!-- LAYER 1: TOP UTILITY BAR (Trust & Global Access) -->
-  <div class="dd-top-utility">
-    <div class="dd-container">
-      <div class="dd-top-utility-inner">
-        <!-- Left: Social Icons -->
-        <div class="dd-top-social">
-          <a href="#" aria-label="LinkedIn">
-            <svg viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
-          </a>
-          <a href="#" aria-label="YouTube">
-            <svg viewBox="0 0 576 512"><path d="M549.65 124.08c-6.28-23.66-24.79-42.17-48.45-48.45C458.54 64 288 64 288 64S117.46 64 74.8 75.63c-23.66 6.28-42.17 24.79-48.45 48.45C15.36 166.74 15.36 256 15.36 256s0 89.26 10.99 131.92c6.28 23.66 24.79 42.17 48.45 48.45C117.46 448 288 448 288 448s170.54 0 213.2-11.63c23.66-6.28 42.17-24.79 48.45-48.45C560.64 345.26 560.64 256 560.64 256s0-89.26-10.99-131.92zM232 337.64V174.36L384 256 232 337.64z"/></svg>
-          </a>
-          <a href="#" aria-label="Facebook">
-            <svg viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
-          </a>
-          <a href="#" aria-label="Instagram">
-            <svg viewBox="0 0 448 512"><path d="M224.1 141c-45.8 0-82.8 37-82.8 82.8s37 82.8 82.8 82.8 82.8-37 82.8-82.8-37-82.8-82.8-82.8zm0 136.1c-29.4 0-53.3-23.9-53.3-53.3s23.9-53.3 53.3-53.3 53.3 23.9 53.3 53.3-23.9 53.3-53.3 53.3zM342.1 48h-236c-41.5 0-75.1 33.6-75.1 75.1v236c0 41.5 33.6 75.1 75.1 75.1h236c41.5 0 75.1-33.6 75.1-75.1v-236c0-41.5-33.6-75.1-75.1-75.1zm36.3 311.1c0 20-16.3 36.3-36.3 36.3h-236c-20 0-36.3-16.3-36.3-36.3v-236c0-20 16.3-36.3 36.3-36.3h236c20 0 36.3 16.3 36.3 36.3v236zM327.3 115.5c0 10.6 8.6 19.2 19.2 19.2s19.2-8.6 19.2-19.2-8.6-19.2-19.2-19.2-19.2 8.6-19.2 19.2z"/></svg>
-          </a>
-        </div>
-        
-        <!-- Right: Global Access -->
-        <div class="dd-top-right-group">
-          <div class="dd-top-lang">
-            <a href="/" class="active">EN</a>
-            <span class="sep">|</span>
-            <a href="/es">ES</a>
-            <span class="sep">|</span>
-            <a href="/fr">FR</a>
-            <span class="sep">|</span>
-            <a href="/ru">RU</a>
-            <span class="sep">|</span>
-            <a href="/ar">AR</a>
-          </div>
-          <div class="dd-top-search">
-            <a href="/search" aria-label="Search">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- LAYER 2: MAIN HEADER -->
   <div class="dd-main-header">
     <div class="dd-container">
       <div class="dd-main-inner">
         <!-- Logo Area -->
         <div class="dd-brand-identity">
-          <a href="/" class="dd-brand-main">
+          <a href="{{ routes.root_url }}" class="dd-brand-main">
             <div class="dd-brand-icon">
-              <img src="{{ 'dragon-mark-transparent.png' | asset_url }}" alt="Dragon Diamond dragon mark">
+              <img src="{{ 'dragon-mark-transparent.png' | asset_url }}" alt="Dragon Diamond dragon mark" width="62" height="62">
             </div>
             <div class="dd-brand-text">
               <span class="dd-brand-name">DRAGON DIAMOND</span>
@@ -67,68 +25,16 @@
         </div>
 
         <!-- Navigation with Product Dropdown -->
-        <nav class="dd-nav-center">
-          <a href="/">HOME</a>
-          <a href="{{ pages['production-systems'].url }}">SOLUTIONS</a>
-          
-          <div class="dd-nav-dropdown-wrap">
-            <a href="/collections/all" class="dd-nav-trigger">PRODUCTS</a>
-            <div class="dd-dropdown-panel">
-              <div class="dd-dropdown-grid">
-                <a href="/collections/co2-laser" class="dd-drop-item">
-                  <span class="dd-drop-title">CO2 Laser Cutting Machines</span>
-                  <span class="dd-drop-desc">Precision signage & acrylic production.</span>
-                </a>
-                <a href="/collections/fiber-laser-cutting" class="dd-drop-item">
-                  <span class="dd-drop-title">Fiber Laser Cutting Machines</span>
-                  <span class="dd-drop-desc">High-speed industrial metal fabrication.</span>
-                </a>
-                <a href="/collections/cnc-router" class="dd-drop-item">
-                  <span class="dd-drop-title">CNC Router Machines</span>
-                  <span class="dd-drop-desc">Heavy-duty routing & furniture setup.</span>
-                </a>
-                <a href="/collections/laser-marking" class="dd-drop-item">
-                  <span class="dd-drop-title">Laser Marking Machines</span>
-                  <span class="dd-drop-desc">Permanent industrial identification.</span>
-                </a>
-                <a href="/collections/laser-welding" class="dd-drop-item">
-                  <span class="dd-drop-title">Laser Welding Machines</span>
-                  <span class="dd-drop-desc">Precision metal joining systems.</span>
-                </a>
-                <a href="/collections/printers" class="dd-drop-item">
-                  <span class="dd-drop-title">Printers</span>
-                  <span class="dd-drop-desc">Direct-to-substrate graphic printing.</span>
-                </a>
-                <a href="/collections/parts-components" class="dd-drop-item">
-                  <span class="dd-drop-title">Parts & Components</span>
-                  <span class="dd-drop-desc">Industrial toolkits and deployment support.</span>
-                </a>
-              </div>
-            </div>
-          </div>
+        <nav class="dd-nav-center" id="DDB2BNavigation">
+<a href="{{ routes.root_url }}">{{ 'dd_home.home' | t }}</a>
+<div class="dd-nav-dropdown-wrap"><a href="{{ routes.root_url }}#HomeCategories" class="dd-nav-trigger">{{ 'dd_home.footer_products' | t }}</a><div class="dd-dropdown-panel"><div class="dd-dropdown-grid">{% for i in (1..6) %}{% assign key = 'dd_home.category_' | append: i %}<a class="dd-drop-item" href="{% if i == 1 %}{{ routes.collections_url }}/co2-laser{% elsif i == 2 %}{{ routes.collections_url }}/cnc-router{% elsif i == 3 %}{{ routes.collections_url }}/laser-marking{% elsif i == 4 %}{{ routes.collections_url }}/fiber-laser-cutting{% elsif i == 5 %}{{ routes.collections_url }}/laser-welding{% elsif i == 6 %}{{ routes.collections_url }}/printers{% else %}{{ routes.root_url }}#HomeCategory-{{ i }}{% endif %}"><span class="dd-drop-title">{{ key | t }}</span></a>{% endfor %}</div></div></div>
+<a href="{{ routes.root_url }}#HomeIndustries">{{ 'dd_home.industries' | t }}</a><a href="{{ routes.root_url }}#HomeCases">{{ 'dd_home.cases' | t }}</a><a href="{{ routes.root_url }}#HomeFactory">{{ 'dd_home.factory' | t }}</a><a href="{{ routes.root_url }}#HomeFAQ">{{ 'dd_home.faq' | t }}</a><a href="{{ routes.root_url }}#HomeContact">{{ 'dd_home.contact' | t }}</a>
+</nav>
 
-          <a href="/pages/case-studies">CASE STUDIES</a>
-          <a href="/pages/support">SUPPORT</a>
-          <a href="/pages/about-us">ABOUT US</a>
-          <a href="/pages/contact">CONTACT</a>
-        </nav>
-
-        <div class="dd-header-locale">
-          <span class="dd-header-divider" aria-hidden="true"></span>
-          <a href="/search" class="dd-header-globe" aria-label="Search">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="9"></circle>
-              <path d="M3 12h18"></path>
-              <path d="M12 3c2.2 2.5 3.3 5.5 3.3 9s-1.1 6.5-3.3 9"></path>
-              <path d="M12 3c-2.2 2.5-3.3 5.5-3.3 9s1.1 6.5 3.3 9"></path>
-            </svg>
-          </a>
-          <a href="/" class="dd-header-lang">EN</a>
-          <span class="dd-header-caret" aria-hidden="true">&or;</span>
-        </div>
+        <div class="dd-header-locale"><a class="dd-nav-quote" href="{{ routes.root_url }}#HomeContact">{{ 'dd_home.quote' | t }}</a></div>
 
         <!-- Mobile Toggle -->
-        <button class="dd-toggle-v3" aria-label="Menu">
+        <button class="dd-toggle-v3" type="button" aria-label="{{ 'dd_home.menu' | t }}" aria-expanded="false" aria-controls="DDB2BNavigation">
           <span></span><span></span>
         </button>
       </div>
@@ -140,6 +46,13 @@
   (() => {
     const header = document.querySelector('.dd-header-v4-9');
     if (!header) return;
+    const toggle = header.querySelector('.dd-toggle-v3');
+    const nav = header.querySelector('.dd-nav-center');
+    const closeMenu = () => { header.classList.remove('menu-open'); toggle.setAttribute('aria-expanded', 'false'); };
+    toggle.addEventListener('click', () => { const open = header.classList.toggle('menu-open'); toggle.setAttribute('aria-expanded', String(open)); });
+    nav.addEventListener('click', event => { if(event.target.closest('a')) closeMenu(); });
+    document.addEventListener('keydown', event => { if(event.key === 'Escape' && header.classList.contains('menu-open')) { closeMenu(); toggle.focus(); } });
+    window.matchMedia('(min-width: 1025px)').addEventListener('change', closeMenu);
 
     const syncHeaderState = () => {
       header.classList.toggle('is-scrolled', window.scrollY > 30);
@@ -316,6 +229,9 @@
     .dd-brand-icon { width: 60px; height: 60px; }
     .dd-toggle-v3 { display: flex; }
   }
+.dd-nav-dropdown-wrap:focus-within .dd-dropdown-panel{opacity:1;visibility:visible;transform:translateY(0)}.dd-nav-quote{display:inline-flex;background:#6de1d3;color:#102c32!important;padding:12px 18px;border-radius:4px;font-weight:700;text-decoration:none;white-space:nowrap}.dd-header-v4-9 a:focus-visible,.dd-toggle-v3:focus-visible{outline:3px solid #de9a35;outline-offset:4px}.dd-toggle-v3{min-width:44px;min-height:44px;align-items:center;justify-content:center}.dd-nav-center{gap:22px}.dd-nav-center>a,.dd-nav-trigger{min-height:44px;display:flex;align-items:center}
+@media(max-width:1024px){.dd-header-v4-9.menu-open{background:#10272d}.dd-header-v4-9.menu-open .dd-nav-center{display:flex;flex-direction:column;align-items:stretch;position:absolute;top:100%;left:0;right:0;background:#10272d;margin:0;padding:20px 24px;max-height:75vh;overflow-y:auto;gap:8px}.dd-header-v4-9.menu-open .dd-nav-dropdown-wrap{display:block}.dd-header-v4-9.menu-open .dd-dropdown-panel{position:static;width:auto;opacity:1;visibility:visible;transform:none;padding:4px 0 8px;background:transparent;box-shadow:none}.dd-header-v4-9.menu-open .dd-dropdown-grid{grid-template-columns:1fr;gap:4px}.dd-header-v4-9.menu-open .dd-drop-item{min-height:44px}.dd-header-v4-9.menu-open .dd-drop-title{font-size:15px}}
+.dd-nav-center{gap:16px}@media(min-width:1025px) and (max-width:1200px){.dd-nav-center{gap:12px;margin:0 14px}.dd-brand-name{font-size:21px}.dd-nav-center>a,.dd-nav-trigger{font-size:12px}.dd-nav-quote{padding:12px}}
 </style>
 
 {% schema %}
