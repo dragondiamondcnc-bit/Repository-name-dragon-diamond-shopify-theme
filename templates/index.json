@@ -9,208 +9,42 @@
  */
 {
   "sections": {
-    "v2_1_hero": {
-      "type": "dd-home-hero-v5",
-      "settings": {}
-    },
-    "v2_1_applications": {
-      "type": "dd-home-workflows-v2",
-      "settings": {}
-    },
-    "v5_05_systems": {
-      "type": "dd-home-production-systems-v5",
-      "blocks": {
-        "co2_laser_system": {
-          "type": "system",
-          "settings": {
-            "title": "CO2 Laser Cutting System",
-            "short_description": "Precision non-metal cutting\nfor signage and acrylic production.",
-            "image": "",
-            "purpose": "Build repeatable non-metal cutting and engraving capacity for signage and acrylic workflows.",
-            "applications": "<ul><li>Sign Manufacturing</li><li>Acrylic Fabrication</li><li>Display Production</li></ul>",
-            "equipment": "CO2 Laser Cutting Machines",
-            "link": "/pages/co2-laser-cutting-solution",
-            "cta": "Explore System"
-          }
-        },
-        "cnc_router_system": {
-          "type": "system",
-          "settings": {
-            "title": "CNC Router System",
-            "short_description": "Heavy-duty routing solutions\nfor large-format fabrication.",
-            "image": "",
-            "purpose": "Establish large-format routing capacity for panels, structures and custom fabricated components.",
-            "applications": "<ul><li>Panel Fabrication</li><li>Display Structures</li><li>Custom Components</li></ul>",
-            "equipment": "CNC Router Machines",
-            "link": "",
-            "cta": "Explore System"
-          }
-        },
-        "uv_flatbed_system": {
-          "type": "system",
-          "settings": {
-            "title": "UV Flatbed Printing System",
-            "short_description": "Direct-to-substrate printing\nfor customized production.",
-            "image": "",
-            "purpose": "Establish direct-to-substrate print capacity for customized graphics and finished products.",
-            "applications": "<ul><li>Acrylic Printing</li><li>Display Graphics</li><li>Custom Products</li></ul>",
-            "equipment": "UV Flatbed Printers",
-            "link": "",
-            "cta": "Explore System"
-          }
-        },
-        "fiber_laser_system": {
-          "type": "system",
-          "settings": {
-            "title": "Fiber Laser Cutting System",
-            "short_description": "Industrial metal processing\nfor precision fabrication.",
-            "image": "",
-            "purpose": "Industrial metal processing for precision fabrication.",
-            "applications": "<ul><li>Metal Fabrication</li><li>Stainless Steel</li><li>Carbon Steel</li></ul>",
-            "equipment": "Fiber Laser Cutting Machines",
-            "link": "",
-            "cta": "Explore System"
-          }
-        },
-        "laser_welding_system": {
-          "type": "system",
-          "settings": {
-            "title": "Laser Welding System",
-            "short_description": "Precision laser joining\nfor fabricated metal assemblies.",
-            "image": "",
-            "purpose": "Metal joining solutions for industrial fabrication.",
-            "applications": "<ul><li>Sheet Metal Fabrication</li><li>Stainless Steel Joining</li><li>Precision Components</li></ul>",
-            "equipment": "Laser Welding Machines",
-            "link": "",
-            "cta": "Explore System"
-          }
-        },
-        "laser_marking_system": {
-          "type": "system",
-          "settings": {
-            "title": "Laser Marking System",
-            "short_description": "Industrial marking capability\nfor products and components.",
-            "image": "",
-            "purpose": "Permanent identification and traceability solutions.",
-            "applications": "<ul><li>Product Identification</li><li>Serial Number Marking</li><li>Industrial Traceability</li></ul>",
-            "equipment": "Laser Marking Machines",
-            "link": "",
-            "cta": "Explore System"
-          }
-        }
-      },
-      "block_order": [
-        "co2_laser_system",
-        "cnc_router_system",
-        "uv_flatbed_system",
-        "fiber_laser_system",
-        "laser_welding_system",
-        "laser_marking_system"
-      ],
+    "main": {
+      "type": "dd-home-b2b",
       "settings": {
-        "eyebrow": "MANUFACTURING CAPABILITY SYSTEMS",
-        "heading": "Production Systems",
-        "description": "Integrated production systems designed around the manufacturing capabilities your operation needs to build."
-      }
-    },
-    "v5_06_trust": {
-      "type": "dd-home-why-production-teams-v1",
-      "blocks": {
-        "production_understanding": {
-          "type": "principle",
-          "settings": {
-            "title": "Production Understanding",
-            "text": "Every project starts by understanding\nyour workflow, materials and output goals."
-          }
-        },
-        "application_engineering": {
-          "type": "principle",
-          "settings": {
-            "title": "Application-Based Engineering",
-            "text": "Systems are configured around\nreal production requirements,\nnot standard machine lists."
-          }
-        },
-        "deployment_experience": {
-          "type": "principle",
-          "settings": {
-            "title": "Deployment Experience",
-            "text": "Experience from different markets\nhelps us understand practical production challenges."
-          }
-        },
-        "production_support": {
-          "type": "principle",
-          "settings": {
-            "title": "Long-Term Production Support",
-            "text": "We stay connected after delivery\nto support stable daily operation."
-          }
-        }
-      },
-      "block_order": [
-        "production_understanding",
-        "application_engineering",
-        "deployment_experience",
-        "production_support"
-      ],
-      "settings": {
-        "eyebrow": "WHY PRODUCTION TEAMS CHOOSE DRAGON DIAMOND",
-        "heading": "Built Around Production,\nNot Just Machines.",
-        "description": "We help production teams select,\ndeploy and operate reliable manufacturing systems\nbased on real production requirements."
-      }
-    },
-    "v2_1_proof": {
-      "type": "dd-home-worldwide-footprint-v5",
-      "settings": {}
-    },
-    "v5_05_process": {
-      "type": "dd-home-inquiry-to-production-v2",
-      "settings": {}
-    },
-    "v2_1_conversion": {
-      "type": "dd-home-start-project-v1",
-      "blocks": {
-        "production_application": {
-          "type": "project_step",
-          "settings": {
-            "title": "Production Application",
-            "text": "Tell us your products,\nmaterials and application scenario."
-          }
-        },
-        "production_requirements": {
-          "type": "project_step",
-          "settings": {
-            "title": "Production Requirements",
-            "text": "Understand your workflow,\noutput goals and production capacity."
-          }
-        },
-        "engineering_recommendation": {
-          "type": "project_step",
-          "settings": {
-            "title": "Engineering Recommendation",
-            "text": "Develop a suitable production system\nbased on your actual requirements."
-          }
-        }
-      },
-      "block_order": [
-        "production_application",
-        "production_requirements",
-        "engineering_recommendation"
-      ],
-      "settings": {
-        "eyebrow": "PROJECT INITIATION",
-        "heading": "START YOUR PRODUCTION PROJECT",
-        "description": "Tell us what you produce.\n\nWe help define the right manufacturing\nsystem based on your materials,\nworkflow and production goals.",
-        "primary_button_text": "START YOUR PROJECT",
-        "primary_button_url": "/pages/rfq"
+        "laser_image": "shopify://shop_images/lz-1390-cutout-v1.png",
+        "router_image": "shopify://shop_images/lz-1325-standard-cutout-v1.png",
+        "sample_1": "shopify://shop_images/laser-sample-acrylic-letters.jpg",
+        "sample_2": "shopify://shop_images/laser-sample-uv-acrylic-camera.jpg",
+        "sample_3": "shopify://shop_images/cnc-sample-decorative-panel.png",
+        "hero_process_image": "shopify://shop_images/laser-sample-uv-acrylic-camera.jpg",
+        "category_image_3": "shopify://shop_images/lz-t5-fiber-marking-cutout-v1.png",
+        "category_model_3": "LZ-T5",
+        "category_product_3": "/products/lz-t5-desktop-fiber-laser-marking-machine",
+        "category_image_4": "shopify://shop_images/fiber-1530-cutout-v1.png",
+        "category_model_4": "LZ-1530F",
+        "category_product_4": "/products/1530-fiber-laser-cutting-machine",
+        "category_image_5": "shopify://shop_images/lz-f-welding-cutout-v1.png",
+        "category_model_5": "LZ-1500F-3000F",
+        "category_product_5": "/products/lz-f-3-in-1-handheld-laser-welding-machine",
+        "category_model_6": "LZ-6090UV",
+        "category_image_6": "shopify://shop_images/lz-6090uv-cutout-v2.png",
+        "category_product_6": "/products/lz-6090uv-uv-flatbed-printer",
+        "company_factory_image": "shopify://shop_images/dd-factory-customer-team-group.jpg",
+        "company_photo_1": "shopify://shop_images/dd-team-customer-discussion.jpg",
+        "company_photo_2": "shopify://shop_images/dd-laser-production-workshop.jpg",
+        "company_photo_3": "shopify://shop_images/dd-customer-factory-visit.jpg",
+        "company_photo_4": "shopify://shop_images/dd-container-loading.jpg",
+        "company_certificate_1": "shopify://shop_images/dd-certificate-cnc.png",
+        "company_certificate_2": "shopify://shop_images/dd-certificate-laser-lvd-emc.png",
+        "company_certificate_3": "shopify://shop_images/dd-certificate-laser-md.png",
+        "company_certificate_4": "shopify://shop_images/dd-certificate-welding.png",
+        "company_certificate_5": "shopify://shop_images/dd-certificate-marking-lvd-emc.png",
+        "company_certificate_6": "shopify://shop_images/dd-certificate-marking-md.png"
       }
     }
   },
   "order": [
-    "v2_1_hero",
-    "v2_1_applications",
-    "v2_1_proof",
-    "v5_05_process",
-    "v5_05_systems",
-    "v5_06_trust",
-    "v2_1_conversion"
+    "main"
   ]
 }
