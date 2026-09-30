@@ -39,6 +39,11 @@
     assign og_description = 'dd_home.seo_description' | t
     assign seo_description = og_description
   endif
+  if request.page_type == 'page' and template.suffix == 'industry-signage'
+    assign og_title = 'Sign Making Machines: Laser, CNC & UV Printing'
+    assign og_description = 'Explore CO2 laser cutters, CNC routers and UV printers for acrylic signs and printed graphics. Get equipment advice and a free sample test from Dragon Diamond.'
+    assign seo_description = og_description
+  endif
   assign six_model = ''
   if request.page_type == 'product'
     if template.suffix == 'lz-1390-six' and product.handle == 'lz-1390-industrial-co2-laser-cutting-machine'
