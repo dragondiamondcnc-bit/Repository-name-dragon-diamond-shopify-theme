@@ -44,6 +44,11 @@
     assign og_description = 'Explore CO2 laser cutters, CNC routers and UV printers for acrylic signs and printed graphics. Get equipment advice and a free sample test from Dragon Diamond.'
     assign seo_description = og_description
   endif
+  if request.page_type == 'page' and template.suffix == 'industry-display'
+    assign og_title = 'CNC & Laser Machines for Displays and Event Decor'
+    assign og_description = 'Plan CNC routing, laser cutting and UV printing for display panels and event decor. Explore a real Israel customer project and request a free sample test.'
+    assign seo_description = og_description
+  endif
   assign six_model = ''
   if request.page_type == 'product'
     if template.suffix == 'lz-1390-six' and product.handle == 'lz-1390-industrial-co2-laser-cutting-machine'
