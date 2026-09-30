@@ -54,6 +54,11 @@
     assign og_description = 'Explore CNC routing for furniture parts and decorative panels. Compare workholding options, see a Georgia customer project and request a free sample test.'
     assign seo_description = og_description
   endif
+  if request.page_type == 'page' and template.suffix == 'industry-crafts'
+    assign og_title = 'Laser Marking & Cutting Machines for Crafts and Gifts'
+    assign og_description = 'Compare fiber, CO2 and UV laser marking for personalized gifts and laser cutting for acrylic and wood crafts. Explore samples and request a free sample test.'
+    assign seo_description = og_description
+  endif
   assign six_model = ''
   if request.page_type == 'product'
     if template.suffix == 'lz-1390-six' and product.handle == 'lz-1390-industrial-co2-laser-cutting-machine'
