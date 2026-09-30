@@ -59,6 +59,11 @@
     assign og_description = 'Compare fiber, CO2 and UV laser marking for personalized gifts and laser cutting for acrylic and wood crafts. Explore samples and request a free sample test.'
     assign seo_description = og_description
   endif
+  if request.page_type == 'page' and template.suffix == 'industry-textile'
+    assign og_title = 'Vision Laser Cutting for Printed Fabrics & Textiles'
+    assign og_description = 'Explore panoramic vision fabric cutting with the LZ-1816L. Compare standard conveyor and optional roll feeding, see samples and request a free sample test.'
+    assign seo_description = og_description
+  endif
   assign six_model = ''
   if request.page_type == 'product'
     if template.suffix == 'lz-1390-six' and product.handle == 'lz-1390-industrial-co2-laser-cutting-machine'
