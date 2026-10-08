@@ -1,221 +1,46 @@
-{% comment %}
-  Dragon Diamond Case Studies Center - Final Authority Edition
-  Deployment Evidence // Global Validation Hub
-{% endcomment %}
+{% assign form_id = 'CaseIndexInquiry-' | append: section.id %}{% assign machine_names = 'CO2 Laser Cutting Machine,CNC Router,Custom Equipment Proposal' | split: ',' %}<div class="dd-caseview dd-caseindex"><section class="dd-caseview__hero"><div class="dd-caseview__wrap"><p class="dd-caseview__eyebrow">CUSTOMER PROJECTS · DRAGON DIAMOND</p><h1>Laser Cutting &amp; CNC Router Customer Case Studies</h1><p class="dd-caseview__lead">Explore customer projects in signage, event decoration and furniture production. See application photographs, factory visits, equipment preparation and delivery records from Uganda, Ethiopia, Israel and Georgia.</p><div class="dd-caseview__actions"><a class="dd-caseview__button" href="#CaseviewContact">Discuss Your Project</a><a href="#customer-projects">Explore Customer Projects →</a></div></div></section><section class="dd-caseview__section" id="customer-projects"><div class="dd-caseview__wrap"><h2>Find a project related to your application</h2><div class="caseindex-filters" aria-label="Filter customer cases by application"><button type="button" data-case-filter="all" aria-pressed="true">All Projects</button><button type="button" data-case-filter="signage" aria-pressed="false">Signage</button><button type="button" data-case-filter="display" aria-pressed="false">Event Decoration</button><button type="button" data-case-filter="furniture" aria-pressed="false">Furniture</button></div><p class="dd-caseview__note" data-case-count aria-live="polite">4 customer projects</p><div class="caseindex-grid"><article class="caseindex-card" data-case-group="signage"><a href="{{ routes.root_url }}pages/case-uganda-sign-factory" aria-label="Read Uganda customer case"><img src="{{ 'case-evidence-A6f78a48ea0b94f928b5b9aad833cd2a87.jpg' | asset_img_url: '800x' }}" width="800" height="800" loading="lazy" alt="Namirembe Pharmacy signage in Uganda" ></a><div class="caseindex-content"><p class="dd-caseview__eyebrow">Uganda · Signage</p><h3><a href="{{ routes.root_url }}pages/case-uganda-sign-factory">Acrylic signage for schools and businesses</a></h3><p><strong>Project equipment:</strong> LZ-1390 CO2 laser</p><p>Factory discussions, equipment preparation and customer-shared signage projects.</p><a class="dd-caseview__button" href="{{ routes.root_url }}pages/case-uganda-sign-factory">View Case Study</a><div class="caseindex-links"><a href="{{ routes.root_url }}pages/industry-sign">Industry Solution →</a><a href="{{ routes.root_url }}products/lz-1390-industrial-co2-laser-cutting-machine">Current Equipment →</a></div></div></article><article class="caseindex-card" data-case-group="signage"><a href="{{ routes.root_url }}pages/case-study-ethiopia" aria-label="Read Ethiopia customer case"><img src="{{ 'ethiopia-customer-storefront-sign.png' | asset_img_url: '800x' }}" width="800" height="800" loading="lazy" alt="Customer storefront signage in Ethiopia" ></a><div class="caseindex-content"><p class="dd-caseview__eyebrow">Ethiopia · Signage</p><h3><a href="{{ routes.root_url }}pages/case-study-ethiopia">Sign-making equipment, training and delivery</a></h3><p><strong>Project equipment:</strong> CO2 laser + CNC router</p><p>Factory demonstrations, operator training and customer-observed container loading.</p><a class="dd-caseview__button" href="{{ routes.root_url }}pages/case-study-ethiopia">View Case Study</a><div class="caseindex-links"><a href="{{ routes.root_url }}pages/industry-sign">Industry Solution →</a><a href="{{ routes.root_url }}products/lz-1390-industrial-co2-laser-cutting-machine">Current Equipment →</a></div></div></article><article class="caseindex-card" data-case-group="display"><a href="{{ routes.root_url }}pages/case-study-israel" aria-label="Read Israel customer case"><img src="{{ 'israel-application-bat-mitzvah.jpg' | asset_img_url: '800x' }}" width="800" height="800" loading="lazy" alt="Customer event decoration installation in Israel" style="object-position:center 25%"></a><div class="caseindex-content"><p class="dd-caseview__eyebrow">Israel · Event decoration</p><h3><a href="{{ routes.root_url }}pages/case-study-israel">Decorative panels for themed events</a></h3><p><strong>Project equipment:</strong> LZ-1325 CNC router</p><p>From factory sample review to printed-panel processing and finished event installations.</p><a class="dd-caseview__button" href="{{ routes.root_url }}pages/case-study-israel">View Case Study</a><div class="caseindex-links"><a href="{{ routes.root_url }}pages/industry-display">Industry Solution →</a><a href="{{ routes.root_url }}products/lz-1325-cnc-router">Current Equipment →</a></div></div></article><article class="caseindex-card" data-case-group="furniture"><a href="{{ routes.root_url }}pages/case-study-georgia" aria-label="Read Georgia customer case"><img src="{{ 'case-evidence-georgia-product-cart.jpg' | asset_img_url: '800x' }}" width="800" height="800" loading="lazy" alt="Decorated wooden storage cart shared by the Georgia customer" ></a><div class="caseindex-content"><p class="dd-caseview__eyebrow">Georgia · Furniture</p><h3><a href="{{ routes.root_url }}pages/case-study-georgia">Custom wood products and a repeat equipment order</a></h3><p><strong>Project equipment:</strong> Custom CNC router</p><p>Machine preparation, customer furniture applications and a later expansion order.</p><a class="dd-caseview__button" href="{{ routes.root_url }}pages/case-study-georgia">View Case Study</a><div class="caseindex-links"><a href="{{ routes.root_url }}pages/industry-furniture">Industry Solution →</a><a href="{{ routes.root_url }}products/lz-1325-cnc-router">Current Equipment →</a></div></div></article></div><p class="dd-caseview__note">Case photographs show historical customer projects. Equipment and accessories may differ from current standard configurations. Confirm materials, options and final specifications for your own order.</p></div></section><section class="dd-caseview__section dd-caseview__tint"><div class="dd-caseview__wrap"><h2>From a customer example to your own equipment plan</h2><div class="dd-caseview__grid"><div class="dd-caseview__panel"><h3>1. Share your application</h3><p>Send your materials, dimensions, artwork and production requirements.</p></div><div class="dd-caseview__panel"><h3>2. Review the process</h3><p>Discuss suitable equipment and request a free sample test on your material.</p></div><div class="dd-caseview__panel"><h3>3. Confirm your configuration</h3><p>Agree equipment options, packing, delivery and technical support in your quotation.</p></div></div><p><a href="#CaseviewContact">Request a Free Sample Test →</a></p></div></section><section class="dd-caseview__section" id="CaseviewContact"><div class="dd-caseview__wrap dd-caseview__split"><div><p class="dd-caseview__eyebrow">TELL US WHAT YOU WANT TO MAKE</p><h2>Get an equipment proposal for your production project</h2><p>Share your material, thickness, finished size and production requirements. We will help you plan the equipment and a free sample test.</p><p><a href="mailto:info@gzcnc-laser.com">info@gzcnc-laser.com</a><br><a href="https://wa.me/8618988946615">WhatsApp: +86 189 8894 6615</a></p><p class="dd-caseview__note">Need to share artwork or photos? Send them by email or WhatsApp. Name, email and message are required.</p></div>
+    {% form 'contact', id: form_id %}<p class="dd-caseview__note">This inquiry relates to {{ page.title | escape }}.</p>
+      <input type="hidden" name="contact[Source]" value="Customer case study">
+      {% if form.posted_successfully? %}<div class="dd-caseview__success" role="status" tabindex="-1" data-caseview-success><strong>Thank you — your inquiry has been sent.</strong><p>Our team will review your requirements and contact you by email. You do not need to submit the same inquiry again.</p></div><dialog data-caseview-dialog aria-labelledby="CaseviewSuccessTitle"><h2 id="CaseviewSuccessTitle">Inquiry sent successfully</h2><p>Thank you for contacting Dragon Diamond. Our team will review your requirements and contact you by email.</p><button type="button" class="dd-caseview__button" data-caseview-close>Got it</button></dialog>{% endif %}
+      {% if form.errors %}<div role="alert">{{ form.errors | default_errors }}</div>{% endif %}
+      <div class="dd-caseview__fields"><div><label for="CaseviewName-{{ section.id }}">Name *</label><input id="CaseviewName-{{ section.id }}" name="contact[name]" autocomplete="name" value="{{ form.name | escape }}" required></div><div><label for="CaseviewEmail-{{ section.id }}">Email *</label><input id="CaseviewEmail-{{ section.id }}" name="contact[email]" type="email" autocomplete="email" value="{{ form.email | escape }}" required></div><div><label for="CaseviewCompany-{{ section.id }}">Company</label><input id="CaseviewCompany-{{ section.id }}" name="contact[Company]" autocomplete="organization" value="{{ form.Company | escape }}"></div><div><label for="CaseviewWA-{{ section.id }}">WhatsApp</label><input id="CaseviewWA-{{ section.id }}" name="contact[WhatsApp]" type="tel" autocomplete="tel" value="{{ form.WhatsApp | escape }}"></div></div>
+      <label for="CaseviewProduct-{{ section.id }}">Product Interested</label><select id="CaseviewProduct-{{ section.id }}" name="contact[Product Interested]"><option>Similar project / need advice</option>{% for name in machine_names %}<option>{{ name }}</option>{% endfor %}<option>Other production requirements</option></select>
+      <label for="CaseviewMessage-{{ section.id }}">Message *</label><textarea id="CaseviewMessage-{{ section.id }}" name="contact[body]" rows="5" placeholder="Material, part size, application, equipment requirements and destination country..." required>{{ form.body | escape }}</textarea><button type="submit" class="dd-caseview__button">Send Inquiry</button>
+    {% endform %}
+  </div></section></div><script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Laser Cutting and CNC Router Customer Case Studies","url":{{ canonical_url | json }},"mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"name":"Uganda — Acrylic signage for schools and businesses","url":{{ request.origin | append: '/pages/case-uganda-sign-factory' | json }}},{"@type":"ListItem","position":2,"name":"Ethiopia — Sign-making equipment, training and delivery","url":{{ request.origin | append: '/pages/case-study-ethiopia' | json }}},{"@type":"ListItem","position":3,"name":"Israel — Decorative panels for themed events","url":{{ request.origin | append: '/pages/case-study-israel' | json }}},{"@type":"ListItem","position":4,"name":"Georgia — Custom wood products and a repeat equipment order","url":{{ request.origin | append: '/pages/case-study-georgia' | json }}}]}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":{{ request.origin | json }}},{"@type":"ListItem","position":2,"name":"Case Studies","item":{{ canonical_url | json }}}]}</script>
+{% stylesheet %}
+.dd-caseview{color:#163237;background:#fff;font-family:Arial,sans-serif;font-size:17px;line-height:1.65}.dd-caseview *{box-sizing:border-box}.dd-caseview__wrap{max-width:1280px;margin:auto;padding:0 32px}.dd-caseview__section{padding:76px 0}.dd-caseview__tint{background:#eff5f4}.dd-caseview__hero{background:#14373b;color:#fff;padding:135px 0 64px}.dd-caseview__crumb{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;margin-bottom:44px}.dd-caseview .dd-caseview__hero a{color:#80e0d7}.dd-caseview__split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}.dd-caseview__hero .dd-caseview__split{align-items:center}.dd-caseview h1,.dd-caseview h2,.dd-caseview h3{font-family:var(--font-heading--family,Arial,sans-serif);color:inherit;letter-spacing:-.025em;line-height:1.16;margin:0 0 20px}.dd-caseview h1{font-size:clamp(36px,3.4vw,54px)}.dd-caseview h2{font-size:clamp(28px,2.6vw,38px)}.dd-caseview h3{font-size:23px;margin-bottom:14px}.dd-caseview p{margin:0 0 20px}.dd-caseview__eyebrow{font-size:12px;font-weight:700;letter-spacing:2px;color:#087d83}.dd-caseview__hero .dd-caseview__eyebrow{color:#80e0d7}.dd-caseview__lead{font-size:19px}.dd-caseview__intro{max-width:800px}.dd-caseview__actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin:28px 0}.dd-caseview a{color:#08777b;text-underline-offset:4px}.dd-caseview__button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 20px;background:#087c80;color:#fff!important;border:0;border-radius:4px;font:700 15px/1.4 Arial,sans-serif;text-decoration:none;cursor:pointer;text-align:center}.dd-caseview__hero .dd-caseview__button{background:#74dfd3;color:#10383b!important}.dd-caseview figure{margin:0}.dd-caseview img{display:block;width:100%;height:auto}.dd-caseview__hero img{aspect-ratio:4/3;object-fit:cover;border-radius:10px}.dd-caseview figcaption,.dd-caseview__note{font-size:14px;margin-top:18px!important}.dd-caseview__hero figcaption{color:#c4dcde}.dd-caseview__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:30px}.dd-caseview__two{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:30px}.dd-caseview__card{border:1px solid #d6e2e2;border-radius:8px;overflow:hidden;background:#fff;display:flex;flex-direction:column}.dd-caseview__card img{aspect-ratio:16/10;object-fit:cover}.dd-caseview__body{padding:24px;flex:1;display:flex;flex-direction:column}.dd-caseview__body>a:last-child{margin-top:auto}.dd-caseview__body ul{padding-left:20px;margin:0 0 24px;font-size:15px}.dd-caseview__machine>a{background:#e8f0ef}.dd-caseview__machine img{object-fit:contain;padding:18px;aspect-ratio:4/3}.dd-caseview__panel{padding:26px;background:#fff;border-radius:8px;border-top:3px solid #087f82}.dd-caseview__panel p{margin:0}.dd-caseview__steps{list-style:none;margin:0;padding:0;border-left:2px solid #83c9c5}.dd-caseview__steps li{padding:0 0 20px 26px}.dd-caseview__steps li:last-child{padding-bottom:0}.dd-caseview__steps h3{font-size:21px}.dd-caseview__faq details{border-bottom:1px solid #b9cecc}.dd-caseview__faq summary{padding:18px 0;min-height:48px;cursor:pointer;font-weight:700}.dd-caseview__faq details p{padding:0 0 16px}.dd-caseview__fields{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}.dd-caseview label{display:block;margin-bottom:6px;font-size:15px;font-weight:700}.dd-caseview input,.dd-caseview textarea,.dd-caseview select{display:block;width:100%;max-width:100%;min-height:48px;padding:12px;border:1px solid #a8c0c0;border-radius:4px;background:#fff;color:#163237;font:16px/1.4 Arial,sans-serif;margin-bottom:18px}.dd-caseview textarea{resize:vertical}.dd-caseview [id]{scroll-margin-top:125px}.dd-caseview :focus-visible{outline:3px solid #d18b24;outline-offset:4px}.dd-caseview__success{padding:20px;background:#e0f5ee;border:2px solid #087c80;margin-bottom:24px;border-radius:6px}.dd-caseview dialog{max-width:520px;width:calc(100% - 32px);padding:30px;border:0;border-radius:10px;color:#163237}.dd-caseview dialog::backdrop{background:#082429b3}.dd-caseview__two img{object-fit:contain;background:#edf3f2}.dd-caseview a{overflow-wrap:anywhere}@media(max-width:899px){.dd-caseview__wrap{padding:0 22px}.dd-caseview__split{grid-template-columns:1fr;gap:32px}.dd-caseview__grid{grid-template-columns:1fr}.dd-caseview__section{padding:48px 0}.dd-caseview__hero{padding-top:105px}.dd-caseview__crumb{margin-bottom:28px}.dd-caseview__hero img{aspect-ratio:16/10}.dd-caseview__machine img{max-height:310px}.dd-caseview__two{grid-template-columns:1fr}.dd-caseview__body{padding:22px}.dd-caseview__actions{align-items:flex-start;flex-direction:column}.dd-caseview__fields{grid-template-columns:1fr}}
+.dd-caseview__compare{overflow-x:auto}.dd-caseview table{width:100%;border-collapse:collapse;font-size:16px}.dd-caseview th,.dd-caseview td{text-align:left;vertical-align:top;border:1px solid #c3d4d4;padding:16px}.dd-caseview th{background:#edf4f3}.dd-caseview .cnc-machines{grid-template-columns:repeat(2,minmax(0,1fr))}.dd-caseview .cnc-machines img{height:330px;object-fit:contain;padding:18px;background:#edf3f3}.dd-caseview .dd-caseview__hero img{aspect-ratio:4/3;object-fit:contain}.dd-caseview .co2-model{font-size:28px;margin-bottom:12px}.dd-caseview .co2-need{font-weight:700;color:#087f82}.dd-caseview .co2-specs{font-size:15px}.dd-caseview .co2-additional{grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:700px){.dd-caseview .cnc-machines,.dd-caseview .co2-additional{grid-template-columns:1fr}.dd-caseview table{min-width:610px}.dd-caseview .cnc-machines img{height:290px}}.cnc-config{margin:22px 0}.cnc-config>div{display:grid;grid-template-columns:1fr 1.5fr;gap:14px;padding:12px 0;border-bottom:1px solid #c3d4d4}.cnc-config dt{font-weight:700}.cnc-config dd{margin:0}.dd-caseview__panel>a{display:inline-block;margin-top:18px}.dd-caseview #CaseviewMachine img{object-fit:contain;max-height:450px}.dd-caseview__two .dd-caseview__card img{height:310px;object-fit:cover;object-position:center 42%}.dd-caseview .dd-caseview__hero img{object-fit:contain}@media(max-width:700px){.cnc-config>div{grid-template-columns:1fr;gap:5px}.dd-caseview__two .dd-caseview__card img{height:260px}}.fiber-sample-window{position:relative;overflow:hidden;aspect-ratio:4/3;border-radius:8px}.dd-caseview .fiber-original-samples{display:block;width:100%;height:100%;object-fit:contain}.dd-caseview .dd-caseview__hero img{object-fit:contain}.dd-caseview .weld-sample{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+.dd-caseview .dd-caseview__hero img{aspect-ratio:4/3;object-fit:contain;max-height:520px}.case-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:24px 0}.case-gallery img{width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;background:#e9efee;border-radius:6px}.case-gallery figure{min-width:0}.case-gallery figcaption{font-size:14px;line-height:1.5}.case-nav,.case-links{display:flex;flex-wrap:wrap;gap:16px 28px;margin-top:28px}.case-config-note{padding:18px;border-left:3px solid #00858a;background:white;font-size:15px}.case-stages{padding-left:24px}.case-stages li{padding:14px 0;border-bottom:1px solid #c3d4d4}.case-more{margin-top:26px}.case-more summary{padding:18px 0;cursor:pointer;font-weight:700}.dd-caseview .dd-caseview__panel h2{font-size:20px}.dd-caseview section[id]{scroll-margin-top:110px}@media(max-width:749px){.case-gallery{grid-template-columns:1fr;gap:24px}.case-gallery img{max-height:350px}.case-nav{font-size:14px;gap:12px 20px}}
 
-<div class="dd-case-center dd-industrial-v4">
-  <!-- HERO SECTION -->
-  <section class="dd-center-hero">
-    <div class="dd-container">
-      <h1 class="dd-title">GLOBAL DEPLOYMENT EVIDENCE</h1>
-      <p class="dd-subtitle">Verified CNC Router, Laser Cutting and Laser Marking System Installations Across Multiple Industries.</p>
-      
-      <div class="dd-intro-text">
-        <p>Dragon Diamond supports manufacturers, sign makers, furniture workshops and industrial fabricators worldwide. This evidence center documents real machine deployments, factory visits, technical training, export delivery and production validation from global customers.</p>
-      </div>
-    </div>
-  </section>
+/* Photo review 2026-10-08: native proportions, no fixed image boxes. */
+.dd-caseview .dd-caseview__hero img{width:100%;height:auto;aspect-ratio:auto;max-height:none;object-fit:initial;background:transparent}
+.dd-caseview .dd-caseview__hero figure{width:100%;max-width:480px;justify-self:center}
+.dd-caseview .case-gallery{display:block;margin:24px 0}
+.dd-caseview .case-photo-row{display:grid;grid-template-columns:var(--case-columns);gap:24px;align-items:start;margin-bottom:28px}
+.dd-caseview .case-photo-row--single{max-width:680px}
+.dd-caseview .case-gallery figure{margin:0;min-width:0}
+.dd-caseview .case-gallery a{display:block}
+.dd-caseview .case-gallery img{display:block;width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:initial;background:transparent;border-radius:6px}
+.dd-caseview .case-gallery figcaption{margin-top:12px;font-size:15px;line-height:1.5}
+@media(max-width:749px){.dd-caseview .case-photo-row{grid-template-columns:1fr;gap:24px}.dd-caseview .dd-caseview__hero figure{max-width:100%}}
 
-  <!-- CASE GRID SECTION -->
-  <section class="dd-case-grid-section">
-    <div class="dd-container">
-      <div class="dd-case-grid">
-        <!-- CASE_001: Uganda -->
-        <div class="dd-case-card">
-          <div class="dd-case-media">
-            <img src="https://sc01.alicdn.com/kf/Ha2366552ccda4d7c999d224a8ab9810dj.jpg" alt="Uganda Signage Factory">
-            <div class="dd-case-tag">CASE_001</div>
-          </div>
-          <div class="dd-case-content">
-            <div class="dd-case-meta">
-              <div class="dd-meta-item"><span>COUNTRY</span><strong>UGANDA</strong></div>
-              <div class="dd-meta-item"><span>INDUSTRY</span><strong>COMMERCIAL SIGN MAKING</strong></div>
-            </div>
-            <div class="dd-case-summary">
-              <p>Factory-direct deployment for acrylic letters, illuminated signs and commercial branding production.</p>
-            </div>
-            <div class="dd-case-specs">
-              <div class="dd-spec-row"><span>SYSTEM</span><strong>LZ-1390 LASER CUTTING MACHINE</strong></div>
-              <div class="dd-spec-row"><span>STATUS</span><strong class="status-running">PRODUCTION RUNNING</strong></div>
-            </div>
-            <a href="/pages/case-uganda-sign-factory" class="dd-btn-outline">VIEW DEPLOYMENT LOG</a>
-          </div>
-        </div>
+.dd-caseview .case-photo-trim-bars a{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:6px}.dd-caseview .case-photo-trim-bars a img{position:absolute;top:50%;left:0;width:100%;height:auto;transform:translateY(-50%);border-radius:0}
+@media(max-width:749px){.dd-caseview [data-compact-israel-gallery] .case-photo-row figure{width:100%;max-width:var(--compact-photo-width);justify-self:center}}
+.dd-caseview [data-israel-square] .case-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 24px;max-width:1100px;margin:24px auto}
+.dd-caseview [data-israel-square] .case-photo-row{display:contents}
+.dd-caseview [data-israel-square] .case-gallery figure{width:100%;max-width:none;margin:0}
+.dd-caseview [data-israel-square] .case-gallery a{display:block;aspect-ratio:1;overflow:hidden;border-radius:6px}
+.dd-caseview [data-israel-square] .case-gallery img{width:100%;height:100%;aspect-ratio:1;object-fit:cover;object-position:center}
+.dd-caseview [data-israel-square].dd-caseview__hero img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;object-position:center 65%}
+.dd-caseview [data-israel-square] img[alt*="event installation"]{object-position:center 25%}
+.dd-caseview [data-israel-square] img[alt*="group photo"]{object-position:center 40%}
+@media(max-width:749px){.dd-caseview [data-israel-square] .case-gallery{grid-template-columns:1fr;max-width:340px}.dd-caseview [data-israel-square] .case-photo-row figure{max-width:none}}
 
-        <!-- CASE_002: Georgia -->
-        <div class="dd-case-card">
-          <div class="dd-case-media">
-            <img src="https://sc02.alicdn.com/kf/A21a6f4b6f987470cb208f13ec8b08bacN.png" alt="Georgia Furniture Workshop" style="--zoom: 1.5; --pos: center 40%;">
-            <div class="dd-case-tag">CASE_002</div>
-          </div>
-          <div class="dd-case-content">
-            <div class="dd-case-meta">
-              <div class="dd-meta-item"><span>COUNTRY</span><strong>GEORGIA</strong></div>
-              <div class="dd-meta-item"><span>INDUSTRY</span><strong>FURNITURE MANUFACTURING</strong></div>
-            </div>
-            <div class="dd-case-summary">
-              <p>Verified referral purchase in 2023 followed by a larger 2026 ATC CNC Router upgrade. 2023-2026 repeat purchase journey.</p>
-            </div>
-            <div class="dd-case-specs">
-              <div class="dd-spec-row"><span>SYSTEM</span><strong>1325 CNC + 2128 ATC</strong></div>
-              <div class="dd-spec-row"><span>STATUS</span><strong class="status-orders">REPEAT PURCHASE</strong></div>
-            </div>
-            <a href="/pages/case-study-georgia" class="dd-btn-outline">VIEW DEPLOYMENT LOG</a>
-          </div>
-        </div>
+.caseindex-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}.caseindex-card{border:1px solid #d6e2e2;border-radius:12px;overflow:hidden;background:white;display:flex;flex-direction:column}.caseindex-card[hidden]{display:none}.caseindex-card img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover}.caseindex-content{padding:28px;display:flex;flex-direction:column;align-items:start;flex:1}.caseindex-content h3{font-size:28px;margin:0 0 16px}.caseindex-content h3 a{text-decoration:none;color:inherit}.caseindex-content .dd-caseview__button{margin-top:auto}.caseindex-links{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:20px}.caseindex-filters{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}.caseindex-filters button{font:inherit;padding:12px 20px;border:1px solid #087c83;border-radius:6px;background:white;color:#135158;cursor:pointer}.caseindex-filters button[aria-pressed=true]{background:#087c83;color:white}.caseindex-filters button:focus-visible{outline:3px solid #183f47;outline-offset:3px}@media(max-width:749px){.caseindex-grid{grid-template-columns:1fr}.caseindex-content{padding:22px}.caseindex-content h3{font-size:25px}}
+{% endstylesheet %}{% javascript %}
+function initCaseviewFeedback(){document.querySelectorAll('[data-caseview-dialog]').forEach(dialog=>{if(dialog.dataset.ready)return;dialog.dataset.ready='true';const status=dialog.closest('form').querySelector('[data-caseview-success]');dialog.querySelector('[data-caseview-close]').addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>status.focus());if(typeof dialog.showModal==='function')dialog.showModal();else status.focus();});}
+initCaseviewFeedback();document.addEventListener('shopify:section:load',initCaseviewFeedback);
 
-        <!-- CASE_005: Ethiopia -->
-        <div class="dd-case-card">
-          <div class="dd-case-media">
-            <img src="https://sc02.alicdn.com/kf/A40abebafe10d44009c1d8f37f7cd0e06E.png" alt="Ethiopia Advertising Production">
-            <div class="dd-case-tag">CASE_005</div>
-          </div>
-          <div class="dd-case-content">
-            <div class="dd-case-meta">
-              <div class="dd-meta-item"><span>COUNTRY</span><strong>ETHIOPIA</strong></div>
-              <div class="dd-meta-item"><span>INDUSTRY</span><strong>ADVERTISING & SIGNAGE</strong></div>
-            </div>
-            <div class="dd-case-summary">
-              <p>Verified production deployment of CO2 Laser and CNC solutions for the Addis Ababa advertising market.</p>
-            </div>
-            <div class="dd-case-specs">
-              <div class="dd-spec-row"><span>SYSTEM</span><strong>CNC + CO2 LASER</strong></div>
-              <div class="dd-spec-row"><span>STATUS</span><strong class="status-running">PRODUCTION RUNNING</strong></div>
-            </div>
-            <a href="/pages/case-study-005-ethiopia" class="dd-btn-outline">VIEW DEPLOYMENT LOG</a>
-          </div>
-        </div>
-
-        <!-- CASE_004: Israel -->
-        <div class="dd-case-card">
-          <div class="dd-case-media">
-            <img src="https://sc02.alicdn.com/kf/A02931f37b93640579151ac6f67b16c798.png" alt="Israel Event Decoration Workshop">
-            <div class="dd-case-tag">CASE_004</div>
-          </div>
-          <div class="dd-case-content">
-            <div class="dd-case-meta">
-              <div class="dd-meta-item"><span>COUNTRY</span><strong>ISRAEL</strong></div>
-              <div class="dd-meta-item"><span>INDUSTRY</span><strong>EVENT DECORATION</strong></div>
-            </div>
-            <div class="dd-case-summary">
-              <p>Documented journey from factory verification to commercial event production in Israel using LZ-1325 CNC Router.</p>
-            </div>
-            <div class="dd-case-specs">
-              <div class="dd-spec-row"><span>SYSTEM</span><strong>CNC ROUTER SYSTEM</strong></div>
-              <div class="dd-spec-row"><span>STATUS</span><strong class="status-running">PRODUCTION RUNNING</strong></div>
-            </div>
-            <a href="/pages/case-study-israel" class="dd-btn-outline">VIEW DEPLOYMENT LOG</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY CHOOSE SECTION -->
-  <section class="dd-why-choose">
-    <div class="dd-container">
-      <div class="dd-section-header">
-        <h2 class="dd-title">WHY GLOBAL MANUFACTURERS CHOOSE DRAGON DIAMOND</h2>
-      </div>
-      
-      <div class="dd-why-grid">
-        <div class="dd-why-col">
-          <div class="dd-why-icon">01</div>
-          <h3>FACTORY VERIFICATION</h3>
-          <p>Real customer visits and machine inspections at our manufacturing facility to verify engineering standards.</p>
-        </div>
-        <div class="dd-why-col">
-          <div class="dd-why-icon">02</div>
-          <h3>TECHNICAL TRAINING</h3>
-          <p>Comprehensive factory-based and remote technical support programs to ensure rapid deployment and operational stability.</p>
-        </div>
-        <div class="dd-why-col">
-          <div class="dd-why-icon">03</div>
-          <h3>PRODUCTION VALIDATION</h3>
-          <p>Real production results and performance verification from actual customer environments across the globe.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA SECTION -->
-  <section class="dd-case-cta">
-    <div class="dd-container">
-      <div class="dd-cta-box">
-        <h2 class="dd-title">NEED A PRODUCTION SOLUTION?</h2>
-        <a href="#consultation" class="dd-btn-solid">REQUEST TECHNICAL CONSULTATION</a>
-      </div>
-    </div>
-  </section>
-</div>
-
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&display=swap');
-
-  .dd-case-center { background: #0F1115; color: #FFF; font-family: 'Archivo Narrow', sans-serif; }
-  .dd-center-hero { padding: 120px 0 80px; border-bottom: 1px solid rgba(255,255,255,0.05); }
-  .dd-subtitle { font-size: 24px; color: #00A3AD; margin: 24px 0; font-weight: 700; letter-spacing: -1px; }
-  .dd-intro-text { max-width: 800px; opacity: 0.6; line-height: 1.8; font-size: 16px; margin-top: 40px; }
-  
-  .dd-case-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding: 100px 32px 100px 0; }
-  .dd-case-card { background: #1A1C20; border: 1px solid rgba(255,255,255,0.05); display: flex; flex-direction: column; height: 100%; }
-  .dd-case-media { position: relative; aspect-ratio: 16/10; overflow: hidden; }
-  .dd-case-media img { 
-    width: 100%; height: 100%; object-fit: cover; 
-    filter: contrast(1.1); 
-    transform: scale(var(--zoom, 1.1)); 
-    object-position: var(--pos, center);
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease; 
-  }
-  .dd-case-card:hover .dd-case-media img { 
-    transform: scale(calc(var(--zoom, 1.1) * 1.03)); 
-    filter: brightness(1.05); 
-  }
-  .dd-case-tag { position: absolute; top: 0; left: 0; background: #00A3AD; color: #000; font-size: 10px; font-weight: 700; padding: 8px 16px; letter-spacing: 2px; z-index: 10; }
-  
-  .dd-case-content { padding: 32px; flex-grow: 1; display: flex; flex-direction: column; }
-  .dd-case-meta { display: grid; grid-template-columns: 1fr; gap: 16px; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.05); }
-  .dd-meta-item span { display: block; font-size: 8px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 4px; font-weight: 700; }
-  .dd-meta-item strong { display: block; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; color: #FFF; }
-  
-  .dd-case-summary { margin-bottom: 24px; flex-grow: 1; }
-  .dd-case-summary p { font-size: 13px; line-height: 1.6; opacity: 0.6; margin: 0; }
-  
-  .dd-case-specs { margin-bottom: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.05); }
-  .dd-spec-row { margin-bottom: 16px; }
-  .dd-spec-row:last-child { margin-bottom: 0; }
-  .dd-spec-row span { display: block; font-size: 8px; opacity: 0.4; letter-spacing: 2px; margin-bottom: 4px; font-weight: 700; }
-  .dd-spec-row strong { display: block; font-size: 11px; color: #FFF; font-weight: 700; letter-spacing: 0.5px; }
-  .dd-spec-row strong.status-running { color: #00FF88; }
-  .dd-spec-row strong.status-orders { color: #00A3AD; }
-  .dd-spec-row strong.status-training { color: #FFCC00; }
-  .dd-spec-row strong.status-remote { color: #00A3AD; }
-  
-  .dd-case-card .dd-btn-outline { align-self: flex-start; }
-  
-  .dd-why-choose { padding: 120px 0; background: rgba(255,255,255,0.02); }
-  .dd-why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 64px; margin-top: 80px; }
-  .dd-why-icon { font-size: 12px; font-weight: 700; color: #00A3AD; border: 1px solid #00A3AD; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; margin-bottom: 32px; }
-  .dd-why-col h3 { font-size: 16px; font-weight: 700; letter-spacing: 2px; margin-bottom: 24px; color: #FFF; }
-  .dd-why-col p { font-size: 14px; opacity: 0.5; line-height: 1.8; margin: 0; }
-  
-  .dd-case-cta { padding: 120px 0; }
-  .dd-cta-box { background: #00A3AD; padding: 100px; text-align: center; }
-  .dd-cta-box h2 { font-size: 48px; font-weight: 700; letter-spacing: -2px; margin-bottom: 48px; color: #000; }
-  .dd-cta-box .dd-btn-solid { background: #000; color: #FFF; border-color: #000; padding: 24px 64px; }
-  .dd-cta-box .dd-btn-solid:hover { background: #FFF; color: #000; }
-  
-  @media (max-width: 1024px) {
-    .dd-case-grid, .dd-why-grid { grid-template-columns: 1fr; }
-    .dd-cta-box { padding: 60px 40px; }
-    .dd-cta-box h2 { font-size: 32px; }
-  }
-</style>
-
-{% schema %}
-{
-  "name": "Case Studies Center Final",
-  "settings": [],
-  "presets": [{"name": "Case Studies Center Final"}]
-}
-{% endschema %}
+document.querySelectorAll('.dd-caseindex').forEach(root=>{root.querySelectorAll('[data-case-filter]').forEach(button=>button.addEventListener('click',()=>{const selected=button.dataset.caseFilter;root.querySelectorAll('[data-case-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));let count=0;root.querySelectorAll('[data-case-group]').forEach(card=>{card.hidden=selected!=='all'&&card.dataset.caseGroup!==selected;if(!card.hidden)count++;});root.querySelector('[data-case-count]').textContent=count+' customer project'+(count===1?'':'s');}));});
+{% endjavascript %}{% schema %}{"name":"Customer Case Studies","settings":[]}{% endschema %}

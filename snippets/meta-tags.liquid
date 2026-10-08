@@ -36,6 +36,8 @@
   assign seo_description = page_description
   if request.page_type == 'page' and seo_description == blank
     case page.handle
+      when 'case-studies'
+        assign seo_description = 'Explore laser cutting and CNC router customer projects in signage, event decoration and furniture. See factory visits, applications and delivery records.'
       when 'case-study-ethiopia'
         assign seo_description = 'Explore an Ethiopia customer factory visit and equipment training at Dragon Diamond. Discuss your production needs, sample testing and technical support.'
       when 'case-study-georgia'
