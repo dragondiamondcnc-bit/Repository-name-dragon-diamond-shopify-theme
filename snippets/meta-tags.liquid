@@ -77,6 +77,11 @@
     assign og_description = 'Explore panoramic vision fabric cutting with the LZ-1816L. Compare standard conveyor and optional roll feeding, see samples and request a free sample test.'
     assign seo_description = og_description
   endif
+  if request.page_type == 'page' and template.suffix == 'factory'
+    assign og_title = 'Laser & CNC Equipment Factory in Guangzhou'
+    assign og_description = 'Explore Dragon Diamond workshop, team, customer visits, exhibitions and container loading. Established in 2012 in Guangzhou. Arrange a visit or free sample test.'
+    assign seo_description = og_description
+  endif
   assign six_model = ''
   if request.page_type == 'product'
     if template.suffix == 'lz-1390-six' and product.handle == 'lz-1390-industrial-co2-laser-cutting-machine'
