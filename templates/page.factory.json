@@ -1,0 +1,27 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "dd-factory-page",
+      "settings": {
+        "company_certificate_1": "shopify://shop_images/dd-certificate-cnc.png",
+        "company_certificate_2": "shopify://shop_images/dd-certificate-laser-lvd-emc.png",
+        "company_certificate_3": "shopify://shop_images/dd-certificate-laser-md.png",
+        "company_certificate_4": "shopify://shop_images/dd-certificate-welding.png",
+        "company_certificate_5": "shopify://shop_images/dd-certificate-marking-lvd-emc.png",
+        "company_certificate_6": "shopify://shop_images/dd-certificate-marking-md.png"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
