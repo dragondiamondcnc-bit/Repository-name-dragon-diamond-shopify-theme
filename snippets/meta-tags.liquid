@@ -1,3 +1,4 @@
+{% if page.handle == 'case-study-005-ethiopia' %}{% assign canonical_url = request.origin | append: routes.root_url | append: 'pages/case-study-ethiopia' %}{% endif %}
 {% liquid
   assign dd_inquiry_product = false
   if product.tags contains 'b2b-inquiry'
@@ -36,6 +37,20 @@
   assign seo_description = page_description
   if request.page_type == 'page' and seo_description == blank
     case page.handle
+      when 'production-systems'
+        assign seo_description = 'Compare laser cutting, CNC routing, UV printing, welding and marking by application. Review customer projects and discuss your equipment requirements.'
+      when 'co2-laser-cutting-solution'
+        assign seo_description = 'Plan CO2 laser cutting and engraving for acrylic, wood and sign components. Review the LZ-1390, application requirements and customer project records.'
+      when 'about-us'
+        assign seo_description = 'Meet Guangzhou Dragon Diamond Technology Co., Ltd., established in 2012. Explore our factory, laser and CNC equipment, customer projects and technical support.'
+      when 'customization'
+        assign seo_description = 'Discuss equipment configuration, optional accessories and sample testing with Dragon Diamond. Share materials, dimensions and production requirements for review.'
+      when 'industry-acrylic'
+        assign seo_description = 'Review CO2 laser cutting, engraving and UV printing for acrylic signs, display parts and gifts. Compare equipment and request testing of your actual material.'
+      when 'industry-metal'
+        assign seo_description = 'Compare fiber laser cutting, handheld laser welding and marking for metal applications. Share your material and process requirements for equipment selection.'
+      when 'case-study-005-ethiopia'
+        assign seo_description = 'Explore an Ethiopia customer factory visit, equipment discussion and training with Dragon Diamond. Review project photographs and discuss your own requirements.'
       when 'case-studies'
         assign seo_description = 'Explore laser cutting and CNC router customer projects in signage, event decoration and furniture. See factory visits, applications and delivery records.'
       when 'case-study-ethiopia'

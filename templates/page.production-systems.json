@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "systems_hero": {
@@ -118,16 +127,16 @@
     "evidence": {
       "type": "dd-systems-evidence-v1",
       "blocks": {
-        "uganda": { "type": "evidence", "settings": { "country": "Uganda", "system": "CO₂ Laser Cutting", "application": "High-volume signage fabrication", "status": "Production running", "link": "/pages/case-uganda-sign-factory" } },
-        "ethiopia": { "type": "evidence", "settings": { "country": "Ethiopia", "system": "CO₂ Laser + CNC Router", "application": "Advertising and signage production", "status": "Production running", "link": "/pages/case-study-ethiopia" } },
+        "uganda": { "type": "evidence", "settings": { "country": "Uganda", "system": "CO₂ Laser Cutting", "application": "Signage fabrication", "status": "Project records", "link": "/pages/case-uganda-sign-factory" } },
+        "ethiopia": { "type": "evidence", "settings": { "country": "Ethiopia", "system": "CO₂ Laser + CNC Router", "application": "Advertising and signage production", "status": "Project records", "link": "/pages/case-study-ethiopia" } },
         "georgia": { "type": "evidence", "settings": { "country": "Georgia", "system": "CNC Router", "application": "Furniture and panel processing", "status": "Repeat purchase", "link": "/pages/case-study-georgia" } },
-        "israel": { "type": "evidence", "settings": { "country": "Israel", "system": "CNC Router", "application": "Display and event production", "status": "Production running", "link": "/pages/case-study-israel" } }
+        "israel": { "type": "evidence", "settings": { "country": "Israel", "system": "CNC Router", "application": "Display and event production", "status": "Project records", "link": "/pages/case-study-israel" } }
       },
       "block_order": ["uganda", "ethiopia", "georgia", "israel"],
       "settings": {
-        "eyebrow": "VERIFIED EVIDENCE / 04",
+        "eyebrow": "CUSTOMER PROJECTS / 04",
         "heading": "Production Systems In Operation",
-        "description": "Documented deployments connect system selection with real applications and operating status."
+        "description": "Customer project records connect equipment selection with applications, factory visits and training."
       }
     },
     "systems_cta": {

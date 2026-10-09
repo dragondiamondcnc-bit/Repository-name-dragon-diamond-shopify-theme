@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "solution_hero": { "type": "dd-solution-hero-v1", "settings": { "button_url": "/pages/contact?source=co2-laser-solution" } },
@@ -57,8 +66,8 @@
     "solution_evidence": {
       "type": "dd-solution-evidence-v1",
       "blocks": {
-        "uganda": { "type": "deployment", "settings": { "location": "UGANDA", "context": "SIGN PRODUCTION", "system": "CO₂ Laser Cutting System", "status": "Active Production", "image_alt": "Uganda sign production deployment", "link_label": "VIEW CASE STUDY", "link_url": "/pages/case-uganda-sign-factory" } },
-        "ethiopia": { "type": "deployment", "settings": { "location": "ETHIOPIA", "context": "INTEGRATED FABRICATION", "system": "CO₂ Laser + CNC Router", "status": "Production Commissioned", "image_alt": "Ethiopia integrated fabrication deployment", "link_label": "VIEW CASE STUDY", "link_url": "/pages/case-study-ethiopia" } }
+        "uganda": { "type": "deployment", "settings": { "location": "UGANDA", "context": "SIGN PRODUCTION", "system": "CO₂ Laser Cutting System", "status": "Project records", "image_alt": "Uganda sign production deployment", "link_label": "VIEW CASE STUDY", "link_url": "/pages/case-uganda-sign-factory" } },
+        "ethiopia": { "type": "deployment", "settings": { "location": "ETHIOPIA", "context": "INTEGRATED FABRICATION", "system": "CO₂ Laser + CNC Router", "status": "Factory visit and training", "image_alt": "Ethiopia integrated fabrication deployment", "link_label": "VIEW CASE STUDY", "link_url": "/pages/case-study-ethiopia" } }
       },
       "block_order": ["uganda", "ethiopia"], "settings": {}
     },
