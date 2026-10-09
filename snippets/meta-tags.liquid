@@ -67,6 +67,19 @@
     assign og_description = 'dd_support.seo_description' | t
     assign seo_description = og_description
   endif
+  if request.page_type == 'page' and template.suffix == 'information'
+    case page.handle
+      when 'about-us'
+        assign seo_description = 'Meet Guangzhou Dragon Diamond Technology Co., Ltd., established in 2012. Explore our factory, laser and CNC equipment, customer projects and technical support.'
+      when 'customization'
+        assign seo_description = 'Discuss equipment configuration, optional accessories and sample testing with Dragon Diamond. Share materials, dimensions and production requirements for review.'
+      when 'industry-acrylic'
+        assign seo_description = 'Review CO2 laser cutting, engraving and UV printing for acrylic signs, display parts and gifts. Compare equipment and request testing of your actual material.'
+      when 'industry-metal'
+        assign seo_description = 'Compare fiber laser cutting, handheld laser welding and marking for metal applications. Share your material and process requirements for equipment selection.'
+    endcase
+    assign og_description = seo_description
+  endif
   if request.page_type == 'index'
     assign og_title = 'dd_home.seo_title' | t
     assign og_description = 'dd_home.seo_description' | t
