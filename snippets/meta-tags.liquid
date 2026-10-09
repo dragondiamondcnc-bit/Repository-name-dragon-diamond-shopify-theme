@@ -82,6 +82,16 @@
     assign og_description = 'Explore Dragon Diamond workshop, team, customer visits, exhibitions and container loading. Established in 2012 in Guangzhou. Arrange a visit or free sample test.'
     assign seo_description = og_description
   endif
+  if request.page_type == 'page' and page.handle == 'faq'
+    assign og_title = 'Laser & CNC Equipment FAQ'
+    assign seo_description = 'Answers about equipment selection, free sample testing, machine options, packing, delivery, installation training and spare parts from Dragon Diamond.'
+    assign og_description = seo_description
+  endif
+  if request.page_type == 'page' and page.handle == 'contact'
+    assign og_title = 'Contact Dragon Diamond for Equipment & Sample Testing'
+    assign seo_description = 'Contact Dragon Diamond in Guangzhou for laser and CNC equipment advice, a free sample test or a factory visit. Send your production requirements to our team.'
+    assign og_description = seo_description
+  endif
   assign six_model = ''
   if request.page_type == 'product'
     if template.suffix == 'lz-1390-six' and product.handle == 'lz-1390-industrial-co2-laser-cutting-machine'
