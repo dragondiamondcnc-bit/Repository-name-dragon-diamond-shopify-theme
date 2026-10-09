@@ -47,6 +47,11 @@
       assign og_description = seo_description
     endif
   endif
+  if request.page_type == 'page' and template.suffix == 'support'
+    assign og_title = 'dd_support.seo_title' | t
+    assign og_description = 'dd_support.seo_description' | t
+    assign seo_description = og_description
+  endif
   if request.page_type == 'index'
     assign og_title = 'dd_home.seo_title' | t
     assign og_description = 'dd_home.seo_description' | t
