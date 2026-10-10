@@ -1,0 +1,26 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "dd-co2-product",
+      "settings": {
+        "model": "LZ-1610",
+        "summary": "1600 × 1000 mm · 150W",
+        "eyebrow": "ACRYLIC · WOOD · RIGID SHEET WORK",
+        "hero_asset": "lz-1390-cutout-v1.png",
+        "caption": "LZ-1390 series reference photograph. The LZ-1610 has a 1600 × 1000 mm working area; appearance and dimensions are confirmed with the order."
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
